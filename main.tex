@@ -1,0 +1,159 @@
+\documentclass[a4paper, USenglish, 11pt,draft]{report}
+\usepackage[T1]{fontenc}
+\usepackage{babel, folder/uiomasterfp}
+
+\usepackage[table]{xcolor}
+\usepackage{bm,ltablex,microtype}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{blkarray} %needed for indexing matrix
+\usepackage{fancyvrb} % packages needed for verbatim environments
+\usepackage{alltt}
+\usepackage{subfiles}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{etoolbox} % for \ifthen
+\usepackage{listofitems} % for \readlist to create arrays
+\usepackage[outline]{contour} % glow around text
+\contourlength{1.4pt}
+\usepackage{tikz}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{myred}{red!80!black}
+\colorlet{myblue}{blue!80!black}
+\colorlet{mygreen}{green!60!black}
+\colorlet{myorange}{orange!70!red!60!black}
+\colorlet{mydarkred}{red!30!black}
+\colorlet{mydarkblue}{blue!40!black}
+\colorlet{mydarkgreen}{green!30!black}
+\colorlet{mybrown}{brown!60!black}
+\tikzstyle{node}=[thick,circle,draw=myblue,minimum size=22,inner sep=0.5,outer sep=0.6]
+\tikzstyle{bias}=[thick,rectangle,draw=mybrown,minimum size=22,inner sep=0.5,outer sep=0.6, fill=mybrown!25]
+\tikzstyle{node in}=[node,green!20!black,draw=mygreen!30!black,fill=mygreen!25]
+\tikzstyle{node hidden}=[node,blue!20!black,draw=myblue!30!black,fill=myblue!20]
+\tikzstyle{node convol}=[node,orange!20!black,draw=myorange!30!black,fill=myorange!20]
+\tikzstyle{node out}=[node,red!20!black,draw=myred!30!black,fill=myred!20]
+\tikzstyle{connect}=[thick,mydarkblue] %,line cap=round
+\tikzstyle{connect arrow}=[-{Latex[length=4,width=3.5]},thick,mydarkblue,shorten <=0.5,shorten >=1]
+\tikzset{ % node styles, numbered for easy mapping with \nstyle
+  node 1/.style={node in},
+  node 2/.style={node hidden},
+  node 3/.style={node out},
+}
+\def\nstyle{int(\lay<\Nnodlen?min(2,\lay):3)} % map layer number onto 1, 2, or 3
+
+% make new layer for drawing in background.
+\pgfdeclarelayer{back}
+\pgfsetlayers{back,main}
+
+\pgfkeys{%
+/tikz/on layer/.code={
+\pgfonlayer{#1}\begingroup
+\aftergroup\endpgfonlayer
+\aftergroup\endgroup
+},
+/tikz/node on layer/.code={
+\pgfonlayer{#1}\begingroup
+\expandafter\def\expandafter\tikz@node@finish\expandafter{\expandafter\endgroup\expandafter\endpgfonlayer\tikz@node@finish}%
+}
+}
+
+%\pagestyle{empty}
+\def\layersep{2.5cm}
+
+\usepackage{lmodern}         % Latin Modern fonts derived from Computer Modern
+\usepackage[left=3.5cm,right=3.5cm,
+top=3cm,bottom=2.5cm]{geometry}
+% Hyperlinks in PDF:
+\definecolor{linkcolor}{rgb}{0,0,0.4}
+\usepackage{hyperref}
+\hypersetup{
+    breaklinks=true,
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=black,
+    filecolor=black,
+    %filecolor=blue,
+    pdfmenubar=true,
+    pdftoolbar=true,
+    bookmarksdepth=3   % Uncomment (and tweak) for PDF bookmarks with more levels than the TOC
+    }
+%\hyperbaseurl{}   % hyperlinks are relative to this root
+
+\setcounter{tocdepth}{4}  % levels in table of contents
+
+
+% prevent orhpans and widows
+\clubpenalty = 10000
+\widowpenalty = 10000
+
+% --- end of standard preamble for documents ---
+
+
+% insert custom LaTeX commands...
+\newcommand{\jb}{8J\beta}
+\raggedbottom
+\makeindex
+\usepackage[totoc]{idxlayout}   % for index in the toc
+\usepackage[nottoc]{tocbibind}  % for references/bibliography in the toc
+\usepackage{natbib}
+
+% \usepackage{booktabs}				% for citing
+\usepackage{float}					% for placing figures
+% \usepackage[ruled,vlined,linesnumbered]{algorithm2e} %for pseudocoding
+\usepackage{algorithm,algpseudocode}
+
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+
+% \newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}} %for pseudocoding comment
+% \SetCommentSty{mycommfont}
+
+
+\newcommand{\degr}{^\circ}
+%Claudia's comments
+\newcommand{\cc}[1]{{\bf \textcolor{violet}{#1}}}
+
+
+%-------------------- end preamble ----------------------
+
+
+\author{Bendik Nyheim}
+\title{A novel application of machine learning to develop pointing models for current and future radio/sub-millimeter telescopes}
+
+
+\begin{document}
+% \onehalfspacing
+
+\uiomasterfp[master, program={Computational Science: Physics},
+color=blue,image = {teleskopgutt2},
+supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Claudia Cicone (UiO)}]
+
+
+\tableofcontents
+\chapter{Introduction}
+\input{Chapters/introduction.tex}
+
+\chapter{Atronomical Background}
+\input{Chapters/ast_background.tex}
+
+
+\chapter{Machine Learning Background}
+\input{Chapters/ml_background.tex}
+
+\chapter{Method}
+\input{Chapters/method.tex}
+
+
+\appendix
+
+\newpage
+
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{citations}
+
+\end{document}
+

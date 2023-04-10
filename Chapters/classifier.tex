@@ -1,0 +1,10 @@
+A XGBoost model that classifies scans to be good or bad.
+
+The inputs into the model is the amplitude, FWHM and offsets, along with their uncertainty.
+The output from the model is a number between 0 and 1, indicating how certain the model is that the scan is good.
+A score of 1 means the model is 100%certain that the scan is good. 
+
+The model is trained on a self-made training set, where I manually labeled about 360 scans to be good bad.
+I was pretty strict when classifying the scans myself, because I only wanted the cleanest scans. 
+The model scan easily be trained again on a new training set.
+
