@@ -173,7 +173,7 @@ The quantity
 \begin{equation}\label{eq:z_neuron}
     z_j^l = \sum_{k} w_{jk}^l a^{l-1}_k+b_j^l
 \end{equation}
- will be useful explaining how to optimize a neural network, and can be considered the weighted input for neuron $j$ in layer $l$.
+ will be useful in explaining how to optimize a neural network, and can be considered the weighted input for neuron $j$ in layer $l$.
 
 
 \begin{figure}[H]
@@ -206,13 +206,13 @@ The next equation relates the error in a neuron with the errors in the neurons i
     \delta_j^l = \frac{\partial C}{\partial z_j^l} = \sum_k \frac{\partial C}{\partial z_k^{l+1}} \frac{\partial z_k^{l+1}}{\partial z_j^l} = \sum_k \delta_k^{l+1} \frac{\partial z_k^{l+1}}{\partial z_j^l} = \left( \sum_k \delta_k^{l+1} w_{kj}^{l+1} \right) \sigma '(z_j^l)
 \end{equation}
 Note that the indices on the weight $w$ are now swapped.
-We may think of this equation as error propagating backwards by multiplying the error in layer $l+1$ with the transpose of the weight connecting layer $l$ with $l+1$
+We may think of this equation as an error propagating backward by multiplying the error in layer $l+1$ with the transpose of the weight connecting layer $l$ with $l+1$
 The final equation is derived from the partial derivative of the cost function with respect to the weight $w_{jk}^l$
 \begin{equation}\label{eq:bp4}
     \frac{\partial C}{\partial w_{jk}^l} = \frac{\partial C}{\partial z_j^l} \frac{\partial z_j^l}{\partial w_{jk}^l} = \delta_j^l a_k^{l-1}
 \end{equation}
 
-Equation \eqref{eq:bp1} lets us calculate the error in the last layer, and using equation \eqref{eq:bp3} we can propagate this error backwards through the network, calculating the error for all the neurons.
+Equation \eqref{eq:bp1} lets us calculate the error in the last layer, and using equation \eqref{eq:bp3} we can propagate this error backward through the network, calculating the error for all the neurons.
 We then use equations \eqref{eq:bp2} and \eqref{eq:bp4} to calculate the gradient of the cost function with respect to the weights and biases.
 
 
@@ -223,7 +223,7 @@ Properties like non-linearity, differentiability, monotonicity, smoothness, and 
 Non-linearity enables the model to capture complex relationships, differentiability is necessary for calculating the derivative of the loss function with respect to the trainable weights, monotonicity helps ensure stability in activation outputs, smoothness stabilizes gradients during training, and zero-centering balances the activation distribution within the model.
 
 Activation functions play a crucial role in the training of a neural network by allowing it to learn non-linear relationships between inputs and outputs.
-Different activation functions have varying properties, and the are some properties considered important.
+Different activation functions have varying properties, and there are some properties considered important.
 
 \begin{itemize}
     \item Non-linearity enables the model to capture complex relationships

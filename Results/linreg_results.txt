@@ -1,0 +1,82 @@
+(my_env_ben) [bendikny@beehive22 code]$ python models_v2.py
+tp_key: 0, start: 2022-05-22 06:00:00, end: 2022-05-22 23:40:00
+RMS az_tp0: 1.74 arcsecs
+RMS el_datasplit: 1.85 arcsecs
+RMS on testing set: 2.83 arcsecs
+RMS on training set: 2.54 arcsecs
+tp_key: 1, start: 2022-05-22 00:00:00, end: 2022-07-04 00:00:00
+RMS az_tp1: 2.82 arcsecs
+RMS el_datasplit: 3.06 arcsecs
+RMS on testing set: 6.73 arcsecs
+RMS on training set: 4.17 arcsecs
+tp_key: 2, start: 2022-01-01 00:00:00, end: 2022-09-17 17:30:00
+RMS az_tp2: 14.69 arcsecs
+RMS el_datasplit: 7.38 arcsecs
+RMS on testing set: 15.06 arcsecs
+RMS on training set: 16.44 arcsecs
+tp_key: 3, start: 2022-03-01 00:00:00, end: 2022-05-22 00:00:00
+RMS az_tp3: 15.10 arcsecs
+RMS el_datasplit: 7.14 arcsecs
+RMS on testing set: 17.40 arcsecs
+RMS on training set: 16.70 arcsecs
+tp_key: 4, start: 2022-07-05 00:00:00, end: 2022-08-12 00:00:00
+RMS az_tp4: 2.83 arcsecs
+RMS el_datasplit: 3.01 arcsecs
+RMS on testing set: 23.46 arcsecs
+RMS on training set: 4.13 arcsecs
+
+
+
+def prepare_linear_terms(Az,El):
+    terms_az = [
+        Az,
+        np.sin(Az),
+        np.cos(3*Az),
+        np.sin(2*Az),
+        np.cos(2*Az),
+        np.cos(Az) * np.tan(El),
+        np.sin(Az) * np.tan(El),
+        np.tan(El),
+        1/np.cos(El),
+        np.cos(2*Az) / np.cos(El),
+        np.cos(Az) / np.cos(El),
+        np.cos(5*Az) / np.cos(El),
+        np.ones(len(Az)),
+    ]
+    terms_el = [
+        El,
+        np.sin(El),
+        np.cos(El),
+        np.cos(2*Az),
+        np.sin(2*Az),
+        np.cos(3*Az),
+        np.sin(3*Az),
+        np.sin(4*Az),
+        np.sin(5*Az),
+        np.sin(Az),
+        np.sin(Az)*np.tan(El),
+        np.ones(len(Az)),
+    ]
+
+    #Set of all terms in terma_az and terms_el
+    terms_both = [
+        Az,
+        El,
+        np.sin(Az),
+        np.cos(3*Az),
+        np.sin(2*Az),
+        np.cos(2*Az),
+        np.cos(Az) * np.tan(El),
+        np.sin(Az) * np.tan(El),
+        np.tan(El),
+        1/np.cos(El),
+        np.ones(len(Az)),
+        np.sin(El),
+        np.cos(El),
+        np.sin(3*Az),
+        np.sin(4*Az),
+        np.sin(5*Az),
+        np.cos(2*Az) / np.cos(El),
+        np.cos(Az) / np.cos(El),
+        np.cos(5*Az) / np.cos(El)
+    ]

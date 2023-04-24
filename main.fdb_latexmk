@@ -1,25 +1,25 @@
 # Fdb version 4
-["bibtex main"] 1680520444 "main.aux" "main.bbl" "main" 1680520451 0
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 0 -1
   "./citations.bib" 1680269400 5065 6790daf7f679ee6df838b6ce5a4de719 ""
   "c:/texlive/2022/texmf-dist/bibtex/bst/base/plain.bst" 1677854049 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1680520449 24138 aa1c5210237e847e26bbd778a4c82812 "pdflatex"
+  "main.aux" 1682258345 24914 1540cb6ff0d1ea8dbb028229daf4fe2e "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1680514335 "main.idx" "main.ind" "main" 1680520451 0
-  "main.idx" 1680520448 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 0 "main.idx" "main.ind" "main" 0 -1
+  "main.idx" 1682258344 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1680520444 "c:/Users/bendi/uni/Master/Master Thesis/main.tex" "main.pdf" "main" 1680520451 0
+["pdflatex"] 1682258341 "c:/Users/bendi/uni/Master/Master Thesis/main.tex" "main.pdf" "main" 1682258348 2
   "Astronomy/Azimuth-Altitude_schematic.png" 1678707361 114622 e0028e7dc3e6c8420d567c85c8fced7d ""
   "Astronomy/radio_telescope.png" 1678713033 60506 a978b43221037627639659627de8f94d ""
-  "Chapters/ast_background.tex" 1680520436 31005 445bff9c92b2a2aec5821295154760aa ""
+  "Chapters/ast_background.tex" 1681798984 30868 a30d8e33e592585e248b84cb5e1386b0 ""
   "Chapters/introduction.tex" 1679911355 2788 e287c1eec4a01b19a53081248b921b16 ""
-  "Chapters/method.tex" 1679060985 19017 d599d9b1b5b4443e701039c48fd2b543 ""
-  "Chapters/ml_background.tex" 1680520066 20526 9a4b9780bf48e1b9c96fdd39aaaaea51 ""
+  "Chapters/method.tex" 1682258341 22420 c698318891e15aa790f9bd9a55c091b4 ""
+  "Chapters/ml_background.tex" 1682251694 20532 78348a17ada47dbaaca0d462fc955214 ""
   "Clf/mAP_curve_both.pdf" 1678443443 12647 af353f347d718fe66c4cd59aab3a653d ""
   "Clf/precision_recall_curve_both.pdf" 1678443449 11402 97d724d6e63044667ba763ec99604205 ""
   "Correlation/Correlation_temp.pdf" 1678290476 24283 a83b86725ca195a55f10761f9289039d ""
@@ -38,7 +38,7 @@
   "Pointing Scans/good_line.png" 1677852914 96933 1ebc23a15b40840e020e17b5a969a0ff ""
   "Tiltmeter plots/scan_duration_distribution_date.pdf" 1678271079 63424 8a67b58365564b687620d51f520b8d3c ""
   "Tiltmeter plots/scan_duration_distribution_rx.pdf" 1678279282 20773 914816a4595fef2b2c65ac26675bcb81 ""
-  "c:/Users/bendi/uni/Master/Master Thesis/main.tex" 1679920954 4741 ceeb093549800384c233de1ab0609cfd ""
+  "c:/Users/bendi/uni/Master/Master Thesis/main.tex" 1682256297 4742 8bb8e2d7bb563346b64a885fe08a854b ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc" 1677855033 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1677856663 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1677856663 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -306,10 +306,10 @@
   "folder/uio-fp-navn-eng.pdf" 1677852914 9896 3790f54969705c4284148bf62f780187 ""
   "folder/uio-fp-segl.pdf" 1677852914 64936 89441810db60f45a672971bad5b14ed1 ""
   "folder/uiomasterfp.sty" 1677852914 8814 1230e2e7575ae9111cb964e7fb79060a ""
-  "main.aux" 1680520449 24138 aa1c5210237e847e26bbd778a4c82812 "pdflatex"
-  "main.bbl" 1680520444 2090 8c8bcbd0385b51b43d83ec0641d237d3 "bibtex main"
-  "main.ind" 1680514335 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.toc" 1680520449 5389 aca79114fc312350790edd2b84a9bc3c "pdflatex"
+  "main.aux" 1682258345 24914 1540cb6ff0d1ea8dbb028229daf4fe2e "pdflatex"
+  "main.bbl" 0 -1 0 "bibtex main"
+  "main.ind" 0 -1 0 "makeindex main.idx"
+  "main.toc" 1682258345 6313 884c9b8d1a41288b62759985e98e67dc "pdflatex"
   "teleskopgutt2.jpeg" 1677852914 246701 b078786cc75ae739d4a1b3af20a68b36 ""
   (generated)
   "main.aux"

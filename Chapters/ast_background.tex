@@ -437,7 +437,7 @@ The monitor database provides data with varying frequencies, as shown in Table \
 
 \subsection{Pointing scan data}
 A pointing scan is an observation of a source with known location, which is used to calibrate the pointing model.
-There are two types of pointing scans: Line pointings and continous pointings.
+There are two types of pointing scans: Line pointings and continuum scans.
 Figure \ref{fig:features_during_scans} shows the information in the monitor database form a pointing scan.
 \paragraph{Line pointing}
 A line pointing involves pointing at an extended source. 
@@ -469,11 +469,10 @@ A Gaussian is then fitted to these points, and the resulting amplitude, full wid
     \label{fig:line_pointings}
 \end{figure}
 
-\paragraph{Continuous pointing}
-When the known source is much larger than the beam size \textcolor{red}{check this}, a line pointing is not feasible due to \textcolor{red}{due to what?}.
-In this case, a continuous pointing is carried out instead, which involves scanning the source continuously in azimuth and elevation while recording the flux intensity.
+\paragraph{Continuum Scan}
+Not all sources have emission lines, and for these sources a contunuum scan is carried out instead. In this case, a source is continuously scanned in azimuth and elevation while recording the flux intensity.
 A Gaussian curve is fitted to the recorded flux intensity to determine the offsets, amplitude, and full width at half maximum (FWHM).
-Figure \ref{fig:continueous_pointings} show examples of continuous pointing scans and the corresponding Gaussian fits.
+Figure \ref{fig:continueous_pointings} show examples of continuum scans and the corresponding Gaussian fits.
 
 \begin{figure}[H]
     \centering
@@ -490,7 +489,7 @@ Figure \ref{fig:continueous_pointings} show examples of continuous pointing scan
          \caption{Noisy line pointing with bad Gaussian fit.}
          \label{subfig:bad_continuous}
      \end{subfigure}
-    \caption{The two panels show continuous pointing scans. a) is good and clean, and b) is noise and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.}
+    \caption{The two panels show continuum pointing scans. a) is good and clean, and b) is noise and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.}
     \label{fig:continueous_pointings}
 \end{figure}
 

@@ -1,0 +1,30 @@
+Here is one possible structure for your Method section:
+
+Introduction: Start by introducing your research question and explaining the two experiments you are conducting.
+
+Data Collection: Describe the data you have collected for each experiment, including the source and format of the data, and any preprocessing steps you took to prepare it for analysis.
+You may also want to discuss any challenges you encountered during data collection.
+
+Experiment 1: Pointing Model using Hybrid Neural Network
+
+Model Architecture: Describe the architecture of the hybrid neural network you used, including the number of layers, activation functions, and any other relevant details.
+Hyperparameter Tuning: Explain how you performed hyperparameter tuning for the model, including the ranges of values you sampled and the method you used to select the best hyperparameters.
+Model Fitting: Describe how you fitted the model using the selected hyperparameters and the training data, including any regularization techniques you used.
+Model Evaluation: Explain how you evaluated the performance of the model, including the metrics you used to measure performance and any visualizations you created to compare the model's predictions to the true observed azimuth and elevation.
+Experiment 2: Pointing Correction Model
+
+Feature Selection: Describe how you selected the features to use in the model, including any preprocessing steps you took to clean the data.
+Model Selection: Explain how you selected the model(s) to use for predicting the pointing corrections, including the types of models you tried (e.g., linear regression, decision trees, random forests) and the method you used to select the best model.
+Model Fitting: Describe how you fitted the selected model(s) using the training data.
+Model Evaluation: Explain how you evaluated the performance of the model(s), including the metrics you used to measure performance and any visualizations you created to compare the model's predictions to the true pointing corrections.
+Statistical Analysis: If relevant, describe any statistical analysis you performed on the results of the experiments, such as hypothesis testing or confidence interval estimation.
+
+Ethical Considerations: If relevant, describe any ethical considerations you took into account during the experiments, such as informed consent or privacy protection.
+
+Limitations and Future Work: Discuss any limitations of your experiments and potential directions for future research.
+
+Conclusion: Summarize the key findings of your experiments and their implications for the development of pointing models for radio telescopes.
+
+This is just one possible structure for your Method section, and you may need to adapt it based on the specific requirements of your thesis and the preferences of your advisor.
+Remember to be clear and concise in your descriptions, and to provide enough detail that someone else could reproduce your experiments if they wanted to.
+Good luck with your thesis!

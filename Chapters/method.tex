@@ -336,5 +336,56 @@ $i$ & $\Tilde{\delta}_{az}$ &  $\Tilde{\delta}_{el}$ &  $\Tilde{ca}$ &  $\Tilde{
 8 &      -0.8 &      -1.1 &       2.7 &      -2.2 \\
 \bottomrule
 \end{tabular}
-
 \end{table}
+
+\section{Experiments overview}
+In this section, I will present two machine learning experiments directly related to the two research questions.
+The first experiment explores the use of neural networks to develop a pointing model that can replace the current linear model fitted through linear regression.
+The second experiment explores the use of an XGBoost model to predict the pointing correction that currently is performed manually.
+
+\section{Experiment 1: Pointing Model using Neural Networks}
+This experiment uses the raw data from the optical receiver. 
+In this dataset, there are input azimuth and elevation coordinates, denoted $Az_{\text{input}}$ and $El_{\text{input}}$ respectively,
+and corresponding true observed values $Az_{\text{observed}}$ and $El_{\text{observed}}$.
+
+
+The goal is to find a model $f$ such that
+\begin{equation}
+    f(X) \approx (\delta_{\text{Az}}, \delta_{\text{El}}) = (Az_{\text{observed}}-Az_{\text{input}}, El_{\text{observed}}-El_{\text{input}})
+\end{equation}
+
+\subsection{Feature Selection}
+We know from the current model that certain geometrical and harmonic terms are highly correlated with the offset we are trying to predict.
+Therefore, we construct these terms and calculate Pearson's and Spearman's rank correlation between the features and offsets.
+We then select the features that have the highest correlation. In addition to the features that are used in the current pointing model,
+we also include some features obtained from the telescope's database.
+For these features, we also look at Pearson's and Spearman's rank correlation between features and predictors and choose features thereafter.
+We select all the features with either of the correlations $\geq 0.1$. In training time, a subset of these features is sampled and used for training the neural network.
+
+\subsection{Model Architecture}
+Four different model architectures are tested in this experiment. First, a straightforward approach where we feed all the data into either one, two, or three layers.
+The three other architectures are meant to combine the current model with machine learning.
+The geometrical and harmonic terms are separated from the other features and processed in different ways.
+
+The following are the four different architectures.
+\begin{enumerate}
+    \item \textbf{Regular neural network:} Neural network that takes all the features and passes them through the same layers.
+    \item \textbf{Neural network with separated features 1:} Geometric and harmonic features are connected directly to the outputs,
+    and the rest of the features are passed through layers with nonlinear activation functions.
+    \item \textbf{Neural network with separated features 2:} Geometric and harmonic features are concatenated to the output of the .
+    \item \textbf{Neural network with separated features 3:} The harmonic terms are fed to the output. The other features are fed to a hidden layer.
+
+activation function like the features from the sensory data. Instead, they are fed directly to the output. The results of this should be like a neural network 
+combined with linear regression. 
+
+\subsection{Model Training}
+\subsection{Model Evaluation}
+
+
+\section{Experiment 1: Pointing Correction Model}
+\subsection{Feature Selection}
+\subsection{Model Architecture}
+\subsection{Model Training}
+\subsection{Model Evaluation}
+
+
