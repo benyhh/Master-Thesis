@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  23 APR 2023 15:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  26 APR 2023 11:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1001,182 +1001,113 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 18.99994pt on input line 133.
  [1]
 Package hyperref Info: Option `pageanchor' set `true' on input line 133.
-
-No file main.toc.
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
-[1
-
-]
-Chapter 1.
-(./Chapters/introduction.tex) [2
-
-]
-Chapter 2.
-(./Chapters/ast_background.tex
-
-LaTeX Warning: Reference `fig:altaz_coords' on page 3 undefined on input line 13.
-
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 17.
-(c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
+ (./main.toc
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 17.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 17.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 17.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 17.
+(Font)              <10.95> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 17.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 17.
+(Font)              <6> on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
+) [1
+
+])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [2]
+Chapter 1.
+(./Chapters/introduction.tex) [3
+
+]
+Chapter 2.
+(./Chapters/ast_background.tex
 Underfull \hbox (badness 10000) in paragraph at lines 13--20
 
  []
 
-<Astronomy/Azimuth-Altitude_schematic.png, id=26, 1927.2pt x 1856.9375pt>
-
-Package natbib Warning: Citation `altaz_schematic' on page 3 undefined on input line 33.
-
-
-Package natbib Warning: Citation `altaz_schematic' on page 3 undefined on input line 33.
-
-[3
+<Astronomy/Azimuth-Altitude_schematic.png, id=30, 1927.2pt x 1856.9375pt>
+[4
 
 ]
-<Astronomy/radio_telescope.png, id=35, 474.27188pt x 440.39531pt>
- [4]
+<Astronomy/radio_telescope.png, id=38, 474.27188pt x 440.39531pt>
+ [5]
 Underfull \hbox (badness 10000) in paragraph at lines 55--70
 
  []
 
-[5]
+[6]
 Underfull \hbox (badness 10000) in paragraph at lines 74--77
 
  []
 
-
-Package natbib Warning: Citation `tpoint_manual' on page 6 undefined on input line 99.
-
-[6]
+[7]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 123.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [7] [8]
-
-LaTeX Warning: Reference `tab:optical' on page 9 undefined on input line 244.
-
-[9]
-
-LaTeX Warning: Reference `fig:corr_temp' on page 10 undefined on input line 285.
-
-<Correlation/Correlation_temp.pdf, id=60, 1156.32pt x 1156.32pt>
-[10]
-
-LaTeX Warning: Reference `tab:data_frequency' on page 11 undefined on input line 330.
-
-
-LaTeX Warning: Reference `tab:data_frequency' on page 11 undefined on input line 333.
-
-[11]
-<Feature during scans/scan_ACTUALAZ_335.pdf, id=69, 722.7pt x 433.62pt>
-<Feature during scans/scan_ACTUALEL_335.pdf, id=70, 722.7pt x 433.62pt>
-<Feature during scans/scan_TEMP1_335.pdf, id=71, 722.7pt x 433.62pt>
+) [8] [9] [10]
+<Correlation/Correlation_temp.pdf, id=63, 1156.32pt x 1156.32pt>
+ [11] [12]
+<Feature during scans/scan_ACTUALAZ_335.pdf, id=72, 722.7pt x 433.62pt>
+<Feature during scans/scan_ACTUALEL_335.pdf, id=73, 722.7pt x 433.62pt>
+<Feature during scans/scan_TEMP1_335.pdf, id=74, 722.7pt x 433.62pt>
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 410.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 410.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 410.
-<Feature during scans/scan_TILT1T_335.pdf, id=72, 722.7pt x 433.62pt>
-<Feature during scans/scan_WINDDIRECTION_335.pdf, id=73, 722.7pt x 433.62pt>
-<Feature during scans/scan_WINDSPEED_335.pdf, id=74, 722.7pt x 433.62pt>
- [12]
-
-LaTeX Warning: Reference `fig:features_during_scans' on page 13 undefined on input line 441.
-
-
-LaTeX Warning: Reference `fig:line_pointings' on page 13 undefined on input line 444.
-
-[13]
-<Pointing Scans/good_line.png, id=81, 645.612pt x 448.67625pt>
-<Pointing Scans/bad_line.png, id=83, 651.6345pt x 448.67625pt>
-
-
-LaTeX Warning: Reference `fig:continueous_pointings' on page 14 undefined on input line 475.
-
-[14]
-<Pointing Scans/good_continuous.png, id=87, 686.565pt x 453.49425pt>
-<Pointing Scans/bad_continuous.png, id=88, 686.565pt x 453.49425pt>
+<Feature during scans/scan_TILT1T_335.pdf, id=75, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDDIRECTION_335.pdf, id=76, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDSPEED_335.pdf, id=77, 722.7pt x 433.62pt>
+ [13] [14]
+<Pointing Scans/good_line.png, id=84, 645.612pt x 448.67625pt>
+<Pointing Scans/bad_line.png, id=86, 651.6345pt x 448.67625pt>
  [15]
-
-LaTeX Warning: Reference `tab:instrument_usage' on page 16 undefined on input line 510.
-
-
+<Pointing Scans/good_continuous.png, id=90, 686.565pt x 453.49425pt>
+<Pointing Scans/bad_continuous.png, id=91, 686.565pt x 453.49425pt>
+ [16]
 Underfull \hbox (badness 10000) in paragraph at lines 509--512
 
  []
 
-
-LaTeX Warning: Reference `tab:tiltmeter_example' on page 16 undefined on input line 544.
-
-) [16] [17]
+) [17] [18]
 Chapter 3.
 (./Chapters/ml_background.tex
 Underfull \hbox (badness 10000) in paragraph at lines 11--17
 
  []
 
-[18
+[19
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
  []
 
-[19]
-
-LaTeX Warning: Reference `fig:decitiontree' on page 20 undefined on input line 103.
-
-
-LaTeX Warning: Reference `fig:evolution_of_xgb' on page 20 undefined on input line 109.
-
-
-Package natbib Warning: Citation `Mehta_2019' on page 20 undefined on input line 112.
-
-[20]
-<Other figures/decisiontree_example.PNG, id=110, 1033.61156pt x 804.00375pt>
-<Other figures/evolution_of_xgb.png, id=111, 542.025pt x 288.3272pt>
-
-
-Package natbib Warning: Citation `morde_vishal_nodate' on page 21 undefined on input line 152.
-
-
-Package natbib Warning: Citation `morde_vishal_nodate' on page 21 undefined on input line 152.
-
-
-LaTeX Warning: Reference `fig:nnfig' on page 21 undefined on input line 158.
-
-[21]
-
-Package natbib Warning: Citation `universal_approximation' on page 22 undefined on input line 165.
-
-(./Other figures/nn_with_eqs.tex 
+[20] [21]
+<Other figures/decisiontree_example.PNG, id=113, 1033.61156pt x 804.00375pt>
+<Other figures/evolution_of_xgb.png, id=114, 542.025pt x 288.3272pt>
+ [22] (./Other figures/nn_with_eqs.tex 
 Neural network activation
 contour: Using real outline for `$w_{1,1}$' on input line 36.
 contour: Using real outline for `$w_{1,2}$' on input line 36.
@@ -1185,246 +1116,110 @@ contour: Using real outline for `$w_{1,4}$' on input line 36.
 contour: Using real outline for `$w_{1,n}$' on input line 36.
 contour: Using real outline for `$b_1$' on input line 41.
 )
-
-Package natbib Warning: Citation `tikz' on page 22 undefined on input line 183.
-
-
-Package natbib Warning: Citation `tikz' on page 22 undefined on input line 183.
-
-
-Package natbib Warning: Citation `backprop_original' on page 22 undefined on input line 188.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--192
+Underfull \hbox (badness 10000) in paragraph at lines 191--195
 
  []
 
-[22]
-
-LaTeX Warning: Reference `eq:z_neuron' on page 23 undefined on input line 203.
-
-
-LaTeX Warning: Reference `eq:bp1' on page 23 undefined on input line 215.
-
-
-LaTeX Warning: Reference `eq:bp3' on page 23 undefined on input line 215.
-
-
-LaTeX Warning: Reference `eq:bp2' on page 23 undefined on input line 216.
-
-
-LaTeX Warning: Reference `eq:bp4' on page 23 undefined on input line 216.
-
-[23]
-
-Package natbib Warning: Citation `SHAP' on page 24 undefined on input line 253.
-
-
-Package natbib Warning: Citation `SAGE' on page 24 undefined on input line 253.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 253--259
+[23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 256--262
 
  []
 
 
-Package natbib Warning: Citation `shapley_value_1953' on page 24 undefined on input line 260.
-
-
-Package natbib Warning: Citation `covert_shap_sage' on page 24 undefined on input line 262.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--263
+Underfull \hbox (badness 10000) in paragraph at lines 263--266
 
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 281--284
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 284--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--292
+Underfull \hbox (badness 10000) in paragraph at lines 293--295
 
  []
 
-
-Package natbib Warning: Citation `sage_paper' on page 25 undefined on input line 304.
-
-) [25]
+) [26]
 Chapter 4.
 (./Chapters/method.tex
-
-LaTeX Warning: Reference `subfig:bad_continuous' on page 26 undefined on input line 19.
-
-
-LaTeX Warning: Reference `subfig:bad_line' on page 26 undefined on input line 19.
-
-
-LaTeX Warning: Reference `subfig:bad_line' on page 26 undefined on input line 19.
-
-
-LaTeX Warning: Reference `fig:line_pointings' on page 26 undefined on input line 21.
-
-
-LaTeX Warning: Reference `fig:continueous_pointings' on page 26 undefined on input line 21.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 19--24
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
 
  []
 
-[26
+[27
 
 ]
-
-LaTeX Warning: Reference `fig:pointing_scan_clf' on page 27 undefined on input line 42.
-
-<Clf/precision_recall_curve_both.pdf, id=133, 578.16pt x 397.485pt>
-<Clf/mAP_curve_both.pdf, id=134, 578.16pt x 397.485pt>
-
-LaTeX Warning: Reference `tab:scan_flag_difference' on page 27 undefined on input line 90.
-
-[27]
-
-LaTeX Warning: Reference `fig:scan_times_box' on page 28 undefined on input line 114.
-
-
-LaTeX Warning: Reference `fig:scan_times_date' on page 28 undefined on input line 116.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 112--118
+<Clf/precision_recall_curve_both.pdf, id=136, 578.16pt x 397.485pt>
+<Clf/mAP_curve_both.pdf, id=137, 578.16pt x 397.485pt>
+ [28]
+Underfull \hbox (badness 10000) in paragraph at lines 117--123
 
  []
 
+<Tiltmeter plots/scan_duration_distribution_date.pdf, id=141, 1300.86pt x 722.7pt>
 
-LaTeX Warning: Reference `fig:scan_times_date' on page 28 undefined on input line 120.
-
-
-LaTeX Warning: Reference `fig:scan_times_box' on page 28 undefined on input line 120.
-
-<Tiltmeter plots/scan_duration_distribution_date.pdf, id=138, 1300.86pt x 722.7pt>
-
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 127--128
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 133--134
  [][] |
  []
 
-[28]
-<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=142, 1806.75pt x 722.7pt>
+[29]
+<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=146, 1806.75pt x 722.7pt>
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 134--135
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 140--141
  [][] |
  []
 
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 144.
-[29] [30]
-
-Package natbib Warning: Citation `ephem' on page 31 undefined on input line 233.
-
-
-LaTeX Warning: Reference `eq:sun_az_diff' on page 31 undefined on input line 240.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 249--252
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 150.
+[30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 255--258
 
  []
 
-[31]
+[32] [33] [34] (./Other figures/regular_nn.tex 
+Neural network large 
+ Layer 1, 2, 3, 4,) (./Other figures/combined_nn_sep1.tex 
+Neural network large 
+ Layer 1, 2, 1, 2, 3, 4,) (./Other figures/combined_nn_sep2.tex 
+Neural network large 
+ Layer 1, 2, 3, 1, 2, 3, 4,) (./Other figures/combined_nn_sep3.tex 
+Neural network large 
+ Layer 1, 2, 3, 1, 2, 3, 4, 1, 2, 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 3, 1, 2, 3, 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 4,) [35] [36]
+<Canva/datasplits.png, id=170, 1445.4pt x 482.55281pt>
+ [37] [38]) [39] (./main.bbl) [40
 
-LaTeX Warning: Reference `tab:offset_and_correction' on page 32 undefined on input line 262.
-
-
-LaTeX Warning: Reference `eq:ca' on page 32 undefined on input line 263.
-
-
-LaTeX Warning: Reference `eq:ie' on page 32 undefined on input line 263.
-
-
-LaTeX Warning: Reference `eq:ca' on page 32 undefined on input line 264.
-
-
-LaTeX Warning: Reference `eq:ie' on page 32 undefined on input line 264.
-
-
-LaTeX Warning: Reference `eq:ca' on page 32 undefined on input line 271.
-
-
-LaTeX Warning: Reference `eq:ie' on page 32 undefined on input line 271.
-
-
-LaTeX Warning: Reference `eq:ca' on page 32 undefined on input line 295.
-
-
-LaTeX Warning: Reference `eq:ie' on page 32 undefined on input line 295.
-
-[32]
-
-LaTeX Warning: Reference `eq:ca_tilde' on page 33 undefined on input line 322.
-
-
-LaTeX Warning: Reference `eq:ie_tilde' on page 33 undefined on input line 322.
-
-
-LaTeX Warning: Reference `eq:off_az_tilde' on page 33 undefined on input line 322.
-
-
-LaTeX Warning: Reference `eq:off_el_tilde' on page 33 undefined on input line 322.
-
-
-LaTeX Warning: Reference `eq:ca_tilde' on page 33 undefined on input line 322.
-
-
-LaTeX Warning: Reference `eq:ie_tilde' on page 33 undefined on input line 322.
-
-
-LaTeX Warning: Reference `eq:off_az_tilde' on page 33 undefined on input line 322.
-
-
-LaTeX Warning: Reference `eq:off_el_tilde' on page 33 undefined on input line 322.
-
-[33]) [34] [35]
-No file main.bbl.
-
-Package natbib Warning: There were undefined citations.
-
-
-c:/Users/bendi/uni/Master/Master Thesis/main.tex:158: LaTeX Error: \begin{enumerate} on input line 371 ended by \end{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.158 \end{document}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(./main.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 371 (\begingroup)
-### bottom level 
+] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 29308 strings out of 476024
- 544307 string characters out of 5794017
- 1881382 words of memory out of 5000000
- 48866 multiletter control sequences out of 15000+600000
- 633504 words of font info for 245 fonts, out of 8000000 for 9000
+ 29701 strings out of 476024
+ 550899 string characters out of 5794017
+ 1965382 words of memory out of 5000000
+ 49215 multiletter control sequences out of 15000+600000
+ 637666 words of font info for 259 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,22n,80p,1043b,904s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,22n,80p,1043b,1182s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (37 pages, 374680 bytes).
+Output written on main.pdf (42 pages, 396684 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 154 compressed objects within 2 object streams
+ 272 PDF objects out of 1000 (max. 8388607)
+ 164 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 62075 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 64128 words of extra memory for PDF output out of 74296 (max. 10000000)
 

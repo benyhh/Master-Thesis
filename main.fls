@@ -1325,21 +1325,9 @@ INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-OUTPUT main.toc
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT ./Chapters/introduction.tex
-INPUT Chapters/introduction.tex
-INPUT ./Chapters/introduction.tex
-INPUT Chapters/introduction.tex
-INPUT ./Chapters/ast_background.tex
-INPUT Chapters/ast_background.tex
-INPUT ./Chapters/ast_background.tex
-INPUT Chapters/ast_background.tex
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT ./main.toc
+INPUT main.toc
+INPUT main.toc
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -1390,6 +1378,21 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT main.toc
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT ./Chapters/introduction.tex
+INPUT Chapters/introduction.tex
+INPUT ./Chapters/introduction.tex
+INPUT Chapters/introduction.tex
+INPUT ./Chapters/ast_background.tex
+INPUT Chapters/ast_background.tex
+INPUT ./Chapters/ast_background.tex
+INPUT Chapters/ast_background.tex
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./Astronomy/Azimuth-Altitude_schematic.png
 INPUT ./Astronomy/Azimuth-Altitude_schematic.png
 INPUT Astronomy/Azimuth-Altitude_schematic.png
@@ -1536,6 +1539,32 @@ INPUT ./Tiltmeter plots/scan_duration_distribution_rx.pdf
 INPUT Tiltmeter plots/scan_duration_distribution_rx.pdf
 INPUT ./Tiltmeter plots/scan_duration_distribution_rx.pdf
 INPUT ./Tiltmeter plots/scan_duration_distribution_rx.pdf
+INPUT ./Other figures/regular_nn.tex
+INPUT Other figures/regular_nn.tex
+INPUT ./Other figures/regular_nn.tex
+INPUT Other figures/regular_nn.tex
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT ./Other figures/combined_nn_sep1.tex
+INPUT Other figures/combined_nn_sep1.tex
+INPUT ./Other figures/combined_nn_sep1.tex
+INPUT Other figures/combined_nn_sep1.tex
+INPUT ./Other figures/combined_nn_sep2.tex
+INPUT Other figures/combined_nn_sep2.tex
+INPUT ./Other figures/combined_nn_sep2.tex
+INPUT Other figures/combined_nn_sep2.tex
+INPUT ./Other figures/combined_nn_sep3.tex
+INPUT Other figures/combined_nn_sep3.tex
+INPUT ./Other figures/combined_nn_sep3.tex
+INPUT Other figures/combined_nn_sep3.tex
+INPUT ./Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
 INPUT main.aux
 INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc

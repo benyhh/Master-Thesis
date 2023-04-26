@@ -1,14 +1,14 @@
 \section{Supervised learning}
 Supervised learning is a subfield of machine learning that refers to training a model to predict a specific target value based on input data.
 In this context, the input data is commonly referred to as "features", and when paired with the corresponding target value for prediction, the training is supervised.
-There are two types of supervised learning, regression and classification. 
-In regression, we predict a continous variable, while we in claffication predict a binary value, true or false.
+There are two types of supervised learning, regression, and classification. 
+In regression, we predict a continuous variable, while in classification predict a binary value, true or false.
 The model architecture of the model can be the same regardless of predicting a true/false or continuous value. 
 The difference is in the loss function, which is used to evaluate the performance of the model during training, and for neural networks, the last layer activation function.
-In depth explanations of this will come in the following sections.
+In-depth explanations of this will come in the following sections.
 
 \section{Loss/Cost}
-In machine learning, the loss of a model refers to the discrepancy between the predicted and true value.
+In machine learning, the loss of a model refers to the discrepancy between the predicted and true values.
 It is calculated using a specific function designed to penalize incorrect predictions and serves as a measure of the model's performance.
 The ultimate goal of any machine learning model is to minimize the loss and thereby reduce the difference between predicted and desired outputs.
 To achieve this, the model is trained by calculating the gradient of the loss function with respect to different components in the model.
@@ -63,7 +63,7 @@ By using a separate set of data for testing, we can get a better estimate of the
 When the error on the training data is low, the model has low bias.
 However, if the model is too complex, it may also have high variance, meaning that it is overly sensitive to the training data and unable to generalize well to new data.
 A model with high variance may perform well on the training data, but its performance on new data may be poor.
-The key to building a good model is to balance bias and variance, and to find the right level of complexity that will allow the model to generalize well.
+The key to building a good model is to balance bias and variance and to find the right level of complexity that will allow the model to generalize well.
 Proper selection of the train/test split ratio and the use of other techniques such as regularization can help achieve this balance and improve the model's performance.
 
 
@@ -123,9 +123,9 @@ This often leads to better generalization and reduced overfitting.
 
 \paragraph{Boosting}
 An ensemble is created in boosting as well, but the trees are not made independently.
-They are trained one-by-one considering the previous trees.
+They are trained one by one considering the previous trees.
 A sample weight is assigned to each sample used to train a tree based on the current ensemble's accuracy.
-Samples with large prediction error are assigned larger weights and those with accurate predictions are assigned lower weights.
+Samples with large prediction errors are assigned larger weights and those with accurate predictions are assigned lower weights.
 The final prediction is a weighted sum of all ensemble predictions, with weights based on each individual tree's accuracy.
 
 \paragraph{Gradient Boosting}
@@ -183,8 +183,11 @@ The quantity
 Generated using TikZ \cite{tikz}}
     \label{fig:nnfig}
 \end{figure}
-\subsection{Backpropagation}
 
+
+
+
+\subsection{Backpropagation}
 Backpropagation\cite{backprop_original} is a fundamental algorithm in training artificial neural networks.
 It calculates the gradient of the loss function with respect to all the weights and biases in the network,
 allowing for the updating of these parameters in a way that reduces the loss.
@@ -268,18 +271,18 @@ The Shapley value for a player $i$ in a cooperative game with $d$ players is
 \end{equation}
 
 where $D$ is the set of all players, $S$ is a coalition of players, $w(S)$ is the value of the coalition $S$, and $|S|$ is the number of players in the coalition.
-This formula satisfy four important conditions:
+This formula satisfies four important conditions:
 \begin{itemize}
     \item Efficiency: The sum of all Shapley values should be equal to the total value of the group.
     \item Symmetry: If two players $i$ and $j$ have the same impact on all coalitions with $w(S \cup \{i\}) = w(S \cup \{j\})$ for all $S$, they should have the same Shapley value $\phi_i(w) = \phi_j(w)$.
     \item Dummy: A player $i$ that makes no contribution to the group with $w(S \cup \{i\}) = w(S)$, should receive a value of zero, or $\phi_i(w)=0$.
     \item Linearity: The value of a player should be proportional to their contribution to the group.
-If player $i$ contributes twice as much to the groups overall worth than player $j$, then player $i$ should have twice the Shapley value.
+If player $i$ contributes twice as much as player $j$ to the group's overall worth, then player $i$ should have twice the Shapley value.
 \end{itemize}
 
 \subsection{SHAP}
 Shapley values explain how each feature $(x^1, \dots, x^d)$ in a model $f$ contributes to the deviation from the mean prediction $\mathbb{E}[f(x)]$ of the dataset, for a single prediction.
-It a assigns a value $\phi_1, \dots, \phi_d$ to each feature, that quantifies the feature's influence on the prediction $f(x)$.
+It assigns a value $\phi_1, \dots, \phi_d$ to each feature, that quantifies the feature's influence on the prediction $f(x)$.
 SHAP (Shapley Additive Explanations) is a way of computing approximate Shapley values for machine learning models.\\
 
 We define a cooperative game $v_{f,x}$ to represent a prediction given the features $x^S$, as
@@ -299,7 +302,7 @@ Uninformative features will have small values $\phi_i(v_{f,x}) \approx 0$.
 \subsection{SAGE}
 SAGE (Shapley Additive Global Importance) explains how every feature contributes to the performance of the model overall, and it relates to SHAP in a simple way.
 For a given feature, the global feature importance is the average SHAP value (for that feature) across all samples in the dataset.
-This is, however, not how it is calculated in practise.
+This is, however, not how it is calculated in practice.
 A paper by Ian Covert et al.
 \cite{sage_paper} on global feature importance proposes an algorithm that aims directly at a global feature explanation, unlike the SHAP values, which makes
 it faster.

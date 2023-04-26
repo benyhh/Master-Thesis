@@ -1,7 +1,7 @@
 \section{Astronomy Terms}
 \subsection{The Celestial Sphere}
 The celestial sphere is a fundamental concept in astronomy.
-It is an imaginary sphere with an arbitrary radius that is centered on Earth, and it allows us to represent the positions of celestial objects in a convenient and intuitive way.
+It is an imaginary sphere with an arbitrary radius that is centered on Earth, and it allows us to represent the positions of celestial objects conveniently and intuitively.
 Any astronomical observation can be thought of as a 2D projection onto the celestial sphere, which is a tool that astronomers use to specify the position of a target without using its distance.
 Instead, the position is described in terms of two-dimensional coordinates on the sphere.
 While the celestial sphere is a universal concept, the coordinate system used to specify the location of a target can vary from telescope to telescope.
@@ -21,7 +21,7 @@ Throughout this thesis, we will use the term elevation instead of altitude to de
 Another angle term used in this thesis is the horizontal angle.
 We will use the term azimuth when referring to the telescope pointing, while the term horizontal angle will be used for the pointing offset.
 The azimuth angle is the angle projected on the horizontal plane, while the horizontal angle is the angle measured on the celestial sphere and is dependent on elevation.
-It is important to be aware of this distinction when measuring offsets, and applying it corrections to the pointing model.
+It is important to be aware of this distinction when measuring offsets, and applying its corrections to the pointing model.
 
 For example, suppose we are pointing at a source at $Az=El=60\degr$ and observe that the source is actually $1\degr$ to the right.
 In this case, the horizontal offset is $1\degr$, while the azimuth offset is $1\degr/\cos{El}=2\degr$.
@@ -76,9 +76,9 @@ Another possibility is investigating the use of machine learning models to aid s
 This will reduce the workload at the telescope. \\
 
 \section{Pointing model}
-Since radio/(sub)-mm telescope observe over extended time, they need a pointing model to obtain sufficiently accurate pointings.
-The flux of the brightest radio sources are also weaker than the atmospheric emission, which means that they are invisible in real time.
-Therefore, the astronomers need to know that the pointing is accurate before making observations.
+Since radio/(sub)-mm telescope observes over an extended time, they need a pointing model to obtain sufficiently accurate pointings.
+The flux of the brightest radio sources is also weaker than the atmospheric emission, which means that they are invisible in real time.
+Therefore, astronomers need to know that the pointing is accurate before making observations.
 The pointing model at APEX consists of two parts, one analytical model, and additional pointing corrections performed at regular intervals based on recent observed pointing offsets.
 The resulting pointing can be explained by these equations
 \begin{align}
@@ -94,16 +94,16 @@ In the following section, I introduce and explain the adjustments from the analy
 \subsection{Analytical model}
 \textcolor{red}{How good is this model, and how accurate after pointing corrections?}
 There are a lot of different factors that affect the pointing, 
-and some of them can be modelled with an analytical model. Some of the terms are purely geometrical, based on imperfect mounting of telescope components,
+and some of them can be modeled with an analytical model. Some of the terms are purely geometrical, based on the imperfect mounting of telescope components,
 and others are empirical. The following terms are the ones used in the analytical pointing model at APEX,
-and the description of them are taken directly from the tpoint software manual \cite{tpoint_manual}.
-All the terms are dependant on either the azimuth $Az$ or elevation $El$, except for a couple that are just constants. 
-The sum of all the terms is the adjustment adjustment made by the model.
+and their description of them are taken directly from the tpoint software manual \cite{tpoint_manual}.
+All the terms are dependent on either the azimuth $Az$ or elevation $El$, except for a couple that is just constants. 
+The sum of all the terms is the adjustment made by the model.
 All the constants are determined by a linear fit based on observed offsets from a pointing campaign.
 
 
 \subsubsection{Harmonic terms}
-There are multiple harmonic terms in the analytial model, some geometrical and some empirical.
+There are multiple harmonic terms in the analytical model, some geometrical and some empirical.
 The empirical terms have been found to improve the model through trial and error.
 The following terms are the empirical terms for azimuth
 \begin{align}
@@ -118,11 +118,11 @@ and the terms for elevation are
 \end{align}
 
 
-In the tpoint software, harmonic terms are denoted on the format $Hrfci$. The list below explain the different terms.
+In the tpoint software, harmonic terms are denoted on the format $Hrfci$. The list below explains the different terms.
 \begin{itemize}
     \item $H$: Stands for harmonics
     \item $r$: The resulting variable, either $Az$ or $El$, denoting azimuth and elevation respectively.
-    The resulting variable can also be $S$, which means result is horizontal, or azimuth scaled by a factor $1/\cos{El}$.
+    The resulting variable can also be $S$, which means the result is horizontal, or azimuth scaled by a factor $1/\cos{El}$.
     \item $f$: The harmonic function, either $S$ or $C$ denoting \textit{sine} and \textit{cosine}.
     \item $c$: The variable that the funciton $f$ is dependent on, either $Az$ or $El$.
     \item $i$: Integer value in the range $0$-$9$, denoting the frequency of the harmonic.
@@ -132,12 +132,12 @@ For example will $\Delta Az = \text{HACA3}\cos{3Az}$ be denoted as HACA3 in the 
 
 \subsubsection{Az/El non-perpendicularity (NPAE)}
 In an altazimuth mount, if the azimuth axis and elevation axis are not exactly at
-right angles, horizontal shifts proportional to $\sin{El}$ occur. This effect is zero when pointing at the horizon, and increases with elevation propotional to $1/\cos{El}$
+right angles, horizontal shifts proportional to $\sin{El}$ occur. This effect is zero when pointing at the horizon, and increases with elevation proportional to $1/\cos{El}$
 
 \begin{equation}
     \Delta Az \simeq - \text{NPAE } \frac{\sin{El}}{\cos{El}}= - \text{NPAE } \tan{El},
 \end{equation}
-where NPAE is the horizontal displacement when poining at Zenith.
+where NPAE is the horizontal displacement when pointing at Zenith.
 
 \subsubsection{Horizontal displacement of Nasmyth rotator}
 In a Nasmyth altazimuth mount, a horizontal displacement between the elevation axis of the mount and the rotation axis of the Nasmyth instrument-rotator produces
@@ -152,7 +152,7 @@ and an elevation component
 where NRX is the horizontal displacement.
 
 \subsubsection{Left-right collimation error}
-In an altazimuth mount, the collimination error is the non-perpendicularity between the nominated pointing direction and the elevation axis.
+In an altazimuth mount, the collimation error is the non-perpendicularity between the nominated pointing direction and the elevation axis.
 It produces a horizontal image shift given by
 \begin{equation}
     \Delta Az \simeq -\text{CA} \sec{El}
@@ -233,11 +233,11 @@ and I will therefore refer to them as such in the rest of this thesis.
 \section{Database}
 
 
-\subsection{Optical Observations}
+\subsection{Raw Data}
 The analytical model relies on observations obtained through an optical receiver.
 Optical observations are easier to obtain when there is no other pointing model, as you can observe the source in real time.
 To obtain the necessary data, the telescope is pointed at various sources with known locations.
-This process yields both input coordinates and actual observed coordinates, and can be done for the different instruments at the telescope.
+This process yields both input coordinates and observed coordinates, and can be done for the different instruments at the telescope.
 According to astronomers at the telescope, only the NFLASH230 receiver have reliable and consistent optical observations, as the data obtained using the other receivers
 are too noisy due to structural changes at the telescope. Therefore, only optical data from NFLASH230 is used for the analytical underlying poinitng model in this project.
 

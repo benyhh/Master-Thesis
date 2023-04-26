@@ -1,0 +1,113 @@
+\begin{tikzpicture}[x=2.3cm,y=2.0cm]
+  \message{^^JNeural network large}
+  \readlist\Nnod{3,3,2} % array of number of nodes per layer
+  \readlist\Nnodtwo{2,3,3,2}
+  \message{^^J  Layer}
+  \foreachitem \N \in \Nnod{ % loop over layers
+    \def\lay{\Ncnt} % alias of index of current layer
+    \pgfmathsetmacro\prev{int(\Ncnt-1)} % number of previous layer
+    \message{\lay,}
+    \foreach \i [evaluate={\y=\N/4-\i*0.5; \x=\lay*0.8+0.8; \n=\nstyle;
+                           \nprev=int(\prev<\Nnodlen?min(2,\prev):3);}] in {1,...,\N}{ % loop over nodes
+      
+      % NODES
+      %\node[node \n,outer sep=0.6,minimum size=18] (N\lay-\i) at (\x,\y) {};
+      \ifnum \lay<\Nnodlen % draw last node over lines
+        \coordinate (N\lay-\i) at (\x,\y);
+      \else
+        \coordinate (N\lay-\i) at (\x,\y-0.75);
+      \fi
+      % CONNECTIONS
+      \ifnum\lay>1 % connect to previous layer
+        \foreach \j in {1,...,\Nnod[\prev]}{ % loop over nodes in previous layer
+          \draw[connect,white,line width=1.2] (N\prev-\j) -- (N\lay-\i);
+          \draw[connect] (N\prev-\j) -- (N\lay-\i);
+          %\draw[connect] (N\prev-\j.0) -- (N\lay-\i.180); % connect to left
+          \node[node \nprev,minimum size=18] at (N\prev-\j) {}; % draw node over lines
+        }
+        \ifnum \lay=\Nnodlen % draw last node over lines
+          \node[node \n,minimum size=18] at (N\lay-\i) {};
+        \fi
+      \fi % else: nothing to connect first layer
+      
+    }
+  }
+
+  \foreachitem \N \in \Nnodtwo{ % loop over layers
+    \def\lay{\Ncnt} % alias of index of current layer
+    \pgfmathsetmacro\prev{int(\Ncnt-1)} % number of previous layer
+    \message{\lay,}
+    \foreach \i [evaluate={\y=\N/4-\i*0.5-1.5; \x=\lay*0.8; \n=\nstyle;
+                           \nprev=int(\prev<\Nnodtwolen?min(2,\prev):3);}] in {1,...,\N}{ % loop over nodes
+      % NODES
+      %\node[node \n,outer sep=0.6,minimum size=18] (N\lay-\i) at (\x,\y) {};
+      \ifnum \lay<\Nnodtwolen % draw last node over lines
+        \coordinate (M\lay-\i) at (\x,\y);
+      \else
+        \coordinate (M\lay-\i) at (\x,\y+0.75);
+      \fi
+      % CONNECTIONS
+      \ifnum\lay>1 % connect to previous layer
+        \foreach \j in {1,...,\Nnodtwo[\prev]}{ % loop over nodes in previous layer
+          \draw[connect,white,line width=1.2] (M\prev-\j) -- (M\lay-\i);
+          \draw[connect] (M\prev-\j) -- (M\lay-\i);
+          %\draw[connect] (N\prev-\j.0) -- (N\lay-\i.180); % connect to left
+          \node[node \nprev,minimum size=18] at (M\prev-\j) {}; % draw node over lines
+        }
+        \ifnum \lay=\Nnodtwolen % draw last node over lines
+          \node[node \n,minimum size=18] at (M\lay-\i) {};
+        \fi
+      \fi % else: nothing to connect first layer
+      
+    }
+  }
+
+  \foreachitem \N \in \Nnod{ % loop over layers
+    \def\lay{\Ncnt} % alias of index of current layer
+    \pgfmathsetmacro\prev{int(\Ncnt-1)} % number of previous layer
+    \message{\lay,}
+    \foreach \i [evaluate={\y=\N-\i*0.5; \x=\lay; \n=\nstyle;
+                           \nprev=int(\prev<\Nnodlen?min(2,\prev):3);}] in {1,...,\N}{ % loop over nodes
+      
+      % CONNECTIONS
+      \ifnum\lay=2 % connect to previous layer
+        \foreach \j in {1,...,\Nnod[\prev]}{ % loop over nodes in previous layer
+          \draw[connect,white,line width=1.2] (M3-\j) -- (N\lay-\i);
+          \draw[connect] (M3-\j) -- (N\lay-\i);
+          %\draw[connect] (N\prev-\j.0) -- (N\lay-\i.180); % connect to left
+          \message{^^J Nprev \nprev}
+          \node[node 2,minimum size=18] at (M3-\j) {}; % draw node over lines
+          \node[node 2,minimum size=18] at (N\lay-\j) {}; % draw node over lines
+        }
+      \fi % else: nothing to connect first layer
+      
+    }
+  }
+
+  \foreachitem \N \in \Nnodtwo{ % loop over layers
+    \def\lay{\Ncnt} % alias of index of current layer
+    \pgfmathsetmacro\prev{int(\Ncnt-1)} % number of previous layer
+    \message{\lay,}
+    \foreach \i [evaluate={\y=\N/4-\i*0.5; \x=\lay+2; \n=\nstyle;
+                           \nprev=int(\prev<\Nnodtwolen?min(2,\prev):3);}] in {1,...,\N}{ % loop over nodes
+      % NODES
+      %\node[node \n,outer sep=0.6,minimum size=18] (N\lay-\i) at (\x,\y) {};
+      \ifnum\lay=3 % connect to previous layer
+        \foreach \j in {1,...,\Nnodtwo[\prev]}{ % loop over nodes in previous layer
+          \message{^^J \lay Here (N1-\j) {l\lay}}
+          \draw[connect,white,line width=1.2] (N1-\j) -- (M\lay-\i);
+          \draw[connect] (N1-\j) -- (M\lay-\i);
+          %\draw[connect] (N\prev-\j.0) -- (N\lay-\i.180); % connect to left
+          \node[node 1,minimum size=18] at (N1-\j) {}; % draw node over lines
+          \node[node 2,minimum size=18] at (M\lay-\j) {}; % draw node over lines
+          
+        }
+
+      \fi % else: nothing to connect first layer
+      
+    }
+  }
+
+
+
+\end{tikzpicture}
