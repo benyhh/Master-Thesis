@@ -1,9 +1,9 @@
 \section{Astronomy Terms}
 \subsection{The Celestial Sphere}
 The celestial sphere is a fundamental concept in astronomy.
-It is an imaginary sphere with an arbitrary radius that is centered on Earth, and it allows us to represent the positions of celestial objects conveniently and intuitively.
-Any astronomical observation can be thought of as a 2D projection onto the celestial sphere, which is a tool that astronomers use to specify the position of a target without using its distance.
-Instead, the position is described in terms of two-dimensional coordinates on the sphere.
+It is an imaginary sphere with an arbitrary radius centered on Earth, and it allows us to represent the positions of celestial objects conveniently and intuitively.
+Any astronomical observation is a 2D projection onto the celestial sphere, a tool astronomers use to specify the position of a target without using its distance.
+Instead, we describe the position as two-dimensional coordinates on the sphere.
 While the celestial sphere is a universal concept, the coordinate system used to specify the location of a target can vary from telescope to telescope.
 
 
@@ -11,21 +11,22 @@ While the celestial sphere is a universal concept, the coordinate system used to
 
 \subsection{Altitude-Azimuth Coordinate System}
 Figure \ref{fig:altaz_coords} depicts the coordinate system used at APEX, which is an altitude-azimuth system.
-In this system, coordinates are specified using an azimuth and an altitude (or elevation) angle.
+This system specifies the coordinates using an azimuth and an altitude (or elevation) angle.
 Azimuth is the angle around the axis perpendicular to the horizontal plane, with zero degrees corresponding to due north.
 At APEX, the convention is to increase the azimuth angle in a clockwise direction.
-The interval for azimuth angles is $[-270^\circ,270^\circ]$ due to APEX's ability to rotate one and a half times around its own axis in the horizontal plane.
-Elevation, on the other hand, is the angle perpendicular to the horizontal plane, with zero degrees corresponding to the telescope pointing at the horizon, and $90\degr$ to the telescope pointing at zenith, which is directly above it.
-Throughout this thesis, we will use the term elevation instead of altitude to describe this coordinate.\\
+The interval for azimuth angles is $[-270^\circ,270^\circ]$ due to APEX's ability to rotate one and a half times around its axis in the horizontal plane.
+On the other hand, elevation is the angle perpendicular to the horizontal plane, with zero degrees corresponding to the telescope pointing at the horizon and $90\degr$ to the telescope pointing at the zenith directly above it.
+This thesis will use elevation instead of altitude to describe this coordinate.\\
 
 Another angle term used in this thesis is the horizontal angle.
-We will use the term azimuth when referring to the telescope pointing, while the term horizontal angle will be used for the pointing offset.
+We will use the term azimuth when referring to the telescope pointing and the horizontal angle for the pointing offset.
 The azimuth angle is the angle projected on the horizontal plane, while the horizontal angle is the angle measured on the celestial sphere and is dependent on elevation.
-It is important to be aware of this distinction when measuring offsets, and applying its corrections to the pointing model.
+It is essential to know this distinction when measuring offsets and applying its corrections to the pointing model.
 
-For example, suppose we are pointing at a source at $Az=El=60\degr$ and observe that the source is actually $1\degr$ to the right.
-In this case, the horizontal offset is $1\degr$, while the azimuth offset is $1\degr/\cos{El}=2\degr$.
-Therefore, the azimuth angle must be increased by twice the horizontal offset due to the influence of elevation.
+For example, we point at a source at $ Az=El=60\degr $ and observe that the source is $ 1\degr $ to the right.
+The horizontal offset is $1\degr$, while the azimuth offset is $1\degr/\cos{El}=2\degr$.
+Therefore, the azimuth angle must increase by twice the horizontal offset due to the influence of elevation.
+
 
 \begin{figure}[H]
     \centering
@@ -51,61 +52,65 @@ Therefore, the azimuth angle must be increased by twice the horizontal offset du
 \end{figure}
 
 
-\section{Problem description}
-\textcolor{red}{This section have to be fixed completely}
-A telescope makes high precision observations of objects located very far away from earth.
-Because of this distance, small changes such as deformation of mirrors due to temperature might impact the precision drastically.\cc{Claudia Cicone: Here you could explain that astronomical objects are observed as they were "projected" in 2D angular coordinates on the sky, and you could talk about astronomical coordinates (see Lecture 5 notes of my course AST2210 for some explanation and references)
-}
-Over time, these deformations have been observed and analyzed, and in order to counter this, a pointing model is made.
-\cc{Claudia Cicone: The need for a pointing model is relevant mainly to sub-mm telescopes that cannot take real-time images of what they are observing, and so the precision of the pointing direction must be known accurately before starting the observations.}
-The pointing model uses measurements from various instruments, and is fitted to the observed offsets.
-The model is used for about a month, or until it start performing poorly.
-The variation in measurements are still too big using only this model, so pointing scans have to be made regularly to correct even more.
-A pointing scan is an observation of an object with known location.
-When doing this, the offset on this observation is then added on top of the pointing model.
-These corrections to azimuth and elevations are used for a couple of hours, until a new pointing scan is made.
-\cc{Claudia Cicone: Need to define azimuth and elevation first, see other comment above
-}
-Using this approach, pointing error is reduced to about $4$ arc seconds.\\
+% \section{Problem description}
+% \textcolor{red}{This section have to be fixed completely}
+% A telescope makes high precision observations of objects located very far away from Earth.
+% Because of this distance, small changes such as the deformation of mirrors due to temperature might impact the precision drastically.\cc{Claudia Cicone: Here you could explain that astronomical objects are observed as they were "projected" in 2D angular coordinates on the sky, and you could talk about astronomical coordinates (see Lecture 5 notes of my course AST2210 for some explanation and references)
+% }
+% Over time, these deformations have been observed and analyzed, and in order to counter this, a pointing model is made.
+% \cc{Claudia Cicone: The need for a pointing model is relevant mainly to sub-mm telescopes that cannot take real-time images of what they are observing, and so the precision of the pointing direction must be known accurately before starting the observations.}
+% The pointing model uses measurements from various instruments and is fitted to the observed offsets.
+% The model is used for about a month, or until it start performing poorly.
+% The variation in measurements are still too big using only this model, so pointing scans have to be made regularly to correct even more.
+% A pointing scan is an observation of an object with known location.
+% When doing this, the offset on this observation is then added on top of the pointing model.
+% These corrections to azimuth and elevations are used for a couple of hours, until a new pointing scan is made.
+% \cc{Claudia Cicone: Need to define azimuth and elevation first, see other comment above
+% }
+% Using this approach, pointing error is reduced to about $4$ arc seconds.\\
 
-The aim of this thesis is to investigate the possibility of using machine learning to increase the performance of the telescope, by improving pointing accuracy.
-This can be done in multiple ways.
+% The aim of this thesis is to investigate the possibility of using machine learning to increase the performance of the telescope, by improving pointing accuracy.
+% This can be done in multiple ways.
 
-One possibility is to apply a pointing model on top of the current pointing model using machine learning, such that the average offset is reduced even more.
-Another possibility is investigating the use of machine learning models to aid such that a pointing scan doesn't have to be made as often.
-This will reduce the workload at the telescope. \\
+% One possibility is to apply a pointing model on top of the current pointing model using machine learning, such that the average offset is reduced even more.
+% Another possibility is investigating the use of machine learning models to aid such that a pointing scan doesn't have to be made as often.
+% This will reduce the workload at the telescope. \\
 
 \section{Pointing model}
-Since radio/(sub)-mm telescope observes over an extended time, they need a pointing model to obtain sufficiently accurate pointings.
-The flux of the brightest radio sources is also weaker than the atmospheric emission, which means that they are invisible in real time.
-Therefore, astronomers need to know that the pointing is accurate before making observations.
-The pointing model at APEX consists of two parts, one analytical model, and additional pointing corrections performed at regular intervals based on recent observed pointing offsets.
-The resulting pointing can be explained by these equations
+Since radio/(sub)-mm telescopes observe over an extended time, they need a pointing model to obtain sufficiently accurate pointings.
+The flux of the brightest radio sources is also weaker than the atmospheric emission, which means they are invisible in real-time.
+Therefore, astronomers must know that the pointing is accurate before making observations.
+The pointing model at APEX consists of two parts, one analytical model and additional pointing corrections performed at regular intervals based on recently observed pointing offsets.
+These equations can explain the resulting pointing
 \begin{align}
     Az &= Az_\text{input} + \Delta Az_\text{analytical model} + \Delta Az_\text{correction} \\ 
     El &= El_\text{input} + \Delta El_\text{analytical model} + \Delta El_\text{correction}
 \end{align}
 Where the first term is the input coordinates, the second is the adjustment made according to the analytical model,
-and the last term is the adjustments made according to recent observed pointing offsets.
+Furthermore, the last term is the adjustments made according to recent observed pointing offsets.
 
-In the following section, I introduce and explain the adjustments from the analytical model and pointing offsets. 
+In the following section, we introduce and explain the adjustments from the analytical model and pointing offsets. 
 
 
-\subsection{Analytical model}
-\textcolor{red}{How good is this model, and how accurate after pointing corrections?}
-There are a lot of different factors that affect the pointing, 
-and some of them can be modeled with an analytical model. Some of the terms are purely geometrical, based on the imperfect mounting of telescope components,
-and others are empirical. The following terms are the ones used in the analytical pointing model at APEX,
-and their description of them are taken directly from the tpoint software manual \cite{tpoint_manual}.
-All the terms are dependent on either the azimuth $Az$ or elevation $El$, except for a couple that is just constants. 
-The sum of all the terms is the adjustment made by the model.
-All the constants are determined by a linear fit based on observed offsets from a pointing campaign.
+\subsection{Analytical Model}
 
+Accurately observing pointing offsets without a pointing model can be challenging as the error is typically more significant than the beam size, causing the source to fall outside the beam. At APEX,  they use an optical receiver mounted in the primary mirror to make the initial observations, which allows them to observe the source in real-time.
+During this process, the telescope is pointed at various sources with known locations, yielding both input and observed coordinates.
+
+The analytical model at APEX considers various factors that affect pointing, including purely geometrical terms based on the imperfect mounting of telescope components and empirical terms.
+The analytical pointing model uses the following terms, dependent on the azimuth $Az$ or elevation $El$, except for a few constant terms.
+They determine the coefficients for all the terms using a linear fit based on the observed offsets from a pointing campaign, and the sum of all terms is the adjustment made by the model.
+
+They base most of the terms described in this section on data collected from the optical receiver mounted in the primary mirror.
+Then, they refine the terms using observations from different instruments to develop specialized pointing models for each, while most terms remain constant from the optical fit.
+The analytical model is crucial in accurately determining the telescope's pointing offsets, essential in obtaining high-quality observational data.
+
+The following descriptions of the terms are taken directly from the tpoint software manual \cite{tpoint_manual}.
 
 \subsubsection{Harmonic terms}
-There are multiple harmonic terms in the analytical model, some geometrical and some empirical.
-The empirical terms have been found to improve the model through trial and error.
-The following terms are the empirical terms for azimuth
+The analytical model has multiple harmonic terms, some geometrical and some empirical.
+The tpoint software used to develop the analytical model suggests terms that improve the model's performance on the chosen dataset.
+The following terms are the empirical terms for azimuth.
 \begin{align}
     \Delta Az =&  c_1 \cdot \sin{Az} + c_2 \cdot \frac{\cos{2Az}}{\cos{El}} + c_3 \cdot \cos{3Az} + c_4 \cdot \sin{2Az} \\
     &+ c_5 \cdot \cos{2Az} + c_6 \cdot \frac{\cos{Az}}{\cos{El}} + c_7 \cdot \frac{\cos{5Az}}{\cos{El}},
@@ -118,7 +123,8 @@ and the terms for elevation are
 \end{align}
 
 
-In the tpoint software, harmonic terms are denoted on the format $Hrfci$. The list below explains the different terms.
+The tpoint software denotes the harmonic terms in the format $Hrfci$. The list below explains the different terms.
+
 \begin{itemize}
     \item $H$: Stands for harmonics
     \item $r$: The resulting variable, either $Az$ or $El$, denoting azimuth and elevation respectively.
@@ -128,11 +134,11 @@ In the tpoint software, harmonic terms are denoted on the format $Hrfci$. The li
     \item $i$: Integer value in the range $0$-$9$, denoting the frequency of the harmonic.
 \end{itemize}
 
-For example will $\Delta Az = \text{HACA3}\cos{3Az}$ be denoted as HACA3 in the software.
+For example, is $\Delta Az = \text{HACA3}\cos{3Az}$ denoted as HACA3 in the tpoint software.
 
 \subsubsection{Az/El non-perpendicularity (NPAE)}
 In an altazimuth mount, if the azimuth axis and elevation axis are not exactly at
-right angles, horizontal shifts proportional to $\sin{El}$ occur. This effect is zero when pointing at the horizon, and increases with elevation proportional to $1/\cos{El}$
+right angles, horizontal shifts proportional to $\sin{El}$ occur. This effect is zero when pointing at the horizon and increases with elevation proportional to $1/\cos{El}$
 
 \begin{equation}
     \Delta Az \simeq - \text{NPAE } \frac{\sin{El}}{\cos{El}}= - \text{NPAE } \tan{El},
@@ -154,13 +160,13 @@ where NRX is the horizontal displacement.
 \subsubsection{Left-right collimation error}
 In an altazimuth mount, the collimation error is the non-perpendicularity between the nominated pointing direction and the elevation axis.
 It produces a horizontal image shift given by
-\begin{equation}
-    \Delta Az \simeq -\text{CA} \sec{El}
+\begin{equation}\label{eq:pmodel_ca}
+    \Delta Az \simeq -\text{CA} / \cos{El}
 \end{equation}
 
 
 \subsubsection{Azimuth and elevation index error}
-Index errors are the errors when you point at the origo.
+Index errors are the errors when pointing at origo.
 
 The azimuth index error is 
 \begin{equation}
@@ -168,14 +174,14 @@ The azimuth index error is
 \end{equation}
 
 and elevation index error is
-\begin{equation}
+\begin{equation}\label{eq:pmodel_ie}
     \Delta El = \text{IE}
 \end{equation}
 
 \subsubsection{Azimuth axis misalignment} 
 
-In an altazimuth mount,misalignment of the azimuth axis north-south or east-west cause errors.
-The errors cause by misalignment in north-south are given by
+In an altazimuth mount, misalignment of the azimuth axis north-south or east-west causes errors.
+The errors caused by misalignment in the north-south are given by
 
 \begin{equation}
     \Delta Az \simeq - \text{AN} \sin{Az} \cdot \tan{El},
@@ -186,7 +192,7 @@ and
 \begin{equation}
     \Delta El \simeq - \text{AN} \cos{Az},
 \end{equation}
-where AN is the misalignment alignent in north-south direction.
+where AN is the misalignment alignment in the north-south direction.
 The errors given by misalignment in east-west are given by
 
 \begin{equation}
@@ -198,25 +204,47 @@ and
 \begin{equation}
     \Delta El \simeq \text{AW} \sin{Az},
 \end{equation}
-where AW is the misalignment alignent in east-west direction.
+where AW is the misalignment alignment in the east-west direction.
 
-
+\begin{table}[h]
+    \centering
+    \caption{The terms in the analytical model. }
+    \begin{tabular}{cc}
+    \textbf{Azimuth Terms} & \textbf{Elevation Terms} \\
+    \hline
+    \multicolumn{2}{c}{Optical observations} \\ 
+    \cline{1-2}
+    \hline
+    $\sin{Az}$ & $\sin{El}$ \\
+    $\cos{2Az}/\cos{El}$ & $\cos{El}$ \\
+    $\cos{3Az}$ & $\cos{2Az}$ \\
+    $\sin{2Az}$ & $\sin{2Az}$ \\
+    $\cos{2Az}$     & $\cos{3Az}$ \\
+    $\cos{Az}/\cos{El}$ & $\sin{3Az}$ \\
+    $\cos{5Az}/\cos{El}$ & $\sin{4Az}$ \\
+    & $\sin{5Az}$ \\
+    \multicolumn{2}{c}{Radio receivers} \\
+    \cline{1-2}
+    \hline
+    $\cos{Az}$ & $\cos{Az}$ \\
+    \end{tabular}
+\end{table}
 
 \subsection{Pointing corrections} 
-The analytical pointing model can only reduce the pointing offsets down to about an average of \textcolor{red}{$x$ arcseconds}.
-To reduce the pointing offsets even further, a pointing scan is made by pointing the telescope at a source with known coordinates. 
-This operations is called a pointing scan, and by observing the resulting pointing offsets from the known source,
-the pointing model can be updated according to the following eqautions
-The terms $\Delta Az_\text{correction}$ and $\Delta Az_\text{correction}$ are updated
+The analytical pointing model can only reduce the pointing offsets to about an average of \textcolor{red}{$x$ arcseconds}.
+In order to reduce the pointing offsets even further, the astronomers at APEX update the pointing model by pointing at a source with known coordinates.
+This operation is called a pointing scan, and by observing the resulting pointing offsets from the known source,
+they update the terms CA and IE in the pointing model for azimuth and elevation correction, respectively
+They update the terms as follows
 \begin{align}
-    \Delta Az_\text{correction} &= \Delta Az_\text{correction} + \delta_{\text{Az}} \label{eq:ca}\\ 
-    \Delta El_\text{correction} &= \Delta El_\text{correction} - \delta_{\text{El}},\label{eq:ie}
+    \text{CA} &= \text{CA} + \delta_{\text{Az}} \label{eq:ca}\\ 
+    \text{IE} &= \text{IE} - \delta_{\text{El}},\label{eq:ie},
 \end{align}
-where $\delta_{\text{Az}}$ and $\delta_{\text{El}}$ are the recently observed pointing offsets in azimuth and elevation respectively.
-These pointing corrections are carried out every couple of hours to make sure the pointing is sufficient during science observations.
+where $\delta_{\text{Az}}$ and $\delta_{\text{El}}$ are the recently observed pointing offsets in azimuth and elevation, respectively.
+The astronomers perform these pointing corrections every couple of hours to ensure the pointing is sufficient during science observations.
 
-In the telescope systems, the correction variables $\Delta Az_\text{correction}$ and $\Delta El_\text{correction}$ are labeled as $ca$ and $ie$ respectively,
-and I will therefore refer to them as such in the rest of this thesis.
+Note that we divide the term CA \eqref{eq:pmodel_ca} by cosine elevation, which converts the observed horizontal offset to azimuth.
+
 
 \section{Research questions and related works}
 \begin{itemize}
@@ -234,23 +262,21 @@ and I will therefore refer to them as such in the rest of this thesis.
 
 
 \subsection{Raw Data}
-The analytical model relies on observations obtained through an optical receiver.
-Optical observations are easier to obtain when there is no other pointing model, as you can observe the source in real time.
-To obtain the necessary data, the telescope is pointed at various sources with known locations.
-This process yields both input coordinates and observed coordinates, and can be done for the different instruments at the telescope.
-According to astronomers at the telescope, only the NFLASH230 receiver have reliable and consistent optical observations, as the data obtained using the other receivers
-are too noisy due to structural changes at the telescope. Therefore, only optical data from NFLASH230 is used for the analytical underlying poinitng model in this project.
+The raw data from the pointing scans using the NFLASH230 receiver provides input and actual coordinates.
+They obtain the actual coordinates of the sources by combining the input coordinates with the adjustments made by the pointing model,
+automatic adjustments based on sensory data, and the observed offset.
+Then, they use this raw data to refine the model fit on data obtained from the optical receiver.
+Table \ref{tab:raw_datanflash230} is included to provide an example of this data format. 
 
-Table \ref{tab:optical} provides an example of the format of this data.
-    
 
 \begin{table}[h]
     \centering
+    \caption{Extract of raw data obtained with NFLASH230. The data file also includes the source, which is irrelevant to this project.}
     \begin{tabular}{ccccc}
          & \multicolumn{2}{c}{Input} & \multicolumn{2}{c}{Observed} \\ 
         \cline{2-3} \cline{4-5}
         Date & Azimuth & Elevation & Azimuth & Elevation \\ 
-        \hline \\
+        \hline
         2022-01-03 14:24:04 & $189.812879$ & $41.0762$ & $190.254779$ & $40.883651$ \\
         2022-01-03 18:59:40 & $50.842145$ & $73.371647$ & $51.269044$ & $73.203243$ \\
         2022-01-03 19:01:49 & $49.555916$ & $73.752182$ & $49.983112$ & $73.583545$ \\
@@ -260,54 +286,63 @@ Table \ref{tab:optical} provides an example of the format of this data.
         2022-01-22 14:15:35 & $148.569964$ & $89.044036$ & $147.783271$ & $88.852306$ \\
         2022-01-22 14:18:15 & $215.664924$ & $49.563821$ & $216.104389$ & $49.386438$ \\
     \end{tabular}
-    \caption{Extract from data obtained by the optical receiver of NFLASH230. The source is also included in the datafile, but it is not relevant here. \textcolor{red}{I don't know what it means that optical data is for the nflash receiver}}
-    \label{tab:optical}
+    \label{tab:raw_datanflash230}
     \end{table}
 
 
 
-
 \subsection{The Monitor Database}
-The monitor database plays a critical role in this project, providing valuable sensory data from within and outside of the telescope.
-In this section, we will explore the data contained within the monitor database and identify the variables that are most relevant for our purposes.
+The monitor database is critical in this project, providing valuable sensory data from within and outside the telescope.
+In this section, we will explore the data contained within the monitor database and identify the most relevant variables to our purposes.
 
 \paragraph{Azimuth and Elevation}
-The database have tables for the input azimuth and elevation, which is the raw coordinates before the main pointing model have adjusted the pointing.
-These are labeled COMMANDAZ and COMMANDEL.
-In addition to these, it includes the actual azimuth and elevation, which is the result after applying the pointing model, and a correction obtained from a pointing scan.
-These are labeled ACTUALAZ and ACTUALEL.
+The database includes tables for the input azimuth and elevation, labeled COMMANDAZ and COMMANDEL.
+These tables contain the raw coordinates before the pointing model has adjusted the pointing.
 
-Additionally, the database contains tables for the velocity of the azimuth and elevation, labeled ACTUALVELOCITYAZ and ACTUALVELOCITYEL.
+The database also includes tables for the actual azimuth and elevation, labeled ACTUALAZ and ACTUALEL.
+These tables contain the coordinates obtained after applying the pointing model and automatic adjustments based on sensory data.
+
+Finally, the database contains tables for the azimuth and elevation velocity, labeled ACTUALVELOCITYAZ and ACTUALVELOCITYEL.
+These tables provide information on the velocity of the telescope during observations.
+
+The frequency of these measurements is $6$ data points per minute.
+Figure \ref{subfig:scan_az} show these measurements for the duration of a pointing scan, along with additional data points before and after the scan.
+
 
 \paragraph{Temperature Measurements}
-Temperature is measured by multiple instruments at various locations on the telescope.
-The database includes tables labeled as TEMPERATURE, TEMP1 through TEMP6, TEMP26 through TEMP28, and TILT1T.
-Figure \ref{fig:corr_temp} shows that many of these measurements are highly correlated.
-Specifically, TEMP1 through TEMP6 are all correlated with each other at a coefficient of $\geq 0.98$.
+Multiple instruments located at different locations on the telescope measure the temperature and store the measurements in the database.
+The tables that contain these measurements are labeled TEMPERATURE, TEMP1 through TEMP6, TEMP26 through TEMP28, and TILT1T. 
+Figure \ref{fig:corr_temp} indicates that many of these measurements are highly correlated.
+For example, TEMP1 through TEMP6 show a strong correlation $\geq 0.98$.
 Similarly, TEMP26 through TEMP28 and TEMPERATURE are also highly correlated.
+The frequencies of some of these measurements are different, and they may all be found in Table \ref{tab:data_frequency}.
+Figure \ref{subfig:scan_temp1} and \ref{subfig:scan_tilt1t} show the measurements of TEMP1 and TILT1T respectively
+for the duration of a pointing scan and additional data points before and after the scan.
+
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.98\textwidth]{Correlation/Correlation_temp.pdf}
     \caption{Linear correlation between temperature measures.
-    The values are the median of all data points within a pointing scan.}
+    The values are sampled by the median value at each pointing scan.}
     \label{fig:corr_temp}
 \end{figure}
 
 \paragraph{Hexapod}
-The secondary mirror, also known as the subreflector, is supported by a hexapod. 
-The hexapod is capable of three-dimensional movement and can also rotate around the azimuth and elevation axes.
+The secondary mirror, also known as the subreflector, is supported by a hexapod.
+The hexapod moves in three dimensions and rotates around azimuth and elevation axes.
 There are five measures associated with the hexapod: POSITIONX, POSITIONY, POSITIONZ, ROTATIONX, and ROTATIONY.
-These measures are essential for positioning the secondary mirror and ensuring an accurate pointing.
+These measures are essential for positioning the secondary mirror and ensuring accurate pointing. The frequency of these measurements is $6$ data points per minute.
 
 \paragraph{Tiltmeter}
-The telescope is equipped with two tiltmeters that measure the tilt or inclination of the telescope with respect to the vertical direction.
-One of the tiltmeters is aligned with the telescope pointing direction, while the other is orthogonal to it.
-These tiltmeters are labeled TILT1X and TILT1Y, respectively.
+The telescope has two tiltmeters that measure its tilt or inclination to the vertical direction.
+One tiltmeter aligns with the telescope's pointing, while the other is orthogonal.
+They label these tiltmeters as TILT1X and TILT1Y, respectively, and they take measurements at a frequency of $12$ data points per minute.
 
 \paragraph{Weather data}
 The weather station at the telescope provides measurements of various weather parameters, including dew point, humidity, pressure, wind speed, and wind direction.
-The instruments take measurements at an interval of $11$ seconds.
+The instruments take measurements at a frequency of $5$ data points per minute.
+The figures \ref{sub@subfig:scan_winddir} and \ref{subfig:scan_windspeed} show wind direction and speed measurements for the time period around a pointing scan.
 
 
 \textcolor{red}{Put this in feature engineering section}
@@ -322,18 +357,20 @@ v_\textit{wind} = \sigma_\textit{wind}^2
 
 \paragraph{Disp abs?}
 
+Frequency of $12$ data points per minute.
+
 \paragraph{Automatic adjustments}
-To ensure accurate and stable pointing of the telescope, there are automatic adjustments made based on readings from various sensors.
-These adjustments account for systematic errors that have been previously modeled and are based on measurements from tiltmeters,
-temperature sensors installed at different locations, and other relevant sources of data \textcolor{red}{Explain spem and disp here?}.
+Automatic adjustments based on readings from various sensors ensure accurate and stable pointing of the telescope.
+These adjustments account for systematic errors previously modeled and are based on measurements from tiltmeters, temperature sensors installed at different locations, and other relevant data sources.
 The automatic adjustments are made in the azimuth and elevation directions and are denoted by variables starting with DAZ or DEL, respectively.
+These measurements are all recorded at a frequency of $12$ data points per minute.
 A comprehensive list of these variables can be found in Table \ref{tab:data_frequency}.
 
 \paragraph{Data frequency}
 The monitor database provides data with varying frequencies, as shown in Table \ref{tab:data_frequency}, which lists the approximate number of data points per minute.
 
 \begin{table}[H]
-    \caption{The frequency in datapoints per minute of different variables in the monitor database.}
+    \caption{The frequency in data points per minute of different variables in the monitor database.}
     \centering
     \begin{tabular}{lr}
         \toprule
@@ -420,7 +457,7 @@ The monitor database provides data with varying frequencies, as shown in Table \
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Feature during scans/scan_WINDDIRECTION_335.pdf}
-        \caption{Wind direction data from the weather station, measured in degrees from North, where clockwise is positive angle direction.}
+        \caption{Wind direction data from the weather station, measured in degrees from North, where clockwise is the positive angle direction.}
         \label{subfig:scan_winddir}
     \end{subfigure}
        \begin{subfigure}[t]{0.49\textwidth}
@@ -429,23 +466,23 @@ The monitor database provides data with varying frequencies, as shown in Table \
         \caption{Wind speed data from the weather station.}
         \label{subfig:scan_windspeed}
     \end{subfigure}
-     \caption{Timeseries plots of different sensory data before, during and a little after a pointing scan. The red line denotes the timestamp for a scan in the pointing scan database.
-     The red dots are from when the telescope is observing, while the blue dots are when the telescope is idle or preparing to observe.}
+     \caption{Scatter plots that show different sensory data from before, during, and after a pointing scan. The red line denotes the timestamp for a scan in the pointing scan database.
+     The red dots indicate when the telescope is observing, while the blue dots indicate when the telescope is idle or preparing to observe.}
      \label{fig:features_during_scans}
 \end{figure}
 
 
 \subsection{Pointing scan data}
-A pointing scan is an observation of a source with known location, which is used to calibrate the pointing model.
-There are two types of pointing scans: Line pointings and continuum scans.
-Figure \ref{fig:features_during_scans} shows the information in the monitor database form a pointing scan.
-\paragraph{Line pointing}
-A line pointing involves pointing at an extended source. 
+A pointing scan is an observation of a source with a known location, which is used to calibrate the pointing model.
+There are two types of pointing scans: Line-pointings and continuum scans.
+Figure \ref{fig:features_during_scans} shows the information in the monitor database from a pointing scan.
+\paragraph{Line-pointing}
+A line-pointing involves pointing at an extended source. 
 The telescope then makes ten scans, recording the flux intensity from the source, five vertically and five horizontally, around the center of the pointing, as shown in figure \ref{fig:line_pointings}.
-The upper panel shows a high quality pointing scan and the lower panel shows a noise low quality pointing scan.
+The upper panel shows a high-quality pointing scan and the lower panel shows a noisy low-quality pointing scan.
 The cross-plot on the right side shows the line spectrum for each of the observations (center plus eight offset observations).
 
-The flux from the source is integrated, and the resulting values are plotted as blue dots on the left-hand side of the plots.
+The flux from the source is integrated, and the resulting values are plotted as blue dots on the left-hand side of the panel.
 A Gaussian is then fitted to these points, and the resulting amplitude, full width at half maximum (FWHM), and offsets are given in the table.
 
 \begin{figure}[H]
@@ -453,24 +490,24 @@ A Gaussian is then fitted to these points, and the resulting amplitude, full wid
      \begin{subfigure}[b]{0.75\textwidth}
          \centering
          \includegraphics[width=\textwidth]{Pointing Scans/good_line.png}
-         \caption{Line pointing with little noise and a good Gaussian fit.}
+         \caption{Line-pointing with little noise and a good Gaussian fit.}
          \label{subfig:good_line}
      \end{subfigure}
     \\
      \begin{subfigure}[b]{0.75\textwidth}
          \centering
          \includegraphics[width=\textwidth]{Pointing Scans/bad_line.png}
-         \caption{Noisy line pointing with bad Gaussian fit.}
+         \caption{Noisy line-pointing with bad Gaussian fit.}
          \label{subfig:bad_line}
      \end{subfigure}
-    \caption{The two figures show line pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing.
+    \caption{The two figures show line-pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing.
     The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both fits.
     The figures also show the correction that was used during the pointing ($ca$ and $ie$), along with other metrics.}
     \label{fig:line_pointings}
 \end{figure}
 
 \paragraph{Continuum Scan}
-Not all sources have emission lines, and for these sources a contunuum scan is carried out instead. In this case, a source is continuously scanned in azimuth and elevation while recording the flux intensity.
+Not all sources have emission lines, and for these sources, a continuum scan is carried out instead. In this case, a source is continuously scanned in azimuth and elevation while recording the flux intensity.
 A Gaussian curve is fitted to the recorded flux intensity to determine the offsets, amplitude, and full width at half maximum (FWHM).
 Figure \ref{fig:continueous_pointings} show examples of continuum scans and the corresponding Gaussian fits.
 
@@ -479,24 +516,24 @@ Figure \ref{fig:continueous_pointings} show examples of continuum scans and the 
      \begin{subfigure}[b]{0.75\textwidth}
          \centering
          \includegraphics[width=\textwidth]{Pointing Scans/good_continuous.png}
-         \caption{Line pointing with little noise and a good Gaussian fit.}
+         \caption{Line-pointing with little noise and a good Gaussian fit.}
          \label{subfig:good_continuous}
      \end{subfigure}
     \\
      \begin{subfigure}[b]{0.75\textwidth}
          \centering
          \includegraphics[width=\textwidth]{Pointing Scans/bad_continuous.png}
-         \caption{Noisy line pointing with bad Gaussian fit.}
+         \caption{Noisy line-pointing with bad Gaussian fit.}
          \label{subfig:bad_continuous}
      \end{subfigure}
-    \caption{The two panels show continuum pointing scans. a) is good and clean, and b) is noise and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.}
+    \caption{The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.}
     \label{fig:continueous_pointings}
 \end{figure}
 
 
 
 \paragraph{Pointing scan timestamp} 
-In the main database, each pointing scan has a timestamp on the format YYYY-MM-DD HH:MM:SS, with second resolution. This timestamp does not reflect the the actual start of a pointing scan. Also, there is not information in the database itself that indicates whether the telescope is observing, but this information can be extracted from some dump files from the tiltmeter, which includes a flag indicating whether the telescope is idle, preparing to observe, or observing. Combining this flag with the timestamps, we can obtain the accurate start and end time of a pointing scan. However, these tiltmeter dump files are only available for some time periods.
+In the main database, each pointing scan has a timestamp in the format YYYY-MM-DD HH:MM:SS, with a one-second resolution. This timestamp does not reflect the actual start of a pointing scan. Also, there is not information in the database itself that indicates whether the telescope is observing, but this information can be extracted from some dump files from the tiltmeter, which includes a flag indicating whether the telescope is idle, preparing to observe, or observing. Combining this flag with the timestamps, we can obtain the accurate start and end time of a pointing scan. However, these tiltmeter dump files are only available for some time periods.
 
 \begin{itemize}
     \item Plots with scan times distribution
@@ -506,8 +543,8 @@ In the main database, each pointing scan has a timestamp on the format YYYY-MM-D
 \end{itemize}
 
 \paragraph{Instruments}
-The telescope is equipped with various observing instruments that operates at a variety of frequencies.
-Table \ref{tab:instrument_usage} shows the frequency band each of the instruments cover,
+The telescope is equipped with various observing instruments that operate at a variety of frequencies.
+Table \ref{tab:instrument_usage} shows the frequency band each of the instruments covers,
 along with the number of times they were used for a pointing scan throughout the year of $2022$.\\
 
 The broad range of frequencies at which astronomical phenomena emit electromagnetic radiation requires observation across a wide range of frequencies to study these phenomena comprehensively.

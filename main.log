@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  26 APR 2023 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  27 APR 2023 16:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1030,13 +1030,13 @@ File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-])
+] [2])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- [2]
+ [3]
 Chapter 1.
-(./Chapters/introduction.tex) [3
+(./Chapters/introduction.tex) [4
 
 ]
 Chapter 2.
@@ -1045,69 +1045,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 13--20
 
  []
 
-<Astronomy/Azimuth-Altitude_schematic.png, id=30, 1927.2pt x 1856.9375pt>
-[4
+<Astronomy/Azimuth-Altitude_schematic.png, id=33, 1927.2pt x 1856.9375pt>
+[5
 
 ]
-<Astronomy/radio_telescope.png, id=38, 474.27188pt x 440.39531pt>
- [5]
-Underfull \hbox (badness 10000) in paragraph at lines 55--70
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 74--77
-
- []
-
-[7]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 123.
+<Astronomy/radio_telescope.png, id=42, 474.27188pt x 440.39531pt>
+ [6] [7]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 129.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [8] [9] [10]
-<Correlation/Correlation_temp.pdf, id=63, 1156.32pt x 1156.32pt>
- [11] [12]
-<Feature during scans/scan_ACTUALAZ_335.pdf, id=72, 722.7pt x 433.62pt>
-<Feature during scans/scan_ACTUALEL_335.pdf, id=73, 722.7pt x 433.62pt>
-<Feature during scans/scan_TEMP1_335.pdf, id=74, 722.7pt x 433.62pt>
+) [8] [9] [10] [11]
+<Correlation/Correlation_temp.pdf, id=67, 1156.32pt x 1156.32pt>
+ [12] [13]
+<Feature during scans/scan_ACTUALAZ_335.pdf, id=75, 722.7pt x 433.62pt>
+<Feature during scans/scan_ACTUALEL_335.pdf, id=76, 722.7pt x 433.62pt>
+<Feature during scans/scan_TEMP1_335.pdf, id=77, 722.7pt x 433.62pt>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 410.
+(Font)              <10> on input line 447.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 410.
+(Font)              <7> on input line 447.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 410.
-<Feature during scans/scan_TILT1T_335.pdf, id=75, 722.7pt x 433.62pt>
-<Feature during scans/scan_WINDDIRECTION_335.pdf, id=76, 722.7pt x 433.62pt>
-<Feature during scans/scan_WINDSPEED_335.pdf, id=77, 722.7pt x 433.62pt>
- [13] [14]
-<Pointing Scans/good_line.png, id=84, 645.612pt x 448.67625pt>
-<Pointing Scans/bad_line.png, id=86, 651.6345pt x 448.67625pt>
- [15]
-<Pointing Scans/good_continuous.png, id=90, 686.565pt x 453.49425pt>
-<Pointing Scans/bad_continuous.png, id=91, 686.565pt x 453.49425pt>
+(Font)              <5> on input line 447.
+<Feature during scans/scan_TILT1T_335.pdf, id=78, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDDIRECTION_335.pdf, id=79, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDSPEED_335.pdf, id=80, 722.7pt x 433.62pt>
+ [14] [15]
+<Pointing Scans/good_line.png, id=87, 645.612pt x 448.67625pt>
+<Pointing Scans/bad_line.png, id=89, 651.6345pt x 448.67625pt>
  [16]
-Underfull \hbox (badness 10000) in paragraph at lines 509--512
+<Pointing Scans/good_continuous.png, id=93, 686.565pt x 453.49425pt>
+<Pointing Scans/bad_continuous.png, id=94, 686.565pt x 453.49425pt>
+ [17]
+Underfull \hbox (badness 10000) in paragraph at lines 546--549
 
  []
 
-) [17] [18]
+) [18] [19]
 Chapter 3.
 (./Chapters/ml_background.tex
 Underfull \hbox (badness 10000) in paragraph at lines 11--17
 
  []
 
-[19
+[20
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 46--48
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
 
  []
 
-[20] [21]
-<Other figures/decisiontree_example.PNG, id=113, 1033.61156pt x 804.00375pt>
-<Other figures/evolution_of_xgb.png, id=114, 542.025pt x 288.3272pt>
- [22] (./Other figures/nn_with_eqs.tex 
+[21] [22]
+<Other figures/decisiontree_example.PNG, id=116, 1033.61156pt x 804.00375pt>
+<Other figures/evolution_of_xgb.png, id=117, 542.025pt x 288.3272pt>
+ [23] (./Other figures/nn_with_eqs.tex 
 Neural network activation
 contour: Using real outline for `$w_{1,1}$' on input line 36.
 contour: Using real outline for `$w_{1,2}$' on input line 36.
@@ -1116,67 +1106,67 @@ contour: Using real outline for `$w_{1,4}$' on input line 36.
 contour: Using real outline for `$w_{1,n}$' on input line 36.
 contour: Using real outline for `$b_1$' on input line 41.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 191--195
+Underfull \hbox (badness 10000) in paragraph at lines 180--184
 
  []
 
-[23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 256--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--266
-
- []
-
-[25]
-Underfull \hbox (badness 10000) in paragraph at lines 284--287
+[24] [25]
+Underfull \hbox (badness 10000) in paragraph at lines 245--251
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 293--295
+Underfull \hbox (badness 10000) in paragraph at lines 252--255
 
  []
 
-) [26]
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 273--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+) [27]
 Chapter 4.
 (./Chapters/method.tex
 Underfull \hbox (badness 10000) in paragraph at lines 23--28
 
  []
 
-[27
+[28
 
 ]
-<Clf/precision_recall_curve_both.pdf, id=136, 578.16pt x 397.485pt>
-<Clf/mAP_curve_both.pdf, id=137, 578.16pt x 397.485pt>
- [28]
+<Clf/precision_recall_curve_both.pdf, id=139, 578.16pt x 397.485pt>
+<Clf/mAP_curve_both.pdf, id=140, 578.16pt x 397.485pt>
+ [29]
 Underfull \hbox (badness 10000) in paragraph at lines 117--123
 
  []
 
-<Tiltmeter plots/scan_duration_distribution_date.pdf, id=141, 1300.86pt x 722.7pt>
+<Tiltmeter plots/scan_duration_distribution_date.pdf, id=145, 1300.86pt x 722.7pt>
 
 Overfull \hbox (39.83629pt too wide) in paragraph at lines 133--134
  [][] |
  []
 
-[29]
-<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=146, 1806.75pt x 722.7pt>
+[30]
+<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=149, 1806.75pt x 722.7pt>
 
 Overfull \hbox (39.83629pt too wide) in paragraph at lines 140--141
  [][] |
  []
 
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 150.
-[30] [31]
+[31] [32]
 Underfull \hbox (badness 10000) in paragraph at lines 255--258
 
  []
 
-[32] [33] [34] (./Other figures/regular_nn.tex 
+[33] [34] [35] [36] (./Other figures/regular_nn.tex 
 Neural network large 
  Layer 1, 2, 3, 4,) (./Other figures/combined_nn_sep1.tex 
 Neural network large 
@@ -1202,24 +1192,40 @@ Neural network large
  3Here (N1-3) {l3} 
  3Here (N1-1) {l3} 
  3Here (N1-2) {l3} 
- 3Here (N1-3) {l3} 4,) [35] [36]
-<Canva/datasplits.png, id=170, 1445.4pt x 482.55281pt>
- [37] [38]) [39] (./main.bbl) [40
+ 3Here (N1-3) {l3} 4,) [37] [38]
+<Canva/datasplits.png, id=176, 1445.4pt x 482.55281pt>
+ [39]) [40]
+Chapter 5.
+[41
+
+]
+Chapter 6.
+[42
+
+]
+Chapter 7.
+[43
+
+]
+Appendix A.
+(./Chapters/appendix.tex) [44
+
+] (./main.bbl) [45
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  29701 strings out of 476024
- 550899 string characters out of 5794017
- 1965382 words of memory out of 5000000
- 49215 multiletter control sequences out of 15000+600000
- 637666 words of font info for 259 fonts, out of 8000000 for 9000
+ 550969 string characters out of 5794017
+ 1967382 words of memory out of 5000000
+ 49219 multiletter control sequences out of 15000+600000
+ 637362 words of font info for 256 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,80p,1043b,1182s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (42 pages, 396684 bytes).
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (47 pages, 403695 bytes).
 PDF statistics:
- 272 PDF objects out of 1000 (max. 8388607)
- 164 compressed objects within 2 object streams
+ 293 PDF objects out of 1000 (max. 8388607)
+ 178 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  64128 words of extra memory for PDF output out of 74296 (max. 10000000)
 

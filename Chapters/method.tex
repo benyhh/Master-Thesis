@@ -345,7 +345,7 @@ $i$ & $\Tilde{\delta}_{az}$ &  $\Tilde{\delta}_{el}$ &  $\Tilde{ca}$ &  $\Tilde{
 \end{table}
 
 
-\section{Experiments overview}
+\section{Machine Learning Experiments}
 In this section, I will provide an overview of two machine learning experiments that are pertinent to the two research questions.
 The first experiment aims to investigate the effectiveness of neural networks in developing a pointing model that could potentially replace the current linear model, which is created through linear regression.
 The purpose of this experiment is to explore the feasibility of a more sophisticated model in terms of pointing accuracy.
@@ -359,6 +359,11 @@ The goal is to find a model $f$ such that
 \begin{equation}
     f(X) \approx (\delta_{\text{Az}}, \delta_{\text{El}}) = (Az_{\text{observed}}-Az_{\text{input}}, El_{\text{observed}}-El_{\text{input}})
 \end{equation}
+
+The dataset is split in three parts. A train, validation, and test set.
+The last $15\%$ of the data, which is sorted by date, is used for testing.
+The remaining $85\%$ of the data is used for training and validation, and this set is split into $20\%$ for training and $80\%$ for validation.
+This results in $\approx 76\%$ and $\approx 24\%$ of the total dataset being used for training and validation respectively.
 
 
 \subsection{Feature Selection}
@@ -393,38 +398,44 @@ These are visualized in figure \ref{fig:nn_architecture}.
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \input{Other figures/regular_nn.tex}
-        \caption{\textbf{Regular neural network:}}
+        \caption{\textbf{Regular neural network:}
+        This is the standard neural network architecture without any feature separation.
+        All features are connected to the same layers.}
         \label{subfig:cm_dt}
     \end{subfigure}
     \hfill
    \begin{subfigure}[t]{0.49\textwidth}
        \centering
        \input{Other figures/combined_nn_sep1.tex}
-       \caption{\textbf{Neural network with separated features 1:} Geometric and harmonic features are connected directly to the output layer}
+       \caption{\textbf{Neural network with separated features 1:}
+       In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer, without any nonlinear activation function.}
        \label{subfig:cm_rf}
 \end{subfigure}
 \\~\\
     \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \input{Other figures/combined_nn_sep2.tex}
-        \caption{\textbf{Neural network with separated features 2}: Geometric and harmonic features are separated from the other features, but also processed by a nonlinear activation function.}
+        \caption{\textbf{Neural network with separated features 2}:
+        Similar to the previous architecture, the geometric and harmonic features are separated from the other features,
+        but they are also processed by a nonlinear activation function before being connected to the output layer.}
         \label{subfig:cm_bag}
     \end{subfigure}
     \hfill
        \begin{subfigure}[t]{0.49\textwidth}
         \centering
         \input{Other figures/combined_nn_sep3.tex}
-        \caption{\textbf{Neural network with separated features 3:} Processed regular features are concatenated with geometric and harmonic features.}
+        \caption{\textbf{Neural network with separated features 3:}
+        In this architecture, the processed regular features are concatenated with the geometric and harmonic features before being connected to the output layer.}
         \label{subfig:cm_bos}
     \end{subfigure}
-     \caption{Neural network architecture for the base pointing model trained on raw data.}
+     \caption{Overall, these architectures were used to train a base pointing model on raw data.}
      \label{fig:nn_architecture}
 \end{figure}
 
 The hyperparameters for the neural networks were sampled from different distributions, as presented in Table \ref{tab:nn_hyperparameters}.
 While some parameters were consistent across all models, such as the use of the Adam optimization algorithm, and the mean squared error loss function.
-
-
+In total, \textcolor{red}{input the number of fitted NNs here} networks of each architecture are trained for $300$ epochs.
+The epoch with the best performance on the validation set is picked for the current parameters sampled.
 
 \begin{table}[H]
     \centering
@@ -440,17 +451,30 @@ While some parameters were consistent across all models, such as the use of the 
     \end{tabular}
     \label{tab:nn_hyperparameters}
     \end{table}
+
 \subsection{Model Evaluation}
+To evaluate the performance of the models, we used the root mean squared (RMS), measured in arcseconds, on the test set.
+The RMS is calculated as follows:
+\begin{equation}
+    \text{RMS} = \sqrt{ \frac{1}{N} \sum_{i=1}^N \left( (\tilde{\delta}_{Az,i} - \delta_{Az,i})^2 + (\tilde{\delta}_{El,i} - \delta_{El,i})^2 \right)},
+\end{equation}
+where $\tilde{\delta}_{Az}$ and $\tilde{\delta}_{El}$ are the predicted offsets, while $\delta_{Az}$ and $\delta_{El}$ are the true values.
+$N$ is the number of observations in the test set.
+
+This RMS is used to compare the performance of the models.
+It will also be compared with a benchmark linear regression model, to see if a machine learning approach offers any improvements.
 
 \section{Experiment 2: Pointing Correction Model}
-In this experiment, we aim to improve the pointing accuracy by training XGBoost models to predict offsets obtained by pointing scans.
-We use four different datasets, all of which are preprocessed using our cleaning criteria and the XGBoost classifier trained to remove bad pointing scans.
-These datasets use
+The goal of this experiment is to improve the pointing accuracy by training XGBoost models to predict offsets obtained from pointing scans.
+To accomplish this, we utilized four distinct datasets, all of which were preprocessed using our cleaning criteria.
+In addition, an XGBoost classifier was trained to eliminate bad pointing scans to ensure that the models are trained only on high-quality data.
+
+The following list presents the characteristics of each dataset used in this study:
 \begin{itemize}
-\item all instruments
-\item NFLASH230 only
-\item all instruments transformed to simulate optimal pointing corrections
-\item NFLASH230 only transformed to simulate optimal pointing corrections
+\item Dataset containing pointing scans from all instruments.
+\item Dataset consisting solely of pointing scans from the NFLASH230 instrument.
+\item Dataset that includes pointing scans from all instruments, with offsets and corrections transformed to simulate optimal pointing corrections.
+\item Dataset that includes pointing scans from only the NFLASH230 instrument, with offsets and corrections transformed to simulate optimal pointing corrections.
 \end{itemize}
 
 By training our models on these datasets, we hope to reduce the pointing offset and improve the accuracy of the pointing.
@@ -494,11 +518,11 @@ This approach helps us identify the most important features and can improve the 
 By selecting different numbers of features, we can explore the trade-off between model complexity and performance.\textcolor{red}{write and ref to mutual info in theory section}.
 
 \subsection{Model Architecture}
-For each model, we performed a Bayesian hyperparameter search using the parameter space shown in Table \ref{tab:xgb_hyperparameters_pcorr}.
+We performed a Bayesian hyperparameter search for each model using the parameter space in Table \ref{tab:xgb_hyperparameters_pcorr}.
 The search space includes eight hyperparameters that affect the model's complexity, such as the maximum depth of the trees, the regularization strength, and the learning rate.
 We used a uniform or log-uniform distribution to sample each hyperparameter within a specific range.
-In total, we evaluated $200$ different combinations of hyperparameters (for each dataset, cross-validation case, target variable, and the number of features selected) to find the optimal values for each model.
-The models were validated using the MSE, and the model with the best performance on the validation set was picked.
+We evaluated $200$ different combinations of hyperparameters (for each dataset, cross-validation case, target variable, and the number of features selected) to find the optimal values for each model.
+The models were validated using the MSE, and we picked the model with the best performance on the validation set.
 
 
 \begin{table}[H]
@@ -515,6 +539,7 @@ The models were validated using the MSE, and the model with the best performance
         subsample & Uniform & [0.5, 1] \\ 
         gamma & Log-Uniform & [$10^{-5}$, 1] \\ 
         min child weight & Uniform & [1, 10] \\ 
+        \hline
     \end{tabular}
     \label{tab:xgb_hyperparameters_pcorr}
 \end{table}
@@ -523,13 +548,21 @@ The models were validated using the MSE, and the model with the best performance
 
 \subsection{Model Evaluation}
 To evaluate the performance of the models, we calculated the RMS on each test fold and compared it to the current RMS of the telescope on the same data.
-We then computed the ratio of the model's RMS to the current RMS for each fold, denoted as $r_{RMS,i}$.
-If the ratio is less than $1$, it indicates that the XGBoost model provides an improvement over the current performance of the telescope on that fold.
-
-To obtain an overall measure of the model's performance compared to the current performance of the telescope, we averaged the ratios $r_{RMS,i}$ over all six test folds
+The RMS is calculated for azimuth and elevation separately since an XGBoost model only can predict one target.
+For a fold $j$ and target either azimuth or elevation, the RMS is calculated by
 \begin{equation}
-    \bar{r}_{RMS} = \sum_{i=1}^6 \frac{RMS_{model,i}}{RMS_{current,i}}.
+    RMS_{\text{target},j} = \sqrt{\frac{1}{N_j}\sum_{i=1}^{N_j} (\tilde{\delta}_{\text{target},ji} - \delta_{\text{target},ji})^2},
 \end{equation}
-This gives us an average ratio denoted as $\bar{r}_{RMS}$, which is a measure of the improvement in performance provided by the XGBoost model.
+where $\tilde{\delta}_{\text{target},ji}$ is the predicted pointing offset and $\delta_{\text{target},ji}$ is the true pointing offset for the $i$th pointing scan in fold $j$.
+$N_j$ is the number of pointing scans in fold $j$. 
+We then computed the ratio $r_{RMS,j}$ of the model's RMS to the current RMS for each fold.
+If the ratio is less than $1$, it indicates that the XGBoost model provides an improvement over the current performance of the telescope for a given fold.
+
+To obtain an overall measure of the model's performance compared to the current performance of the telescope, we averaged the ratios $r_{RMS,j}$ over all six test folds
+\begin{equation}
+    \bar{r}_{RMS} = \sum_{i=1}^6 \frac{RMS_{model,j}}{RMS_{current,j}}.
+\end{equation}
+This gives us an average ratio $\bar{r}_{RMS}$, which is a measure of the improvement in performance provided by the XGBoost model.
 If $\bar{r}_{RMS} < 1$, it indicates that the XGBoost model outperforms the current pointing correction method on average across all test folds.
-By comparing the average ratio $\bar{r}_{RMS}$ for the two different cross-validation cases and the selected number of features, we can identify which models provide the best performance.
+By comparing the average ratio $\bar{r}_{RMS}$ for the two different cross-validation cases in figure \ref{fig:datasplit_cases} and the selected number of features,
+we can identify which models provide the best performance.
