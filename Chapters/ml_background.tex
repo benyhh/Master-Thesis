@@ -1,72 +1,75 @@
 \section{Supervised learning}
 Supervised learning is a subfield of machine learning that refers to training a model to predict a specific target value based on input data.
-In this context, the input data is commonly referred to as "features", and when paired with the corresponding target value for prediction, the training is supervised.
-There are two types of supervised learning, regression, and classification. 
+In this context, we refer to the input data as "features." The training is supervised when paired with the corresponding target value for prediction.
+There are two types of supervised learning, regression and classification. 
 In regression, we predict a continuous variable, while in classification predict a binary value, true or false.
 The model architecture of the model can be the same regardless of predicting a true/false or continuous value. 
-The difference is in the loss function, which is used to evaluate the performance of the model during training, and for neural networks, the last layer activation function.
+The difference is in the loss function, which is used to evaluate the model's performance during training. The last layer activation function for neural networks is different for regression and classification. 
 In-depth explanations of this will come in the following sections.
 
 \section{Loss/Cost}
 In machine learning, the loss of a model refers to the discrepancy between the predicted and true values.
-It is calculated using a specific function designed to penalize incorrect predictions and serves as a measure of the model's performance.
+It is calculated using a specific function designed to penalize incorrect predictions and measure the model's performance.
 The ultimate goal of any machine learning model is to minimize the loss and thereby reduce the difference between predicted and desired outputs.
 To achieve this, the model is trained by calculating the gradient of the loss function with respect to different components in the model.
-These gradients are then used to determine how the model can be adjusted in the direction that minimizes the loss, through an iterative process.
+These gradients determine how the model is adjusted to minimize the loss through an iterative process.
 As a result, the model is optimized to make better predictions and achieve higher accuracy.\\
 
 The most common loss function for regression is the mean squared error
 \begin{equation} \label{eq:mse}
-    \mathcal{L}(y, \Tilde{y}) = \frac{1}{N}\sum_{i=1}^N(y-\Tilde{y})^2
+    \mathcal{L}(y, \Tilde{y}) = \frac{1}{N}\sum_{i=1}^N(y-\Tilde{y})^2,
 \end{equation}
-
-
+where $\tilde{y}$ is the prediction, $y$ the true value, and $N$ the number of predictions.
 
 \subsection{Loss Functions}
 Loss functions are used to evaluate the performance of the machine learning model during training.
-
-In this specific problem, when trying to predict the offset in both azimuth and elevation, there are two obvious ways to calculate the loss.
-One where the machine learning model considers the offset in azimuth and elevation separately, and one where it considers both of them together.
-Let $\Tilde{y}_{Az}$ and $\Tilde{y}_{El}$ denote the prediction for the offset in azimuth and elevation respectively.
+We consider two different loss functions when predicting azimuth and elevation simultaneously with the same model, such as a neural network.
+One loss function considers the offset in azimuth and elevation separately, and one considers the total distance.
+Let $\Tilde{y}_{Az}$ and $\Tilde{y}_{El}$ denote the prediction for the offset in azimuth and elevation, respectively.
 $y_{Az}$ and $y_{El}$ are the true values.
-The first way to calculate is 
+The first loss function is the mean squared error 
 \begin{equation}\label{eq:mse1}
-    \mathcal{L} = \frac{1}{N}\sum_i^N (y_{Az,i}-\Tilde{y}_{Az,i})^2 + \frac{1}{N}\sum_i^N (y_{El,i}-\Tilde{y}_{El,i})^2
+    \mathcal{L}_{\text{MSE}} = \frac{1}{2N}\sum_i^N \left( (y_{Az,i}-\Tilde{y}_{Az,i})^2 + (y_{El,i}-\Tilde{y}_{El,i})^2 \right),
 \end{equation}
-Using this loss function, the machine learning model will focus on minimizing both of the offsets evenly.\\
-
-For the second loss function, we use the mean squared Cartesian distance
+where $N$ is the number of predictions. 
+\\
+For the second loss function, we use the mean squared distance
 \begin{equation}\label{eq:totaloff}
-    \mathcal{L} = \frac{1}{N}\sum_i^N \left[ (y_{Az,i}-\Tilde{y}_{Az,i})^2 + (y_{El,i}-\Tilde{y}_{El,i})^2 \right],
+    \mathcal{L}_{\text{MSD}} = \frac{1}{N}\sum_i^N \left[ (y_{Az,i}-\Tilde{y}_{Az,i})^2 + (y_{El,i}-\Tilde{y}_{El,i})^2 \right],
 \end{equation}
+It is difficult to predict the effects of these loss functions if any at all, but one difference could be that $\mathcal{L}_{\text{MSE}}$ is more sensitive to outliers,
+and $\mathcal{L}_{\text{MSD}}$ reduces the offsets more evenly. \\
 
-which should have the effect of minimizing the offsets evenly.
+For models with a single output azimuth or elevation, we use the regular mean squared error \eqref{eq:mse}
 
 \section{Train/test set}
-Machine learning models can be highly complex and can fit all the data points in a dataset.
+Machine learning models can be highly complex and fit all the data points in a dataset.
 While this can result in perfect predictions on the training data, it often leads to poor performance on new data, a phenomenon known as overfitting.
-To counteract this, the data is typically split into two parts - a training set and a test set (sometimes a third validation set is also used).
-The model is trained on the training set, and the error on the test set is used to evaluate the model's performance.
-By using a separate set of data for testing, we can get a better estimate of the model's performance on new data and avoid overfitting.
+To counteract this, the data is typically split into two parts - a training set and a validation set.
+The model is trained on the training set, and the error on the validation set is used to evaluate the model's performance. 
+By using a separate set of data for validation, we can better estimate the model's performance on new data and avoid overfitting.
 
 When the error on the training data is low, the model has low bias.
 However, if the model is too complex, it may also have high variance, meaning that it is overly sensitive to the training data and unable to generalize well to new data.
 A model with high variance may perform well on the training data, but its performance on new data may be poor.
 The key to building a good model is to balance bias and variance and to find the right level of complexity that will allow the model to generalize well.
-Proper selection of the train/test split ratio and the use of other techniques such as regularization can help achieve this balance and improve the model's performance.
+Proper selection of the train/test split ratio and other techniques, such as regularization, can help achieve this balance and improve the model's performance.
+
+One usually picks the machine learning model with the best performance on the validation set, but this performance is not a reasonable estimate of the expected performance on future predictions.
+That is because many models are usually trained, and the model with the best performance on the validation set could have gotten lucky.
+Therefore, a third test set is used to get an unbiased estimate of the model's performance.
+The data in the test set is not used when training or validation and is only used to estimate the final model's performance.
 
 
 \section{Scaling}
-
-In machine learning, some models such as neural networks are highly sensitive to the scale of input data.
+In machine learning, some models, such as neural networks, are highly sensitive to the scale of input data.
 The inputs to a model often contain different types of data with varying scales.
 Neural networks use weights to transform the input data, and each neuron in a fully connected network receives data from every input feature.
 If the input features have different scales, training the weights can be slow and unstable.
 Scaling the input data to have the same scale improves the speed and performance of the model.
 In contrast, tree-based models are not affected by the range scale of the data since they consist of tests and not mathematical operations.
 
-The most common scaling method is to standardize the data to have zero mean and a standard deviation of one.
-This is achieved by subtracting the mean and dividing by the standard deviation.
+The most common scaling method is to standardize the data to have zero mean and a standard deviation of one. This is achieved by subtracting the mean and dividing by the standard deviation.
 Mathematically, the standardization of a feature $x$ is represented as:
 
 \begin{equation}
@@ -78,26 +81,25 @@ The mean and standard deviation are computed using the following equations:
 
 \begin{align}
 \mu &= \frac{1}{n}\sum_{i=1}^{n}x_i\\
-\sigma &= \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \mu)^2}
+\sigma &= \sqrt{\frac{1}{n}\sum_{i=1}^{n}(x_i - \mu)^2},
 \end{align}
-
-where $n$ is the number of observations in the feature.
-In addition to standardization, other scaling methods such as min-max scaling and robust scaling are also used in specific cases.
+where $n$ is the number of observations of the feature.
+In addition to standardization, other scaling methods, such as min-max and robust scaling, are also used in specific cases.
 Overall, scaling is a crucial step in preprocessing data for machine learning, as it can significantly impact the performance of a model.
-
+However, for tree-based methods, scaling has no effect, as predictions are made based on conditions in the data, not mathematical operations.
 
 
 \section{Decision Trees}
 Decision trees are tree-like models that make decisions based on conditions.
-As shown in Figure \ref{fig:decitiontree}, each circle represents a node with various types, including decision nodes that split into two other nodes and leaf/terminal nodes that don't.
+As shown in Figure \ref{fig:decitiontree}, each circle represents a node with various types, including decision nodes that split into two other nodes and leaf/terminal nodes that do not.
 The root node is the topmost decision node.
-Given an observation, there is a single path to a leaf node that represents the prediction made by the decision tree.
+Given an observation, a single path to a leaf node represents the prediction made by the decision tree.
 
-Trees are constructed greedily from the top, meaning that each split is made to minimize the loss function at the current step, without considering future splits.
-Single decision trees are not typically sufficient for complex problems.
-There are various methods to improve decision tree models, as demonstrated in Figure \ref{fig:evolution_of_xgb}.
+Trees are constructed greedily from the top, meaning that each split is made to minimize the loss function at the current step without considering future splits.
+More than a single decision tree is required for complex problems.
+Various methods exist to improve decision tree models, as Figure \ref{fig:evolution_of_xgb} demonstrates.
 The final step in the figure is XGBoost (Extreme Gradient Boost), a highly efficient and high-performing machine learning algorithm.
-In this section, we'll briefly cover the methods used to optimize decision trees for prediction.
+This section will briefly cover the methods used to optimize decision trees for prediction.
 \cite{Mehta_2019}
 
 
@@ -107,20 +109,20 @@ Each model is trained using bootstrapped data (resampled from the original datas
 The final prediction is the average of all ensemble models.
 
 \paragraph{Random Forest}
-A method based on bagging, where each tree in the ensemble is made using only a randomly chosen subset of features.
+Random forest is based on bagging, where each tree in the ensemble is made using only a randomly chosen subset of features.
 This often leads to better generalization and reduced overfitting.
 
 \paragraph{Boosting}
-An ensemble is created in boosting as well, but the trees are not made independently.
-They are trained one by one considering the previous trees.
+In boosting, an ensemble is created, but the trees are not made independently.
+They are trained one by one, considering the previous trees.
 A sample weight is assigned to each sample used to train a tree based on the current ensemble's accuracy.
-Samples with large prediction errors are assigned larger weights and those with accurate predictions are assigned lower weights.
-The final prediction is a weighted sum of all ensemble predictions, with weights based on each individual tree's accuracy.
+Samples with significant prediction errors are assigned larger weights, and those with accurate predictions are assigned lower weights.
+The final prediction is a weighted sum of all ensemble predictions, with weights based on each tree's accuracy.
 
 \paragraph{Gradient Boosting}
 Like in regular boosting, an ensemble of trees is created iteratively by considering the errors made by previous trees.
 The process starts with a constant model that predicts the mean of all samples.
-The gradient of the loss function with respect to each sample is calculated and a tree is made to predict these gradients.
+The gradient of the loss function with respect to each sample is calculated, and a tree is made to predict these gradients.
 The new prediction is the constant plus a small step in the direction of the predicted gradients.
 Repeated iteration with small steps in the gradient direction helps reduce both bias and variance.
 
@@ -143,14 +145,14 @@ Repeated iteration with small steps in the gradient direction helps reduce both 
 \end{figure}
 
 \section{Neural Networks}
-A Neural Network (NN) is an Artificial Intelligence (AI) model composed of interconnected neurons, inspired by biological neural networks found in animal brains.
-NNs are arranged in layers, as shown in Figure \ref{fig:nnfig}, and consist of an input layer, one or more hidden layers, and an output layer.
+A Neural Network (NN) is an Artificial Intelligence (AI) model composed of interconnected neurons inspired by biological neural networks in animal brains.
+These networks are arranged in layers, as shown in Figure \ref{fig:nnfig}, and consist of an input layer, one or more hidden layers, and an output layer.
 The size of the hidden layer(s) varies depending on the nature of the problem.
-NNs process input to produce an output, which ideally is close to what you aim to predict.
+A neural network processes input to produce an output, ideally close to the true value.
 
 Each connection in an NN has a trainable weight $w_{jk}^l$, representing the weight from the $k^{th}$ neuron in layer $(l-1)$ to the $j^{th}$ neuron in layer $l$.
 Each neuron also has its own bias $b_j$, added to its output to prevent the input to its activation function $\sigma$ from being zero.
-The activation function $\sigma$, applied to the neuron's output, is the final transformation before passing data to the next layer.
+The activation function $\sigma$ applied to the neuron's output is the final transformation before passing data to the next layer.
 This nonlinear function is crucial in allowing NNs to learn nonlinear relationships in data \cite{universal_approximation}.
 
 The following is the mathematical explanation of how a neuron processes the outputs from the previous layer.
@@ -162,7 +164,7 @@ The quantity
 \begin{equation}\label{eq:z_neuron}
     z_j^l = \sum_{k} w_{jk}^l a^{l-1}_k+b_j^l
 \end{equation}
- will be useful in explaining how to optimize a neural network, and can be considered the weighted input for neuron $j$ in layer $l$.
+will be helpful when explaining how to optimize a neural network and can be considered the weighted input for neuron $j$ in layer $l$.
 
 
 \begin{figure}[H]
@@ -179,8 +181,8 @@ Generated using TikZ \cite{tikz}}
 \subsection{Backpropagation}
 Backpropagation\cite{backprop_original} is a fundamental algorithm in training artificial neural networks.
 It calculates the gradient of the loss function with respect to all the weights and biases in the network,
-allowing for the updating of these parameters in a way that reduces the loss.
-The algorithm is based on four key equations, which will be described in this section.\\
+allowing for updating these parameters to reduce the loss.
+The algorithm is based on four key equations, which we describe in this section.\\
 
 We define the error in the $j^\text{th}$ neuron in the $l^\text{th}$ layer by
 \begin{equation}\label{eq:bp1} 
@@ -199,29 +201,26 @@ The next equation relates the error in a neuron with the errors in the neurons i
 \end{equation}
 Note that the indices on the weight $w$ are now swapped.
 We may think of this equation as an error propagating backward by multiplying the error in layer $l+1$ with the transpose of the weight connecting layer $l$ with $l+1$
-The final equation is derived from the partial derivative of the cost function with respect to the weight $w_{jk}^l$
+We derive the final equation from the partial derivative of the cost function with respect to the weight $w_{jk}^l$
 \begin{equation}\label{eq:bp4}
     \frac{\partial C}{\partial w_{jk}^l} = \frac{\partial C}{\partial z_j^l} \frac{\partial z_j^l}{\partial w_{jk}^l} = \delta_j^l a_k^{l-1}
 \end{equation}
 
-Equation \eqref{eq:bp1} lets us calculate the error in the last layer, and using equation \eqref{eq:bp3} we can propagate this error backward through the network, calculating the error for all the neurons.
+Equation \eqref{eq:bp1} lets us calculate the error in the last layer, and using equation \eqref{eq:bp3}, we can propagate this error backward through the network, calculating the error for all the neurons.
 We then use equations \eqref{eq:bp2} and \eqref{eq:bp4} to calculate the gradient of the cost function with respect to the weights and biases.
 
 
 \subsection{Activation functions}
-Activation functions play a crucial role in the training of a neural network by allowing it to learn non-linear relationships between inputs and outputs.
-Different activation functions have varying properties, and some of the most common ones will be discussed in this section.
-Properties like non-linearity, differentiability, monotonicity, smoothness, and zero-centering are considered important for activation functions.
+Activation functions play a crucial role in training a neural network by allowing it to learn non-linear relationships between inputs and outputs.
+Different activation functions have varying properties; we will discuss some of the most common ones in this section.
+Properties like non-linearity, differentiability, monotonicity, smoothness, and zero-centering are important for activation functions.
 Non-linearity enables the model to capture complex relationships, differentiability is necessary for calculating the derivative of the loss function with respect to the trainable weights, monotonicity helps ensure stability in activation outputs, smoothness stabilizes gradients during training, and zero-centering balances the activation distribution within the model.
-
-Activation functions play a crucial role in the training of a neural network by allowing it to learn non-linear relationships between inputs and outputs.
-Different activation functions have varying properties, and there are some properties considered important.
 
 \begin{itemize}
     \item Non-linearity enables the model to capture complex relationships
     \item Differentiability is necessary for calculating the derivative of the loss function with respect to the trainable weights
     \item Monotonicity helps ensure stability in activation outputs, smoothness stabilizes gradients during training
-    \item Smoothness: A smooth activation function helps with making the gradients and training stable.
+    \item Smoothness: A smooth activation function helps stabilize the gradients and training.
     \item Zero-centering balances the activation distribution within the model.
 \end{itemize}
 
@@ -232,25 +231,26 @@ Tanh, the hyperbolic tangent function is given by
 \end{equation}
 
 \paragraph{ReLU}
-The Rectified Linear Unit (ReLU) activation function pushes all negative values to zero while leaving positive values unchanged.
-This introduces non-linearity while solving the vanishing gradients problem by having a gradient of either 0 or 1 for negative and positive values, respectively.
+The Rectified Linear Unit (ReLU) activation function pushes all negative values to zero while leaving positive values unchanged,
+which introduces non-linearity while solving the vanishing gradients problem by having a gradient of either 0 or 1 for negative and positive values, respectively.
 \begin{equation}\label{eq:relu}
     R(x) = \begin{cases} x & \mbox{if } x > 0 \\ \mbox{0,} & \mbox{otherwise} \end{cases}
 \end{equation}
 
-
+\paragraph{GeLU}
+The Gaussian Error Linear Unit (GeLU) is a smooth approximation of the ReLU function, given by
 
 
 \section{Model Explainability}
 In the context of machine learning, SHAP \cite{SHAP} and SAGE \cite{SAGE} apply the same idea to determine the contribution of each feature to a prediction.
 SHAP provides a local explanation by computing the contribution of each feature to the prediction of a single data point.
-On the other hand, SAGE provides a global explanation by computing the contribution of each feature to the overall prediction performance of the model.
-These methods allow us to understand the relationship between the features and the prediction, which is particularly useful when the model is too complex to interpret.
+On the other hand, SAGE provides a global explanation by computing each feature's contribution to the model's overall prediction performance.
+These methods allow us to understand the relationship between the features and the prediction, particularly useful when the model is too complex to interpret.
 Additionally, they provide a way to validate the model's fairness and bias.
-By understanding which features are contributing the most to a prediction, one can determine if the model is fair or biased, and if the prediction is trustworthy.\\
+By understanding which features contribute the most to a prediction, one can determine if the model is fair or biased and if the prediction is trustworthy.\\
 
 Both SHAP and SAGE methods are based on Shapley values \cite{shapley_value_1953}, a concept in game theory introduced by Lloyd Shapley in 1951.
-Shapley values determine the contribution of each player to a group's surplus or overall value.
+Shapley values determine each player's contribution to a group's surplus or overall value.
 The explanation below of Shapley values, SHAP, and SAGE is inspired by a blog post by Ian Covert \cite{covert_shap_sage}.\\
 
 The Shapley value for a player $i$ in a cooperative game with $d$ players is
@@ -262,17 +262,17 @@ The Shapley value for a player $i$ in a cooperative game with $d$ players is
 where $D$ is the set of all players, $S$ is a coalition of players, $w(S)$ is the value of the coalition $S$, and $|S|$ is the number of players in the coalition.
 This formula satisfies four important conditions:
 \begin{itemize}
-    \item Efficiency: The sum of all Shapley values should be equal to the total value of the group.
+    \item Efficiency: The sum of all Shapley values is equal to the group's total value.
     \item Symmetry: If two players $i$ and $j$ have the same impact on all coalitions with $w(S \cup \{i\}) = w(S \cup \{j\})$ for all $S$, they should have the same Shapley value $\phi_i(w) = \phi_j(w)$.
     \item Dummy: A player $i$ that makes no contribution to the group with $w(S \cup \{i\}) = w(S)$, should receive a value of zero, or $\phi_i(w)=0$.
-    \item Linearity: The value of a player should be proportional to their contribution to the group.
+    \item Linearity: A player's value is proportional to their contribution to the group.
 If player $i$ contributes twice as much as player $j$ to the group's overall worth, then player $i$ should have twice the Shapley value.
 \end{itemize}
 
 \subsection{SHAP}
-Shapley values explain how each feature $(x^1, \dots, x^d)$ in a model $f$ contributes to the deviation from the mean prediction $\mathbb{E}[f(x)]$ of the dataset, for a single prediction.
-It assigns a value $\phi_1, \dots, \phi_d$ to each feature, that quantifies the feature's influence on the prediction $f(x)$.
-SHAP (Shapley Additive Explanations) is a way of computing approximate Shapley values for machine learning models.\\
+Shapley values explain how each feature $(x^1, \dots, x^d)$ in a model $f$ contributes to the deviation from the mean prediction $\mathbb{E}[f(x)]$ of the dataset for a single prediction.
+It assigns a value $\phi_1, \dots, \phi_d$ to each feature that quantifies the feature's influence on the prediction $f(x)$.
+SHAP (Shapley Additive Explanations) computes approximate Shapley values for machine learning models.\\
 
 We define a cooperative game $v_{f,x}$ to represent a prediction given the features $x^S$, as
 \begin{equation}
@@ -282,16 +282,16 @@ We define a cooperative game $v_{f,x}$ to represent a prediction given the featu
 where $x^S$ are known, and the remaining features are treated as random variable $X^{\Bar{S}}$ (where $\Bar{S} = D \backslash S$).
 This is the mean prediction $f(X)$ when the unknown values follow the conditional distribution $X^{\Bar{S}} | X^S = x^S$.\\
 
-Using a subset of features from the prediction while sampling the rest from the dataset, reduces the chance of improbable samples.
+Using a subset of features from the prediction while sampling the rest from the dataset reduces the chance of improbable samples.
 Given this convention for making predictions, we can apply the Shapley value to define each feature's contribution to the prediction $f(X)$ using Shapley values $\phi_i(v_{f,x})$.
 A Shapley value of $\phi_i(v_{f,x}) > 0$ indicates that feature $i$ contributes to an increase in prediction $f(X)$.
 A negative Shapley value $\phi_i(v_{f,x}) < 0$ indicates the opposite, that the feature contributes to a decrease in $f(X)$.
 Uninformative features will have small values $\phi_i(v_{f,x}) \approx 0$.
 
 \subsection{SAGE}
-SAGE (Shapley Additive Global Importance) explains how every feature contributes to the performance of the model overall, and it relates to SHAP in a simple way.
+SAGE (Shapley Additive Global Importance) explains how every feature contributes to the model's overall performance, and it relates to SHAP in a simple way.
 For a given feature, the global feature importance is the average SHAP value (for that feature) across all samples in the dataset.
-This is, however, not how it is calculated in practice.
+This is, however, different from how it is calculated in practice.
 A paper by Ian Covert et al.
 \cite{sage_paper} on global feature importance proposes an algorithm that aims directly at a global feature explanation, unlike the SHAP values, which makes
 it faster.

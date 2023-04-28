@@ -208,7 +208,7 @@ where AW is the misalignment alignment in the east-west direction.
 
 \begin{table}[h]
     \centering
-    \caption{The terms in the analytical model. }
+    \caption{The terms in the analytical model. \textcolor{red}{Table not complete.} }
     \begin{tabular}{cc}
     \textbf{Azimuth Terms} & \textbf{Elevation Terms} \\
     \hline
@@ -294,6 +294,7 @@ Table \ref{tab:raw_datanflash230} is included to provide an example of this data
 \subsection{The Monitor Database}
 The monitor database is critical in this project, providing valuable sensory data from within and outside the telescope.
 In this section, we will explore the data contained within the monitor database and identify the most relevant variables to our purposes.
+We got a copy of the database containing data from 01.01.2022 to 17.09.2022.
 
 \paragraph{Azimuth and Elevation}
 The database includes tables for the input azimuth and elevation, labeled COMMANDAZ and COMMANDEL.
@@ -345,16 +346,6 @@ The instruments take measurements at a frequency of $5$ data points per minute.
 The figures \ref{sub@subfig:scan_winddir} and \ref{subfig:scan_windspeed} show wind direction and speed measurements for the time period around a pointing scan.
 
 
-\textcolor{red}{Put this in feature engineering section}
-\begin{align}
-    \Delta \textit{Az}_\textit{wind} = \textit{Az}_\textit{pointing} - \textit{Az}_\textit{wind}
-\end{align}
-
-For the turbulence, a simple model is used
-\begin{align}
-v_\textit{wind} = \sigma_\textit{wind}^2
-\end{align}
-
 \paragraph{Disp abs?}
 
 Frequency of $12$ data points per minute.
@@ -362,12 +353,13 @@ Frequency of $12$ data points per minute.
 \paragraph{Automatic adjustments}
 Automatic adjustments based on readings from various sensors ensure accurate and stable pointing of the telescope.
 These adjustments account for systematic errors previously modeled and are based on measurements from tiltmeters, temperature sensors installed at different locations, and other relevant data sources.
-The automatic adjustments are made in the azimuth and elevation directions and are denoted by variables starting with DAZ or DEL, respectively.
-These measurements are all recorded at a frequency of $12$ data points per minute.
-A comprehensive list of these variables can be found in Table \ref{tab:data_frequency}.
+Some system at the telescope automatically makes these adjustments, and the tables in the database that contain information about these adjustments start with DAZ or DEL, denoting adjustments in azimuth and elevation, respectively.
+The frequency of this data is $12$ data points per minute.
+Table \ref{tab:data_frequency} shows a comprehensive list of these variables.
 
 \paragraph{Data frequency}
-The monitor database provides data with varying frequencies, as shown in Table \ref{tab:data_frequency}, which lists the approximate number of data points per minute.
+The monitor database provides data with varying frequencies, as shown in Table \ref{tab:data_frequency},
+which lists the approximate number of data points per minute for each table used in this project.
 
 \begin{table}[H]
     \caption{The frequency in data points per minute of different variables in the monitor database.}
@@ -473,17 +465,19 @@ The monitor database provides data with varying frequencies, as shown in Table \
 
 
 \subsection{Pointing scan data}
-A pointing scan is an observation of a source with a known location, which is used to calibrate the pointing model.
-There are two types of pointing scans: Line-pointings and continuum scans.
+During a pointing scan, the telescope observes a source with a known location to obtain a pointing offset.
+The observers use this offset to recalibrate the pointing model. There are two types of pointing scans: Line-pointings and continuum scans.
 Figure \ref{fig:features_during_scans} shows the information in the monitor database from a pointing scan.
+
 \paragraph{Line-pointing}
 A line-pointing involves pointing at an extended source. 
-The telescope then makes ten scans, recording the flux intensity from the source, five vertically and five horizontally, around the center of the pointing, as shown in figure \ref{fig:line_pointings}.
-The upper panel shows a high-quality pointing scan and the lower panel shows a noisy low-quality pointing scan.
-The cross-plot on the right side shows the line spectrum for each of the observations (center plus eight offset observations).
+The telescope then makes ten scans, recording the flux intensity from the source, five vertically and five horizontally,
+around the center of the pointing, as shown in figure \ref{fig:line_pointings}.
+The upper panel shows a high-quality pointing scan, and the lower panel shows a noisy, low-quality pointing scan.
+The cross-plot on the right side shows the line spectrum for each observation (center plus eight offset observations).
 
-The flux from the source is integrated, and the resulting values are plotted as blue dots on the left-hand side of the panel.
-A Gaussian is then fitted to these points, and the resulting amplitude, full width at half maximum (FWHM), and offsets are given in the table.
+The integrals of the flux recorded from the source are plotted as blue dots on the left-hand side of the panel.
+A Gaussian is fitted to these points, and the table shows the resulting amplitude, full width at half maximum (FWHM), and offsets.
 
 \begin{figure}[H]
     \centering
@@ -501,13 +495,13 @@ A Gaussian is then fitted to these points, and the resulting amplitude, full wid
          \label{subfig:bad_line}
      \end{subfigure}
     \caption{The two figures show line-pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing.
-    The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both fits.
-    The figures also show the correction that was used during the pointing ($ca$ and $ie$), along with other metrics.}
+    The table shows the amplitude, full width at half maximum (FWHM), offset, and the uncertainty of these measures, for azimuth and elevation.
+    The figures also show the correction applied during the pointing ($ca$ and $ie$), along with other metrics.}
     \label{fig:line_pointings}
 \end{figure}
 
 \paragraph{Continuum Scan}
-Not all sources have emission lines, and for these sources, a continuum scan is carried out instead. In this case, a source is continuously scanned in azimuth and elevation while recording the flux intensity.
+Not all sources have emission lines; for these sources, the telescope performs a continuum scan instead. In this case, a source is continuously scanned in azimuth and elevation while recording the flux intensity.
 A Gaussian curve is fitted to the recorded flux intensity to determine the offsets, amplitude, and full width at half maximum (FWHM).
 Figure \ref{fig:continueous_pointings} show examples of continuum scans and the corresponding Gaussian fits.
 
@@ -543,13 +537,12 @@ In the main database, each pointing scan has a timestamp in the format YYYY-MM-D
 \end{itemize}
 
 \paragraph{Instruments}
-The telescope is equipped with various observing instruments that operate at a variety of frequencies.
-Table \ref{tab:instrument_usage} shows the frequency band each of the instruments covers,
-along with the number of times they were used for a pointing scan throughout the year of $2022$.\\
+The observing instruments on the telescope operate at various frequencies.
+Table \ref{tab:instrument_usage} provides information on the frequency range covered by each instrument,
+along with the number of scans performed using each instrument throughout the year 2022.\\
 
 The broad range of frequencies at which astronomical phenomena emit electromagnetic radiation requires observation across a wide range of frequencies to study these phenomena comprehensively.
-A complete list of instruments and descriptions can be found at APEX's \href{https://www.eso.org/sci/facilities/apex/cfp/cfp110/instrument_summary.html.html}{website}.
-
+APEX's \href{https://www.eso.org/sci/facilities/apex/cfp/cfp110/instrument_summary.html.html}{website} provides a complete list of instruments along with their descriptions.
 \begin{table}[H]
     \centering
     \caption{The number of times each instrument was used for a pointing scan in $2022$. There are $8847$ scans in total.}
@@ -574,11 +567,12 @@ A complete list of instruments and descriptions can be found at APEX's \href{htt
 
 
 \subsection{Tiltmeter dump files}
-The tiltmeter dump files is a small part of the database, and are only used to analyze when pointing scans start and end.
-There are 280 of these files, and all have filenames on the format "Tiltmeter\_YYYY-MM-DD.dump", which indicates which date the data is from.
-These files contrain 7 columns, which are datetime, azimuth, elevation, tilt1x, tilt1y, tilt1t and lastly the scan flag.
-For our purpose, only the datetime and scan flag are interesting.
-Table \ref{tab:tiltmeter_example} show an extract of the datetime and scan flag columns from one of the tiltmeter dumps.
+The tiltmeter dump files are a small part of the database and are only used to analyze when pointing scans start and end.
+There are 280 of these files, and all have filenames in the format "Tiltmeter\_YYYY-MM-DD.dump," which indicates the data's date.
+These files contain seven columns: datetime, azimuth, elevation, tilt1x, tilt1y, tilt1t, and the scan flag.
+For our purpose, only the datetime and scan flags provide useful information.
+Table \ref{tab:tiltmeter_example} shows an extract of the datetime and scan flag columns from one of the tiltmeter dumps.
+
 
 \begin{table}[H]
     \centering

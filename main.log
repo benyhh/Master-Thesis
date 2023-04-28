@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  27 APR 2023 16:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  28 APR 2023 16:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -23,8 +23,6 @@ File: size11.clo 2022/07/02 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (c:/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 ) (c:/texlive/2022/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2023/02/13 3.86 The Babel package
 \babel@savecnt=\count194
@@ -352,6 +350,17 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (c:/texlive/2022/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip64
+\f@nch@O@elh=\skip65
+\f@nch@O@erh=\skip66
+\f@nch@O@olh=\skip67
+\f@nch@O@orh=\skip68
+\f@nch@O@elf=\skip69
+\f@nch@O@erf=\skip70
+\f@nch@O@olf=\skip71
+\f@nch@O@orf=\skip72
 ) (c:/texlive/2022/texmf-dist/tex/generic/listofitems/listofitems.sty (c:/texlive/2022/texmf-dist/tex/generic/listofitems/listofitems.tex
 \loi_cnt_foreach_nest=\count304
 \loi_nestcnt=\count305
@@ -359,7 +368,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified sep char (CT)
 ) (c:/texlive/2022/texmf-dist/tex/latex/contour/contour.sty
 Package: contour 2004/11/18 v2.14 Print contoured text (HH, MH)
-\con@length=\skip64
+\con@length=\skip73
 
 Loading configuration file `contour.cfg'.
 (c:/texlive/2022/texmf-dist/tex/latex/contour/contour.cfg
@@ -708,12 +717,12 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
-\Hy@SectionHShift=\skip65
+\Hy@SectionHShift=\skip74
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 83.
-Package hyperref Info: Option `colorlinks' set `true' on input line 83.
-Package hyperref Info: Option `pdfmenubar' set `true' on input line 83.
-Package hyperref Info: Option `pdftoolbar' set `true' on input line 83.
+Package hyperref Info: Option `breaklinks' set `true' on input line 84.
+Package hyperref Info: Option `colorlinks' set `true' on input line 84.
+Package hyperref Info: Option `pdfmenubar' set `true' on input line 84.
+Package hyperref Info: Option `pdftoolbar' set `true' on input line 84.
 \@indexfile=\write5
 \openout5 = `main.idx'.
 
@@ -735,8 +744,8 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \page@free=\dimen313
 \premulticols=\dimen314
 \postmulticols=\dimen315
-\multicolsep=\skip66
-\multicolbaselineskip=\skip67
+\multicolsep=\skip75
+\multicolbaselineskip=\skip76
 \partial@page=\box80
 \last@line=\box81
 \maxbalancingoverflow=\dimen316
@@ -791,10 +800,10 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \mc@col@check@num=\count350
 )
 \c@idxcols=\count351
-\indexcolsep=\skip68
-\indexrule=\skip69
-\ila@indentunit=\skip70
-\ila@initsep=\skip71
+\indexcolsep=\skip77
+\indexrule=\skip78
+\ila@indentunit=\skip79
+\ila@initsep=\skip80
 ) (c:/texlive/2022/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
@@ -804,8 +813,8 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
 
 ) (c:/texlive/2022/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip72
-\bibsep=\skip73
+\bibhang=\skip81
+\bibsep=\skip82
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count352
 ) (c:/texlive/2022/texmf-dist/tex/latex/float/float.sty
@@ -828,35 +837,35 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \c@ALG@line=\count355
 \c@ALG@rem=\count356
 \c@ALG@nested=\count357
-\ALG@tlm=\skip74
-\ALG@thistlm=\skip75
+\ALG@tlm=\skip83
+\ALG@thistlm=\skip84
 \c@ALG@Lnr=\count358
 \c@ALG@blocknr=\count359
 \c@ALG@storecount=\count360
 \c@ALG@tmpcounter=\count361
-\ALG@tmplength=\skip76
+\ALG@tmplength=\skip85
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
 ) (c:/texlive/2022/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/02/25 v3.4 ragged2e Package
-\CenteringLeftskip=\skip77
-\RaggedLeftLeftskip=\skip78
-\RaggedRightLeftskip=\skip79
-\CenteringRightskip=\skip80
-\RaggedLeftRightskip=\skip81
-\RaggedRightRightskip=\skip82
-\CenteringParfillskip=\skip83
-\RaggedLeftParfillskip=\skip84
-\RaggedRightParfillskip=\skip85
-\JustifyingParfillskip=\skip86
-\CenteringParindent=\skip87
-\RaggedLeftParindent=\skip88
-\RaggedRightParindent=\skip89
-\JustifyingParindent=\skip90
+\CenteringLeftskip=\skip86
+\RaggedLeftLeftskip=\skip87
+\RaggedRightLeftskip=\skip88
+\CenteringRightskip=\skip89
+\RaggedLeftRightskip=\skip90
+\RaggedRightRightskip=\skip91
+\CenteringParfillskip=\skip92
+\RaggedLeftParfillskip=\skip93
+\RaggedRightParfillskip=\skip94
+\JustifyingParfillskip=\skip95
+\CenteringParindent=\skip96
+\RaggedLeftParindent=\skip97
+\RaggedRightParindent=\skip98
+\JustifyingParindent=\skip99
 )
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 128.
- (c:/texlive/2022/texmf-dist/tex/latex/lm/t1lmr.fd
-File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 129.
+ (c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count362
@@ -864,24 +873,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 128.
-LaTeX Font Info:    ... okay on input line 128.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 129.
+LaTeX Font Info:    ... okay on input line 129.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count363
@@ -901,18 +910,18 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \microtypecontext on input line 128.
-Package microtype Info: Applying patch `item' on input line 128.
-Package microtype Info: Applying patch `toc' on input line 128.
-Package microtype Info: Applying patch `eqnum' on input line 128.
-Package microtype Info: Applying patch `footnote' on input line 128.
+LaTeX Info: Redefining \microtypecontext on input line 129.
+Package microtype Info: Applying patch `item' on input line 129.
+Package microtype Info: Applying patch `toc' on input line 129.
+Package microtype Info: Applying patch `eqnum' on input line 129.
+Package microtype Info: Applying patch `footnote' on input line 129.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 128.
+LaTeX Info: Redefining \showhyphens on input line 129.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -961,22 +970,22 @@ Package caption Info: End \AtBeginDocument code.
 
 Package hyperref Warning: Draft mode on.
 
-Package hyperref Info: Link coloring ON on input line 128.
-Package hyperref Info: Option `pageanchor' set `false' on input line 133.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 133.
+Package hyperref Info: Link coloring ON on input line 129.
+Package hyperref Info: Option `pageanchor' set `false' on input line 135.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 135.
 (c:/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 133.
+(Font)              scaled to size 13.29996pt on input line 135.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 133.
+(Font)              scaled to size 5.69998pt on input line 135.
 <folder/uio-fp-navn-eng.pdf, id=4, 469.755pt x 123.46124pt>
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 133.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 135.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -985,247 +994,376 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.29996pt on input line 133.
+(Font)              scaled to size 13.29996pt on input line 135.
 <folder/uio-fp-segl.pdf, id=5, 232.87pt x 232.87pt>
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 30.3999pt on input line 133.
+(Font)              scaled to size 30.3999pt on input line 135.
 
 
-Package xcolor Warning: Incompatible color definition on input line 133.
+Package xcolor Warning: Incompatible color definition on input line 135.
 
 <teleskopgutt2.jpeg, id=6, 1129.21875pt x 697.10437pt>
 [1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.99994pt on input line 133.
+(Font)              scaled to size 18.99994pt on input line 135.
  [1]
-Package hyperref Info: Option `pageanchor' set `true' on input line 133.
- (./main.toc
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4.
- (c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
+Package hyperref Info: Option `pageanchor' set `true' on input line 135.
+ (./main.toc)
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [1
+
+]
+Chapter 1.
+[2
+
+]
+Chapter 2.
+[3
+
+]
+Chapter 3.
+[4
+
+]
+Chapter 4.
+[5
+
+]
+Chapter 5.
+[6
+
+]
+Chapter 6.
+[7
+
+]
+Chapter 7.
+[8
+
+] (./Chapters/appendix.tex
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 5.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 5.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 4.
+(Font)              <10.95> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 5.
  (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
-
-] [2])
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
- [3]
-Chapter 1.
-(./Chapters/introduction.tex) [4
-
-]
-Chapter 2.
-(./Chapters/ast_background.tex
-Underfull \hbox (badness 10000) in paragraph at lines 13--20
-
- []
-
-<Astronomy/Azimuth-Altitude_schematic.png, id=33, 1927.2pt x 1856.9375pt>
-[5
-
-]
-<Astronomy/radio_telescope.png, id=42, 474.27188pt x 440.39531pt>
- [6] [7]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 129.
- (c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [8] [9] [10] [11]
-<Correlation/Correlation_temp.pdf, id=67, 1156.32pt x 1156.32pt>
- [12] [13]
-<Feature during scans/scan_ACTUALAZ_335.pdf, id=75, 722.7pt x 433.62pt>
-<Feature during scans/scan_ACTUALEL_335.pdf, id=76, 722.7pt x 433.62pt>
-<Feature during scans/scan_TEMP1_335.pdf, id=77, 722.7pt x 433.62pt>
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 447.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 447.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 447.
-<Feature during scans/scan_TILT1T_335.pdf, id=78, 722.7pt x 433.62pt>
-<Feature during scans/scan_WINDDIRECTION_335.pdf, id=79, 722.7pt x 433.62pt>
-<Feature during scans/scan_WINDSPEED_335.pdf, id=80, 722.7pt x 433.62pt>
- [14] [15]
-<Pointing Scans/good_line.png, id=87, 645.612pt x 448.67625pt>
-<Pointing Scans/bad_line.png, id=89, 651.6345pt x 448.67625pt>
- [16]
-<Pointing Scans/good_continuous.png, id=93, 686.565pt x 453.49425pt>
-<Pointing Scans/bad_continuous.png, id=94, 686.565pt x 453.49425pt>
- [17]
-Underfull \hbox (badness 10000) in paragraph at lines 546--549
-
- []
-
-) [18] [19]
-Chapter 3.
-(./Chapters/ml_background.tex
-Underfull \hbox (badness 10000) in paragraph at lines 11--17
-
- []
-
-[20
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 35--37
-
- []
-
-[21] [22]
-<Other figures/decisiontree_example.PNG, id=116, 1033.61156pt x 804.00375pt>
-<Other figures/evolution_of_xgb.png, id=117, 542.025pt x 288.3272pt>
- [23] (./Other figures/nn_with_eqs.tex 
-Neural network activation
-contour: Using real outline for `$w_{1,1}$' on input line 36.
-contour: Using real outline for `$w_{1,2}$' on input line 36.
-contour: Using real outline for `$w_{1,3}$' on input line 36.
-contour: Using real outline for `$w_{1,4}$' on input line 36.
-contour: Using real outline for `$w_{1,n}$' on input line 36.
-contour: Using real outline for `$b_1$' on input line 41.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 180--184
+./Chapters/appendix.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 ...f_nflash230_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
- []
+./Chapters/appendix.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 ...f_nflash230_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 245--251
+./Chapters/appendix.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 ...f_nflash230_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
- []
+./Chapters/appendix.tex:14: Missing $ inserted.
+<inserted text> 
+                $
+l.14 ...f_nflash230_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:33: Missing $ inserted.
+<inserted text> 
+                $
+l.33 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 ...2_clean_clf_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 ...2_clean_clf_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 ...2_clean_clf_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:51: Missing $ inserted.
+<inserted text> 
+                $
+l.51 ...2_clean_clf_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--255
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- []
+./Chapters/appendix.tex:69: Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 273--276
+./Chapters/appendix.tex:69: Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
- []
+./Chapters/appendix.tex:69: Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:69: Missing $ inserted.
+<inserted text> 
+                $
+l.69 ...transformed_results_table, randomly split}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 282--284
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- []
+./Chapters/appendix.tex:87: Missing $ inserted.
+<inserted text> 
+                $
+l.87 ...lf_nflash230_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-) [27]
-Chapter 4.
-(./Chapters/method.tex
-Underfull \hbox (badness 10000) in paragraph at lines 23--28
+./Chapters/appendix.tex:87: Missing $ inserted.
+<inserted text> 
+                $
+l.87 ...lf_nflash230_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
- []
+./Chapters/appendix.tex:87: Missing $ inserted.
+<inserted text> 
+                $
+l.87 ...lf_nflash230_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-[28
+./Chapters/appendix.tex:87: Missing $ inserted.
+<inserted text> 
+                $
+l.87 ...lf_nflash230_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-]
-<Clf/precision_recall_curve_both.pdf, id=139, 578.16pt x 397.485pt>
-<Clf/mAP_curve_both.pdf, id=140, 578.16pt x 397.485pt>
- [29]
-Underfull \hbox (badness 10000) in paragraph at lines 117--123
 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-<Tiltmeter plots/scan_duration_distribution_date.pdf, id=145, 1300.86pt x 722.7pt>
+./Chapters/appendix.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 133--134
- [][] |
- []
+./Chapters/appendix.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-[30]
-<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=149, 1806.75pt x 722.7pt>
+./Chapters/appendix.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 140--141
- [][] |
- []
+./Chapters/appendix.tex:106: Missing $ inserted.
+<inserted text> 
+                $
+l.106 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 150.
-[31] [32]
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
 
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[33] [34] [35] [36] (./Other figures/regular_nn.tex 
-Neural network large 
- Layer 1, 2, 3, 4,) (./Other figures/combined_nn_sep1.tex 
-Neural network large 
- Layer 1, 2, 1, 2, 3, 4,) (./Other figures/combined_nn_sep2.tex 
-Neural network large 
- Layer 1, 2, 3, 1, 2, 3, 4,) (./Other figures/combined_nn_sep3.tex 
-Neural network large 
- Layer 1, 2, 3, 1, 2, 3, 4, 1, 2, 
- Nprev 1 
- Nprev 1 
- Nprev 1 
- Nprev 1 
- Nprev 1 
- Nprev 1 
- Nprev 1 
- Nprev 1 
- Nprev 1 3, 1, 2, 3, 
- 3Here (N1-1) {l3} 
- 3Here (N1-2) {l3} 
- 3Here (N1-3) {l3} 
- 3Here (N1-1) {l3} 
- 3Here (N1-2) {l3} 
- 3Here (N1-3) {l3} 
- 3Here (N1-1) {l3} 
- 3Here (N1-2) {l3} 
- 3Here (N1-3) {l3} 4,) [37] [38]
-<Canva/datasplits.png, id=176, 1445.4pt x 482.55281pt>
- [39]) [40]
-Chapter 5.
-[41
+./Chapters/appendix.tex:124: Missing $ inserted.
+<inserted text> 
+                $
+l.124 ...2_clean_clf_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-]
-Chapter 6.
-[42
+./Chapters/appendix.tex:124: Missing $ inserted.
+<inserted text> 
+                $
+l.124 ...2_clean_clf_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-]
-Chapter 7.
-[43
+./Chapters/appendix.tex:124: Missing $ inserted.
+<inserted text> 
+                $
+l.124 ...2_clean_clf_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-]
-Appendix A.
-(./Chapters/appendix.tex) [44
+./Chapters/appendix.tex:124: Missing $ inserted.
+<inserted text> 
+                $
+l.124 ...2_clean_clf_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-] (./main.bbl) [45
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+./Chapters/appendix.tex:142: Missing $ inserted.
+<inserted text> 
+                $
+l.142 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:142: Missing $ inserted.
+<inserted text> 
+                $
+l.142 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:142: Missing $ inserted.
+<inserted text> 
+                $
+l.142 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chapters/appendix.tex:142: Missing $ inserted.
+<inserted text> 
+                $
+l.142 ...transformed_results_table, split on days}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [9
+
+] (./main.bbl [10] [11]
+
+Package natbib Warning: Empty `thebibliography' environment on input line 3.
+
+) [12
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 29701 strings out of 476024
- 550969 string characters out of 5794017
- 1967382 words of memory out of 5000000
- 49219 multiletter control sequences out of 15000+600000
- 637362 words of font info for 256 fonts, out of 8000000 for 9000
+ 28415 strings out of 476024
+ 526677 string characters out of 5794017
+ 1878382 words of memory out of 5000000
+ 48248 multiletter control sequences out of 15000+600000
+ 567788 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,22n,80p,1043b,1182s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (47 pages, 403695 bytes).
+ 84i,10n,80p,1043b,649s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (14 pages, 144334 bytes).
 PDF statistics:
- 293 PDF objects out of 1000 (max. 8388607)
- 178 compressed objects within 2 object streams
+ 100 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 64128 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 27164 words of extra memory for PDF output out of 29859 (max. 10000000)
 

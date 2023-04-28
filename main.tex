@@ -1,5 +1,5 @@
-\documentclass[a4paper, USenglish, 11pt, draft]{report}
-\usepackage[T1]{fontenc}
+\documentclass[a4paper, USenglish, 11pt,draft]{report}
+% \usepackage[T1]{fontenc}
 \usepackage{babel, folder/uiomasterfp}
 
 \usepackage[table]{xcolor}
@@ -14,6 +14,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{fancyhdr}
 %\usepackage{etoolbox} % for \ifthen
 \usepackage{listofitems} % for \readlist to create arrays
 \usepackage[outline]{contour} % glow around text
@@ -126,6 +127,7 @@ top=3cm,bottom=2.5cm]{geometry}
 
 
 \begin{document}
+\pagestyle{fancy}
 % \onehalfspacing
 
 \uiomasterfp[master, program={Computational Science: Physics},
@@ -133,19 +135,20 @@ color=blue,image = {teleskopgutt2},
 supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Claudia Cicone (UiO)}]
 
 
-\tableofcontents
+\tableofcontents 
+
 \chapter{Introduction}
-\input{Chapters/introduction.tex}
+% \input{Chapters/introduction.tex}
 
 \chapter{Atronomical Background}
-\input{Chapters/ast_background.tex}
+% \input{Chapters/ast_background.tex}
 
 
 \chapter{Machine Learning Background}
-\input{Chapters/ml_background.tex}
+% \input{Chapters/ml_background.tex}
 
 \chapter{Method}
-\input{Chapters/method.tex}
+% \input{Chapters/method.tex}
 
 \chapter{Results}
 
@@ -153,8 +156,10 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 
 \chapter{Conclusion}
 
+\pagestyle{plain}
 \appendix
-\chapter{}
+\chapter*{Appendices}
+\section*{Appendix A}
 \input{Chapters/appendix.tex}
 
 \newpage
