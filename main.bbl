@@ -1,3 +1,69 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{universal_approximation}
+Tianping Chen and Hong Chen.
+\newblock Universal approximation to nonlinear operators by neural networks
+  with arbitrary activation functions and its application to dynamical systems.
+\newblock {\em IEEE Transactions on Neural Networks}, 6(4):911--917, 1995.
+
+\bibitem{covert_shap_sage}
+Ian Covert.
+\newblock Understanding shap and sage.
+\newblock \url{https://iancovert.com/blog/understanding-shap-sage/}, 2020.
+
+\bibitem{SAGE}
+Ian Covert, Scott Lundberg, and Su-In Lee.
+\newblock Understanding global feature contributions with additive importance
+  measures, 2020.
+
+\bibitem{sage_paper}
+Ian Covert, Scott Lundberg, and Su-In Lee.
+\newblock Understanding global feature contributions with additive importance
+  measures, 2020.
+
+\bibitem{SHAP}
+Scott Lundberg and Su-In Lee.
+\newblock A unified approach to interpreting model predictions, 2017.
+
+\bibitem{Mehta_2019}
+Pankaj Mehta, Marin Bukov, Ching-Hao Wang, Alexandre~G.R. Day, Clint
+  Richardson, Charles~K. Fisher, and David~J. Schwab.
+\newblock A high-bias, low-variance introduction to machine learning for
+  physicists.
+\newblock {\em Physics Reports}, 810:1--124, may 2019.
+
+\bibitem{morde_vishal_nodate}
+Vishal Morde.
+\newblock Xgboost algorithm: Long she may rein.
+\newblock Downloaded January 2023.
+
+\bibitem{ephem}
+Brandon Rhodes.
+\newblock Ephem, 2021.
+\newblock \url{https://pypi.org/project/ephem/}.
+
+\bibitem{backprop_original}
+David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
+\newblock Learning representations by back-propagating errors.
+\newblock {\em Nature}, 323(6088):533--536, 1986.
+
+\bibitem{shapley_value_1953}
+Lloyd Shapley.
+\newblock A value for n-person games.
+\newblock {\em Contributions to the Theory of Games}, 2:307--317, 1953.
+
+\bibitem{tikz}
+Till Tantau.
+\newblock The {PGF/TikZ} manual, 2021.
+
+\bibitem{altaz_schematic}
+Tomruen.
+\newblock Azimuth-altitude schematic, 2011.
+\newblock Accessed: March 13, 2023.
+
+\bibitem{tpoint_manual}
+Tpoint Software.
+\newblock {\em TPOINT}, 2009.
+\newblock Version 13.5.
 
 \end{thebibliography}
