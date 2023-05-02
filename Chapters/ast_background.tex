@@ -1,4 +1,4 @@
-\section{Astronomy Terms}
+\section{Astronomy Terms}\label{sec:ast_terms}
 \subsection{The Celestial Sphere}
 The celestial sphere is a fundamental concept in astronomy.
 It is an imaginary sphere with an arbitrary radius centered on Earth, and it allows us to represent the positions of celestial objects conveniently and intuitively.
@@ -9,7 +9,7 @@ While the celestial sphere is a universal concept, the coordinate system used to
 
 
 
-\subsection{Altitude-Azimuth Coordinate System}
+\subsection{Altitude-Azimuth Coordinate System}\label{sec:altaz_coords}
 Figure \ref{fig:altaz_coords} depicts the coordinate system used at APEX, which is an altitude-azimuth system.
 This system specifies the coordinates using an azimuth and an altitude (or elevation) angle.
 Azimuth is the angle around the axis perpendicular to the horizontal plane, with zero degrees corresponding to due north.
@@ -76,7 +76,7 @@ Therefore, the azimuth angle must increase by twice the horizontal offset due to
 % Another possibility is investigating the use of machine learning models to aid such that a pointing scan doesn't have to be made as often.
 % This will reduce the workload at the telescope. \\
 
-\section{Pointing model}
+\section{Pointing model}\label{sec:pt_model}
 Since radio/(sub)-mm telescopes observe over an extended time, they need a pointing model to obtain sufficiently accurate pointings.
 The flux of the brightest radio sources is also weaker than the atmospheric emission, which means they are invisible in real-time.
 Therefore, astronomers must know that the pointing is accurate before making observations.
@@ -246,7 +246,7 @@ The astronomers perform these pointing corrections every couple of hours to ensu
 Note that we divide the term CA \eqref{eq:pmodel_ca} by cosine elevation, which converts the observed horizontal offset to azimuth.
 
 
-\section{Research questions and related works}
+\section{Research questions and related works} \label{sec:research_qs}
 \begin{itemize}
     \item Reduce poitning offsets with machine learning model
     \item Replace analytical model with machine learning model
@@ -258,7 +258,7 @@ Note that we divide the term CA \eqref{eq:pmodel_ca} by cosine elevation, which 
     \item ...
 \end{itemize}
 
-\section{Database}
+\section{Database} \label{sec:database}
 
 
 \subsection{Raw Data}

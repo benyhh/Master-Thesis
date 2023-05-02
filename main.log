@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  28 APR 2023 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  2 MAY 2023 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1010,360 +1010,581 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 18.99994pt on input line 135.
  [1]
 Package hyperref Info: Option `pageanchor' set `true' on input line 135.
- (./main.toc)
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
- [1
-
-]
-Chapter 1.
-[2
-
-]
-Chapter 2.
-[3
-
-]
-Chapter 3.
-[4
-
-]
-Chapter 4.
-[5
-
-]
-Chapter 5.
-[6
-
-]
-Chapter 6.
-[7
-
-]
-Chapter 7.
-[8
-
-] (./Chapters/appendix.tex
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5.
+ (./main.toc
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 5.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 5.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 5.
+(Font)              <10.95> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 5.
+(Font)              <6> on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [1
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[2])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[3]
+Chapter 1.
+(./Chapters/introduction.tex) [4
+
+]
+Chapter 2.
+(./Chapters/related_works.tex) [5
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[6]
+Chapter 3.
+(./Chapters/ast_background.tex
+Underfull \hbox (badness 10000) in paragraph at lines 13--20
+
+ []
+
+<Astronomy/Azimuth-Altitude_schematic.png, id=41, 1927.2pt x 1856.9375pt>
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 33.
+(c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-./Chapters/appendix.tex:14: Missing $ inserted.
-<inserted text> 
-                $
-l.14 ...f_nflash230_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [7
 
-./Chapters/appendix.tex:14: Missing $ inserted.
-<inserted text> 
-                $
-l.14 ...f_nflash230_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+]
+<Astronomy/radio_telescope.png, id=48, 474.27188pt x 440.39531pt>
 
-./Chapters/appendix.tex:14: Missing $ inserted.
-<inserted text> 
-                $
-l.14 ...f_nflash230_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-./Chapters/appendix.tex:14: Missing $ inserted.
-<inserted text> 
-                $
-l.14 ...f_nflash230_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-./Chapters/appendix.tex:33: Missing $ inserted.
-<inserted text> 
-                $
-l.33 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[8]
 
-./Chapters/appendix.tex:33: Missing $ inserted.
-<inserted text> 
-                $
-l.33 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-./Chapters/appendix.tex:33: Missing $ inserted.
-<inserted text> 
-                $
-l.33 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[9]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 129.
+ (c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
 
-./Chapters/appendix.tex:33: Missing $ inserted.
-<inserted text> 
-                $
-l.33 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-./Chapters/appendix.tex:51: Missing $ inserted.
-<inserted text> 
-                $
-l.51 ...2_clean_clf_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[10]
 
-./Chapters/appendix.tex:51: Missing $ inserted.
-<inserted text> 
-                $
-l.51 ...2_clean_clf_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-./Chapters/appendix.tex:51: Missing $ inserted.
-<inserted text> 
-                $
-l.51 ...2_clean_clf_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+[11]
 
-./Chapters/appendix.tex:51: Missing $ inserted.
-<inserted text> 
-                $
-l.51 ...2_clean_clf_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[12]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[13]
+<Correlation/Correlation_temp.pdf, id=72, 1156.32pt x 1156.32pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[14]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[15]
+<Feature during scans/scan_ACTUALAZ_335.pdf, id=79, 722.7pt x 433.62pt>
+<Feature during scans/scan_ACTUALEL_335.pdf, id=80, 722.7pt x 433.62pt>
+<Feature during scans/scan_TEMP1_335.pdf, id=81, 722.7pt x 433.62pt>
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 439.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 439.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 439.
+<Feature during scans/scan_TILT1T_335.pdf, id=82, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDDIRECTION_335.pdf, id=83, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDSPEED_335.pdf, id=84, 722.7pt x 433.62pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[16]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[17]
+<Pointing Scans/good_line.png, id=92, 645.612pt x 448.67625pt>
+<Pointing Scans/bad_line.png, id=94, 651.6345pt x 448.67625pt>
+<Pointing Scans/good_continuous.png, id=95, 686.565pt x 453.49425pt>
+<Pointing Scans/bad_continuous.png, id=96, 686.565pt x 453.49425pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[18]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 540--543
+
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[20]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[21]
+Chapter 4.
+(./Chapters/ml_background.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--17
+
+ []
+
+[22
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[23]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[24]
+<Other figures/decisiontree_example.PNG, id=121, 1033.61156pt x 804.00375pt>
+<Other figures/evolution_of_xgb.png, id=122, 542.025pt x 288.3272pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[25] (./Other figures/nn_with_eqs.tex 
+Neural network activation
+contour: Using real outline for `$w_{1,1}$' on input line 36.
+contour: Using real outline for `$w_{1,2}$' on input line 36.
+contour: Using real outline for `$w_{1,3}$' on input line 36.
+contour: Using real outline for `$w_{1,4}$' on input line 36.
+contour: Using real outline for `$w_{1,n}$' on input line 36.
+contour: Using real outline for `$b_1$' on input line 41.
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 245--251
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 252--255
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--276
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[29])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[30]
+Chapter 5.
+(./Chapters/method.tex [31
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[32]
+<Clf/precision_recall_curve_both.pdf, id=149, 578.16pt x 397.485pt>
+<Clf/mAP_curve_both.pdf, id=150, 578.16pt x 397.485pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[33]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 156.
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--199
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[34]
+<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=157, 1806.75pt x 722.7pt>
+
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 214--215
+ [][] |
+ []
+
+<Tiltmeter plots/scan_duration_distribution_date.pdf, id=158, 1300.86pt x 722.7pt>
+
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 221--222
+ [][] |
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[35]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[36]
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[37]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[38]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[39] (./Other figures/regular_nn.tex 
+Neural network large 
+ Layer 1, 2, 3, 4,) (./Other figures/combined_nn_sep1.tex 
+Neural network large 
+ Layer 1, 2, 1, 2, 3, 4,) (./Other figures/combined_nn_sep2.tex 
+Neural network large 
+ Layer 1, 2, 3, 1, 2, 3, 4,) (./Other figures/combined_nn_sep3.tex 
+Neural network large 
+ Layer 1, 2, 3, 1, 2, 3, 4, 1, 2, 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 3, 1, 2, 3, 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 4,)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[40]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[41]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[42]
+<Canva/datasplits.png, id=187, 1445.4pt x 482.55281pt>
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[43])
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[44]
+Chapter 6.
+(./Chapters/results.tex
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-./Chapters/appendix.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-./Chapters/appendix.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-./Chapters/appendix.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+) [45
 
-./Chapters/appendix.tex:69: Missing $ inserted.
-<inserted text> 
-                $
-l.69 ...transformed_results_table, randomly split}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[46]
+Chapter 7.
+[47
+
+]
+Chapter 8.
+[48
+
+] (./Chapters/appendix.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-./Chapters/appendix.tex:87: Missing $ inserted.
-<inserted text> 
-                $
-l.87 ...lf_nflash230_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-./Chapters/appendix.tex:87: Missing $ inserted.
-<inserted text> 
-                $
-l.87 ...lf_nflash230_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-./Chapters/appendix.tex:87: Missing $ inserted.
-<inserted text> 
-                $
-l.87 ...lf_nflash230_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-./Chapters/appendix.tex:87: Missing $ inserted.
-<inserted text> 
-                $
-l.87 ...lf_nflash230_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+Underfull \hbox (badness 1521) in paragraph at lines 120--120
+\OT1/lmr/m/n/10.95 (+20) ing point-ing off-set. The dataset used to get these re-sults con-tain only
+ []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-./Chapters/appendix.tex:106: Missing $ inserted.
-<inserted text> 
-                $
-l.106 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-./Chapters/appendix.tex:106: Missing $ inserted.
-<inserted text> 
-                $
-l.106 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/appendix.tex:106: Missing $ inserted.
-<inserted text> 
-                $
-l.106 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/appendix.tex:106: Missing $ inserted.
-<inserted text> 
-                $
-l.106 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-./Chapters/appendix.tex:124: Missing $ inserted.
-<inserted text> 
-                $
-l.124 ...2_clean_clf_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
+) [49
 
-./Chapters/appendix.tex:124: Missing $ inserted.
-<inserted text> 
-                $
-l.124 ...2_clean_clf_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/appendix.tex:124: Missing $ inserted.
-<inserted text> 
-                $
-l.124 ...2_clean_clf_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/appendix.tex:124: Missing $ inserted.
-<inserted text> 
-                $
-l.124 ...2_clean_clf_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-./Chapters/appendix.tex:142: Missing $ inserted.
-<inserted text> 
-                $
-l.142 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/appendix.tex:142: Missing $ inserted.
-<inserted text> 
-                $
-l.142 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/appendix.tex:142: Missing $ inserted.
-<inserted text> 
-                $
-l.142 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./Chapters/appendix.tex:142: Missing $ inserted.
-<inserted text> 
-                $
-l.142 ...transformed_results_table, split on days}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-) [9
-
-] (./main.bbl [10] [11]
-
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
-
-) [12
+] (./main.bbl [50] [51] [52]) [53
 
 ] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 28415 strings out of 476024
- 526677 string characters out of 5794017
- 1878382 words of memory out of 5000000
- 48248 multiletter control sequences out of 15000+600000
- 567788 words of font info for 99 fonts, out of 8000000 for 9000
+ 29700 strings out of 476024
+ 551861 string characters out of 5794017
+ 1968382 words of memory out of 5000000
+ 49273 multiletter control sequences out of 15000+600000
+ 621479 words of font info for 222 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,10n,80p,1043b,649s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (14 pages, 144334 bytes).
+ 84i,22n,80p,1043b,1180s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmro10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (55 pages, 450823 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 316 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 27164 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 55936 words of extra memory for PDF output out of 61914 (max. 10000000)
 

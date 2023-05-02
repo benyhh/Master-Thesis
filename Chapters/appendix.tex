@@ -1,101 +1,110 @@
-
 \begin{table}[h]
-    \centering
-    \caption{RMS values for different terms in the analytical model}
-    \begin{tabular}{c|cccc}
-    \multicolumn{1}{c}{} & \multicolumn{2}{c}{Case 1} & \multicolumn{2}{c}{Case 2} \\
-    k & Azimuth & Elevation & Azimuth & Elevation \\
-    \hline
-    \end{tabular}
-\end{table}
-
-\begin{table}[h]
-    \centering
-    \caption{tmp2022_clean_clf_nflash230_results_table, randomly split}
-    \begin{tabular}{rrrrr}
+    \centering %$tmp2022\_clean\_clf\_nflash230\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contains only data from NFLASH230 and is cleaned using the regular criteria and XGBoost classifier.}
+    \begin{tabular}{ccc c cc}
         \toprule
-        k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+        k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  0.983957 & 1.018378 &  0.926561 &  0.991728 \\
-         5 &  1.297720 & 1.137682 &  0.938401 &  0.987364 \\
-        10 &  1.428557 & 1.153950 &  0.966462 &  1.002820 \\
-        20 &  1.229440 & 1.103770 &  0.943179 &  0.984103 \\
-        30 &  1.387079 & 1.064364 &  0.958910 &  0.995761 \\
-        40 &  1.224572 & 1.054826 &  0.962620 &  1.004978 \\
-        50 &  1.179139 & 1.073336 &  0.974661 &  0.968089 \\
+        2 &  0.983957 &  1.018378 & &  0.926561 &  0.991728 \\
+        5 &  1.297720 &  1.137682 & &  0.938401 &  0.987364 \\
+       10 &  1.428557 &  1.153950 & &  0.966462 &  1.002820 \\
+       20 &  1.229440 &  1.103770 & &  0.943179 &  0.984103 \\
+       30 &  1.387079 &  1.064364 & &  0.958910 &  0.995761 \\
+       40 &  1.224572 &  1.054826 & &  0.962620 &  1.004978 \\
+       50 &  1.179139 &  1.073336 & &  0.974661 &  0.968089 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 
 \begin{table}[h]
-    \centering
-    \caption{tmp2022_clean_clf_nflash230_transformed_results_table, randomly split}
-    \begin{tabular}{rrrrr}
+    \centering %$tmp2022\_clean\_clf\_nflash230\_transformed\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contains only data from NFLASH230 and is cleaned using the regular criteria and XGBoost classifier.
+    are transformed to simulate a pointing correction after every scan.}
+    \begin{tabular}{ccc c cc}
         \toprule
-        k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+        k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  1.063771 & 1.097368 &  0.982346 &  1.023116 \\
-         5 &  1.158891 & 1.135054 &  0.974600 &  1.005169 \\
-        10 &  1.110609 & 1.074162 &  0.989497 &  1.005604 \\
-        20 &  1.125938 & 1.001437 &  0.970074 &  1.013085 \\
-        30 &  1.126540 & 1.023054 &  0.994982 &  0.971606 \\
-        40 &  1.134314 & 1.065193 &  1.013492 &  1.041213 \\
-        50 &  1.112269 & 1.028447 &  0.980788 &  0.998984 \\
+        2 &  1.063771 &  1.097368 & &  0.982346 &  1.023116 \\
+        5 &  1.158891 &  1.135054 & &  0.974600 &  1.005169 \\
+       10 &  1.110609 &  1.074162 & &  0.989497 &  1.005604 \\
+       20 &  1.125938 &  1.001437 & &  0.970074 &  1.013085 \\
+       30 &  1.126540 &  1.023054 & &  0.994982 &  0.971606 \\
+       40 &  1.134314 &  1.065193 & &  1.013492 &  1.041213 \\
+       50 &  1.112269 &  1.028447 & &  0.980788 &  0.998984 \\
+       \bottomrule
         \bottomrule
     \end{tabular}
 \end{table}
 
 \begin{table}[h]
-    \centering
-    \caption{tmp2022_clean_clf_results_table, randomly split}
-    \begin{tabular}{rrrrr}
+    \centering %$tmp2022\_clean\_clf\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.}
+    \begin{tabular}{ccc c cc}
         \toprule
-         k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+         k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  1.005252 & 1.232152 &  0.963643 &  0.966159 \\
-         5 &  1.002968 & 1.228990 &  0.962584 &  0.952695 \\
-        10 &  1.289085 & 1.212770 &  0.969236 &  0.983188 \\
-        20 &  1.474769 & 1.223286 &  0.973215 &  0.957379 \\
-        30 &  1.420438 & 1.217082 &  0.977044 &  0.957553 \\
-        40 &  1.359452 & 1.250011 &  0.981884 &  0.939400 \\
-        50 &  1.447718 & 1.239426 &  0.960710 &  0.950992 \\
+        2 &  1.005252 &  1.232152 & &  0.963643 &  0.966159 \\
+        5 &  1.002968 &  1.228990 & &  0.962584 &  0.952695 \\
+       10 &  1.289085 &  1.212770 & &  0.969236 &  0.983188 \\
+       20 &  1.474769 &  1.223286 & &  0.973215 &  0.957379 \\
+       30 &  1.420438 &  1.217082 & &  0.977044 &  0.957553 \\
+       40 &  1.359452 &  1.250011 & &  0.981884 &  0.939400 \\
+       50 &  1.447718 &  1.239426 & &  0.960710 &  0.950992 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 \begin{table}[h]
-    \centering
-    \caption{tmp2022_clean_clf_transformed_results_table, randomly split}
-    \begin{tabular}{rrrrr}
+    \centering %$tmp2022\_clean\_clf\_transformed\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+    It is also transformed to simulate a pointing correction after every scan.}
+    \begin{tabular}{ccc c cc}
         \toprule
-        k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+        k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  1.411340 & 1.072811 &  0.958876 &  0.944501 \\
-         5 &  1.658062 & 1.095572 &  0.959785 &  0.959705 \\
-        10 &  1.656576 & 1.144753 &  0.977446 &  0.943979 \\
-        20 &  1.744980 & 1.020705 &  0.974366 &  0.946778 \\
-        30 &  1.891196 & 1.006098 &  0.998285 &  0.940884 \\
-        40 &  2.040398 & 0.993940 &  0.972515 &  0.952763 \\
-        50 &  2.226176 & 0.997667 &  0.976921 &  0.942357 \\
+        2 &  1.411340 &  1.072811 & &  0.958876 &  0.944501 \\
+        5 &  1.658062 &  1.095572 & &  0.959785 &  0.959705 \\
+       10 &  1.656576 &  1.144753 & &  0.977446 &  0.943979 \\
+       20 &  1.744980 &  1.020705 & &  0.974366 &  0.946778 \\
+       30 &  1.891196 &  1.006098 & &  0.998285 &  0.940884 \\
+       40 &  2.040398 &  0.993940 & &  0.972515 &  0.952763 \\
+       50 &  2.226176 &  0.997667 & &  0.976921 &  0.942357 \\
     \bottomrule
 \end{tabular}
 \end{table}
 %%%%%%%%%%%%%%%%%%%%%%% SPLIT ON DAYS BELOW
 \begin{table}[h]
-    \centering
-    \caption{tmp2022_clean_clf_nflash230_results_table, split on days}
-    \begin{tabular}{rrrrr}
+    \centering %$tmp2022\_clean\_clf\_nflash230\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
+    The training and validation data is split on days, meaning that all the scans for a given day
+    are in the training or validation set and not both. The test set is unaffected by this.}
+    \begin{tabular}{ccc c cc}
         \toprule
-         k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+         k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  0.982285 & 1.019755 &  0.929712 &  0.956510 \\
-         5 &  1.365704 & 1.198440 &  0.917298 &  0.937182 \\
-        10 &  1.383077 & 1.155258 &  0.951214 &  0.943254 \\
-        20 &  1.251918 & 1.126138 &  0.939914 &  0.942015 \\
-        30 &  1.334676 & 1.093938 &  0.928257 &  0.939238 \\
-        40 &  1.145716 & 1.057689 &  0.936151 &  0.955285 \\
-        50 &  1.201661 & 1.061612 &  0.937422 &  0.941564 \\
+        2 &  0.982285 &  1.019755 & &  0.929712 &  0.956510 \\
+        5 &  1.365704 &  1.198440 & &  0.917298 &  0.937182 \\
+       10 &  1.383077 &  1.155258 & &  0.951214 &  0.943254 \\
+       20 &  1.251918 &  1.126138 & &  0.939914 &  0.942015 \\
+       30 &  1.334676 &  1.093938 & &  0.928257 &  0.939238 \\
+       40 &  1.145716 &  1.057689 & &  0.936151 &  0.955285 \\
+       50 &  1.201661 &  1.061612 & &  0.937422 &  0.941564 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -103,54 +112,72 @@
 
 \begin{table}[h]
     \centering
-    \caption{tmp2022_clean_clf_nflash230_transformed_results_table, split on days}
-    \begin{tabular}{rrrrr}
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
+    It is also transformed to simulate a pointing correction after every scan.
+    $tmp2022\_clean\_clf\_nflash230\_transformed\_results\_table$,
+    The training and validation data is split on days, meaning that all the scans for a given day
+    are in the training or validation set and not both. The test set is unaffected by this.}
+    \begin{tabular}{ccc c cc}
         \toprule
-         k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+         k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  1.030842 & 1.005132 &  0.982900 &  1.057857 \\
-         5 &  1.036558 & 1.000412 &  0.983725 &  1.031629 \\
-        10 &  1.136567 & 1.008504 &  0.987074 &  1.012463 \\
-        20 &  1.042592 & 1.008786 &  0.977380 &  0.994046 \\
-        30 &  1.242498 & 1.004090 &  0.977887 &  1.008825 \\
-        40 &  1.214723 & 1.006611 &  1.006974 &  0.996165 \\
-        50 &  1.180379 & 0.992092 &  0.983166 &  0.976880 \\
+        2 &  1.030842 &  1.005132 & &  0.982900 &  1.057857 \\
+        5 &  1.036558 &  1.000412 & &  0.983725 &  1.031629 \\
+       10 &  1.136567 &  1.008504 & &  0.987074 &  1.012463 \\
+       20 &  1.042592 &  1.008786 & &  0.977380 &  0.994046 \\
+       30 &  1.242498 &  1.004090 & &  0.977887 &  1.008825 \\
+       40 &  1.214723 &  1.006611 & &  1.006974 &  0.996165 \\
+       50 &  1.180379 &  0.992092 & &  0.983166 &  0.976880 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 \begin{table}[h]
-    \centering
-    \caption{tmp2022_clean_clf_results_table, split on days}
-    \begin{tabular}{rrrrr}
+    \centering %$tmp2022\_clean\_clf\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+    The training and validation data is split on days, meaning that all the scans for a given day
+    are in the training or validation set and not both. The test set is unaffected by this.}
+    \begin{tabular}{ccc c cc}
         \toprule
-         k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+         k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  1.007153 & 1.232004 &  0.959771 &  0.957618 \\
-         5 &  1.002580 & 1.169598 &  0.955311 &  0.967055 \\
-        10 &  1.287770 & 1.115745 &  0.957866 &  0.962132 \\
-        20 &  1.579776 & 1.120837 &  0.969443 &  0.957544 \\
-        30 &  1.606464 & 1.107195 &  0.967436 &  0.971148 \\
-        40 &  1.528256 & 1.068496 &  0.979982 &  0.951577 \\
-        50 &  1.757519 & 1.061275 &  0.993239 &  0.947433 \\
+        2 &  1.007153 &  1.232004 & &  0.959771 &  0.957618 \\
+        5 &  1.002580 &  1.169598 & &  0.955311 &  0.967055 \\
+       10 &  1.287770 &  1.115745 & &  0.957866 &  0.962132 \\
+       20 &  1.579776 &  1.120837 & &  0.969443 &  0.957544 \\
+       30 &  1.606464 &  1.107195 & &  0.967436 &  0.971148 \\
+       40 &  1.528256 &  1.068496 & &  0.979982 &  0.951577 \\
+       50 &  1.757519 &  1.061275 & &  0.993239 &  0.947433 \\
         \bottomrule
     \end{tabular}
 \end{table}
 
 \begin{table}[h]
-    \centering
-    \caption{tmp2022_clean_clf_transformed_results_table, split on days}
-    \begin{tabular}{rrrrr}
+    \centering %$tmp2022\_clean\_clf\_transformed\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+    It is also transformed to simulate a pointing correction after every scan.
+    The training and validation data is split on days, meaning that all the scans for a given day
+    are in the training or validation set and not both. The test set is unaffected by this.}
+    \begin{tabular}{ccc c cc}
         \toprule
-         k & Az RMS 1 & El RMS 1 & Az RMS 2 & El RMS 2 \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+         k & Azimuth & Elevation & & Azimuth & Elevation \\
         \midrule
-         2 &  1.362174 & 1.049563 &  0.958867 &  0.949895 \\
-         5 &  1.519794 & 1.073077 &  0.968773 &  0.951299 \\
-        10 &  1.515574 & 1.043983 &  0.974003 &  0.948826 \\
-        20 &  1.698061 & 1.017496 &  0.981890 &  0.939138 \\
-        30 &  1.716675 & 1.014389 &  0.979207 &  0.957982 \\
-        40 &  2.476614 & 1.034294 &  0.990171 &  0.947986 \\
-        50 &  2.493252 & 1.031271 &  0.968949 &  0.943721 \\
+        2 &  1.362174 &  1.049563 & &  0.958867 &  0.949895 \\
+        5 &  1.519794 &  1.073077 & &  0.968773 &  0.951299 \\
+       10 &  1.515574 &  1.043983 & &  0.974003 &  0.948826 \\
+       20 &  1.698061 &  1.017496 & &  0.981890 &  0.939138 \\
+       30 &  1.716675 &  1.014389 & &  0.979207 &  0.957982 \\
+       40 &  2.476614 &  1.034294 & &  0.990171 &  0.947986 \\
+       50 &  2.493252 &  1.031271 & &  0.968949 &  0.943721 \\
         \bottomrule
     \end{tabular}        
 \end{table}
