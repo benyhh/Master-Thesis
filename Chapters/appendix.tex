@@ -1,3 +1,5 @@
+\section{Pointing Correction Results}
+
 \begin{table}[h]
     \centering %$tmp2022\_clean\_clf\_nflash230\_results\_table$
     \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
@@ -181,3 +183,152 @@
         \bottomrule
     \end{tabular}        
 \end{table}
+
+
+\section{Raw data correlation}
+\begin{table}[h]
+    \centering %$tmp2022\_clean\_clf\_transformed\_results\_table$
+    \caption{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.}
+    \begin{tabular}{lccc}
+        \toprule
+        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+        \midrule
+        WINDSPEED\_VAR\_5        &      $0.10$ &      $0.12$ &               $0.11$ \\
+        DAZ\_TILT\_MEDIAN\_1      &      $0.09$ &      $0.03$ &               $0.14$ \\
+        DAZ\_TILTTEMP\_MEDIAN\_1  &      $0.00$ &     -$0.06$ &               $0.30$ \\
+        TILT1Y\_MEDIAN\_1        &      $0.08$ &      $0.02$ &               $0.13$ \\
+        TEMP26\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.19$ \\
+        TEMP27\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.21$ \\
+        TEMP28\_MEDIAN\_1        &      $0.04$ &      $0.11$ &              $-0.25$ \\
+        TEMPERATURE\_MEDIAN\_1   &      $0.04$ &      $0.12$ &              $-0.26$ \\
+        POSITIONZ\_MEDIAN\_1     &      $0.05$ &      $0.11$ &              $-0.21$ \\
+        DEWPOINT\_MEDIAN\_1      &      $0.08$ &      $0.12$ &              $-0.15$ \\
+        DAZ\_TOTAL\_MEDIAN\_1     &      $0.09$ &      $0.03$ &               $0.13$ \\
+        WINDSPEED\_MEDIAN\_1     &      $0.02$ &      $0.02$ &               $0.13$ \\
+        HESE2                  &      $0.46$ &      $0.44$ &               $0.44$ \\
+        HESE3                  &      $0.98$ &      $0.94$ &               $0.77$ \\
+        HESE4                  &      $0.97$ &      $0.92$ &               $0.74$ \\
+        HESE5                  &      $0.34$ &      $0.31$ &               $0.15$ \\
+        HACA5                  &      $0.06$ &      $0.05$ &               $0.10$ \\
+        HECE                   &      $1.00$ &      $0.96$ &               $0.78$ \\
+        HECE2                  &      $1.00$ &      $0.96$ &               $0.78$ \\
+        HECE3                  &      $0.76$ &      $0.72$ &               $0.52$ \\
+        HSCA5                  &      $0.12$ &      $0.11$ &               $0.14$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering %$tmp2022\_clean\_clf\_transformed\_results\_table$
+    \caption{Features with Pearson's correlation $\geq 0.1$ to either one of the target values.}
+    \begin{tabular}{lccc}
+        \toprule
+        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+        \midrule
+        TEMP26\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.12$ \\
+        TEMP27\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.13$ \\
+        DAZ\_TOTAL\_MEDIAN\_1     &      $0.12$ &      $0.08$ &               $0.07$ \\
+        WINDSPEED\_MEDIAN\_1     &      $0.03$ &      $0.03$ &               $0.10$ \\
+        AWAZ                   &      $0.00$ &     $-0.01$ &               $0.57$ \\
+        HESE2                  &      $0.56$ &      $0.54$ &               $0.45$ \\
+        HESE3                  &      $0.97$ &      $0.90$ &               $0.43$ \\
+        HESE4                  &      $0.91$ &      $0.82$ &               $0.26$ \\
+        HESE5                  &      $0.29$ &      $0.22$ &              $-0.11$ \\
+        HECE                   &      $1.00$ &      $0.92$ &               $0.45$ \\
+        HECE2                  &      $0.98$ &      $0.89$ &               $0.38$ \\
+        HECE3                  &      $0.70$ &      $0.62$ &               $0.10$ \\
+        HSCA                   &      $0.01$ &     $-0.00$ &               $0.53$ \\
+        \bottomrule
+        \end{tabular}
+\end{table}
+
+
+\section{Base pointing model results}
+% \begin{table}[h]
+%     \centering
+%     \caption{Regular neural network}
+%     \begin{tabular}{ccccccc}
+%         \toprule
+%         Mean & STD & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
+%         18.37 & 11.88 &       Tanh &    [[22, 46]] &          0.01 &        475 & MSE \\
+%         18.41 &  7.46 &       GeLU &        [[46]] &          0.01 &        472 & MSD \\
+%         18.84 &  5.60 &       ReLU &        [[82]] &          0.02 &        334 & MSE \\
+%         19.42 &  9.50 &       Tanh &        [[64]] &          0.01 &         61 & MSE \\
+%         22.06 &  7.88 &       ReLU &        [[20]] &          0.00 &        309 & MSD \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+
+% \begin{table}[h]
+%     \centering %$tmp2022\_clean\_clf\_transformed\_results\_table$
+%     \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+%     It is also transformed to simulate a pointing correction after every scan.}
+%     \begin{tabular}{ccc c cc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+%         \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+%         k & Azimuth & Elevation & & Azimuth & Elevation \\
+%         \midrule
+%         2 &  1.411340 &  1.072811 & &  0.958876 &  0.944501 \\
+%         5 &  1.658062 &  1.095572 & &  0.959785 &  0.959705 \\
+%        10 &  1.656576 &  1.144753 & &  0.977446 &  0.943979 \\
+%        20 &  1.744980 &  1.020705 & &  0.974366 &  0.946778 \\
+%        30 &  1.891196 &  1.006098 & &  0.998285 &  0.940884 \\
+%        40 &  2.040398 &  0.993940 & &  0.972515 &  0.952763 \\
+%        50 &  2.226176 &  0.997667 & &  0.976921 &  0.942357 \\
+%     \bottomrule
+% \end{tabular}
+% \end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Separate 1}
+    \begin{tabular}{ccccccc}
+        \toprule
+        \multicolumn{2}{c}{RMS test set} & \multicolumn{5}{c}{Hyperparameters} \\
+        \cmidrule(lr){1-2} 
+        Mean & STD & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
+        \midrule
+        17.41 &  7.87 &       Tanh &        [40] &          0.01 &        101 & MSD \\
+        18.78 & 10.02 &       GeLU &   [86, 106] &          0.02 &         43 & MSD \\
+        20.26 & 10.58 &       ReLU &    [68, 42] &          0.02 &        450 & MSD \\
+        21.51 &  8.38 &       Tanh &        [32] &          0.02 &        266 & MSE \\
+        22.14 & 11.76 &       ReLU &       [106] &          0.02 &         95 & MSE \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+
+% \begin{table}[h]
+%     \centering
+%     \caption{Separate 2}
+%     \begin{tabular}{rrllrrl}
+%         \toprule
+%         RMS Test & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
+%         20.25 &  6.50 &       Tanh &        [[62]] &          0.00 &        155 & MSD \\
+%         20.52 &  5.52 &       Tanh &        [[40]] &          0.01 &        101 & MSD \\
+%         22.19 &  7.02 &       GeLU &        [[54]] &          0.02 &        413 & MSD \\
+%         23.19 & 16.15 &       ReLU &        [[81]] &          0.01 &        439 & MSD \\
+%         24.14 & 14.64 &       GeLU &    [[97, 24]] &          0.02 &        321 & MSE \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+
+% \begin{table}[h]
+%     \centering
+%     \caption{Separate 3}
+%     \begin{tabular}{rrllrrl}
+%         \toprule
+%         RMS Test & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
+%         17.12 &  8.42 &       Tanh &        [[26]] &          0.00 &        358 & MSD \\
+%         19.10 &  7.94 &       Tanh &    [[49, 40]] &          0.02 &        320 & MSD \\
+%         19.81 & 13.94 &       ReLU &    [[97, 60]] &          0.02 &        359 & MSD \\
+%         19.84 & 12.64 &       ReLU &   [[117, 32]] &          0.02 &        298 & MSD \\
+%         20.20 &  9.28 &       ReLU &    [[83, 32]] &          0.01 &        331 & MSD \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+    

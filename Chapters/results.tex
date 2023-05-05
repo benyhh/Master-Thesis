@@ -70,3 +70,20 @@ For these results, see Appendix A (\ref{sec:appendix_a}).
     \end{tabular}
     \label{tab:results_nflash_days}
 \end{table}
+
+
+
+\section{Testing}
+\begin{tabular}{rrrrllrrl}
+    \toprule
+    RMS Test & \multicolumn{2}{l}{RMS Val} & activation & hidden\_layers & learning\_rate & batch\_size &                            loss\_func \\
+        mean &   std &    mean &  std &      first &         first &         first &      first &                                first \\
+       16.61 &  7.63 &   13.20 & 1.82 &       tanh &        [[26]] &          0.00 &        358 & <function MSDLoss at 0x7fc522741940> \\
+    \midrule
+       18.49 &  7.25 &   15.54 & 1.11 &       tanh &    [[49, 40]] &          0.02 &        320 & <function MSDLoss at 0x7fc522741940> \\
+       18.87 & 11.55 &   14.74 & 2.33 &       relu &   [[117, 32]] &          0.02 &        298 & <function MSDLoss at 0x7fc522741940> \\
+       19.26 &  8.62 &   13.95 & 1.90 &       relu &    [[83, 32]] &          0.01 &        331 & <function MSDLoss at 0x7fc522741940> \\
+       19.44 & 12.50 &   15.73 & 3.05 &       relu &    [[97, 60]] &          0.02 &        359 & <function MSDLoss at 0x7fc522741940> \\
+    \bottomrule
+    \end{tabular}
+    

@@ -2,16 +2,21 @@
 \subsection{The Celestial Sphere}
 The celestial sphere is a fundamental concept in astronomy.
 It is an imaginary sphere with an arbitrary radius centered on Earth, and it allows us to represent the positions of celestial objects conveniently and intuitively.
-Any astronomical observation is a 2D projection onto the celestial sphere, a tool astronomers use to specify the position of a target without using its distance.
-Instead, we describe the position as two-dimensional coordinates on the sphere.
-While the celestial sphere is a universal concept, the coordinate system used to specify the location of a target can vary from telescope to telescope.
+Any astronomical observation is a 2D projection onto the celestial sphere,
+a tool astronomers use to specify the position of a target as it appears in the sky without using its physical distance from Earth
+(which requires a deeper knowledge of the physical properties of the astronomical target, usually acquired after many different observations)
+We describe the position as two-dimensional angular coordinates on the sphere.
+While the celestial sphere is a universal concept, the coordinate system used to specify the location of a target can vary.
 
 
 
 
 \subsection{Altitude-Azimuth Coordinate System}\label{sec:altaz_coords}
-Figure \ref{fig:altaz_coords} depicts the coordinate system used at APEX, which is an altitude-azimuth system.
-This system specifies the coordinates using an azimuth and an altitude (or elevation) angle.
+Figure \ref{fig:altaz_coords} depicts the altitude-azimuth coordinate system,
+which depends on the observatory's position on Earth and is commonly used when performing astronomical observations
+(but rarely used in scientific publications, which instead use a universal coordinate system).
+This system specifies the angular coordinates (e.g. in degrees or arcminutes, which are 1/60 of a degree, or arcseconds which are 1/60 of an arcmin)
+using an azimuth and an altitude (or elevation) angle.
 Azimuth is the angle around the axis perpendicular to the horizontal plane, with zero degrees corresponding to due north.
 At APEX, the convention is to increase the azimuth angle in a clockwise direction.
 The interval for azimuth angles is $[-270^\circ,270^\circ]$ due to APEX's ability to rotate one and a half times around its axis in the horizontal plane.
@@ -78,38 +83,49 @@ Therefore, the azimuth angle must increase by twice the horizontal offset due to
 
 \section{Pointing model}\label{sec:pt_model}
 Since radio/(sub)-mm telescopes observe over an extended time, they need a pointing model to obtain sufficiently accurate pointings.
-The flux of the brightest radio sources is also weaker than the atmospheric emission, which means they are invisible in real-time.
-Therefore, astronomers must know that the pointing is accurate before making observations.
-The pointing model at APEX consists of two parts, one analytical model and additional pointing corrections performed at regular intervals based on recently observed pointing offsets.
-These equations can explain the resulting pointing
+The flux of the brightest radio sources is also weaker than the atmospheric emission,
+which means that the signal is often hidden in the noise and needs to be extracted using long integrations and modulation techniques.
+Therefore, astronomers must know that the pointing is accurate before initiating a long integration on the source.
+
+The pointing model at APEX consists of two steps, an analytical model and additional pointing corrections performed at regular intervals based on recently observed pointing offsets.
+The analytical model consists of fitting a multiple terms to the many measurements of the pointing offset (difference between input coordinates and the observed coordinates of the source).
+These terms can be geometric terms or terms related to, for example, metrology data.
+The fitted terms are used for $1$-$2$ months and run in the background adjusting all input coordinates.
+The additional pointing corrections are performed by astronomers every $1$-$2$ hours during the observations and before observing a new target.
+
+These equations explain the resulting pointing
+
 \begin{align}
     Az &= Az_\text{input} + \Delta Az_\text{analytical model} + \Delta Az_\text{correction} \\ 
     El &= El_\text{input} + \Delta El_\text{analytical model} + \Delta El_\text{correction}
 \end{align}
-Where the first term is the input coordinates, the second is the adjustment made according to the analytical model,
-Furthermore, the last term is the adjustments made according to recent observed pointing offsets.
+Where the first terms, $Az_\text{input}$ and $El_\text{input}$, are the input coordinates.
+The second terms $\Delta Az_\text{analytical model}$ and $\Delta El_\text{analytical model}$ are the adjustment made according to the analytical model.
+Furthermore, the last terms, $\Delta Az_\text{correction}$ and $\Delta El_\text{correction}$, are the corrections based on recently measured pointing offsets.
 
 In the following section, we introduce and explain the adjustments from the analytical model and pointing offsets. 
 
 
 \subsection{Analytical Model}
 
-Accurately observing pointing offsets without a pointing model can be challenging as the error is typically more significant than the beam size, causing the source to fall outside the beam. At APEX,  they use an optical receiver mounted in the primary mirror to make the initial observations, which allows them to observe the source in real-time.
-During this process, the telescope is pointed at various sources with known locations, yielding both input and observed coordinates.
+Accurately measuring pointing offsets without a pointing model can be challenging as the error is typically larger than the beam size, causing the source to fall outside the beam. At APEX,
+astronomers use an optical receiver mounted in the primary mirror to make the initial observations, which allows them to observe the source in real-time.
+During this process, which the astronomers perform periodically every $1$-$2$ months, the telescope is pointed at various sources with known locations, yielding both input and observed coordinates.
 
-The analytical model at APEX considers various factors that affect pointing, including purely geometrical terms based on the imperfect mounting of telescope components and empirical terms.
-The analytical pointing model uses the following terms, dependent on the azimuth $Az$ or elevation $El$, except for a few constant terms.
-They determine the coefficients for all the terms using a linear fit based on the observed offsets from a pointing campaign, and the sum of all terms is the adjustment made by the model.
+The analytical pointing model at APEX considers various factors that affect pointing, including purely geometrical terms based on the imperfect mounting of telescope components and empirical terms.
+It uses the terms described below, all of which are dependent on the azimuth $Az$ or elevation $El$, except for a couple of constant terms.
+The coefficients for all the terms are determined by the \texttt{TPOINT} software, using a linear fit based on the observed offsets from a pointing campaign.
+The sum of all terms is the adjustment made by the model.
 
-They base most of the terms described in this section on data collected from the optical receiver mounted in the primary mirror.
-Then, they refine the terms using observations from different instruments to develop specialized pointing models for each, while most terms remain constant from the optical fit.
+Most of the terms described in this section are fitted on data collected from the optical receiver mounted in the primary mirror.
+Then, the astronomers refine the terms using observations from different instruments to develop specialized pointing models for each, while most terms remain constant from the optical fit.
 The analytical model is crucial in accurately determining the telescope's pointing offsets, essential in obtaining high-quality observational data.
 
-The following descriptions of the terms are taken directly from the tpoint software manual \cite{tpoint_manual}.
+The following descriptions of the terms are taken directly from the \texttt{TPOINT} software manual \cite{tpoint_manual}.
 
 \subsubsection{Harmonic terms}
 The analytical model has multiple harmonic terms, some geometrical and some empirical.
-The tpoint software used to develop the analytical model suggests terms that improve the model's performance on the chosen dataset.
+The \texttt{TPOINT} software used to develop the analytical model suggests terms that improve the model's performance on the chosen dataset.
 The following terms are the empirical terms for azimuth.
 \begin{align}
     \Delta Az =&  c_1 \cdot \sin{Az} + c_2 \cdot \frac{\cos{2Az}}{\cos{El}} + c_3 \cdot \cos{3Az} + c_4 \cdot \sin{2Az} \\
@@ -123,7 +139,7 @@ and the terms for elevation are
 \end{align}
 
 
-The tpoint software denotes the harmonic terms in the format $Hrfci$. The list below explains the different terms.
+The \texttt{TPOINT} software denotes the harmonic terms in the format $Hrfci$. The list below explains the different terms.
 
 \begin{itemize}
     \item $H$: Stands for harmonics
@@ -134,7 +150,7 @@ The tpoint software denotes the harmonic terms in the format $Hrfci$. The list b
     \item $i$: Integer value in the range $0$-$9$, denoting the frequency of the harmonic.
 \end{itemize}
 
-For example, is $\Delta Az = \text{HACA3}\cos{3Az}$ denoted as HACA3 in the tpoint software.
+For example, is $\Delta Az = \text{HACA3}\cos{3Az}$ denoted as HACA3 in the \texttt{TPOINT} software.
 
 \subsubsection{Az/El non-perpendicularity (NPAE)}
 In an altazimuth mount, if the azimuth axis and elevation axis are not exactly at

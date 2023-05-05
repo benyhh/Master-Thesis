@@ -1,37 +1,36 @@
-The use of machine learning in astronomy has gaiend popularoty in recent years for a variety of purposes, such as data analysis and prediction.
-However, its application in the context of pointing models in radio telescopes has not yet been explored extensively. 
-In this section, we provide a review of existing literature on pointing models in radio telescopes, as well as the use of machine learning for similar applications
+The application of machine learning in astronomy has become increasingly popular in recent years, with various applications such as data analysis and prediction.
+However, the use of machine learning in the context of pointing models in radio telescopes has yet to be extensively explored.
+In this section, we provide a review of the existing literature on pointing models in radio telescopes, as well as the potential use of machine learning for similar applications.
 
 \section{Pointing Models in Radio Telescopes}
-Traditional methods for pointing models in radio telescopes involve modeling the pointing error as a function of various parameters, 
-such as azimuth, elevation, temperature, and time. 
-These models are often complex and require significant effort to develop and mantain.
-Moreover, they can be limited by the limited by the accuracy of the models used atmospheric refraction, instrumental error, and other sources of noise.
+Traditional methods for pointing models in radio telescopes involve modeling the pointing error as a function of various parameters, such as azimuth, elevation, temperature, and time.
+These models are often complex and require significant effort to develop and maintain.
+Moreover, they can be limited by the accuracy of the models used for atmospheric refraction, instrumental error, and other sources of noise.
 
 Several papers have described various approaches to improve the pointing accuracy of radio telescopes.
-For example, \cite{white_green_2022} constructs a pointing model for the Green Bank Telescope
-using theoretical terms based on the telescope's structure and analysis on the thermal deformation of the telescope structure.
-\cite{greve1996pointing} also studies seasonal effects on the pointing.
+For example, White et al. \cite{whitegreen2022} developed a pointing model for the Green Bank Telescope using theoretical terms based on the telescope's structure and analysis on the thermal deformation of the telescope structure.
+Greve et al. \cite{greve1996pointing} studied seasonal effects on the pointing.
 
+\section{Machine Learning in Astronomy}
+Machine learning is used in various ways in astronomy.
+For instance, Petrillo et al. \cite{mlastgravlens} used two convolutional neural networks to detect gravitational lensing from images.
+George \& Huerta \cite{mlastgravitationalwaves} used a convolutional neural network to detect gravitational waves in real time at LIGO.
+Despite many use cases for machine learning in astronomy and the need for an accurate pointing model in radio telescopes,
+we have not found any studies that used machine learning to develop or maintain a pointing model for radio telescopes.
 
-
-\section{Machine Learning for Pointing Models}
 
 \section{Challenges and Opportunities}
+The use of machine learning for pointing models in radio telescopes poses several challenges and opportunities.
+One of the main challenges is the need for large datasets, which can be difficult to obtain in the context of radio telescopes.
+Moreover, the accuracy of the pointing model depends on the accuracy of the data used for training, which can be affected by various sources of noise and error.
+Nonetheless, machine learning algorithms offer the potential for significant improvements in pointing accuracy,
+and can potentially reduce the complexity and maintenance requirements of traditional pointing models.
+Future research in this area could explore the development of machine learning algorithms that can handle the challenges unique to radio telescopes,
+and the integration of machine learning techniques into existing pointing models.
 
 
 
 
-\section{Pointing Models in Radio Telescopes}
-Traditional methods for pointing models in radio telescopes involve modeling the pointing error as a function of various parameters,
-such as azimuth, elevation, temperature, and time.
-For example, \cite{white_green_2022} constructs a pointing model for the Green Bank Telescope
-using theoretical terms based on the telescope's structure and analysis of data from the metrology systems. 
 
-The paper \cite{greve1996pointing} also studies seasonal effects on the pointing.
-A problem with these models is that they require significant effort to develop and mantain.
 
-\section{Machine Learning for Pointing Models}
-
-\section{Challenges and Opportunities}
 
