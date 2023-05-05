@@ -1,4 +1,4 @@
-\section{Supervised learning}
+\section{Supervised learning} \label{sec:supervised_learning}
 Supervised learning is a subfield of machine learning that refers to training a model to predict a specific target value based on input data.
 In this context, we refer to the input data as "features." The training is supervised when paired with the corresponding target value for prediction.
 There are two types of supervised learning, regression and classification. 
@@ -7,7 +7,7 @@ The model architecture of the model can be the same regardless of predicting a t
 The difference is in the loss function, which is used to evaluate the model's performance during training. The last layer activation function for neural networks is different for regression and classification. 
 In-depth explanations of this will come in the following sections.
 
-\section{Loss/Cost}
+\section{Loss/Cost} \label{sec:loss_cost}
 In machine learning, the loss of a model refers to the discrepancy between the predicted and true values.
 It is calculated using a specific function designed to penalize incorrect predictions and measure the model's performance.
 The ultimate goal of any machine learning model is to minimize the loss and thereby reduce the difference between predicted and desired outputs.
@@ -210,6 +210,95 @@ Equation \eqref{eq:bp1} lets us calculate the error in the last layer, and using
 We then use equations \eqref{eq:bp2} and \eqref{eq:bp4} to calculate the gradient of the cost function with respect to the weights and biases.
 
 
+\subsection{Gradient Descent}
+Gradient Descent (GD) is an iterative optimization algorithm used in machine learning for minimizing a differentiable function.
+The goal of GD is to update the model's trainable parameters in such a way that the loss function is minimized.
+In mathematical terms, we aim to find the values of the parameters $\boldsymbol{\theta}$ that minimize the objective function $\mathcal{L}(\bold{x}, \boldsymbol{\theta})$, where $\bold{x}$ represents the input data.
+The loss function is typically defined as the mean squared error \eqref{eq:mse} for regression problems, so
+\begin{equation}
+    \mathcal{L}(\bold{x}, \boldsymbol{\theta}) = \frac{1}{N}\sum_{i=1}^N(y_i-f(\bold{x}_i, \boldsymbol{\theta}))^2,
+\end{equation}
+where $f(\bold{x}_i, \boldsymbol{\theta})$ is the output of the model for input data $\bold{x}_i$, and $y_i$ is the target value.
+
+To achieve the goal, GD involves calculating the gradient of the loss function with respect to the model's trainable parameters and updating them iteratively by taking a small step in the negative direction of the gradient.
+The iterative update rule can be expressed as follows:
+
+\begin{align}
+\bold{v}_t &= \eta_t \nabla_\theta \mathcal{L}(\bold{x}, \boldsymbol{\theta}), \\
+\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \bold{v}_t,
+\end{align}
+
+where $\eta$ denotes the learning rate, and $\nabla_\theta$ denotes the gradient with respect to $\boldsymbol{\theta}$.
+The learning rate determines the step size of the update, and it is important to choose a suitable value to ensure convergence of the optimization.
+
+One major limitation of GD is that it can get stuck in local minima, yielding suboptimal results.
+The choice of initial parameter values $\boldsymbol{\theta}$ can also impact the final optimized model.
+Moreover, computing the gradient using the entire dataset can be computationally expensive for large datasets.
+To address these limitations, various modifications of GD have been proposed,
+such as stochastic gradient descent (SGD) and mini-batch gradient descent (MBGD),
+which compute the gradient using only a subset of the data at each iteration.
+These modifications can help to accelerate the convergence and improve the scalability of GD.
+
+\subsection{Stochastic Gradient Descent}
+Stochastic Gradient Descent (SGD) is a widely used optimization algorithm in machine learning that addresses some of the limitations of Gradient Descent (GD).
+Unlike GD, which computes the gradient using the entire dataset at each iteration, SGD computes the gradient using only a randomly sampled subset, called a mini-batch.
+This makes SGD more efficient and less computationally expensive than GD, particularly for large datasets.
+Furthermore, by randomly sampling mini-batches, SGD is more likely to escape local minima and converge to the global minimum.
+The update rule for SGD can be derived similarly to that for GD, with the only difference being the replacement of the full dataset with a mini-batch.
+By iteratively updating the model's parameters using mini-batches, SGD can converge faster and more robustly than GD.
+
+However, SGD also has limitations to consider. If the learning rate is too large, the optimization may overshoot the minimum and fail to converge.
+On the other hand, if the learning rate is too small, the optimization may converge very slowly.
+In addition, if there are areas in the function space with small gradients, the optimization may stagnate and fail to converge.
+To address these limitations, various modifications of SGD have been proposed, such as adaptive learning rate methods like Adagrad and RMSprop,
+which adjusts the learning rate dynamically based on the history of the gradients.
+These modifications can improve the stability and convergence speed of SGD.
+
+
+\subsection{Momentum GPT}
+
+In practice, SGD is mostly used with momentum.
+Momentum serves as a memory of previous momenta and can improve the convergence speed of SGD, particularly in areas of the function space with low gradients, such as local minima.
+
+The update rule for momentum can be expressed as follows:
+\begin{align}
+\bold{v}_t &= \gamma \bold{v}_{t-1} + \eta_t \nabla_\theta \mathcal{L}(\bold{x}, \boldsymbol{\theta}) \\
+\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \bold{v}_t,
+\end{align}
+where $\gamma$ is the momentum parameter with $0 \leq \gamma \leq 1$.
+The momentum term considers the update of the previous step, in addition to the gradients at the current step.
+By incorporating previous momenta, momentum can smooth out variations in the optimization trajectory and accelerate convergence towards the minimum.
+
+Momentum is particularly useful when the gradient direction is consistent across many iterations, as it allows the optimization to maintain a higher velocity in the same direction.
+In contrast, in areas of high variance or noisy gradients, momentum may cause overshooting and slow down convergence.
+To address this, adaptive momentum methods like Adam have been proposed, which adjust the momentum parameter dynamically based on the history of the gradients.
+These methods can improve the convergence speed and stability of momentum-based optimization algorithms.
+
+
+\subsection{Adam GPT}
+Adam is an optimization algorithm that combines the benefits of both SGD with momentum and adaptive learning rate methods.
+It uses a running average of the first and second moments of the gradient to compute per-parameter adaptive learning rates.
+Adam updates the parameters iteratively as follows:
+
+\begin{align}
+\bold{g}_t &= \nabla_\theta \mathcal{L}(\bold{x}, \boldsymbol{\theta}) \\
+\bold{m}_t &= \beta_1 \bold{m}{t-1} + (1-\beta_1) \bold{g}_t \\
+\bold{s}_t &= \beta_2 \bold{s}{t-1} + (1-\beta_2) \bold{g}_t^2\\
+\hat{\bold{m}}_t &= \frac{\bold{m}_t}{1 - (\beta_1)^t} \\
+\hat{\bold{s}}_t &= \frac{\bold{s}_t}{1 - (\beta_2)^t} \\
+\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \eta_t \frac{\hat{\bold{m}}_t}{\sqrt{\hat{s}_t} + \epsilon},
+\end{align}
+
+where $\bold{g}_t$ denotes the gradient at time step $t$, $\bold{m}_t$ and $\bold{s}_t$ are the first and second moment estimates, respectively.
+$\beta_1$ and $\beta_2$ control the decay rate of the first and second moments, respectively.
+$\eta_t$ is the learning rate, and $\epsilon$ is a regularization constant to prevent division by zero.
+
+Adam has several advantages over other optimization algorithms, including its ability to adaptively compute per-parameter learning rates and the robustness of its estimates to noise in the gradient.
+The adaptive learning rates can help speed up convergence and lead to better performance.
+Furthermore, the memory of previous first and second-order gradient estimates enables the algorithm to be more robust to noise and outliers in the data.
+As a result, Adam is widely used and has become the de facto standard optimization algorithm in deep learning.
+
+
 \subsection{Activation functions}
 Activation functions play a crucial role in training a neural network by allowing it to learn non-linear relationships between inputs and outputs.
 Different activation functions have varying properties; we will discuss some of the most common ones in this section.
@@ -234,11 +323,22 @@ Tanh, the hyperbolic tangent function is given by
 The Rectified Linear Unit (ReLU) activation function pushes all negative values to zero while leaving positive values unchanged,
 which introduces non-linearity while solving the vanishing gradients problem by having a gradient of either 0 or 1 for negative and positive values, respectively.
 \begin{equation}\label{eq:relu}
-    R(x) = \begin{cases} x & \mbox{if } x > 0 \\ \mbox{0,} & \mbox{otherwise} \end{cases}
+    ReLU(x) = \begin{cases} x & \mbox{if } x > 0 \\ \mbox{0,} & \mbox{otherwise} \end{cases}
 \end{equation}
 
 \paragraph{GeLU}
 The Gaussian Error Linear Unit (GeLU) is a smooth approximation of the ReLU function, given by
+\begin{equation}
+    GeLU(x) = x \Phi (x),
+\end{equation}
+where $\Phi(x)$ is the standard Gaussian cumulative distribution function.
+
+GeLU can be approximated with
+\begin{equation}
+    GeLU(x) \approx 0.5x \left( 1+\tanh\left[\sqrt{2/\pi}(x+0.044715x^3)\right] \right),
+\end{equation}
+which is faster to compute than the original definition but can result in worse performance.
+For computational efficiency, we used this approximation.
 
 
 \section{Model Explainability}
@@ -297,3 +397,16 @@ A paper by Ian Covert et al.
 it faster.
 This is the algorithm used for approximating the SAGE values for the features in the thesis.
 
+\section{Mutual Information}
+Mutual information is a fundamental measure of the statistical dependence between two random variables,
+providing a way to quantify the amount of information one variable conveys about the other.
+For a pair of discrete random variables $X$ and $Y$, we have 
+\begin{equation}
+    I(X;Y) = \sum_{y} \sum_{x} p(x,y) \log \left( \frac{p(x,y)}{p(x)p(y)} \right),
+\end{equation}
+where $p(x,y)$, $p(x)$, and $p(y)$ are the joint and marginal probabilities, respectively.
+The mutual information captures linear and nonlinear relationships between variables, unlike Pearson's correlation coefficient, which can only detect linear relationships.
+However, mutual information has limitations in that it relies on binning the data, which can introduce bias and limit the resolution of the information.
+   
+Furthermore, estimating mutual information for high-dimensional data sets can be computationally expensive.
+Despite these limitations, mutual information remains a popular tool in feature selection, data visualization, and machine learning.

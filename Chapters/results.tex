@@ -1,3 +1,89 @@
+
 \section{Experiment 1: Pointing Model using Neural Networks}
 
 \section{Experiment 2: Pointing Correction Model}
+Table \ref{tab:results_all_days} and \ref{tab:results_nflash_days} show the main results from experiment $2$.
+They contain the average compared RMS \eqref{eq:mean_rms_compared} for azimuth and elevation models in case $1$ and $2$ for different numbers of features $k$ used to train the models.
+We cleaned the datasets we used to train these models using the cleaning criteria and XGBoost classifier.
+Table \ref{tab:results_all_days} shows results for models trained on scans from all instruments, while Table \ref{tab:results_nflash_days} shows results for models
+trained on scans from NFLASH230 only. For both datasets, case $1$ does not offer any improvement at all.
+On the other hand, models from case $2$ improve the pointing accuracy for all numbers of selected features $k$.
+
+First, the results from models predicting offsets for all instruments.
+Adding complexity seems to worsen the performance of azimuth models while improving the performance of elevation models.
+The best performance for azimuth models is for $k=5$ with $\bar{r}_{RMS}=0.955$, although $k=2$ and $k=10$ offer similar performance. 
+For elevation models, the best performance is for $k=50$ with $\bar{r}_{RMS}=0.947$.
+
+Second, the results from models predicting offsets for NFLASH230 only.
+Adding complexity for azimuth does not seem to affect it in the same way, and the results are more similar for different values of $k$.
+The best result for azimuth is $k=5$ with $\bar{r}_{RMS}=0.917$.
+For elevation models, $k=5$ also offers the best performance, with $\bar{r}_{RMS}=0.937$.\\
+
+We also conducted the same experiment for two other datasets, with the offsets and pointing corrections transformed to simulate a pointing correction after every scan.
+We tested splitting the training and validation data completely randomly for all four datasets, unlike the presented results, where we dedicate a day to either training or validation.
+For these results, see Appendix A (\ref{sec:appendix_a}). 
+
+\begin{table}[h]
+    \centering %$tmp2022\_clean\_clf\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+    The training and validation data is split on days, meaning that all the scans for a given day
+    are in the training or validation set and not both. The test set is unaffected by this.}
+    \begin{tabular}{ccc c cc}
+        \toprule
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+         k & Azimuth & Elevation & & Azimuth & Elevation \\
+        \midrule
+        2 &  1.007 &  1.232 & &  0.956 &  0.958 \\
+        5 &  1.003 &  1.170 & &  0.955 &  0.967 \\
+       10 &  1.288 &  1.116 & &  0.958 &  0.962 \\
+       20 &  1.580 &  1.121 & &  0.969 &  0.958 \\
+       30 &  1.606 &  1.107 & &  0.967 &  0.971 \\
+       40 &  1.528 &  1.068 & &  0.980 &  0.951 \\
+       50 &  1.758 &  1.061 & &  0.993 &  0.947 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:results_all_days}
+\end{table}
+
+\begin{table}[h]
+    \centering %$tmp2022\_clean\_clf\_nflash230\_results\_table$
+    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+    The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
+    The training and validation data is split on days, meaning that all the scans for a given day
+    are in the training or validation set and not both. The test set is unaffected by this.}
+    \begin{tabular}{ccc c cc}
+        \toprule
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+         k & Azimuth & Elevation & & Azimuth & Elevation \\
+        \midrule
+        2 &  0.982 &  1.020 & &  0.930 &  0.957 \\
+        5 &  1.366 &  1.198 & &  0.917 &  0.937 \\
+       10 &  1.383 &  1.155 & &  0.951 &  0.943 \\
+       20 &  1.252 &  1.126 & &  0.940 &  0.942 \\
+       30 &  1.335 &  1.094 & &  0.928 &  0.939 \\
+       40 &  1.146 &  1.058 & &  0.936 &  0.955 \\
+       50 &  1.202 &  1.062 & &  0.937 &  0.942 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:results_nflash_days}
+\end{table}
+
+
+
+\section{Testing}
+\begin{tabular}{rrrrllrrl}
+    \toprule
+    RMS Test & \multicolumn{2}{l}{RMS Val} & activation & hidden\_layers & learning\_rate & batch\_size &                            loss\_func \\
+        mean &   std &    mean &  std &      first &         first &         first &      first &                                first \\
+       16.61 &  7.63 &   13.20 & 1.82 &       tanh &        [[26]] &          0.00 &        358 & <function MSDLoss at 0x7fc522741940> \\
+    \midrule
+       18.49 &  7.25 &   15.54 & 1.11 &       tanh &    [[49, 40]] &          0.02 &        320 & <function MSDLoss at 0x7fc522741940> \\
+       18.87 & 11.55 &   14.74 & 2.33 &       relu &   [[117, 32]] &          0.02 &        298 & <function MSDLoss at 0x7fc522741940> \\
+       19.26 &  8.62 &   13.95 & 1.90 &       relu &    [[83, 32]] &          0.01 &        331 & <function MSDLoss at 0x7fc522741940> \\
+       19.44 & 12.50 &   15.73 & 3.05 &       relu &    [[97, 60]] &          0.02 &        359 & <function MSDLoss at 0x7fc522741940> \\
+    \bottomrule
+    \end{tabular}
+    

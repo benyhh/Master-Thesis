@@ -1288,18 +1288,6 @@ INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cf
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\graphics\color.sty
-INPUT .\main.out
-INPUT main.out
-INPUT .\main.out
-INPUT main.out
-INPUT .\main.out
-INPUT main.out
-INPUT .\main.out
-INPUT main.out
-OUTPUT main.pdf
-INPUT .\main.out
-INPUT .\main.out
-OUTPUT main.out
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1phv.fd
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1phv.fd
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\t1phv.fd
@@ -1310,8 +1298,14 @@ INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.
 INPUT .\folder\uio-fp-navn-eng.pdf
 INPUT folder\uio-fp-navn-eng.pdf
 INPUT .\folder\uio-fp-navn-eng.pdf
+OUTPUT main.pdf
 INPUT .\folder\uio-fp-navn-eng.pdf
 INPUT .\folder\uio-fp-navn-eng.pdf
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\t1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\ec-lmtt12.tfm
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8t.tfm
 INPUT .\folder\uio-fp-segl.pdf
 INPUT folder\uio-fp-segl.pdf
@@ -1325,9 +1319,10 @@ INPUT .\teleskopgutt2.jpeg
 INPUT .\teleskopgutt2.jpeg
 INPUT .\teleskopgutt2.jpeg
 INPUT .\teleskopgutt2.jpeg
+INPUT C:\Users\bendi\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-ec.enc
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr8t.vf
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
-INPUT C:\Users\bendi\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\base\8r.enc
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvb8t.vf
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvb8r.tfm
@@ -1390,21 +1385,26 @@ INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\sym
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rm.enc
 OUTPUT main.toc
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmro10.tfm
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr17.tfm
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT .\Chapters\introduction.tex
 INPUT Chapters\introduction.tex
 INPUT .\Chapters\introduction.tex
 INPUT Chapters\introduction.tex
+INPUT .\Chapters\related_works.tex
+INPUT Chapters\related_works.tex
+INPUT .\Chapters\related_works.tex
+INPUT Chapters\related_works.tex
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
 INPUT .\Chapters\ast_background.tex
 INPUT Chapters\ast_background.tex
 INPUT .\Chapters\ast_background.tex
 INPUT Chapters\ast_background.tex
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmr12.tfm
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx12.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
 INPUT .\Astronomy\Azimuth-Altitude_schematic.png
 INPUT .\Astronomy\Azimuth-Altitude_schematic.png
 INPUT Astronomy\Azimuth-Altitude_schematic.png
@@ -1412,8 +1412,11 @@ INPUT .\Astronomy\Azimuth-Altitude_schematic.png
 INPUT .\Astronomy\Azimuth-Altitude_schematic.png
 INPUT .\Astronomy\Azimuth-Altitude_schematic.png
 INPUT .\Astronomy\Azimuth-Altitude_schematic.png
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathsy.enc
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-mathit.enc
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmtt10.tfm
 INPUT .\Astronomy\radio_telescope.png
 INPUT .\Astronomy\radio_telescope.png
 INPUT Astronomy\radio_telescope.png
@@ -1421,6 +1424,7 @@ INPUT .\Astronomy\radio_telescope.png
 INPUT .\Astronomy\radio_telescope.png
 INPUT .\Astronomy\radio_telescope.png
 INPUT .\Astronomy\radio_telescope.png
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rmtt.enc
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ts1lmr.fd
@@ -1547,6 +1551,12 @@ INPUT .\Other figures\nn_with_eqs.tex
 INPUT Other figures\nn_with_eqs.tex
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx8.tfm
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmbx6.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib10.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmmib7.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy10.tfm
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\lmbsy7.tfm
 INPUT .\Chapters\method.tex
 INPUT Chapters\method.tex
 INPUT .\Chapters\method.tex
@@ -1563,18 +1573,18 @@ INPUT Clf\mAP_curve_both.pdf
 INPUT .\Clf\mAP_curve_both.pdf
 INPUT .\Clf\mAP_curve_both.pdf
 INPUT .\Clf\mAP_curve_both.pdf
-INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
-INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
-INPUT Tiltmeter plots\scan_duration_distribution_date.pdf
-INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
-INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
-INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
 INPUT .\Tiltmeter plots\scan_duration_distribution_rx.pdf
 INPUT .\Tiltmeter plots\scan_duration_distribution_rx.pdf
 INPUT Tiltmeter plots\scan_duration_distribution_rx.pdf
 INPUT .\Tiltmeter plots\scan_duration_distribution_rx.pdf
 INPUT .\Tiltmeter plots\scan_duration_distribution_rx.pdf
 INPUT .\Tiltmeter plots\scan_duration_distribution_rx.pdf
+INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
+INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
+INPUT Tiltmeter plots\scan_duration_distribution_date.pdf
+INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
+INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
+INPUT .\Tiltmeter plots\scan_duration_distribution_date.pdf
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri8.tfm
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmri7.tfm
 INPUT .\Other figures\regular_nn.tex
@@ -1601,6 +1611,10 @@ INPUT .\Canva\datasplits.png
 INPUT .\Canva\datasplits.png
 INPUT .\Canva\datasplits.png
 INPUT .\Canva\datasplits.png
+INPUT .\Chapters\results.tex
+INPUT Chapters\results.tex
+INPUT .\Chapters\results.tex
+INPUT Chapters\results.tex
 INPUT .\Chapters\appendix.tex
 INPUT Chapters\appendix.tex
 INPUT .\Chapters\appendix.tex
@@ -1609,15 +1623,7 @@ INPUT .\main.bbl
 INPUT main.bbl
 INPUT .\main.bbl
 INPUT main.bbl
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\tex\latex\lm\ot1lmtt.fd
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\tfm\public\lm\rm-lmtt10.tfm
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\enc\dvips\lm\lm-rmtt.enc
 INPUT main.aux
-INPUT .\main.out
-INPUT .\main.out
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmbx12.pfb
@@ -1630,6 +1636,8 @@ INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.p
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi6.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmi8.pfb
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmib10.pfb
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmmib10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmr6.pfb
@@ -1640,14 +1648,14 @@ INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri8.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmri8.pfb
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmro10.pfb
-INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmro10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmsy8.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt10.pfb
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
+INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\lm\lmtt12.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb
 INPUT C:\Users\bendi\AppData\Local\Programs\MiKTeX\fonts\type1\urw\helvetic\uhvb8a.pfb

@@ -1,44 +1,81 @@
-In this section, we explain the data analysis, cleaning, transformation, feature engineering, and models.
 
-\section{Cleaning pointing scan data}
-\subsection{Cleaning rules}
-The pointing scan data is noisy and contains many outliers.
-In order to make the data more suitable for machine learning, we need to clean the data.
-Below is a list of some criteria we use to filter out scans.
+This section of the thesis outlines the methodology used for data analysis, cleaning, transformation, feature engineering, and machine learning experiments.
+Data-driven methods have the potential to learn all relations in the data, but the size of the dataset limits this.
+Therefore, cleaning the data and selecting features containing information relevant to the desired output is essential.
+With the system's complexity, identifying relevant features can be challenging.
+To address this, we employ data-driven modeling to help identify important features while using feature engineering to incorporate
+our understanding of the system and create informative features.
+
+Cleaning data involves removing irrelevant data that could confuse the model, thereby ensuring that the model learns from the most relevant information.
+Feature engineering involves incorporating domain knowledge into the model to create features that provide additional information.
+
+We perform data analysis to decide which features to train our models.
+This analysis involves understanding the relationships between the different variables in the dataset and identifying which variables
+could be helpful in predicting the target variable.
+The outcome of the data analysis informs our decisions on which features to use in the models.
+
+
+\section{Cleaning pointing scan data} \label{sec:cleaning_pt_scan}
+
+When utilizing data-driven modeling for predictive purposes, ensuring that the dataset is clean and informative is crucial.
+In this project, various factors may impact the quality of the data, and therefore, we implemented measures to clean the data based on our knowledge of the telescope's operation.
+We employed a criteria-based approach and a machine learning classifier to remove pointing scans from the dataset.
+During the removal of pointing scans, it is important to strike a balance between removing noise and retaining relevant information.
+Outliers in the training data can introduce bias into machine learning models, as these data points may not accurately represent real-world conditions.
+Consequently, having outliers in the training data can be more damaging than removing good pointing scans.
+Therefore, we have a strict approach when cleaning the data to ensure high-quality datasets for model training.
+
+
+\subsection{Cleaning criteria}
+To eliminate unreliable or unusable scans, we applied criteria informed by the insights of astronomers at APEX.
+The following list outlines the criteria used to filter out such scans:
 \begin{itemize}
-    \item Scans using the HOLO transmitter.
+    \item Scans using the HOLO transmitter:
     These scans are aimed at a radio tower and are not realistic data for training an ML model.
-    \item Scans using ZEUS2.
+    \item Scans using ZEUS2:
     These are highly experimental pointing scans and unreliable.
-    \item Scans using CHAMP690, as very few scans use this instrument.
-    \item Scans in January and February.
-    There are few scans in this period, and the few we have involve much testing.
-    \item Scans that are tracking tests.
-    \item Scans after 17.09.2022 since we only have sensory data until this point.
+    \item Scans using CHAMP690: There are very few scans with this instrument.
+    \item Scans in January and February of $2022$: The weather is unreliable and there are few scans in this period.
+    \item Scans that are tracking tests
+    \item Scans after 17.09.2022 since we only have sensory data until this point
 \end{itemize}   
 After this filtering, there are $5901$ out of $8862$ scans left.
         
-\subsection{Pointing scan classifier}
+\subsection{Pointing scan classifier} 
 \subsubsection{Method}
-In addition to the cleaning rules, we have to remove the outright bad pointing scans (like \ref{subfig:bad_continuous} \ref{subfig:bad_line}, \ref{subfig:bad_line}).
-We train a classifier to predict whether a scan is good or bad.
+In addition to cleaning the data based on the criteria above, we had to remove the outright bad pointing scans (like \ref{subfig:bad_continuous} \ref{subfig:bad_line}, \ref{subfig:bad_line}).
+The scan quality is often obvious when inspecting the data visually, but it is hard to develop suitable measures to identify which scans are good or bad.
+Instead, we trained a classifier to predict whether a scan is of good or bad quality.
 We used an XGBoost classifier with 13 features as inputs, all of which are present in the pointing scan figures (\ref{fig:line_pointings} and \ref{fig:continueous_pointings}).
 The first 12 features are the amplitudes, FWHMs, pointing offsets, and these values' uncertainties.
 The last feature is the beamsize of the telescope for the given observing frequency.\\
 
 We had to label a training set by manually looking at pointing scans.
-The size of the training set was $369$ with $270$ good and $99$ bad scans.
-We did a hyperparameter search for the max depth between $1$ and $5$, the number of estimators between $1$ and $80$, 
-and used the \textit{scale\_pos\_weight} to consider the unbalanced classes.
-The value for this parameter is the ratio of negative to positive classes. We used
-$80\%$ of the data for training and the rest for testing, corresponding to $295$ and $74$ samples for training and testing, respectively.
+The size of the training set was $369$ samples with $270$ good and $99$ bad scans.
+Table \ref{tab:xgb_hyperparameters_clf} shows the hyperparameters and search ranges we used when optimizing this model, along with the resulting best parameter values.
+We also used \textit{scale\_pos\_weight} to consider the unbalanced classes, for which the value is the ratio of negative to positive classes (number of bad scans divided by number of good scans).
+We split the data into $80\%$ for training and the rest for testing, corresponding to $295$ and $74$ samples for training and testing, respectively.
 
+\begin{table}[H]
+    \centering
+    \caption{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing scan classifier.
+    The table includes names, sampled distributions and corresponding ranges, and parameter values for the best model.}
+    \begin{tabular}{lccc}
+        \toprule
+        Parameter & Sample Distribution & Range & Best Parameter Value\\ \hline
+        max depth & Uniform & [$1$, $5$] & $2$\\ 
+        n estimators & Uniform & [$1$, $80$] & $53$\\ 
+        \bottomrule
+    \end{tabular}
+    \label{tab:xgb_hyperparameters_clf}
+\end{table}
 
 \subsubsection{Results}
 The XGBoost classifier performed well with a $97\%$ overall accuracy on the test set.
 Figure \ref{fig:pointing_scan_clf} shows the precision-recall curve on the left and the average precision curve on the right.
 From the precision-recall curve, it is clear that we can achieve close to $100\%$ precision while still having a high recall.
-We can select a large threshold such that the classifier removes most bad scans from the training data.
+We select a large threshold such that the classifier removes most bad scans from the training data,
+because a bad pointing scan is potentially more harmful for the model than discarding a few good scans.
 The average precision curve shows an optimal threshold for maximizing the precision, which is about $80\%$.\\
 
 Using the classifier to further clean the dataset, using prediction threshold $0.8$, we remove another $575$ scans, leaving us with
@@ -79,13 +116,13 @@ $5326$ scans for the rest of the analysis.
 %     \label{fig:xgb_clf_sage}
 % \end{figure}
 
-\section{Scan duration analysis}
-As mentioned in the database section, the scans' timestamps are not the accurate start time of a scan.
+\section{Scan duration analysis}\label{sec:scan_duration_analysis}
+As mentioned in the database section \ref{sec:database}, the scans' timestamps are not the accurate start time of a scan.
 The tiltmeter dump files with the flag indicating whether the telescope is idle, preparing to observe, or observing,
 is the only accurate data we have when the telescope performs a pointing scan.
 Therefore, we need to combine the timestamp of the pointing scan with the flag in the dump files to analyze the duration of scans.
 
-\subsection{Method}
+\subsection{Analysis}
 First, we convert the different scan flags to numbers.
 \textit{IDLE} and \textit{PREPARING} is the set $0$, and \textit{OBSERVING} is set to $1$.
 Then we can subtract the previous rows from all rows, resulting in the value $1$ when the scan starts, and $-1$ when it ends.
@@ -111,38 +148,9 @@ Table \ref{tab:scan_flag_difference} shows an example of the resulting table.
     \label{tab:scan_flag_difference}
 \end{table}
 
-By analyzing these tables for all the scans we had tiltmeter dumps for,
-we see that the first \textit{OBSERVING} flag present after a scan is $53.9$ seconds after the scan timestamp on average, with a standard deviation of $20.5$ seconds.
-Figure \ref{fig:scan_times_box} shows boxplots of this time difference for each of the instruments, which strongly indicates that assuming the starting point of a scan is $53.9$ seconds after
-the timestamp is reasonable.
-In the same plot, we also see that the starting time is fairly constant for the different instruments.
-The right plot of Figure \ref{fig:scan_times_date} shows the time difference in seconds between the first observing flag after a scan timestamp throughout the year.
-From the plot, this stays constant over time.\\
-
-Now that we have found the start of a pointing scan, we look at the durations of the scans.
-
-The left plots in Figure \ref{fig:scan_times_date} and \ref{fig:scan_times_box} show the duration of the pointing scans for different instruments.
-From this figure, it is clear that the duration of a pointing scan varies a lot.
-A varying scan duration is problematic because we only have these tiltmeter dump files for $2875/8381\approx 34\%$ of the pointing scans. 
-
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_date.pdf}
-    \caption{Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
-    \label{fig:scan_times_date}
-\end{figure}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_rx.pdf}
-    \caption{Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
-    \label{fig:scan_times_box}
-\end{figure}
-
 
 \subsection{Algorithm}
-Using the scan timestamp and the observing flag from tiltmeter dumps, we used the following algorithm to obtain the start and end of pointing scans.
+With the scan timestamp and the observing flag from tiltmeter dumps, we used the following algorithm to obtain the start and end of pointing scans.
 
 \begin{algorithm}[H]
     \caption{Find start and end of pointing scan}
@@ -180,12 +188,51 @@ Using the scan timestamp and the observing flag from tiltmeter dumps, we used th
 \end{algorithm} 
 
 
-\section{Feature Engineering}
-\subsection{Different calculations}
+\subsection{Results}
+By analyzing start and end timestamps for all the scans we had tiltmeter dumps for,
+we see that the first \textit{OBSERVING} flag present after a scan is on average $53.9$ seconds after the scan timestamp on average, with a standard deviation of $20.5$ seconds.
+Figure \ref{fig:scan_times_box} shows boxplots of this time difference for each of the instruments, which strongly indicates that assuming the starting point of a scan is $53.9$ seconds after
+the timestamp is reasonable.
+In the same plot, we also see that the starting time is fairly constant for the different instruments.
+The right plot of Figure \ref{fig:scan_times_date} shows the time difference in seconds between the first observing flag after a scan timestamp throughout the year.
+From the plot, this stays constant over time.\\
+
+Now that we have found the starting points of the pointing scans, we can look at their duration.
+The left plots in Figure \ref{fig:scan_times_date} and \ref{fig:scan_times_box} show the duration of the pointing scans for different instruments.
+From these figures, it is clear that the duration of a pointing scan varies a lot.
+A varying scan duration is problematic because we only have these tiltmeter dump files for $2875/8381\approx 34\%$ of the pointing scans. 
+To address this issue, we collected data for feature engineering over a shorter period of time.
+It is important to note that using data from after a pointing scan has ended can be inaccurate, as the telescope may start observing a different source.
+When examining the scatter plot of scan durations, we observed clusters of scans around $60$-$70$ seconds, $120$-$130$ seconds, and so on.
+To ensure accuracy, we used the mean scan duration grouped by instrument and shorter than $100$ seconds as the cutoff for the duration of time from which we collected data.
+For the scans with an exact start and end time, we used this time period instead.
+\textcolor{red}{Add list of values}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_rx.pdf}
+    \caption{Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
+    \label{fig:scan_times_box}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_date.pdf}
+    \caption{Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
+    \label{fig:scan_times_date}
+\end{figure}
+
+
+
+
+\section{Feature Engineering}\label{sec:feature_engineering}
 There are two main features engineered for this project; features that represent the system during a pointing scan and features that represent changes since the last correction. 
-The idea behind this is simple. The correction used during a pointing scan represents the ideal correction for the system during the previous pointing scan
+The idea behind this is simple. The correction used during a pointing scan represents the ideal correction for the system during the previous pointing scan.
 As there are a lot of factors and complex relationships, and we do not have large amounts of training data, it might be easier for the model to learn 
 how these changes affect the pointing rather than learning all the relationships.
+
+Table \textcolor{red}{ref table with a list of variables with median value} show all features.
 
 % \textcolor{red}{Put this in feature engineering section}
 % \begin{align}
@@ -199,19 +246,19 @@ how these changes affect the pointing rather than learning all the relationships
 
 \paragraph{Median values}
 The median value of variables during a pointing scan is the most used feature.
-Table \textcolor{red}{ref table with a list of variables with median value} shows the list of variables for which we use the median values during a pointing scan.
+
 \paragraph{Sum of all change}
 To capture systematic error in pointing due to the telescope moving back and forth in azimuth and elevation,
 we sum over the positive and negative changes in these variables.
 
 Given the time of the last pointing correction $t_1$ and the start of a pointing scan $t_2$, the sum over the positive changes in a variable $x_i$ is given by
 \begin{equation}\label{eq:positive_int}
-    \sum_{i=t_1+1}^{t_2} \max(0, x_i-x_{i-1})
+    X = \sum_{i=t_1+1}^{t_2} \max(0, x_i-x_{i-1})
 \end{equation}
 
 Similarly, the sum of negative changes in a variable is
 \begin{equation}\label{eq:negative_int}
-    \sum_{i=t_1+1}^{t_2} \min(0, x_i-x_{i-1})
+    X = \sum_{i=t_1+1}^{t_2} \min(0, x_i-x_{i-1})
 \end{equation}
 
 We make these features with azimuth and elevation.
@@ -223,7 +270,7 @@ This feature is self-explanatory and is just the change in a variable since the 
 \end{equation}
 
 In order to make this feature more robust against noisy data,
-we instead look at the change in the median for a time interval around the last correction $t_1$ and the start of a pointing scan $t_2$
+we instead consider the change in the median for a time interval around the last correction $t_1$ and the start of a pointing scan $t_2$
 
 \begin{equation}
     \Delta x = \textit{median}(x_{t_2}, x_{t_2 - 1}, \dots, x_{t_2- p}) - \textit{median}(x_{t_1}, x_{t_1 + 1}, \dots, x_{t_1 + p}),
@@ -234,7 +281,7 @@ where $p$ is the number of data points needed to cover a period of $P$ minutes, 
 In case the speed of the temperature change affects the deformation of the telescope's structure, we find the maximum temperature change in a given time interval since the last pointing correction.
 
 \begin{equation}
-    \max (x_{t_1+p} - x_{t_1}, x_{t_1+p} - x_{t_1}, \dots, x_{t_2} - x_{t_2-p}),
+    X = \max (x_{t_1+p} - x_{t_1}, x_{t_1+p} - x_{t_1}, \dots, x_{t_2} - x_{t_2-p}),
 \end{equation}
 
 
@@ -272,27 +319,28 @@ Another measure tested is the total angle between the pointing and the sun's pos
 \textcolor{red}{add a list of all features for different calculations here}
 
 \section{Transformation of pointing offsets and corrections}
-Table \ref{tab:offset_and_correction} shows some observed pointing offsets and the corrections applied during the pointing scan.
-The pointing corrections $ca$ and $ie$ are sometimes updated according to equation \eqref{eq:ca} and \eqref{eq:ie},
-as we see in the first two rows. Sometimes the corrections are not updated after the pointing scan, like in the consecutive row. Other times, the corrections are updated, but not according to the equation \eqref{eq:ca} and \eqref{eq:ie}.
-This introduces a couple of challenges for the training of a model.
+
+Table \ref{tab:offset_and_corrections} show examples of pointing offsets and corrections applied during the pointing scans.
+The column "Original" show raw pointing scan data.
+The pointing corrections $ca$ and $ie$ are normally updated according to equations \eqref{eq:ca} and \eqref{eq:ie}, 
+as shown in the first two rows of the table.
+However, observers may choose not to update the pointing, particularly when the pointing offset is small, as illustrated in the consecutive row of the table.
+In other cases, the corrections may be updated but not according to equations \eqref{eq:ca} and \eqref{eq:ie}.
+This can occur when a new science project is loaded and the pointing correction from the previous time that project was used is applied.
+These factors introduce several challenges for the training of a model:
 \begin{itemize}
     \item $ca$ and $ie$ should represent the optimal correction using all the information we have about the current state of a system.
     If we do not update the corrections, there is some information about the system (the previously observed pointing offset) that the model is not receiving.
-    \item Some features are constructed by looking at the change in variables since the last correction.
-    If the corrections are not updated, this interval is longer than if it were, and the resulting features could be more prone to uncertainties and noise.
+    \item Some features are constructed as the change in variables since the last correction.
+    If the corrections are not updated, this interval is longer than if they were, and the resulting features could be more prone to uncertainties and noise.
     A problem with the integration also occurs if the corrections are not updated according to the equations \eqref{eq:ca} and \eqref{eq:ie}.
     Then, we do not know when those corrections represent the system, resulting in inaccurate features.
 \end{itemize}
 
+A possible solution to this problem is a two step procedure where we first transform the offsets and corrections to represent the system at the most recent pointing scan,
+and second use these transformed offsets as training labels and the transformed corrections as training inputs.
 
-The following is a possible solution to these problems.
-\begin{enumerate}
-    \item Transform the offsets and corrections to represent the system at the most recent pointing scan.
-    \item Use these transformed offsets as new training labels and transformed corrections as training inputs.
-\end{enumerate}
-
-We do this by assuming the corrections $ca$ and $ie$ are updated after every pointing scan.
+In practice, we do this by assuming the corrections $ca$ and $ie$ are updated after every pointing scan.
 This changes the correction applied during the next pointing scan, which further affects the observed pointing offset.
 This effect propagates throughout the whole dataset.
 The following formulas 
@@ -305,61 +353,87 @@ The following formulas
 Where the "$\sim$" denotes a transformed variable.
 Using these transformations,
 the corrections used for training and the resulting offset are similar to the ones that would be observed if the corrections were made according to the equations
-\eqref{eq:ca} and \eqref{eq:ie} after every pointing scan.
-
+\eqref{eq:ca} and \eqref{eq:ie} after every pointing scan. The column "Transformed" in the table shows the transformed variables.
 
 \begin{table}[H]
     \centering
-    \caption{Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan.}
-    \label{tab:offset_and_correction}
-    \begin{tabular}{ccccc}
+    \caption{\textbf{Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan.
+    \textbf{Transformed:} Pointing offsets and corrections according to equations \eqref{eq:ca_tilde}, \eqref{eq:ie_tilde}, \eqref{eq:off_az_tilde}, and \eqref{eq:off_el_tilde}.}
+    \label{tab:offset_and_corrections}
+    \begin{tabular}{c cccc c cccc}
     \toprule
-    $i$ &  $\delta_{az}$ &  $\delta_{el}$ &  $ca$ & $ie$  \\
+    \multicolumn{1}{c}{} & \multicolumn{4}{c}{Original} & \multicolumn{1}{c}{} & \multicolumn{4}{c}{Transformed} \\
+    \cmidrule(lr){2-5} \cmidrule(lr){7-10} 
+    $i$ &  $\delta_{az}$ &  $\delta_{el}$ &  $ca$ & $ie$  & & $\Tilde{\delta}_{az}$ &  $\Tilde{\delta}_{el}$ &  $\Tilde{ca}$ &  $\Tilde{ie}$ \\
     \midrule
-    1 & 1.2 & 0.1 & 2.1 &  1.7 \\
-    2 &     0.0 & 0.5 & 3.3 &  1.6 \\
-    3 &    -1.1 & 0.0 & 3.3 &  1.6 \\
-    4 &     0.6 & 0.7 & 2.2 &  1.6 \\
-    5 &     0.9 & 1.4 & 2.2 &  1.6 \\
-    6 &     1.0 & 1.1 & 2.2 &  1.6 \\
-    7 &    -0.9 & 1.2 & 3.1 &  0.5 \\
-    8 &     0.5 & 1.5 & 2.2 & -0.7 \\
-    9 &    -0.3 & 0.4 & 2.2 & -0.7 \\
+    $1$ &     $1.2$ & $0.1$ & $2.1$ &  $1.7$ &   &    $1.2$ &       $0.1$ &       $2.1$ &       $1.7$ \\
+    $2$ &     $0.0$ & $0.5$ & $3.3$ &  $1.6$ &   &    $0.0$ &       $0.5$ &       $3.3$ &       $1.6$ \\
+    $3$ &    $-1.1$ & $0.0$ & $3.3$ &  $1.6$ &   &   $-1.1$ &      $-0.5$ &       $3.3$ &       $1.1$ \\
+    $4$ &     $0.6$ & $0.7$ & $2.2$ &  $1.6$ &   &    $0.7$ &       $0.7$ &       $2.2$ &       $1.6$ \\
+    $5$ &     $0.9$ & $1.4$ & $2.2$ &  $1.6$ &   &    $0.2$ &       $0.7$ &       $2.8$ &       $0.9$ \\
+    $6$ &     $1.0$ & $1.1$ & $2.2$ &  $1.6$ &   &    $0.1$ &      $-0.3$ &       $3.1$ &       $0.2$ \\
+    $7$ &    $-0.9$ & $1.2$ & $3.1$ &  $0.5$ &   &   $-1.0$ &       $1.3$ &       $3.2$ &       $0.5$ \\
+    $8$ &     $0.5$ & $1.5$ & $2.2$ & $-0.7$ &   &    $0.5$ &       $1.4$ &       $2.2$ &      $-0.7$ \\
+    $9$ &    $-0.3$ & $0.4$ & $2.2$ & $-0.7$ &   &   $-0.8$ &      $-1.1$ &       $2.7$ &      $-2.2$ \\
     \bottomrule
     \end{tabular}
 \end{table}
 
 
-\begin{table}[H]
-    \centering
-    \caption{Table of transformed pointing offsets and corrections according to equations \eqref{eq:ca_tilde}, \eqref{eq:ie_tilde}, \eqref{eq:off_az_tilde}, and \eqref{eq:off_el_tilde}.}
-    \label{tab:tranform_offsets}
-\begin{tabular}{ccccc}
-\toprule
-$i$ & $\Tilde{\delta}_{az}$ &  $\Tilde{\delta}_{el}$ &  $\Tilde{ca}$ &  $\Tilde{ie}$ \\
-\midrule
-0 &       1.2 &       0.1 &       2.1 &       1.7 \\
-1 &       0.0 &       0.5 &       3.3 &       1.6 \\
-2 &      -1.1 &      -0.5 &       3.3 &       1.1 \\
-3 &       0.7 &       0.7 &       2.2 &       1.6 \\
-4 &       0.2 &       0.7 &       2.8 &       0.9 \\
-5 &       0.1 &      -0.3 &       3.1 &       0.2 \\
-6 &      -1.0 &       1.3 &       3.2 &       0.5 \\
-7 &       0.5 &       1.4 &       2.2 &      -0.7 \\
-8 &      -0.8 &      -1.1 &       2.7 &      -2.2 \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 
-\section{Machine Learning Experiments}
-In this section, we will provide an overview of two machine learning experiments pertinent to the two research questions.
+% \begin{table}[H]
+%     \centering
+%     \caption{Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan.}
+%     \label{tab:offset_and_correction}
+%     \begin{tabular}{ccccc}
+%     \toprule
+%     $i$ &  $\delta_{az}$ &  $\delta_{el}$ &  $ca$ & $ie$  \\
+%     \midrule
+%     1 & 1.2 & 0.1 & 2.1 &  1.7 \\
+%     2 &     0.0 & 0.5 & 3.3 &  1.6 \\
+%     3 &    -1.1 & 0.0 & 3.3 &  1.6 \\
+%     4 &     0.6 & 0.7 & 2.2 &  1.6 \\
+%     5 &     0.9 & 1.4 & 2.2 &  1.6 \\
+%     6 &     1.0 & 1.1 & 2.2 &  1.6 \\
+%     7 &    -0.9 & 1.2 & 3.1 &  0.5 \\
+%     8 &     0.5 & 1.5 & 2.2 & -0.7 \\
+%     9 &    -0.3 & 0.4 & 2.2 & -0.7 \\
+%     \bottomrule
+%     \end{tabular}
+% \end{table}
+
+
+% \begin{table}[H]
+%     \centering
+%     \caption{Table of transformed pointing offsets and corrections according to equations \eqref{eq:ca_tilde}, \eqref{eq:ie_tilde}, \eqref{eq:off_az_tilde}, and \eqref{eq:off_el_tilde}.}
+%     \label{tab:tranform_offsets}
+% \begin{tabular}{ccccc}
+% \toprule
+% $i$ & $\Tilde{\delta}_{az}$ &  $\Tilde{\delta}_{el}$ &  $\Tilde{ca}$ &  $\Tilde{ie}$ \\
+% \midrule
+% 0 &       1.2 &       0.1 &       2.1 &       1.7 \\
+% 1 &       0.0 &       0.5 &       3.3 &       1.6 \\
+% 2 &      -1.1 &      -0.5 &       3.3 &       1.1 \\
+% 3 &       0.7 &       0.7 &       2.2 &       1.6 \\
+% 4 &       0.2 &       0.7 &       2.8 &       0.9 \\
+% 5 &       0.1 &      -0.3 &       3.1 &       0.2 \\
+% 6 &      -1.0 &       1.3 &       3.2 &       0.5 \\
+% 7 &       0.5 &       1.4 &       2.2 &      -0.7 \\
+% 8 &      -0.8 &      -1.1 &       2.7 &      -2.2 \\
+% \bottomrule
+% \end{tabular}
+% \end{table}
+
+
+\section{Machine Learning Experiments}\label{sec:ml_exp}
+In this section, we will provide an overview of two machine learning experiments pertinent to the two research questions. \textcolor{red}{refer to section with research qs}
 The first experiment aims to investigate the effectiveness of neural networks in developing a pointing model that could replace the current linear model, which is created through linear regression.
 It explores the feasibility of a more sophisticated model in terms of pointing accuracy.
 The second experiment aims to examine the effectiveness of an XGBoost model in predicting pointing scan offsets to enhance the pointing accuracy.
 The primary objective of this experiment is to assess whether the proposed model can outperform the current model in terms of pointing accuracy.
 
-\section{Experiment 1: Pointing Model using Neural Networks}
+\subsection{Experiment 1: Pointing Model using Neural Networks}
 This experiment uses the raw dataset containing input coordinates, $Az_{\text{input}}$ and $El_{\text{input}}$ respectively, and corresponding true observed values $Az_{\text{observed}}$ and $El_{\text{observed}}$.
 
 The goal is to find a model $f$ such that
@@ -372,7 +446,7 @@ The last $15\%$ of the data, which we sorted by date, is used for testing.
 We use the remaining $85\%$ of the data for training and validation and split this set into $20\%$ for training and $80\%$ for validation.
 This results in $\approx 76\%$ and $\approx 24\%$ of the total dataset used for training and validation.
 
-\subsection{Feature Selection}
+\subsubsection{Feature Selection}
 Selecting the right features is essential in improving the pointing model's accuracy.
 This model uses two types of features: geometrical and harmonic terms already part of the current linear base model and new features extracted from the telescope's database.
 We identified relevant features by calculating Pearson's and Spearman's rank correlation to the offsets for all features.
@@ -381,7 +455,7 @@ Then, we chose the terms with the strongest correlation to the model and used th
 We made a list of the features we extracted from the database that showed a correlation equal to or greater than 0.1.
 During model training, we randomly selected a subset of 2 to 19 features from this list and used them to train the model.
 
-\subsection{Model Architecture}
+\subsubsection{Model Architecture}
 This experiment utilized four different model architectures.
 The first architecture involved feeding all input data into one, two, or three hidden layers.
 The other three architectures incorporated machine learning techniques by separating the geometrical and harmonic terms of the input data from the other features and processing them using distinct architectures.
@@ -389,13 +463,17 @@ With these approaches, we intend to keep the current model's simplicity and perf
 
 The following are the four different architectures:
 \begin{enumerate}
+    \item \textbf{Regular Neural Network:} All features are passed through the same layers, all with a nonlinear activation function.
+    See Figure \ref{subfig:regular}
     \item \textbf{Neural Network with Separated Features 1:} This architecture separates the input features into two groups: geometric and harmonic features, and the rest of the features.
-    The geometric and harmonic features are connected directly to the output layer, while we pass the remaining features through layers with nonlinear activation functions.
+    The geometric and harmonic features are connected directly to the linear output layer, while we pass the remaining features through layers with nonlinear activation functions.
+    See Figure \ref{subfig:comb_sep1}
     \item \textbf{Neural Network with Separated Features 2:} This architecture is similar to the previous architecture,
     but we feed the geometric and harmonic features through an additional layer of nonlinear activation function before connecting them to the output layer.
+    See Figure \ref{subfig:comb_sep2}
     \item \textbf{Neural Network with Separated Features 3:} This architecture combines the previous two architectures by passing the regular features through a few hidden layers with nonlinear activation functions before concatenating them with the geometric and harmonic features.
     We then pass the combined features through a final layer before connecting them to the output layer.
-    \item \textbf{Regular Neural Network:} All features are passed through the same layers, all with a nonlinear activation function.
+    See Figure \ref{subfig:comb_sep3}
 \end{enumerate}
 These are visualized in Figure \ref{fig:nn_architecture}.
 
@@ -407,7 +485,7 @@ These are visualized in Figure \ref{fig:nn_architecture}.
         \caption{\textbf{Regular neural network:}
         This is the standard neural network architecture without any feature separation.
         All features are connected to the same layers.}
-        \label{subfig:cm_dt}
+        \label{subfig:regular}
     \end{subfigure}
     \hfill
    \begin{subfigure}[t]{0.49\textwidth}
@@ -415,7 +493,7 @@ These are visualized in Figure \ref{fig:nn_architecture}.
        \input{Other figures/combined_nn_sep1.tex}
        \caption{\textbf{Neural network with separated features 1:}
        In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer without any nonlinear activation function.}
-       \label{subfig:cm_rf}
+       \label{subfig:comb_sep1}
 \end{subfigure}
 \\~\\
     \begin{subfigure}[t]{0.49\textwidth}
@@ -424,7 +502,7 @@ These are visualized in Figure \ref{fig:nn_architecture}.
         \caption{\textbf{Neural network with separated features 2}:
         Similar to the previous architecture, the geometric and harmonic features are separated from the other features.
         However, they are also processed by a nonlinear activation function before being connected to the output layer.}
-        \label{subfig:cm_bag}
+        \label{subfig:comb_sep2}
     \end{subfigure}
     \hfill
        \begin{subfigure}[t]{0.49\textwidth}
@@ -432,13 +510,13 @@ These are visualized in Figure \ref{fig:nn_architecture}.
         \input{Other figures/combined_nn_sep3.tex}
         \caption{\textbf{Neural network with separated features 3:}
         In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.}
-        \label{subfig:cm_bos}
+        \label{subfig:comb_sep3}
     \end{subfigure}
      \caption{These architectures were used to train a base pointing model on raw data.}
      \label{fig:nn_architecture}
 \end{figure}
 
-The hyperparameters for the neural networks were sampled from different distributions, as presented in Table \ref{tab:nn_hyperparameters}.
+The hyperparameters for the neural networks were randomly sampled from different distributions, as presented in Table \ref{tab:nn_hyperparameters}.
 Some parameters were consistent across all models, such as the Adam optimization algorithm and the mean squared error loss function.
 In total, \textcolor{red}{input the number of fitted NNs here} networks of each architecture are trained for $300$ epochs.
 We pick the model from the epoch with the best performance on the validation set.
@@ -448,16 +526,16 @@ We pick the model from the epoch with the best performance on the validation set
     \begin{tabular}{lcc}
     \hline
     \textbf{Name} & \textbf{Distribution Type} & \textbf{Range} \\ \hline
-    hidden layers & uniform integer & [1,3] \\
-    hidden layer size & uniform integer & [20, 120] \\
-    learning rate & uniform & [0.001, 0.02] \\
-    batch size & uniform integer & [32, 512] \\
+    hidden layers & uniform integer & [$1$,$3$] \\
+    hidden layer size & uniform integer & [$20$, $120$] \\
+    learning rate & uniform & [$0.001$, $0.02$] \\
+    batch size & uniform integer & [$32$, $512$] \\
     activation & categorical & [gelu, tanh] \\ \hline
     \end{tabular}
     \label{tab:nn_hyperparameters}
     \end{table}
 
-\subsection{Model Evaluation}
+\subsubsection{Loss Function and Model Evaluation}
 To evaluate the performance of the models, we used the root mean squared (RMS), measured in arcseconds, on the test set.
 We calculate the RMS as follows:
 \begin{equation}
@@ -469,19 +547,11 @@ $N$ is the number of observations in the test set.
 This RMS is used to compare the performance of the models.
 It will also be compared with a benchmark linear regression model to see if a machine learning approach offers any improvements.
 
-\section{Experiment 2: Pointing Correction Model}
-This experiment aims to improve the pointing accuracy by training XGBoost models to predict offsets obtained from pointing scans.
-To accomplish this, we utilized four different datasets, all of which we processed using our cleaning criteria and the XGBoost classifier trained to identify bad pointing scans.
-The following list presents the characteristics of each dataset used in this study:
-\begin{itemize}
-\item A dataset containing pointing scans from all instruments.
-\item A dataset consisting solely of pointing scans from the NFLASH230 instrument.
-\item A dataset that includes pointing scans from all instruments, with offsets and corrections transformed to simulate optimal pointing corrections.
-\item A dataset that includes pointing scans from only the NFLASH230 instrument, with offsets and corrections transformed to simulate optimal pointing corrections.
-\end{itemize}
-
+\subsection{Experiment 2: Pointing Correction Model}
+This experiment aims to improve the accuracy of the existing pointing model by training XGBoost models to predict offsets obtained from pointing scans.
+To accomplish this, we utilized two different datasets, which we processed using the cleaning outlined in section \ref{sec:cleaning_pt_scan}.
+The difference between these datasets is that one contains the scans from all instruments, while the other only contains the scans from NFLASH230.
 By training our models on these datasets, we aim to reduce the pointing offset and improve the accuracy of the pointing.
-
 In addition, we varied the way we split the datasets for training and testing.
 We considered two cases:
 
@@ -497,6 +567,13 @@ We considered two cases:
 Figure \ref{fig:datasplit_cases} illustrates the two cases.
 In both cases, we trained and validated the model on $5/6$ of the data and tested on the last $1/6$.
 The difference is the amount of data used for training, which can indicate whether models trained on shorter or longer periods perform better.
+Using longer period, and thus more data, can help the model find complex relations.
+However, a smaller period may be better for learning relations that change over time, as we would expect less variation in a shorter period.
+
+We also split the training and validation data such that scans from a given day only can be either in the training or validation set, not both.
+When splitting the data, we used $35\%$ of the days for validation and $65\%$ for training.
+This does not amount to precisely the same percentage of scans for the given split, but something close to it nonetheless.
+
 
 \begin{figure}[H]
     \centering
@@ -514,13 +591,13 @@ The difference is the amount of data used for training, which can indicate wheth
 
 
 
-\subsection{Feature Selection}
+\subsubsection{Feature Selection}
 We trained models using a range of features, specifically $k=[2,5,10,20,30,40,50]$ features.
 We selected the $k$ features that had the greatest mutual information for each model with the target value.
 This approach helps us identify the most important features to improve the model's performance. Selecting a subset of features can reduce the noise in the data. 
 By selecting different numbers of features, we can explore the trade-off between model complexity and performance.\textcolor{red}{write and ref to mutual info in theory section}.
 
-\subsection{Model Architecture}
+\subsubsection{Model Architecture}
 We performed a Bayesian hyperparameter search for each model using the parameter space in Table \ref{tab:xgb_hyperparameters_pcorr}.
 The search space includes eight hyperparameters that affect the model's complexity, such as the maximum depth of the trees, the regularization strength, and the learning rate.
 We used a uniform or log-uniform distribution to sample each hyperparameter within a specific range.
@@ -532,24 +609,24 @@ The models were validated using the MSE, and we picked the model with the best p
     \centering
     \caption{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing correction model. The table includes names, sampled distributions, and corresponding ranges.}
     \begin{tabular}{lcc}
-        \hline
+        \toprule
         \textbf{Parameter} & \textbf{Sample Distribution} & \textbf{Range} \\ \hline
-        max depth & Uniform & [1, 5] \\ 
-        reg lambda & Uniform & [0, 1] \\ 
-        colsample bytree & Uniform & [0.5, 1] \\ 
-        n estimators & Uniform & [20, 500] \\ 
-        learning rate & Log-Uniform & [$10^{-5}$, 1] \\ 
-        subsample & Uniform & [0.5, 1] \\ 
-        gamma & Log-Uniform & [$10^{-5}$, 1] \\ 
-        min child weight & Uniform & [1, 10] \\ 
-        \hline
+        max depth & Uniform & [$1$, $5$] \\ 
+        reg lambda & Uniform & [$0$, $1$] \\ 
+        colsample bytree & Uniform & [$0.5$, $1$] \\ 
+        n estimators & Uniform & [$20$, $500$] \\ 
+        learning rate & Log-Uniform & [$10^{-5}$, $1$] \\ 
+        subsample & Uniform & [$0.5$, $1$] \\ 
+        gamma & Log-Uniform & [$10^{-5}$, $1$] \\ 
+        min child weight & Uniform & [$1$, $10$] \\ 
+        \bottomrule
     \end{tabular}
     \label{tab:xgb_hyperparameters_pcorr}
 \end{table}
 
 
 
-\subsection{Model Evaluation}
+\subsubsection{Model Evaluation}
 To evaluate the performance of the models, we calculated the RMS on each test fold and compared it to the current RMS of the telescope on the same data.
 The RMS is calculated for azimuth and elevation separately since an XGBoost model only can predict one target.
 For a fold $j$ and target either azimuth or elevation, we calculate the RMS by
@@ -562,7 +639,7 @@ We then computed the ratio $r_{RMS,j}$ of the model's RMS to the current RMS for
 If the ratio is less than $1$, it indicates that the XGBoost model provides an improvement over the current performance of the telescope for a given fold.
 
 To obtain an overall measure of the model's performance compared to the current performance of the telescope, we averaged the ratios $r_{RMS,j}$ over all six test folds
-\begin{equation}
+\begin{equation} \label{eq:mean_rms_compared}
     \bar{r}_{RMS} = \sum_{i=1}^6 \frac{RMS_{model,j}}{RMS_{current,j}}.
 \end{equation}
 This gives us an average ratio $\bar{r}_{RMS}$, which measures the improvement in performance provided by the XGBoost model.

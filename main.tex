@@ -1,4 +1,4 @@
-\documentclass[a4paper, USenglish, 11pt]{report}
+\documentclass[a4paper, USenglish, 11pt, draft]{report}
 % \usepackage[T1]{fontenc}
 \usepackage{babel, folder/uiomasterfp}
 
@@ -125,9 +125,15 @@ top=3cm,bottom=2.5cm]{geometry}
 \author{Bendik Nyheim}
 \title{A novel application of machine learning to develop pointing models for current and future radio/sub-millimeter telescopes}
 
+% \fancypagestyle{plain}{
+% % \fancyhf{}
+% \fancyhead[RO,LE]{\thepage}
+% % \fancyhead[LO,RE]{\chapter}
+% % \renewcommand{\headrulewidth}{0pt}
+% }
 
 \begin{document}
-\pagestyle{fancy}
+% \pagestyle{plain}
 % \onehalfspacing
 
 \uiomasterfp[master, program={Computational Science: Physics},
@@ -140,6 +146,9 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 \chapter{Introduction}
 \input{Chapters/introduction.tex}
 
+\chapter{Related Works}
+\input{Chapters/related_works.tex}
+
 \chapter{Atronomical Background}
 \input{Chapters/ast_background.tex}
 
@@ -151,20 +160,22 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 \input{Chapters/method.tex}
 
 \chapter{Results}
+\input{Chapters/results.tex}
 
 \chapter{Discussion}
 
 \chapter{Conclusion}
 
-\pagestyle{plain}
+% \pagestyle{plain}
 \appendix
 \chapter*{Appendices}
-\section*{Appendix A}
+\section*{Appendix A}\label{sec:appendix_a}
 \input{Chapters/appendix.tex}
 
 \newpage
 
 \bibliographystyle{plain} % We choose the "plain" reference style
-\bibliography{citations}
+\bibliography{citations.bib}
 
 \end{document}
+
