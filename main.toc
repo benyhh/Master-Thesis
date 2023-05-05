@@ -1,0 +1,19 @@
+\babel@toc {USenglish}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Related Works}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Pointing Models in Radio Telescopes}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Machine Learning in Astronomy}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Challenges and Opportunities}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Atronomical Background}{5}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Machine Learning Background}{6}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Method}{7}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Results}{8}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Experiment 1: Pointing Model using Neural Networks}{8}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Correction Model}{8}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Testing}{9}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Discussion}{10}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusion}{11}{chapter.8}%
+\contentsline {section}{\numberline {.1}Pointing Correction Results}{12}{section.Alph0.1}%
+\contentsline {section}{\numberline {.2}Raw data correlation}{13}{section.Alph0.2}%
+\contentsline {section}{\numberline {.3}Base pointing model results}{13}{section.Alph0.3}%
+\contentsline {chapter}{Bibliography}{19}{appendix*.21}%

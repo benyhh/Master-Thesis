@@ -244,91 +244,93 @@
 
 
 \section{Base pointing model results}
-% \begin{table}[h]
-%     \centering
-%     \caption{Regular neural network}
-%     \begin{tabular}{ccccccc}
-%         \toprule
-%         Mean & STD & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
-%         18.37 & 11.88 &       Tanh &    [[22, 46]] &          0.01 &        475 & MSE \\
-%         18.41 &  7.46 &       GeLU &        [[46]] &          0.01 &        472 & MSD \\
-%         18.84 &  5.60 &       ReLU &        [[82]] &          0.02 &        334 & MSE \\
-%         19.42 &  9.50 &       Tanh &        [[64]] &          0.01 &         61 & MSE \\
-%         22.06 &  7.88 &       ReLU &        [[20]] &          0.00 &        309 & MSD \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
-
-
-% \begin{table}[h]
-%     \centering %$tmp2022\_clean\_clf\_transformed\_results\_table$
-%     \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-%     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
-%     It is also transformed to simulate a pointing correction after every scan.}
-%     \begin{tabular}{ccc c cc}
-%         \toprule
-%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
-%         \cmidrule(lr){2-3} \cmidrule(lr){5-6}
-%         k & Azimuth & Elevation & & Azimuth & Elevation \\
-%         \midrule
-%         2 &  1.411340 &  1.072811 & &  0.958876 &  0.944501 \\
-%         5 &  1.658062 &  1.095572 & &  0.959785 &  0.959705 \\
-%        10 &  1.656576 &  1.144753 & &  0.977446 &  0.943979 \\
-%        20 &  1.744980 &  1.020705 & &  0.974366 &  0.946778 \\
-%        30 &  1.891196 &  1.006098 & &  0.998285 &  0.940884 \\
-%        40 &  2.040398 &  0.993940 & &  0.972515 &  0.952763 \\
-%        50 &  2.226176 &  0.997667 & &  0.976921 &  0.942357 \\
-%     \bottomrule
-% \end{tabular}
-% \end{table}
+\begin{table}[h]
+    \centering
+    \caption{Regular neural network}
+    \begin{tabular}{lcccccc}
+        \toprule
+        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
+        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
+        \midrule
+        ReLU &        [82] &       2.0e-02 &        334 & MSE &    17.74 &  5.68 \\
+        Tanh &    [22, 46] &       6.7e-03 &        475 & MSE &    17.86 & 10.70 \\
+        GeLU &        [46] &       1.3e-02 &        472 & MSD &    17.91 &  6.79 \\
+        Tanh &        [64] &       5.7e-03 &         61 & MSE &    18.69 &  8.68 \\
+        ReLU &        [20] &       3.8e-03 &        309 & MSD &    21.42 &  7.22 \\
+  \bottomrule
+    \end{tabular}
+\end{table}
 
 \begin{table}[h]
     \centering
     \caption{Separate 1}
-    \begin{tabular}{ccccccc}
+    \begin{tabular}{lcccccc}
         \toprule
-        \multicolumn{2}{c}{RMS test set} & \multicolumn{5}{c}{Hyperparameters} \\
-        \cmidrule(lr){1-2} 
-        Mean & STD & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
+        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
+        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD \\
         \midrule
-        17.41 &  7.87 &       Tanh &        [40] &          0.01 &        101 & MSD \\
-        18.78 & 10.02 &       GeLU &   [86, 106] &          0.02 &         43 & MSD \\
-        20.26 & 10.58 &       ReLU &    [68, 42] &          0.02 &        450 & MSD \\
-        21.51 &  8.38 &       Tanh &        [32] &          0.02 &        266 & MSE \\
-        22.14 & 11.76 &       ReLU &       [106] &          0.02 &         95 & MSE \\
-        \bottomrule
+        Tanh &        [40] &       9.8e-03 &        101 & MSD &    16.80 &  7.20 \\
+        GeLU &   [86, 106] &       1.9e-02 &         43 & MSD &    18.24 &  9.06 \\
+        Tanh &        [32] &       1.7e-02 &        266 & MSE &    20.13 &  8.22 \\
+        ReLU &    [68, 42] &       2.0e-02 &        450 & MSD &    20.77 &  9.54 \\
+        ReLU &        [29] &       1.3e-02 &        148 & MSD &    21.60 & 13.01 \\
+  \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+    \centering
+    \caption{Separate 2}
+    \begin{tabular}{lcccccc}
+        \toprule
+        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\   
+        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
+        \midrule
+        Tanh &        [40] &       9.8e-03 &        101 & MSD &    19.21 &  5.89 \\
+        Tanh &        [62] &       4.2e-03 &        155 & MSD &    19.77 &  5.93 \\
+        GeLU &        [54] &       2.0e-02 &        413 & MSD &    21.38 &  6.58 \\
+        GeLU &    [97, 24] &       1.9e-02 &        321 & MSE &    22.50 & 13.70 \\
+        ReLU &        [81] &       1.2e-02 &        439 & MSD &    22.61 & 14.51 \\
+  \bottomrule
     \end{tabular}
 \end{table}
 
 
-% \begin{table}[h]
-%     \centering
-%     \caption{Separate 2}
-%     \begin{tabular}{rrllrrl}
-%         \toprule
-%         RMS Test & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
-%         20.25 &  6.50 &       Tanh &        [[62]] &          0.00 &        155 & MSD \\
-%         20.52 &  5.52 &       Tanh &        [[40]] &          0.01 &        101 & MSD \\
-%         22.19 &  7.02 &       GeLU &        [[54]] &          0.02 &        413 & MSD \\
-%         23.19 & 16.15 &       ReLU &        [[81]] &          0.01 &        439 & MSD \\
-%         24.14 & 14.64 &       GeLU &    [[97, 24]] &          0.02 &        321 & MSE \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
+\begin{table}[h]
+    \centering
+    \caption{Separate 3}
+    \begin{tabular}{lcccccc}
+        \toprule
+        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
+        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
+        \midrule
+        Tanh &        [26] &       3.9e-03 &        358 & MSD &    16.61 &  7.63 \\
+        Tanh &    [49, 40] &       1.6e-02 &        320 & MSD &    18.49 &  7.25 \\
+        ReLU &   [117, 32] &       2.1e-02 &        298 & MSD &    18.87 & 11.55 \\
+        ReLU &    [83, 32] &       1.1e-02 &        331 & MSD &    19.26 &  8.62 \\
+        ReLU &    [97, 60] &       1.6e-02 &        359 & MSD &    19.44 & 12.50 \\
+  \bottomrule
+    \end{tabular}
+\end{table}
 
-
-% \begin{table}[h]
-%     \centering
-%     \caption{Separate 3}
-%     \begin{tabular}{rrllrrl}
-%         \toprule
-%         RMS Test & Activation function & Hidden layers & Learning rate & Batch size & Loss function \\
-%         17.12 &  8.42 &       Tanh &        [[26]] &          0.00 &        358 & MSD \\
-%         19.10 &  7.94 &       Tanh &    [[49, 40]] &          0.02 &        320 & MSD \\
-%         19.81 & 13.94 &       ReLU &    [[97, 60]] &          0.02 &        359 & MSD \\
-%         19.84 & 12.64 &       ReLU &   [[117, 32]] &          0.02 &        298 & MSD \\
-%         20.20 &  9.28 &       ReLU &    [[83, 32]] &          0.01 &        331 & MSD \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
     
+\begin{table}[h]
+    \centering
+    \caption{RMS on all folds for the best model for all arcitechtures}
+    \begin{tabular}{lcccccccc}
+        \toprule
+        & \multicolumn{6}{c}{RMS on fold} & & \\
+        \cmidrule(lr){2-7}
+        Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
+        \midrule
+        Regular & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
+        Sep 1 & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
+        Sep 2 & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
+        Sep 3 & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
+        \bottomrule
+    \end{tabular}
+\end{table}

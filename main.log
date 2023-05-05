@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  5 MAY 2023 13:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  5 MAY 2023 17:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,6 +663,7 @@ File: puenc.def 2023-02-07 v7.00v Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
+Package hyperref Info: Option `draft' set `true' on input line 4060.
 Package hyperref Info: Hyper figures OFF on input line 4177.
 Package hyperref Info: Link nesting OFF on input line 4182.
 Package hyperref Info: Hyper index ON on input line 4185.
@@ -966,14 +967,13 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 135.
-(./main.out) (./main.out)
-\@outlinefile=\write6
-\openout6 = `main.out'.
 
+Package hyperref Warning: Draft mode on.
+
+Package hyperref Info: Link coloring ON on input line 135.
 Package hyperref Info: Option `pageanchor' set `false' on input line 141.
 LaTeX Font Info:    Trying to load font information for T1+phv on input line 141.
- (c:/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd
+(c:/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -984,53 +984,206 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 5.69998pt on input line 141.
-<folder/uio-fp-navn-eng.pdf, id=67, 469.755pt x 123.46124pt>
-File: folder/uio-fp-navn-eng.pdf Graphic file (type pdf)
-<use folder/uio-fp-navn-eng.pdf>
-Package pdftex.def Info: folder/uio-fp-navn-eng.pdf  used on input line 141.
-(pdftex.def)             Requested size: 138.56935pt x 36.41953pt.
+<folder/uio-fp-navn-eng.pdf, id=4, 469.755pt x 123.46124pt>
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 141.
+ (c:/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 13.29996pt on input line 141.
-<folder/uio-fp-segl.pdf, id=68, 232.87pt x 232.87pt>
-File: folder/uio-fp-segl.pdf Graphic file (type pdf)
-<use folder/uio-fp-segl.pdf>
-Package pdftex.def Info: folder/uio-fp-segl.pdf  used on input line 141.
-(pdftex.def)             Requested size: 67.43301pt x 67.43106pt.
+<folder/uio-fp-segl.pdf, id=5, 232.87pt x 232.87pt>
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 30.3999pt on input line 141.
 
 
 Package xcolor Warning: Incompatible color definition on input line 141.
 
-<teleskopgutt2.jpeg, id=69, 1129.21875pt x 697.10437pt>
-File: teleskopgutt2.jpeg Graphic file (type jpg)
-<use teleskopgutt2.jpeg>
-Package pdftex.def Info: teleskopgutt2.jpeg  used on input line 141.
-(pdftex.def)             Requested size: 597.51819pt x 263.75362pt.
-[1
+<teleskopgutt2.jpeg, id=6, 1129.21875pt x 697.10437pt>
+[1{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
-{c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./teleskopgutt2.jpeg> <./folder/uio-fp-navn-eng.pdf> <./folder/uio-fp-segl.pdf>]
+]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 18.99994pt on input line 141.
  [1]
 Package hyperref Info: Option `pageanchor' set `true' on input line 141.
  (./main.toc
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 8.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 8.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 8.
+(Font)              <10.95> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 8.
+(Font)              <8> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 8.
- (c:/texlive/2022/tex
+(Font)              <6> on input line 4.
+ (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+))
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [1
+
+]
+Chapter 1.
+[2
+
+]
+Chapter 2.
+(./Chapters/related_works.tex [3
+
+]) [4]
+Chapter 3.
+[5
+
+]
+Chapter 4.
+[6
+
+]
+Chapter 5.
+[7
+
+]
+Chapter 6.
+(./Chapters/results.tex
+
+LaTeX Warning: Reference `eq:mean_rms_compared' on page 8 undefined on input line 6.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (256.8696pt too wide) in paragraph at lines 77--89
+[] |
+ []
+
+) [8
+
+] [9]
+Chapter 7.
+[10
+
+]
+Chapter 8.
+[11
+
+] (./Chapters/appendix.tex
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 1521) in paragraph at lines 122--122
+\OT1/lmr/m/n/10.95 (+20) ing point-ing off-set. The dataset used to get these re-sults con-tain only
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.08421pt too wide) in paragraph at lines 250--263
+ [][] |
+ []
+
+[12
+
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.08421pt too wide) in paragraph at lines 268--281
+ [][] |
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.08421pt too wide) in paragraph at lines 286--299
+ [][] |
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (1.08421pt too wide) in paragraph at lines 305--318
+ [][] |
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [13] (./main.bbl [14] [15] [16] [17] [18]
+Underfull \hbox (badness 2181) in paragraph at lines 16--26
+\OT1/lmr/m/n/10.95 (+20) 3896, Jan-uary 2019.  []eprint: https://academic.oup.com/mnras/article-
+ []
+
+) [19
+
+] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 28492 strings out of 476024
+ 527872 string characters out of 5794017
+ 1915382 words of memory out of 5000000
+ 48272 multiletter control sequences out of 15000+600000
+ 574003 words of font info for 123 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,14n,80p,1043b,647s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (21 pages, 217288 bytes).
+PDF statistics:
+ 143 PDF objects out of 1000 (max. 8388607)
+ 92 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 29212 words of extra memory for PDF output out of 29859 (max. 10000000)
+
