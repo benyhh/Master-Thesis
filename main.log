@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.29)  5 MAY 2023 20:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.4) (preloaded format=pdflatex 2023.4.29)  5 MAY 2023 21:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1326,6 +1326,9 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) [52] (main.bbl [53] [54] [55] [56] [57]
 Underfull \hbox (badness 1342) in paragraph at lines 53--63
 \OT1/lmr/m/n/10.95 (+20) 3896, Jan-uary 2019.  []eprint: https://academic.oup.com/mnras/article-
@@ -1335,15 +1338,15 @@ Underfull \hbox (badness 1342) in paragraph at lines 53--63
 
 ]) [59] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 29923 strings out of 476331
- 563276 string characters out of 5787765
+ 29924 strings out of 476331
+ 563290 string characters out of 5787765
  1967660 words of memory out of 5000000
- 49466 multiletter control sequences out of 15000+600000
+ 49467 multiletter control sequences out of 15000+600000
  620325 words of font info for 226 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,80p,1034b,1183s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi6.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi8.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmib10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr6.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri8.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy8.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt12.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/bendi/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (61 pages, 477856 bytes).
+Output written on main.pdf (61 pages, 479161 bytes).
 PDF statistics:
  332 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

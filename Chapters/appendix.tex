@@ -323,7 +323,7 @@
     \caption{RMS on all folds for the best model for all arcitechtures}
     \begin{tabular}{lcccccccc}
         \toprule
-        & \multicolumn{6}{c}{RMS on fold} & & \\
+        & \multicolumn{6}{c}{RMS on test fold} & & \\
         \cmidrule(lr){2-7}
         Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
         \midrule
@@ -332,5 +332,68 @@
         Sep 2 & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
         Sep 3 & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
         \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+    \centering
+    \caption{Hyperparameters for the best model of each architecture}
+    \begin{tabular}{lccccc}
+        \toprule
+        Architecture & Activation & Hidden Layers & Learning Rate & Batch Size & Loss \\
+        \midrule
+        Regular &  ReLU & [82] & 0.0199 & 334 & MSE \\
+        Sep1    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+        Sep2    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+        Sep3    &  Tanh & [26] & 0.0039 & 358 & MSD \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+%%%Regular feature
+% ['DISP_ABS3_MEDIAN_1']
+
+%%% Separate feature 1
+% [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
+% [['WINDSPEED_VAR_5', 'DEL_TILTTEMP_MEDIAN_1']]
+
+%%% Separate feature 2
+% [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
+% [['WINDSPEED_VAR_5', 'DEL_TILTTEMP_MEDIAN_1']]
+
+%%% Separate feature 3
+% [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
+% [['DAZ_DISP_MEDIAN_1', 'DISP_ABS3_MEDIAN_1', 'POSITIONY_MEDIAN_1', 'TILT1Y_MEDIAN_1', 'TEMPERATURE_MEDIAN_1', 'TILT1T_MEDIAN_1']]
+
+\begin{table}[htbp]
+    \centering
+    \caption{Features selected by hyperparameter search for each model}
+    \label{tab:features}
+    \begin{tabular}{|l|cccc|}
+        \hline
+        Feature & Model 1 & Model 2 & Model 3 & Model 4 \\ \hline
+        DISP ABS3 MEDIAN 1 & x & x & x & x \\ \hline
+        CA & x & x & x & \\ \hline
+        NPAE & x & x & x & \\ \hline
+        C & x & x & x & \\ \hline
+        HECE & x & x & x & \\ \hline
+        HECE2 & x & x & x & \\ \hline
+        HECE3 & x & x & x & \\ \hline
+        HECE4 & x & x & x & \\ \hline
+        HECE5 & x & x & x & \\ \hline
+        HESE & x & x & x & \\ \hline
+        HESE2 & x & x & x & \\ \hline
+        HESE3 & x & x & x & \\ \hline
+        HESE4 & x & x & x & \\ \hline
+        HESE5 & x & x & x & \\ \hline
+        WINDSPEED VAR 5 & x & x & x & \\ \hline
+        DEL TILTTEMP MEDIAN 1 & x & x & x & \\ \hline
+        DAZ DISP MEDIAN 1 & & & x & \\ \hline
+        POSITIONY MEDIAN 1 & & & x & \\ \hline
+        TILT1Y MEDIAN 1 & & & x & \\ \hline
+        TEMPERATURE MEDIAN 1 & & & x & \\ \hline
+        TILT1T MEDIAN 1 & & & x & \\ \hline
     \end{tabular}
 \end{table}
