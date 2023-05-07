@@ -1,89 +1,195 @@
 
 \section{Experiment 1: Pointing Model using Neural Networks}
 
+Table \ref{tab:exp1_rms_folds_best_model} show the RMS in arcseconds on all the folds for the different model arcitechtures.
+The results are from the models with the smallest mean RMS for each of the arcitechtures.
+From the mean RMS over all folds, we see that the different arcitechtures offer similar performance.
+We also see that the RMS of fold $1$ is by far worse than the other folds.
+The lowest mean RMS is from the architecture where the non-linear features are connected to the geometrical and harmonic features.\\
+
+Table \ref{tab:exp1_hyperparameters_best_model} show the hyperparameter used for the best models.
+All arcitechtures perform better with a single hidden layer.
+The regular neural network uses ReLU activation and MSE loss, while the other arcitechtures use Tanh activation and MSD loss.
+The regular neural network also have more neurons in the hidden layer and a higher learning rate.
+The batch size is also varying. There seem to be some similarities between the hyperaprameters chosen for the three arcitectures with seperate features.
+However, given the large standard deviation of the mean RMS, there is probably bigger issues than hyperparameter tuning.\\
+
+Table \ref{tab:exp1_features} lists the features used in each of the best model for all the arcitechtures tested.
+
+\begin{table}[!htbp]
+    \centering
+    \label{tab:exp1_rms_folds_best_model}
+    \caption{RMS on all folds for the best model for all arcitechtures}
+    \begin{tabular}{lcccccccc}
+        \toprule
+        & \multicolumn{6}{c}{RMS on test fold} & & \\
+        \cmidrule(lr){2-7}
+        Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
+        \midrule
+        Regular & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
+        Sep 1 & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
+        Sep 2 & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
+        Sep 3 & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \label{tab:exp1_hyperparameters_best_model}
+    \caption{Hyperparameters for the best model of each architecture}
+    \begin{tabular}{lccccc}
+        \toprule
+        Architecture & Activation & Hidden Layers & Learning Rate & Batch Size & Loss \\
+        \midrule
+        Regular &  ReLU & [82] & 0.0199 & 334 & MSE \\
+        Sep1    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+        Sep2    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+        Sep3    &  Tanh & [26] & 0.0039 & 358 & MSD \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Features selected by hyperparameter search for each model}
+    \label{tab:exp1_features}
+    \begin{tabular}{|l|cccc|}
+        \hline
+        Feature & Sep 1 & Sep 2 & Sep 3 & Regular \\ \hline
+        COMMANDAZ & x & x & x & x \\ \hline
+        COMMANDEL & x & x & x & x \\ \hline
+        DISP ABS3 MEDIAN 1 & x & x & x & x \\ \hline
+        CA & x & x & x & \\ \hline
+        NPAE & x & x & x & \\ \hline
+        Constant & x & x & x & \\ \hline
+        $\cos{(El)}$ & x & x & x & \\ \hline
+        $\cos{(2\cdot El)}$ & x & x & x & \\ \hline
+        $\cos{(3\cdot El)}$ & x & x & x & \\ \hline
+        $\cos{(4\cdot El)}$ & x & x & x & \\ \hline
+        $\cos{(5\cdot El)}$ & x & x & x & \\ \hline
+        $\sin{(El)}$ & x & x & x & \\ \hline
+        $\sin{(2 \cdot El)}$ & x & x & x & \\ \hline
+        $\sin{(3 \cdot El)}$ & x & x & x & \\ \hline
+        $\sin{(4 \cdot El)}$ & x & x & x & \\ \hline
+        $\sin{(5 \cdot El)}$ & x & x & x & \\ \hline
+        WINDSPEED VAR 5 & x & x & x & \\ \hline
+        DEL TILTTEMP MEDIAN 1 & x & x & x & \\ \hline
+        DAZ DISP MEDIAN 1 & & & x & \\ \hline
+        POSITIONY MEDIAN 1 & & & x & \\ \hline
+        TILT1Y MEDIAN 1 & & & x & \\ \hline
+        TEMPERATURE MEDIAN 1 & & & x & \\ \hline
+        TILT1T MEDIAN 1 & & & x & \\ \hline
+    \end{tabular}
+\end{table}
+
 \section{Experiment 2: Pointing Correction Model}
 Table \ref{tab:results_all_days} and \ref{tab:results_nflash_days} show the main results from experiment $2$.
 They contain the average compared RMS \eqref{eq:mean_rms_compared} for azimuth and elevation models in case $1$ and $2$ for different numbers of features $k$ used to train the models.
 We cleaned the datasets we used to train these models using the cleaning criteria and XGBoost classifier.
 Table \ref{tab:results_all_days} shows results for models trained on scans from all instruments, while Table \ref{tab:results_nflash_days} shows results for models
 trained on scans from NFLASH230 only. For both datasets, case $1$ does not offer any improvement at all.
-On the other hand, models from case $2$ improve the pointing accuracy for all numbers of selected features $k$.
+On the other hand, models from case $2$ improve the pointing accuracy for most numbers of selected features $k$.
 
 First, the results from models predicting offsets for all instruments.
 Adding complexity seems to worsen the performance of azimuth models while improving the performance of elevation models.
-The best performance for azimuth models is for $k=5$ with $\bar{r}_{RMS}=0.955$, although $k=2$ and $k=10$ offer similar performance. 
-For elevation models, the best performance is for $k=50$ with $\bar{r}_{RMS}=0.947$.
+The best performance for azimuth models is for $k=2$ with $\bar{r}_{RMS}=0.980$ and $\sigma_{\bar{r}} = 0.059$ which is a slight improvement. 
+For elevation models, the best performance is for $k=50$ with $\bar{r}_{RMS}=0.955$ and $\sigma_{\bar{r}} = 0.029$.
 
 Second, the results from models predicting offsets for NFLASH230 only.
-Adding complexity for azimuth does not seem to affect it in the same way, and the results are more similar for different values of $k$.
-The best result for azimuth is $k=5$ with $\bar{r}_{RMS}=0.917$.
-For elevation models, $k=5$ also offers the best performance, with $\bar{r}_{RMS}=0.937$.\\
+The models for azimuth are $k=2$ and $k=50$ with similar performance $\bar{r}_{RMS}=0.948$ and $\bar{r}_{RMS}=0.945$ respectively.
+For elevation models, $k=50$ offers the best performance, with $\bar{r}_{RMS}=0.940$.
+The standard deviations for these performance estimates are small.\\
+
 
 We also conducted the same experiment for two other datasets, with the offsets and pointing corrections transformed to simulate a pointing correction after every scan.
 We tested splitting the training and validation data completely randomly for all four datasets, unlike the presented results, where we dedicate a day to either training or validation.
 For these results, see Appendix A (\ref{sec:appendix_a}). 
 
-\begin{table}[h]
-    \centering %$tmp2022\_clean\_clf\_results\_table$
-    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+\begin{table}[!htbp]
+    \centering
+    \label{tab:results_all_days}
+    \caption{$tmp2022\_clean\_clf\_results\_table$
+    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
     The training and validation data is split on days, meaning that all the scans for a given day
     are in the training or validation set and not both. The test set is unaffected by this.}
-    \begin{tabular}{ccc c cc}
+    \begin{tabular}{ccccc c cccc}
         \toprule
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
-        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
-         k & Azimuth & Elevation & & Azimuth & Elevation \\
+        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
         \midrule
-        2 &  1.007 &  1.232 & &  0.956 &  0.958 \\
-        5 &  1.003 &  1.170 & &  0.955 &  0.967 \\
-       10 &  1.288 &  1.116 & &  0.958 &  0.962 \\
-       20 &  1.580 &  1.121 & &  0.969 &  0.958 \\
-       30 &  1.606 &  1.107 & &  0.967 &  0.971 \\
-       40 &  1.528 &  1.068 & &  0.980 &  0.951 \\
-       50 &  1.758 &  1.061 & &  0.993 &  0.947 \\
+         2 &     1.007 &     0.003 &     1.232 &     0.055 &  &  0.980 &     0.059 &     0.964 &     0.016 \\
+         5 &     1.003 &     0.003 &     1.170 &     0.028 &  &  0.990 &     0.067 &     0.964 &     0.016 \\
+        10 &     1.288 &     0.101 &     1.116 &     0.015 &  &  1.001 &     0.102 &     0.979 &     0.059 \\
+        20 &     1.580 &     0.082 &     1.121 &     0.023 &  &  1.018 &     0.130 &     0.971 &     0.036 \\
+        30 &     1.606 &     0.110 &     1.107 &     0.018 &  &  1.026 &     0.151 &     0.957 &     0.018 \\
+        40 &     1.528 &     0.111 &     1.068 &     0.010 &  &  1.026 &     0.137 &     0.973 &     0.044 \\
+        50 &     1.758 &     0.121 &     1.061 &     0.027 &  &  1.018 &     0.114 &     0.955 &     0.029 \\
         \bottomrule
     \end{tabular}
-    \label{tab:results_all_days}
 \end{table}
 
-\begin{table}[h]
-    \centering %$tmp2022\_clean\_clf\_nflash230\_results\_table$
-    \caption{Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+\begin{table}[!htbp]
+    \centering
+    \label{tab:results_nflash_days}
+    \caption{$tmp2022\_clean\_clf\_nflash230\_results\_table$
+    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
     The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
     The training and validation data is split on days, meaning that all the scans for a given day
     are in the training or validation set and not both. The test set is unaffected by this.}
-    \begin{tabular}{ccc c cc}
+    \begin{tabular}{ccccc c cccc}
         \toprule
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{RMS Case 1} & & \multicolumn{2}{c}{RMS Case 2} \\
-        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
-         k & Azimuth & Elevation & & Azimuth & Elevation \\
+        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
         \midrule
-        2 &  0.982 &  1.020 & &  0.930 &  0.957 \\
-        5 &  1.366 &  1.198 & &  0.917 &  0.937 \\
-       10 &  1.383 &  1.155 & &  0.951 &  0.943 \\
-       20 &  1.252 &  1.126 & &  0.940 &  0.942 \\
-       30 &  1.335 &  1.094 & &  0.928 &  0.939 \\
-       40 &  1.146 &  1.058 & &  0.936 &  0.955 \\
-       50 &  1.202 &  1.062 & &  0.937 &  0.942 \\
+         2 &     0.982 &     0.014 &     1.020 &     0.024 &  &  0.948 &     0.056 &     0.972 &     0.081 \\
+         5 &     1.366 &     0.077 &     1.198 &     0.034 &  &  0.983 &     0.142 &     0.953 &     0.097 \\
+        10 &     1.383 &     0.087 &     1.155 &     0.047 &  &  0.957 &     0.080 &     0.967 &     0.087 \\
+        20 &     1.252 &     0.119 &     1.126 &     0.071 &  &  0.972 &     0.131 &     0.949 &     0.069 \\
+        30 &     1.335 &     0.226 &     1.094 &     0.041 &  &  0.963 &     0.093 &     0.959 &     0.077 \\
+        40 &     1.146 &     0.036 &     1.058 &     0.020 &  &  0.961 &     0.089 &     0.948 &     0.077 \\
+        50 &     1.202 &     0.131 &     1.062 &     0.022 &  &  0.945 &     0.073 &     0.940 &     0.075 \\
         \bottomrule
     \end{tabular}
-    \label{tab:results_nflash_days}
 \end{table}
 
 
 
-\section{Testing}
-\begin{tabular}{rrrrllrrl}
-    \toprule
-    RMS Test & \multicolumn{2}{l}{RMS Val} & activation & hidden\_layers & learning\_rate & batch\_size &                            loss\_func \\
-        mean &   std &    mean &  std &      first &         first &         first &      first &                                first \\
-       16.61 &  7.63 &   13.20 & 1.82 &       tanh &        [[26]] &          0.00 &        358 & <function MSDLoss at 0x7fc522741940> \\
-    \midrule
-       18.49 &  7.25 &   15.54 & 1.11 &       tanh &    [[49, 40]] &          0.02 &        320 & <function MSDLoss at 0x7fc522741940> \\
-       18.87 & 11.55 &   14.74 & 2.33 &       relu &   [[117, 32]] &          0.02 &        298 & <function MSDLoss at 0x7fc522741940> \\
-       19.26 &  8.62 &   13.95 & 1.90 &       relu &    [[83, 32]] &          0.01 &        331 & <function MSDLoss at 0x7fc522741940> \\
-       19.44 & 12.50 &   15.73 & 3.05 &       relu &    [[97, 60]] &          0.02 &        359 & <function MSDLoss at 0x7fc522741940> \\
-    \bottomrule
+Table \ref{tab:results_minval_days04} show the performane of the pointing correction model if we choose always choose the model with the lowest validation
+loss on and use that model for the test set. It should the performance estimate and standard deviation for the two different cases, and for different datasets.
+The data training and validation data is split on whole days, and the validation size is $0.43\%$ of the training/validation set.
+This does not offer any improvement over the result presented above, but for an NFLASH230 model, this still proves to be a viable strategy.
+The performance using this strategy for NFLASH230 is $\bar{r}_{RMS}=0.958$ for azimuth and $\bar{r}_{RMS}=0.941$ for elevation. 
+Standard deviations are also small.
+
+For a list of the $50$ features with the most mutual information to the target variable, see \ref{tab:exp2_top50_features} in the Appendix \ref{sec:appendix_a}.
+
+
+
+\begin{table}[!htbp]
+    \centering
+    \label{tab:results_minval_days04}
+    \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
+    \begin{tabular}{lcccc c cccc}
+        \toprule
+        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
+        \midrule
+        Transformed       &     2.140 &     0.498 &     1.073 &     0.040 &  &   1.008 &     0.073 &     0.949 &     0.022 \\
+        Transformed NF230 &     1.242 &     0.047 &     1.006 &     0.009 &  &   0.999 &     0.096 &     1.074 &     0.201 \\
+        Regular           &     1.730 &     0.126 &     1.170 &     0.028 &  &   1.016 &     0.114 &     0.994 &     0.065 \\
+        Regular N230      &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
+        \bottomrule
     \end{tabular}
-    
+\end{table}
+
