@@ -1,584 +1,680 @@
-\section{Pointing Correction Results}
+% \section{Pointing Correction Results}
 
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_nflash230\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contains only data from NFLASH230 and is cleaned using the regular criteria and XGBoost classifier.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2  &     0.984 &     0.028 &     1.018 &     0.034 &  &  0.956 &     0.071 &     1.009 &     0.098 \\
-         5  &     1.298 &     0.045 &     1.138 &     0.060 &  &  0.989 &     0.137 &     1.006 &     0.138 \\
-         10 &     1.429 &     0.205 &     1.154 &     0.064 &  &  1.004 &     0.146 &     1.005 &     0.118 \\
-         20 &     1.229 &     0.091 &     1.104 &     0.056 &  &  0.981 &     0.088 &     0.993 &     0.084 \\
-         30 &     1.387 &     0.189 &     1.064 &     0.024 &  &  0.996 &     0.096 &     1.004 &     0.131 \\
-         40 &     1.225 &     0.101 &     1.055 &     0.020 &  &  0.999 &     0.064 &     0.985 &     0.095 \\
-         50 &     1.179 &     0.093 &     1.073 &     0.006 &  &  1.004 &     0.090 &     0.968 &     0.091 \\
-        \midrule
-        \bottomrule
-    \end{tabular}   
-\end{table}
-
-
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_nflash230\_transformed\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contains only data from NFLASH230 and is cleaned using the regular criteria and XGBoost classifier.
-    are transformed to simulate a pointing correction after every scan.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2 &     1.064 &     0.009 &     1.097 &     0.064 &  &  0.987 &     0.068 &     1.005 &     0.115 \\
-         5 &     1.159 &     0.035 &     1.135 &     0.055 &  &  1.025 &     0.105 &     0.988 &     0.085 \\
-        10 &     1.111 &     0.032 &     1.074 &     0.018 &  &  1.045 &     0.152 &     1.001 &     0.161 \\
-        20 &     1.126 &     0.032 &     1.001 &     0.030 &  &  0.992 &     0.089 &     1.032 &     0.252 \\
-        30 &     1.127 &     0.042 &     1.023 &     0.037 &  &  1.029 &     0.161 &     0.992 &     0.164 \\
-        40 &     1.134 &     0.014 &     1.065 &     0.011 &  &  1.019 &     0.157 &     0.987 &     0.159 \\
-        50 &     1.112 &     0.014 &     1.028 &     0.051 &  &  1.051 &     0.162 &     0.957 &     0.083 \\
-       \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2 &     1.005 &     0.001 &     1.232 &     0.028 &  &  0.994 &     0.104 &     0.976 &     0.024 \\
-         5 &     1.003 &     0.004 &     1.229 &     0.056 &  &  0.989 &     0.086 &     0.988 &     0.038 \\
-        10 &     1.289 &     0.264 &     1.213 &     0.071 &  &  1.021 &     0.162 &     1.007 &     0.027 \\
-        20 &     1.475 &     0.135 &     1.223 &     0.076 &  &  1.033 &     0.167 &     0.982 &     0.054 \\
-        30 &     1.420 &     0.183 &     1.217 &     0.090 &  &  1.014 &     0.149 &     1.005 &     0.080 \\
-        40 &     1.359 &     0.101 &     1.250 &     0.048 &  &  1.022 &     0.151 &     1.016 &     0.066 \\
-        50 &     1.448 &     0.260 &     1.239 &     0.068 &  &  1.041 &     0.180 &     0.990 &     0.050 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_transformed\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
-    It is also transformed to simulate a pointing correction after every scan.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2 &     1.411 &     0.267 &     1.073 &     0.018 &  &  1.075 &     0.241 &     1.038 &     0.080 \\
-         5 &     1.658 &     0.068 &     1.096 &     0.024 &  &  1.070 &     0.213 &     1.029 &     0.106 \\
-        10 &     1.657 &     0.061 &     1.145 &     0.070 &  &  1.030 &     0.079 &     1.013 &     0.078 \\
-        20 &     1.745 &     0.016 &     1.021 &     0.017 &  &  1.021 &     0.071 &     0.982 &     0.059 \\
-        30 &     1.891 &     0.351 &     1.006 &     0.005 &  &  1.098 &     0.224 &     0.987 &     0.057 \\
-        40 &     2.040 &     0.156 &     0.994 &     0.006 &  &  1.043 &     0.106 &     0.987 &     0.066 \\
-        50 &     2.226 &     0.328 &     0.998 &     0.008 &  &  1.082 &     0.118 &     0.971 &     0.056 \\
-    \bottomrule
-\end{tabular}
-\end{table}
-%%%%%%%%%%%%%%%%%%%%%%% SPLIT ON DAYS BELOW
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_nflash230\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
-    The training and validation data is split on days, meaning that all the scans for a given day
-    are in the training or validation set and not both. The test set is unaffected by this.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2 &     0.982 &     0.014 &     1.020 &     0.024 &  &  0.948 &     0.056 &     0.972 &     0.081 \\
-         5 &     1.366 &     0.077 &     1.198 &     0.034 &  &  0.983 &     0.142 &     0.953 &     0.097 \\
-        10 &     1.383 &     0.087 &     1.155 &     0.047 &  &  0.957 &     0.080 &     0.967 &     0.087 \\
-        20 &     1.252 &     0.119 &     1.126 &     0.071 &  &  0.972 &     0.131 &     0.949 &     0.069 \\
-        30 &     1.335 &     0.226 &     1.094 &     0.041 &  &  0.963 &     0.093 &     0.959 &     0.077 \\
-        40 &     1.146 &     0.036 &     1.058 &     0.020 &  &  0.961 &     0.089 &     0.948 &     0.077 \\
-        50 &     1.202 &     0.131 &     1.062 &     0.022 &  &  0.945 &     0.073 &     0.940 &     0.075 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_nflash230\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contains only data from NFLASH230 and is cleaned using the regular criteria and XGBoost classifier.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2  &     0.984 &     0.028 &     1.018 &     0.034 &  &  0.956 &     0.071 &     1.009 &     0.098 \\
+%          5  &     1.298 &     0.045 &     1.138 &     0.060 &  &  0.989 &     0.137 &     1.006 &     0.138 \\
+%          10 &     1.429 &     0.205 &     1.154 &     0.064 &  &  1.004 &     0.146 &     1.005 &     0.118 \\
+%          20 &     1.229 &     0.091 &     1.104 &     0.056 &  &  0.981 &     0.088 &     0.993 &     0.084 \\
+%          30 &     1.387 &     0.189 &     1.064 &     0.024 &  &  0.996 &     0.096 &     1.004 &     0.131 \\
+%          40 &     1.225 &     0.101 &     1.055 &     0.020 &  &  0.999 &     0.064 &     0.985 &     0.095 \\
+%          50 &     1.179 &     0.093 &     1.073 &     0.006 &  &  1.004 &     0.090 &     0.968 &     0.091 \\
+%         \midrule
+%         \bottomrule
+%     \end{tabular}   
+% \end{table}
 
 
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_nflash230\_transformed\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
-    It is also transformed to simulate a pointing correction after every scan.
-    The training and validation data is split on days, meaning that all the scans for a given day
-    are in the training or validation set and not both. The test set is unaffected by this.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2 &     1.031 &     0.011 &     1.005 &     0.026 &  &  0.981 &     0.061 &     1.052 &     0.188 \\
-         5 &     1.037 &     0.020 &     1.000 &     0.009 &  &  1.009 &     0.077 &     1.086 &     0.225 \\
-        10 &     1.137 &     0.034 &     1.009 &     0.019 &  &  0.993 &     0.093 &     1.017 &     0.135 \\
-        20 &     1.043 &     0.009 &     1.009 &     0.014 &  &  1.011 &     0.108 &     1.064 &     0.226 \\
-        30 &     1.242 &     0.031 &     1.004 &     0.011 &  &  0.998 &     0.108 &     1.058 &     0.238 \\
-        40 &     1.215 &     0.093 &     1.007 &     0.013 &  &  1.001 &     0.100 &     1.055 &     0.216 \\
-        50 &     1.180 &     0.043 &     0.992 &     0.007 &  &  0.996 &     0.112 &     1.066 &     0.223 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_nflash230\_transformed\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contains only data from NFLASH230 and is cleaned using the regular criteria and XGBoost classifier.
+%     are transformed to simulate a pointing correction after every scan.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2 &     1.064 &     0.009 &     1.097 &     0.064 &  &  0.987 &     0.068 &     1.005 &     0.115 \\
+%          5 &     1.159 &     0.035 &     1.135 &     0.055 &  &  1.025 &     0.105 &     0.988 &     0.085 \\
+%         10 &     1.111 &     0.032 &     1.074 &     0.018 &  &  1.045 &     0.152 &     1.001 &     0.161 \\
+%         20 &     1.126 &     0.032 &     1.001 &     0.030 &  &  0.992 &     0.089 &     1.032 &     0.252 \\
+%         30 &     1.127 &     0.042 &     1.023 &     0.037 &  &  1.029 &     0.161 &     0.992 &     0.164 \\
+%         40 &     1.134 &     0.014 &     1.065 &     0.011 &  &  1.019 &     0.157 &     0.987 &     0.159 \\
+%         50 &     1.112 &     0.014 &     1.028 &     0.051 &  &  1.051 &     0.162 &     0.957 &     0.083 \\
+%        \bottomrule
+%     \end{tabular}
+% \end{table}
 
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
-    The training and validation data is split on days, meaning that all the scans for a given day
-    are in the training or validation set and not both. The test set is unaffected by this.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2 &     1.007 &     0.003 &     1.232 &     0.055 &  &  0.980 &     0.059 &     0.964 &     0.016 \\
-         5 &     1.003 &     0.003 &     1.170 &     0.028 &  &  0.990 &     0.067 &     0.964 &     0.016 \\
-        10 &     1.288 &     0.101 &     1.116 &     0.015 &  &  1.001 &     0.102 &     0.979 &     0.059 \\
-        20 &     1.580 &     0.082 &     1.121 &     0.023 &  &  1.018 &     0.130 &     0.971 &     0.036 \\
-        30 &     1.606 &     0.110 &     1.107 &     0.018 &  &  1.026 &     0.151 &     0.957 &     0.018 \\
-        40 &     1.528 &     0.111 &     1.068 &     0.010 &  &  1.026 &     0.137 &     0.973 &     0.044 \\
-        50 &     1.758 &     0.121 &     1.061 &     0.027 &  &  1.018 &     0.114 &     0.955 &     0.029 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2 &     1.005 &     0.001 &     1.232 &     0.028 &  &  0.994 &     0.104 &     0.976 &     0.024 \\
+%          5 &     1.003 &     0.004 &     1.229 &     0.056 &  &  0.989 &     0.086 &     0.988 &     0.038 \\
+%         10 &     1.289 &     0.264 &     1.213 &     0.071 &  &  1.021 &     0.162 &     1.007 &     0.027 \\
+%         20 &     1.475 &     0.135 &     1.223 &     0.076 &  &  1.033 &     0.167 &     0.982 &     0.054 \\
+%         30 &     1.420 &     0.183 &     1.217 &     0.090 &  &  1.014 &     0.149 &     1.005 &     0.080 \\
+%         40 &     1.359 &     0.101 &     1.250 &     0.048 &  &  1.022 &     0.151 &     1.016 &     0.066 \\
+%         50 &     1.448 &     0.260 &     1.239 &     0.068 &  &  1.041 &     0.180 &     0.990 &     0.050 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
-\begin{table}[!htbp]
-    \centering
-    \caption{$tmp2022\_clean\_clf\_transformed\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
-    It is also transformed to simulate a pointing correction after every scan.
-    The training and validation data is split on days, meaning that all the scans for a given day
-    are in the training or validation set and not both. The test set is unaffected by this.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
-        \midrule
-         2 &     1.362 &     0.223 &     1.050 &     0.015 &  &  1.004 &     0.113 &     0.954 &     0.029 \\
-         5 &     1.520 &     0.062 &     1.073 &     0.041 &  &  1.008 &     0.112 &     0.955 &     0.024 \\
-        10 &     1.516 &     0.041 &     1.044 &     0.020 &  &  0.998 &     0.072 &     0.946 &     0.029 \\
-        20 &     1.698 &     0.051 &     1.017 &     0.016 &  &  1.011 &     0.094 &     0.948 &     0.038 \\
-        30 &     1.717 &     0.144 &     1.014 &     0.009 &  &  1.029 &     0.119 &     0.954 &     0.033 \\
-        40 &     2.477 &     0.079 &     1.034 &     0.017 &  &  1.037 &     0.117 &     0.946 &     0.025 \\
-        50 &     2.493 &     0.213 &     1.031 &     0.009 &  &  1.018 &     0.097 &     0.948 &     0.021 \\
-        \bottomrule
-    \end{tabular}        
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_transformed\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+%     It is also transformed to simulate a pointing correction after every scan.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2 &     1.411 &     0.267 &     1.073 &     0.018 &  &  1.075 &     0.241 &     1.038 &     0.080 \\
+%          5 &     1.658 &     0.068 &     1.096 &     0.024 &  &  1.070 &     0.213 &     1.029 &     0.106 \\
+%         10 &     1.657 &     0.061 &     1.145 &     0.070 &  &  1.030 &     0.079 &     1.013 &     0.078 \\
+%         20 &     1.745 &     0.016 &     1.021 &     0.017 &  &  1.021 &     0.071 &     0.982 &     0.059 \\
+%         30 &     1.891 &     0.351 &     1.006 &     0.005 &  &  1.098 &     0.224 &     0.987 &     0.057 \\
+%         40 &     2.040 &     0.156 &     0.994 &     0.006 &  &  1.043 &     0.106 &     0.987 &     0.066 \\
+%         50 &     2.226 &     0.328 &     0.998 &     0.008 &  &  1.082 &     0.118 &     0.971 &     0.056 \\
+%     \bottomrule
+% \end{tabular}
+% \end{table}
+% %%%%%%%%%%%%%%%%%%%%%%% SPLIT ON DAYS BELOW
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_nflash230\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
+%     The training and validation data is split on days, meaning that all the scans for a given day
+%     are in the training or validation set and not both. The test set is unaffected by this.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2 &     0.982 &     0.014 &     1.020 &     0.024 &  &  0.948 &     0.056 &     0.972 &     0.081 \\
+%          5 &     1.366 &     0.077 &     1.198 &     0.034 &  &  0.983 &     0.142 &     0.953 &     0.097 \\
+%         10 &     1.383 &     0.087 &     1.155 &     0.047 &  &  0.957 &     0.080 &     0.967 &     0.087 \\
+%         20 &     1.252 &     0.119 &     1.126 &     0.071 &  &  0.972 &     0.131 &     0.949 &     0.069 \\
+%         30 &     1.335 &     0.226 &     1.094 &     0.041 &  &  0.963 &     0.093 &     0.959 &     0.077 \\
+%         40 &     1.146 &     0.036 &     1.058 &     0.020 &  &  0.961 &     0.089 &     0.948 &     0.077 \\
+%         50 &     1.202 &     0.131 &     1.062 &     0.022 &  &  0.945 &     0.073 &     0.940 &     0.075 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
 
-%%% Min val tables 
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_nflash230\_transformed\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
+%     It is also transformed to simulate a pointing correction after every scan.
+%     The training and validation data is split on days, meaning that all the scans for a given day
+%     are in the training or validation set and not both. The test set is unaffected by this.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2 &     1.031 &     0.011 &     1.005 &     0.026 &  &  0.981 &     0.061 &     1.052 &     0.188 \\
+%          5 &     1.037 &     0.020 &     1.000 &     0.009 &  &  1.009 &     0.077 &     1.086 &     0.225 \\
+%         10 &     1.137 &     0.034 &     1.009 &     0.019 &  &  0.993 &     0.093 &     1.017 &     0.135 \\
+%         20 &     1.043 &     0.009 &     1.009 &     0.014 &  &  1.011 &     0.108 &     1.064 &     0.226 \\
+%         30 &     1.242 &     0.031 &     1.004 &     0.011 &  &  0.998 &     0.108 &     1.058 &     0.238 \\
+%         40 &     1.215 &     0.093 &     1.007 &     0.013 &  &  1.001 &     0.100 &     1.055 &     0.216 \\
+%         50 &     1.180 &     0.043 &     0.992 &     0.007 &  &  0.996 &     0.112 &     1.066 &     0.223 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
-\begin{table}[!htbp]
-    \centering
-    \caption{Performance when choosing min validation for each fold. Random splits on train/val. Test size $0.4$}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
-        \midrule
-        Transformed      &     1.967 &   0.370 &     1.112 &     0.059 &   &  1.077 &     0.125 &     0.985 &     0.055 \\
-        Transformed N230 &     1.144 &   0.048 &     1.074 &     0.018 &   &  1.038 &     0.163 &     1.030 &     0.254 \\
-        Regular          &     1.429 &   0.175 &     1.246 &     0.058 &   &  1.035 &     0.181 &     1.021 &     0.074 \\
-        Regular N230     &     1.284 &   0.185 &     1.138 &     0.058 &   &  1.004 &     0.090 &     0.970 &     0.089 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+%     The training and validation data is split on days, meaning that all the scans for a given day
+%     are in the training or validation set and not both. The test set is unaffected by this.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2 &     1.007 &     0.003 &     1.232 &     0.055 &  &  0.980 &     0.059 &     0.964 &     0.016 \\
+%          5 &     1.003 &     0.003 &     1.170 &     0.028 &  &  0.990 &     0.067 &     0.964 &     0.016 \\
+%         10 &     1.288 &     0.101 &     1.116 &     0.015 &  &  1.001 &     0.102 &     0.979 &     0.059 \\
+%         20 &     1.580 &     0.082 &     1.121 &     0.023 &  &  1.018 &     0.130 &     0.971 &     0.036 \\
+%         30 &     1.606 &     0.110 &     1.107 &     0.018 &  &  1.026 &     0.151 &     0.957 &     0.018 \\
+%         40 &     1.528 &     0.111 &     1.068 &     0.010 &  &  1.026 &     0.137 &     0.973 &     0.044 \\
+%         50 &     1.758 &     0.121 &     1.061 &     0.027 &  &  1.018 &     0.114 &     0.955 &     0.029 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{$tmp2022\_clean\_clf\_transformed\_results\_table$
+%     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
+%     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
+%     It is also transformed to simulate a pointing correction after every scan.
+%     The training and validation data is split on days, meaning that all the scans for a given day
+%     are in the training or validation set and not both. The test set is unaffected by this.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         k & Mean & STD & Mean & STD & & Mean & STD & Mean & STD \\ 
+%         \midrule
+%          2 &     1.362 &     0.223 &     1.050 &     0.015 &  &  1.004 &     0.113 &     0.954 &     0.029 \\
+%          5 &     1.520 &     0.062 &     1.073 &     0.041 &  &  1.008 &     0.112 &     0.955 &     0.024 \\
+%         10 &     1.516 &     0.041 &     1.044 &     0.020 &  &  0.998 &     0.072 &     0.946 &     0.029 \\
+%         20 &     1.698 &     0.051 &     1.017 &     0.016 &  &  1.011 &     0.094 &     0.948 &     0.038 \\
+%         30 &     1.717 &     0.144 &     1.014 &     0.009 &  &  1.029 &     0.119 &     0.954 &     0.033 \\
+%         40 &     2.477 &     0.079 &     1.034 &     0.017 &  &  1.037 &     0.117 &     0.946 &     0.025 \\
+%         50 &     2.493 &     0.213 &     1.031 &     0.009 &  &  1.018 &     0.097 &     0.948 &     0.021 \\
+%         \bottomrule
+%     \end{tabular}        
+% \end{table}
+
+
+% %%% Min val tables 
+
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Performance when choosing min validation for each fold. Random splits on train/val. Test size $0.4$}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
+%         \midrule
+%         Transformed      &     1.967 &   0.370 &     1.112 &     0.059 &   &  1.077 &     0.125 &     0.985 &     0.055 \\
+%         Transformed N230 &     1.144 &   0.048 &     1.074 &     0.018 &   &  1.038 &     0.163 &     1.030 &     0.254 \\
+%         Regular          &     1.429 &   0.175 &     1.246 &     0.058 &   &  1.035 &     0.181 &     1.021 &     0.074 \\
+%         Regular N230     &     1.284 &   0.185 &     1.138 &     0.058 &   &  1.004 &     0.090 &     0.970 &     0.089 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
     
-\begin{table}[!htbp]
-    \centering
-    \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
-    \begin{tabular}{ccccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
-        \midrule
-        Transformed       &     2.140 &     0.498 &     1.073 &     0.040 &  &   1.008 &     0.073 &     0.949 &     0.022 \\
-        Transformed NF230 &     1.242 &     0.047 &     1.006 &     0.009 &  &   0.999 &     0.096 &     1.074 &     0.201 \\
-        Regular           &     1.730 &     0.126 &     1.170 &     0.028 &  &   1.016 &     0.114 &     0.994 &     0.065 \\
-        Regular N230      &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
+%     \label{tab:pcorr_min_val_days_04}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
+%         \midrule
+%         Transformed       &     2.140 &     0.498 &     1.073 &     0.040 &  &   1.008 &     0.073 &     0.949 &     0.022 \\
+%         Transformed NF230 &     1.242 &     0.047 &     1.006 &     0.009 &  &   0.999 &     0.096 &     1.074 &     0.201 \\
+%         Regular           &     1.730 &     0.126 &     1.170 &     0.028 &  &   1.016 &     0.114 &     0.994 &     0.065 \\
+%         Regular N230      &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
     
 
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.5$.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Split on days} & & \multicolumn{4}{c}{Random splits} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
+%         \midrule
+%         Transformed       &    0.975 &     0.107 &     0.964 &     0.079 &  &   0.980 &     0.073 &     0.981 &     0.115 \\
+%         Transformed NF230 &    0.998 &     0.078 &     0.961 &     0.021 &  &   1.021 &     0.074 &     0.984 &     0.057 \\
+%         Regular           &    1.043 &     0.138 &     1.035 &     0.136 &  &   1.006 &     0.083 &     1.013 &     0.117 \\
+%         Regular N230      &    1.003 &     0.123 &     0.952 &     0.018 &  &   1.032 &     0.154 &     1.000 &     0.046 \\
+%         \bottomrule
+%     \end{tabular}  
+% \end{table}
 \begin{table}[!htbp]
     \centering
+    \label{tab:minval_fold5}
     \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.5$.}
-    \begin{tabular}{ccccc c cccc}
+    \begin{tabular}{lcc c cc}
         \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Split on days} & & \multicolumn{4}{c}{Random splits} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Split on days} & & \multicolumn{2}{c}{Random splits} \\
+        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+        Dataset &  Azimuth  &  Elevation  & & Azimuth  &  Elevation  \\
         \midrule
-        Transformed       &    0.975 &     0.107 &     0.964 &     0.079 &  &   0.980 &     0.073 &     0.981 &     0.115 \\
-        Transformed NF230 &    0.998 &     0.078 &     0.961 &     0.021 &  &   1.021 &     0.074 &     0.984 &     0.057 \\
-        Regular           &    1.043 &     0.138 &     1.035 &     0.136 &  &   1.006 &     0.083 &     1.013 &     0.117 \\
-        Regular N230      &    1.003 &     0.123 &     0.952 &     0.018 &  &   1.032 &     0.154 &     1.000 &     0.046 \\
-        \bottomrule
-    \end{tabular}  
-\end{table}
-
-%%% FEATURES FOR DIFFERNTE DATASETS WITH PCORR MODEL
-
-
-\begin{longtable}{|lcccccccc|}
-    \toprule
-    \label{tab:exp2_top50_features}
-    & \multicolumn{2}{c}{Regular} & \multicolumn{2}{c}{Regular N230} & \multicolumn{2}{c}{Transformed} & \multicolumn{2}{c|}{Transformed N230}\\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
-    Features & Az & El & Az & El & Az & El & Az & El \\  \hline
-    \endfirsthead
-    
-    \toprule
-    & \multicolumn{2}{c}{Regular} & \multicolumn{2}{c}{Regular N230} & \multicolumn{2}{c}{Transformed} & \multicolumn{2}{c|}{Transformed N230}\\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
-    Features & Az & El & Az & El & Az & El & Az & El \\ \hline
-    \endhead
-    \multicolumn{9}{r}{{Continued on next page}} \\
-    \midrule
-    \endfoot
-    
-    \endlastfoot
-    ACTUALAZ\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
-    ACTUALAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ACTUALAZ\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALAZ\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALEL\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
-    ACTUALEL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ACTUALEL\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALEL\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALVELOCITYAZ\_MAX &        &        &        &        &      x &      x &      x &      x \\ \hline
-    ACTUALVELOCITYEL\_MAX &        &        &        &        &      x &      x &      x &      x \\ \hline
-    COMMANDAZ\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
-    COMMANDAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    COMMANDAZ\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    COMMANDAZ\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    COMMANDEL\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
-    COMMANDEL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    COMMANDEL\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    COMMANDEL\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    DAZ\_DISP\_CHANGE\_I1 &        &        &        &        &      x &        &      x &      x \\ \hline
-    DAZ\_DISP\_MEDIAN &      x &        &      x &      x &      x &      x &      x &      x \\ \hline
-    DAZ\_TILTTEMP\_CHANGE\_I1 &        &        &        &        &        &        &      x &      x \\ \hline
-    DAZ\_TILTTEMP\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    DAZ\_TILT\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
-    DAZ\_TILT\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DAZ\_TOTAL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DEL\_DISP\_CHANGE\_I1 &        &        &        &        &        &        &      x &      x \\ \hline
-    DEL\_DISP\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    DEL\_SPEM\_CHANGE\_I1 &        &        &        &        &      x &      x &        &      x \\ \hline
-    DEL\_SPEM\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    DEL\_TILTTEMP\_MEDIAN &      x &      x &      x &      x &        &        &      x &        \\ \hline
-    DEL\_TILT\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
-    DEL\_TILT\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    DEL\_TOTAL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DEWPOINT\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    DISP\_ABS1\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    DISP\_ABS2\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DISP\_ABS3\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    DSUNAZ\_CHANGE\_P5 &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    HUMIDITY\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    POSITIONX\_MEDIAN &      x &      x &      x &      x &        &      x &        &        \\ \hline
-    POSITIONY\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    POSITIONZ\_MEDIAN &      x &      x &      x &        &      x &      x &        &        \\ \hline
-    PRESSURE\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ROTATIONX\_MEDIAN &      x &      x &        &      x &      x &      x &        &        \\ \hline
-    SUNAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    SUNEL\_MEDIAN &        &        &      x &      x &        &        &        &        \\ \hline
-    TEMP1\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    TEMP26\_CHANGE\_I1 &        &        &        &        &        &        &        &      x \\ \hline
-    TEMP26\_MEDIAN &      x &      x &      x &      x &        &        &        &        \\ \hline
-    TEMP27\_MEDIAN &      x &      x &      x &      x &        &        &        &        \\ \hline
-    TEMP28\_MEDIAN &      x &      x &      x &      x &        &        &        &      x \\ \hline
-    TEMP2\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    TEMP3\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    TEMP4\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    TEMP5\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    TEMP6\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    TEMPERATURE\_MEDIAN &      x &      x &        &      x &      x &      x &      x &        \\ \hline
-    TILT1T\_MEDIAN &      x &      x &      x &      x &        &        &      x &        \\ \hline
-    TILT1X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT1Y\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    TILT2T\_MEDIAN &      x &      x &      x &      x &        &        &        &      x \\ \hline
-    TILT2X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT2Y\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT3T\_MEDIAN &      x &      x &      x &        &        &        &      x &        \\ \hline
-    TILT3X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT3Y\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    WINDDIRECTION\_MEDIAN &        &      x &      x &      x &        &        &        &      x \\ \hline
-    WINDSPEED\_MEDIAN &      x &      x &        &        &        &        &        &      x \\ \hline
-    WINDSPEED\_VARIANCE\_P5 &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    ca &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ie &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    month &        &        &      x &      x &        &        &        &        \\ \hline
-    month\_continuous &      x &      x &      x &      x &        &        &      x &        \\ \hline
-    time\_of\_day &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-\end{longtable}        
-
-
-
-
-
-\section{Raw data correlation}
-\begin{table}[!htbp]
-    \centering
-    \caption{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.}
-    \begin{tabular}{lccc}
-        \toprule
-        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
-        \midrule
-        WINDSPEED\_VAR\_5        &      $0.10$ &      $0.12$ &               $0.11$ \\
-        DAZ\_TILT\_MEDIAN\_1      &      $0.09$ &      $0.03$ &               $0.14$ \\
-        DAZ\_TILTTEMP\_MEDIAN\_1  &      $0.00$ &     -$0.06$ &               $0.30$ \\
-        TILT1Y\_MEDIAN\_1        &      $0.08$ &      $0.02$ &               $0.13$ \\
-        TEMP26\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.19$ \\
-        TEMP27\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.21$ \\
-        TEMP28\_MEDIAN\_1        &      $0.04$ &      $0.11$ &              $-0.25$ \\
-        TEMPERATURE\_MEDIAN\_1   &      $0.04$ &      $0.12$ &              $-0.26$ \\
-        POSITIONZ\_MEDIAN\_1     &      $0.05$ &      $0.11$ &              $-0.21$ \\
-        DEWPOINT\_MEDIAN\_1      &      $0.08$ &      $0.12$ &              $-0.15$ \\
-        DAZ\_TOTAL\_MEDIAN\_1     &      $0.09$ &      $0.03$ &               $0.13$ \\
-        WINDSPEED\_MEDIAN\_1     &      $0.02$ &      $0.02$ &               $0.13$ \\
-        HESE2                  &      $0.46$ &      $0.44$ &               $0.44$ \\
-        HESE3                  &      $0.98$ &      $0.94$ &               $0.77$ \\
-        HESE4                  &      $0.97$ &      $0.92$ &               $0.74$ \\
-        HESE5                  &      $0.34$ &      $0.31$ &               $0.15$ \\
-        HACA5                  &      $0.06$ &      $0.05$ &               $0.10$ \\
-        HECE                   &      $1.00$ &      $0.96$ &               $0.78$ \\
-        HECE2                  &      $1.00$ &      $0.96$ &               $0.78$ \\
-        HECE3                  &      $0.76$ &      $0.72$ &               $0.52$ \\
-        HSCA5                  &      $0.12$ &      $0.11$ &               $0.14$ \\
-        \bottomrule
+        Transformed       & 2.016 & 1.067 & 1.050 & 0.926  \\
+        Transformed NF230 & 1.243 & 1.009 & 0.954 & 1.008  \\
+        Regular           & 1.779 & 1.186 & 1.027 & 0.951  \\
+        Regular N230      & 1.204 & 1.262 & 0.930 & 0.906  \\
+    \bottomrule
     \end{tabular}
 \end{table}
 
+
+% %%% FEATURES FOR DIFFERNTE DATASETS WITH PCORR MODEL
+
+
+% \begin{longtable}{|lcccccccc|}
+%     \toprule
+%     \label{tab:exp2_top50_features}
+%     & \multicolumn{2}{c}{Regular} & \multicolumn{2}{c}{Regular N230} & \multicolumn{2}{c}{Transformed} & \multicolumn{2}{c|}{Transformed N230}\\
+%     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+%     Features & Az & El & Az & El & Az & El & Az & El \\  \hline
+%     \endfirsthead
+    
+%     \toprule
+%     & \multicolumn{2}{c}{Regular} & \multicolumn{2}{c}{Regular N230} & \multicolumn{2}{c}{Transformed} & \multicolumn{2}{c|}{Transformed N230}\\
+%     \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
+%     Features & Az & El & Az & El & Az & El & Az & El \\ \hline
+%     \endhead
+%     \multicolumn{9}{r}{{Continued on next page}} \\
+%     \midrule
+%     \endfoot
+    
+%     \endlastfoot
+%     ACTUALAZ\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
+%     ACTUALAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     ACTUALAZ\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     ACTUALAZ\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     ACTUALEL\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
+%     ACTUALEL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     ACTUALEL\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     ACTUALEL\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     ACTUALVELOCITYAZ\_MAX &        &        &        &        &      x &      x &      x &      x \\ \hline
+%     ACTUALVELOCITYEL\_MAX &        &        &        &        &      x &      x &      x &      x \\ \hline
+%     COMMANDAZ\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
+%     COMMANDAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     COMMANDAZ\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     COMMANDAZ\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     COMMANDEL\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
+%     COMMANDEL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     COMMANDEL\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     COMMANDEL\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
+%     DAZ\_DISP\_CHANGE\_I1 &        &        &        &        &      x &        &      x &      x \\ \hline
+%     DAZ\_DISP\_MEDIAN &      x &        &      x &      x &      x &      x &      x &      x \\ \hline
+%     DAZ\_TILTTEMP\_CHANGE\_I1 &        &        &        &        &        &        &      x &      x \\ \hline
+%     DAZ\_TILTTEMP\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
+%     DAZ\_TILT\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
+%     DAZ\_TILT\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     DAZ\_TOTAL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     DEL\_DISP\_CHANGE\_I1 &        &        &        &        &        &        &      x &      x \\ \hline
+%     DEL\_DISP\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
+%     DEL\_SPEM\_CHANGE\_I1 &        &        &        &        &      x &      x &        &      x \\ \hline
+%     DEL\_SPEM\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
+%     DEL\_TILTTEMP\_MEDIAN &      x &      x &      x &      x &        &        &      x &        \\ \hline
+%     DEL\_TILT\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
+%     DEL\_TILT\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
+%     DEL\_TOTAL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     DEWPOINT\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
+%     DISP\_ABS1\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
+%     DISP\_ABS2\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     DISP\_ABS3\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
+%     DSUNAZ\_CHANGE\_P5 &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
+%     HUMIDITY\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     POSITIONX\_MEDIAN &      x &      x &      x &      x &        &      x &        &        \\ \hline
+%     POSITIONY\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     POSITIONZ\_MEDIAN &      x &      x &      x &        &      x &      x &        &        \\ \hline
+%     PRESSURE\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     ROTATIONX\_MEDIAN &      x &      x &        &      x &      x &      x &        &        \\ \hline
+%     SUNAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     SUNEL\_MEDIAN &        &        &      x &      x &        &        &        &        \\ \hline
+%     TEMP1\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
+%     TEMP26\_CHANGE\_I1 &        &        &        &        &        &        &        &      x \\ \hline
+%     TEMP26\_MEDIAN &      x &      x &      x &      x &        &        &        &        \\ \hline
+%     TEMP27\_MEDIAN &      x &      x &      x &      x &        &        &        &        \\ \hline
+%     TEMP28\_MEDIAN &      x &      x &      x &      x &        &        &        &      x \\ \hline
+%     TEMP2\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
+%     TEMP3\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
+%     TEMP4\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
+%     TEMP5\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
+%     TEMP6\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
+%     TEMPERATURE\_MEDIAN &      x &      x &        &      x &      x &      x &      x &        \\ \hline
+%     TILT1T\_MEDIAN &      x &      x &      x &      x &        &        &      x &        \\ \hline
+%     TILT1X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     TILT1Y\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
+%     TILT2T\_MEDIAN &      x &      x &      x &      x &        &        &        &      x \\ \hline
+%     TILT2X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     TILT2Y\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     TILT3T\_MEDIAN &      x &      x &      x &        &        &        &      x &        \\ \hline
+%     TILT3X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     TILT3Y\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     WINDDIRECTION\_MEDIAN &        &      x &      x &      x &        &        &        &      x \\ \hline
+%     WINDSPEED\_MEDIAN &      x &      x &        &        &        &        &        &      x \\ \hline
+%     WINDSPEED\_VARIANCE\_P5 &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
+%     ca &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     ie &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+%     month &        &        &      x &      x &        &        &        &        \\ \hline
+%     month\_continuous &      x &      x &      x &      x &        &        &      x &        \\ \hline
+%     time\_of\_day &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
+% \end{longtable}        
+
+
+%%% RESULTS PCORR FOR DIFFERENT FOLDS
+
 \begin{table}[!htbp]
     \centering
-    \caption{Features with Pearson's correlation $\geq 0.1$ to either one of the target values.}
-    \begin{tabular}{lccc}
+    \caption{All}
+    \begin{tabular}{lccccccccc}
         \toprule
-        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+        \multirow{3}{*}{Target} & \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
+        & & by   & & & Max   & child  & of         & & \\
+        & & tree & & & Depth & weight & estimators & & \\
         \midrule
-        TEMP26\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.12$ \\
-        TEMP27\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.13$ \\
-        DAZ\_TOTAL\_MEDIAN\_1     &      $0.12$ &      $0.08$ &               $0.07$ \\
-        WINDSPEED\_MEDIAN\_1     &      $0.03$ &      $0.03$ &               $0.10$ \\
-        AWAZ                   &      $0.00$ &     $-0.01$ &               $0.57$ \\
-        HESE2                  &      $0.56$ &      $0.54$ &               $0.45$ \\
-        HESE3                  &      $0.97$ &      $0.90$ &               $0.43$ \\
-        HESE4                  &      $0.91$ &      $0.82$ &               $0.26$ \\
-        HESE5                  &      $0.29$ &      $0.22$ &              $-0.11$ \\
-        HECE                   &      $1.00$ &      $0.92$ &               $0.45$ \\
-        HECE2                  &      $0.98$ &      $0.89$ &               $0.38$ \\
-        HECE3                  &      $0.70$ &      $0.62$ &               $0.10$ \\
-        HSCA                   &      $0.01$ &     $-0.00$ &               $0.53$ \\
+        \multirow{6}{*}{Az} &   1 &   0.536 &  0.013 &          0.018 &      5 &             8 &       269 &       1 &      0.699 \\
+                            &   2 &   0.526 &  0.013 &          0.010 &      1 &            10 &       393 &       0.175 &      0.756 \\
+                            &   3 &   0.970 &  0.063 &          0.023 &      2 &             2 &       460 &       0.071 &      0.800 \\
+                            &   4 &   0.501 &  0.008 &          0.019 &      3 &             2 &       400 &       0.578 &      0.979 \\
+                            &   5 &   0.530 &  0.031 &          0.187 &      2 &             3 &        69 &       0.277 &      0.931 \\
+                            &   6 &   0.668 &  0.056 &          0.139 &      2 &             2 &        77 &       0.426 &      0.783 \\
+        \hline
+        \multirow{6}{*}{El} &   1 &   0.577 &  0.247 &          0.017 &      5 &             1 &       111 &       0.966 &      0.517 \\
+                            &   2 &   0.645 &  0.078 &          0.063 &      5 &             2 &        33 &       0.010 &      0.787 \\
+                            &   3 &   0.600 &  0.017 &          0.009 &      5 &             5 &        86 &       0.660 &      0.598 \\
+                            &   4 &   0.608 &  0.019 &          0.037 &      5 &            10 &       368 &       0.329 &      0.600 \\
+                            &   5 &   0.999 &  0.031 &          0.022 &      4 &             1 &       427 &       0.178 &      0.716 \\
+                            &   6 &   0.788 &  0.369 &          0.097 &      2 &             1 &       354 &       0.552 &      0.796 \\
         \bottomrule
         \end{tabular}
 \end{table}
 
-
-
-\section{Base pointing model results}
 \begin{table}[!htbp]
     \centering
-    \caption{Regular neural network}
-    \begin{tabular}{lcccccc}
+    \caption{NFLASH230}
+    \begin{tabular}{lccccccccc}
         \toprule
-        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
-        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
-        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
+        \multirow{3}{*}{Target} & \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
+        & & by   & & & Max   & child  & of         & & \\
+        & & tree & & & Depth & weight & estimators & & \\
         \midrule
-        ReLU &        [82] &       2.0e-02 &        334 & MSE &    17.74 &  5.68 \\
-        Tanh &    [22, 46] &       6.7e-03 &        475 & MSE &    17.86 & 10.70 \\
-        GeLU &        [46] &       1.3e-02 &        472 & MSD &    17.91 &  6.79 \\
-        Tanh &        [64] &       5.7e-03 &         61 & MSE &    18.69 &  8.68 \\
-        ReLU &        [20] &       3.8e-03 &        309 & MSD &    21.42 &  7.22 \\
-  \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-    \centering
-    \caption{Separate 1}
-    \begin{tabular}{lcccccc}
-        \toprule
-        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
-        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
-        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD \\
-        \midrule
-        Tanh &        [40] &       9.8e-03 &        101 & MSD &    16.80 &  7.20 \\
-        GeLU &   [86, 106] &       1.9e-02 &         43 & MSD &    18.24 &  9.06 \\
-        Tanh &        [32] &       1.7e-02 &        266 & MSE &    20.13 &  8.22 \\
-        ReLU &    [68, 42] &       2.0e-02 &        450 & MSD &    20.77 &  9.54 \\
-        ReLU &        [29] &       1.3e-02 &        148 & MSD &    21.60 & 13.01 \\
-  \bottomrule
-    \end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-    \centering
-    \caption{Separate 2}
-    \begin{tabular}{lcccccc}
-        \toprule
-        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\   
-        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
-        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
-        \midrule
-        Tanh &        [40] &       9.8e-03 &        101 & MSD &    19.21 &  5.89 \\
-        Tanh &        [62] &       4.2e-03 &        155 & MSD &    19.77 &  5.93 \\
-        GeLU &        [54] &       2.0e-02 &        413 & MSD &    21.38 &  6.58 \\
-        GeLU &    [97, 24] &       1.9e-02 &        321 & MSE &    22.50 & 13.70 \\
-        ReLU &        [81] &       1.2e-02 &        439 & MSD &    22.61 & 14.51 \\
-  \bottomrule
-    \end{tabular}
-\end{table}
-
-
-\begin{table}[!htbp]
-    \centering
-    \caption{Separate 3}
-    \begin{tabular}{lcccccc}
-        \toprule
-        \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
-        \cmidrule(lr){1-5} \cmidrule(lr){6-7}
-        Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
-        \midrule
-        Tanh &        [26] &       3.9e-03 &        358 & MSD &    16.61 &  7.63 \\
-        Tanh &    [49, 40] &       1.6e-02 &        320 & MSD &    18.49 &  7.25 \\
-        ReLU &   [117, 32] &       2.1e-02 &        298 & MSD &    18.87 & 11.55 \\
-        ReLU &    [83, 32] &       1.1e-02 &        331 & MSD &    19.26 &  8.62 \\
-        ReLU &    [97, 60] &       1.6e-02 &        359 & MSD &    19.44 & 12.50 \\
-  \bottomrule
-    \end{tabular}
-\end{table}
-
-    
-\begin{table}[!htbp]
-    \centering
-    \caption{RMS on all folds for the best model for all arcitechtures}
-    \begin{tabular}{lcccccccc}
-        \toprule
-        & \multicolumn{6}{c}{RMS on test fold} & & \\
-        \cmidrule(lr){2-7}
-        Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
-        \midrule
-        Regular & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
-        Sep 1 & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
-        Sep 2 & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
-        Sep 3 & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
+        \multirow{6}{*}{Az} &   1 &      0.720 &  0.125 &          0.126 &      1 &             4 &       201 &       0.247 &      0.864 \\
+                            &   2 &      0.777 &  0.988 &          0.017 &      1 &             6 &       468 &       0.763 &      0.962 \\
+                            &   3 &      0.517 &  0.298 &          0.014 &      2 &             7 &       470 &       0.509 &      0.762 \\
+                            &   4 &      0.972 &  0.773 &          0.116 &      5 &             1 &        30 &       0.006 &      0.802 \\
+                            &   5 &      0.897 &  0.112 &          0.008 &      5 &            10 &       435 &       0.658 &      0.819 \\
+                            &   6 &      0.935 &  0.011 &          0.064 &      1 &             6 &       224 &       0.228 &      0.748 \\
+        \hline
+        \multirow{6}{*}{El} &   1 &      0.600 &  0.156 &          0.007 &      5 &             2 &       140 &       0.047 &      0.792 \\
+                            &   2 &      0.999 &  0.148 &          0.029 &      5 &             1 &        38 &       0.998 &      0.580 \\
+                            &   3 &      0.955 &  0.237 &          0.014 &      3 &             6 &       210 &       0.613 &      0.712 \\
+                            &   4 &      0.537 &  0.014 &          0.034 &      2 &            10 &       352 &       0.537 &      0.594 \\
+                            &   5 &      0.686 &  0.324 &          0.081 &      1 &             1 &       371 &       0.368 &      0.966 \\
+                            &   6 &      0.862 &  0.306 &          0.184 &      1 &            10 &       157 &       0.029 &      0.701 \\
         \bottomrule
-    \end{tabular}
+        \end{tabular}
 \end{table}
 
-
-
-\begin{table}[!htbp]
+\begin{table}
     \centering
-    \caption{Hyperparameters for the best model of each architecture}
+    \caption{Validation and test performance for Case 2, all instruments left and nflash230 right.
+    Performance when choosing the number of features showing best performance.}
     \begin{tabular}{lccccc}
         \toprule
-        Architecture & Activation & Hidden Layers & Learning Rate & Batch Size & Loss \\
+        Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
         \midrule
-        Regular &  ReLU & [82] & 0.0199 & 334 & MSE \\
-        Sep1    &  Tanh & [40] & 0.0098 & 101 & MSD \\
-        Sep2    &  Tanh & [40] & 0.0098 & 101 & MSD \\
-        Sep3    &  Tanh & [26] & 0.0039 & 358 & MSD \\
+        \multirow{6}{*}{Az} & 1 &      0.915 &       1.084 &      0.846 &       1.043 \\
+                            & 2 &      0.971 &       0.928 &      0.886 &       0.953 \\
+                            & 3 &      0.927 &       1.011 &      0.928 &       0.872 \\
+                            & 4 &      0.945 &       0.952 &      0.882 &       0.962 \\
+                            & 5 &      0.933 &       0.972 &      0.898 &       0.938 \\
+                            & 6 &      0.937 &       0.935 &      0.930 &       0.923 \\ 
+        \hline
+        \multirow{6}{*}{El} & 1 &      0.964 &       0.975 &      0.916 &       1.014 \\
+                            & 2 &      0.930 &       1.000 &      0.889 &       0.973 \\
+                            & 3 &      0.966 &       0.957 &      0.886 &       1.025 \\
+                            & 4 &      0.822 &       0.922 &      0.839 &       0.839 \\
+                            & 5 &      0.830 &       0.934 &      0.802 &       0.888 \\
+                            & 6 &      0.836 &       0.941 &      0.827 &       0.901 \\
         \bottomrule
     \end{tabular}
 \end{table}
+    
 
-%%%Regular feature
-% ['DISP_ABS3_MEDIAN_1']
+% \section{Raw data corrElation}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.}
+%     \begin{tabular}{lccc}
+%         \toprule
+%         Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+%         \midrule
+%         WINDSPEED\_VAR\_5        &      $0.10$ &      $0.12$ &               $0.11$ \\
+%         DAZ\_TILT\_MEDIAN\_1      &      $0.09$ &      $0.03$ &               $0.14$ \\
+%         DAZ\_TILTTEMP\_MEDIAN\_1  &      $0.00$ &     -$0.06$ &               $0.30$ \\
+%         TILT1Y\_MEDIAN\_1        &      $0.08$ &      $0.02$ &               $0.13$ \\
+%         TEMP26\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.19$ \\
+%         TEMP27\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.21$ \\
+%         TEMP28\_MEDIAN\_1        &      $0.04$ &      $0.11$ &              $-0.25$ \\
+%         TEMPERATURE\_MEDIAN\_1   &      $0.04$ &      $0.12$ &              $-0.26$ \\
+%         POSITIONZ\_MEDIAN\_1     &      $0.05$ &      $0.11$ &              $-0.21$ \\
+%         DEWPOINT\_MEDIAN\_1      &      $0.08$ &      $0.12$ &              $-0.15$ \\
+%         DAZ\_TOTAL\_MEDIAN\_1     &      $0.09$ &      $0.03$ &               $0.13$ \\
+%         WINDSPEED\_MEDIAN\_1     &      $0.02$ &      $0.02$ &               $0.13$ \\
+%         HESE2                  &      $0.46$ &      $0.44$ &               $0.44$ \\
+%         HESE3                  &      $0.98$ &      $0.94$ &               $0.77$ \\
+%         HESE4                  &      $0.97$ &      $0.92$ &               $0.74$ \\
+%         HESE5                  &      $0.34$ &      $0.31$ &               $0.15$ \\
+%         HACA5                  &      $0.06$ &      $0.05$ &               $0.10$ \\
+%         HECE                   &      $1.00$ &      $0.96$ &               $0.78$ \\
+%         HECE2                  &      $1.00$ &      $0.96$ &               $0.78$ \\
+%         HECE3                  &      $0.76$ &      $0.72$ &               $0.52$ \\
+%         HSCA5                  &      $0.12$ &      $0.11$ &               $0.14$ \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
-%%% Separate feature 1
-% [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
-% [['WINDSPEED_VAR_5', 'DEL_TILTTEMP_MEDIAN_1']]
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Features with Pearson's correlation $\geq 0.1$ to either one of the target values.}
+%     \begin{tabular}{lccc}
+%         \toprule
+%         Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+%         \midrule
+%         TEMP26\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.12$ \\
+%         TEMP27\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.13$ \\
+%         DAZ\_TOTAL\_MEDIAN\_1     &      $0.12$ &      $0.08$ &               $0.07$ \\
+%         WINDSPEED\_MEDIAN\_1     &      $0.03$ &      $0.03$ &               $0.10$ \\
+%         AWAZ                   &      $0.00$ &     $-0.01$ &               $0.57$ \\
+%         HESE2                  &      $0.56$ &      $0.54$ &               $0.45$ \\
+%         HESE3                  &      $0.97$ &      $0.90$ &               $0.43$ \\
+%         HESE4                  &      $0.91$ &      $0.82$ &               $0.26$ \\
+%         HESE5                  &      $0.29$ &      $0.22$ &              $-0.11$ \\
+%         HECE                   &      $1.00$ &      $0.92$ &               $0.45$ \\
+%         HECE2                  &      $0.98$ &      $0.89$ &               $0.38$ \\
+%         HECE3                  &      $0.70$ &      $0.62$ &               $0.10$ \\
+%         HSCA                   &      $0.01$ &     $-0.00$ &               $0.53$ \\
+%         \bottomrule
+%         \end{tabular}
+% \end{table}
 
-%%% Separate feature 2
-% [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
-% [['WINDSPEED_VAR_5', 'DEL_TILTTEMP_MEDIAN_1']]
 
-%%% Separate feature 3
-% [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
-% [['DAZ_DISP_MEDIAN_1', 'DISP_ABS3_MEDIAN_1', 'POSITIONY_MEDIAN_1', 'TILT1Y_MEDIAN_1', 'TEMPERATURE_MEDIAN_1', 'TILT1T_MEDIAN_1']]
 
-\begin{table}[htbp]
-    \centering
-    \caption{Features selected by hyperparameter search for each model}
-    \label{tab:features}
-    \begin{tabular}{|l|cccc|}
-        \hline
-        Feature & Sep 1 & Sep 2 & Sep 3 & Regular \\ \hline
-        DISP ABS3 MEDIAN 1 & x & x & x & x \\ \hline
-        CA & x & x & x & \\ \hline
-        NPAE & x & x & x & \\ \hline
-        C & x & x & x & \\ \hline
-        HECE & x & x & x & \\ \hline
-        HECE2 & x & x & x & \\ \hline
-        HECE3 & x & x & x & \\ \hline
-        HECE4 & x & x & x & \\ \hline
-        HECE5 & x & x & x & \\ \hline
-        HESE & x & x & x & \\ \hline
-        HESE2 & x & x & x & \\ \hline
-        HESE3 & x & x & x & \\ \hline
-        HESE4 & x & x & x & \\ \hline
-        HESE5 & x & x & x & \\ \hline
-        WINDSPEED VAR 5 & x & x & x & \\ \hline
-        DEL TILTTEMP MEDIAN 1 & x & x & x & \\ \hline
-        DAZ DISP MEDIAN 1 & & & x & \\ \hline
-        POSITIONY MEDIAN 1 & & & x & \\ \hline
-        TILT1Y MEDIAN 1 & & & x & \\ \hline
-        TEMPERATURE MEDIAN 1 & & & x & \\ \hline
-        TILT1T MEDIAN 1 & & & x & \\ \hline
-    \end{tabular}
-\end{table}
+% \section{Base pointing model results}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Regular neural network}
+%     \begin{tabular}{lcccccc}
+%         \toprule
+%         \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
+%         \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+%         Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
+%         \midrule
+%         ReLU &        [82] &       2.0e-02 &        334 & MSE &    17.74 &  5.68 \\
+%         Tanh &    [22, 46] &       6.7e-03 &        475 & MSE &    17.86 & 10.70 \\
+%         GeLU &        [46] &       1.3e-02 &        472 & MSD &    17.91 &  6.79 \\
+%         Tanh &        [64] &       5.7e-03 &         61 & MSE &    18.69 &  8.68 \\
+%         ReLU &        [20] &       3.8e-03 &        309 & MSD &    21.42 &  7.22 \\
+%   \bottomrule
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Separate 1}
+%     \begin{tabular}{lcccccc}
+%         \toprule
+%         \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
+%         \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+%         Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD \\
+%         \midrule
+%         Tanh &        [40] &       9.8e-03 &        101 & MSD &    16.80 &  7.20 \\
+%         GeLU &   [86, 106] &       1.9e-02 &         43 & MSD &    18.24 &  9.06 \\
+%         Tanh &        [32] &       1.7e-02 &        266 & MSE &    20.13 &  8.22 \\
+%         ReLU &    [68, 42] &       2.0e-02 &        450 & MSD &    20.77 &  9.54 \\
+%         ReLU &        [29] &       1.3e-02 &        148 & MSD &    21.60 & 13.01 \\
+%   \bottomrule
+%     \end{tabular}
+% \end{table}
+
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Separate 2}
+%     \begin{tabular}{lcccccc}
+%         \toprule
+%         \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\   
+%         \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+%         Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
+%         \midrule
+%         Tanh &        [40] &       9.8e-03 &        101 & MSD &    19.21 &  5.89 \\
+%         Tanh &        [62] &       4.2e-03 &        155 & MSD &    19.77 &  5.93 \\
+%         GeLU &        [54] &       2.0e-02 &        413 & MSD &    21.38 &  6.58 \\
+%         GeLU &    [97, 24] &       1.9e-02 &        321 & MSE &    22.50 & 13.70 \\
+%         ReLU &        [81] &       1.2e-02 &        439 & MSD &    22.61 & 14.51 \\
+%   \bottomrule
+%     \end{tabular}
+% \end{table}
+
+
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Separate 3}
+%     \begin{tabular}{lcccccc}
+%         \toprule
+%         \multicolumn{5}{c}{Hyperparameters} & \multicolumn{2}{c}{Test RMS} \\
+%         \cmidrule(lr){1-5} \cmidrule(lr){6-7}
+%         Activation & Hidden layers & Learning rate & Batch size & Loss & Mean[$''$] & STD\\
+%         \midrule
+%         Tanh &        [26] &       3.9e-03 &        358 & MSD &    16.61 &  7.63 \\
+%         Tanh &    [49, 40] &       1.6e-02 &        320 & MSD &    18.49 &  7.25 \\
+%         ReLU &   [117, 32] &       2.1e-02 &        298 & MSD &    18.87 & 11.55 \\
+%         ReLU &    [83, 32] &       1.1e-02 &        331 & MSD &    19.26 &  8.62 \\
+%         ReLU &    [97, 60] &       1.6e-02 &        359 & MSD &    19.44 & 12.50 \\
+%   \bottomrule
+%     \end{tabular}
+% \end{table}
+
+    
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{RMS on all folds for the best model for all arcitechtures}
+%     \begin{tabular}{lcccccccc}
+%         \toprule
+%         & \multicolumn{6}{c}{RMS on test fold} & & \\
+%         \cmidrule(lr){2-7}
+%         Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
+%         \midrule
+%         Regular & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
+%         Sep 1 & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
+%         Sep 2 & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
+%         Sep 3 & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+
+
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Hyperparameters for the best model of each architecture}
+%     \begin{tabular}{lccccc}
+%         \toprule
+%         Architecture & Activation & Hidden Layers & Learning Rate & Batch Size & Loss \\
+%         \midrule
+%         Regular &  ReLU & [82] & 0.0199 & 334 & MSE \\
+%         Sep1    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+%         Sep2    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+%         Sep3    &  Tanh & [26] & 0.0039 & 358 & MSD \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
+
+% %%%Regular feature
+% % ['DISP_ABS3_MEDIAN_1']
+
+% %%% Separate feature 1
+% % [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
+% % [['WINDSPEED_VAR_5', 'DEL_TILTTEMP_MEDIAN_1']]
+
+% %%% Separate feature 2
+% % [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
+% % [['WINDSPEED_VAR_5', 'DEL_TILTTEMP_MEDIAN_1']]
+
+% %%% Separate feature 3
+% % [['CA', 'NPAE', 'C', 'HECE', 'HECE2', 'HECE3', 'HECE4', 'HECE5', 'HESE', 'HESE2', 'HESE3', 'HESE4', 'HESE5']]
+% % [['DAZ_DISP_MEDIAN_1', 'DISP_ABS3_MEDIAN_1', 'POSITIONY_MEDIAN_1', 'TILT1Y_MEDIAN_1', 'TEMPERATURE_MEDIAN_1', 'TILT1T_MEDIAN_1']]
+
+% \begin{table}[htbp]
+%     \centering
+%     \caption{Features selected by hyperparameter search for each model}
+%     \label{tab:features}
+%     \begin{tabular}{|l|cccc|}
+%         \hline
+%         Feature & Sep 1 & Sep 2 & Sep 3 & Regular \\ \hline
+%         DISP ABS3 MEDIAN 1 & x & x & x & x \\ \hline
+%         CA & x & x & x & \\ \hline
+%         NPAE & x & x & x & \\ \hline
+%         C & x & x & x & \\ \hline
+%         HECE & x & x & x & \\ \hline
+%         HECE2 & x & x & x & \\ \hline
+%         HECE3 & x & x & x & \\ \hline
+%         HECE4 & x & x & x & \\ \hline
+%         HECE5 & x & x & x & \\ \hline
+%         HESE & x & x & x & \\ \hline
+%         HESE2 & x & x & x & \\ \hline
+%         HESE3 & x & x & x & \\ \hline
+%         HESE4 & x & x & x & \\ \hline
+%         HESE5 & x & x & x & \\ \hline
+%         WINDSPEED VAR 5 & x & x & x & \\ \hline
+%         DEL TILTTEMP MEDIAN 1 & x & x & x & \\ \hline
+%         DAZ DISP MEDIAN 1 & & & x & \\ \hline
+%         POSITIONY MEDIAN 1 & & & x & \\ \hline
+%         TILT1Y MEDIAN 1 & & & x & \\ \hline
+%         TEMPERATURE MEDIAN 1 & & & x & \\ \hline
+%         TILT1T MEDIAN 1 & & & x & \\ \hline
+%     \end{tabular}
+% \end{table}

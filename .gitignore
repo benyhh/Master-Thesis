@@ -39,6 +39,7 @@
 *.tif
 *.tar
 *.tar.gz
+
 *.tgz
 *.zip
 *.pt

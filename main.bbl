@@ -21,18 +21,6 @@ Ian Covert, Scott Lundberg, and Su-In Lee.
 \newblock Understanding global feature contributions with additive importance
   measures, 2020.
 
-\bibitem{mlastgravitationalwaves}
-Daniel George and Eliu Huerta.
-\newblock Deep learning for real-time gravitational wave detection and
-  parameter estimation with advanced ligo data.
-\newblock 11 2017.
-
-\bibitem{greve1996pointing}
-A~Greve, J-F Panis, and C~Thum.
-\newblock The pointing of the iram 30-m telescope.
-\newblock {\em Astronomy and Astrophysics Supplement, v. 115, p. 379}, 115:379,
-  1996.
-
 \bibitem{SHAP}
 Scott Lundberg and Su-In Lee.
 \newblock A unified approach to interpreting model predictions, 2017.
@@ -48,18 +36,6 @@ Pankaj Mehta, Marin Bukov, Ching-Hao Wang, Alexandre~G.R. Day, Clint
 Vishal Morde.
 \newblock Xgboost algorithm: Long she may rein.
 \newblock Downloaded January 2023.
-
-\bibitem{mlastgravlens}
-C~E Petrillo, C~Tortora, G~Vernardos, L~V~E Koopmans, G~Verdoes~Kleijn,
-  M~Bilicki, N~R Napolitano, S~Chatterjee, G~Covone, A~Dvornik, T~Erben,
-  F~Getman, B~Giblin, C~Heymans, J~T~A de~Jong, K~Kuijken, P~Schneider, H~Shan,
-  C~Spiniello, and A~H Wright.
-\newblock {LinKS}: discovering galaxy-scale strong lenses in the
-  {Kilo}-{Degree} {Survey} using convolutional neural networks.
-\newblock {\em Monthly Notices of the Royal Astronomical Society},
-  484(3):3879--3896, January 2019.
-\newblock \_eprint:
-  https://academic.oup.com/mnras/article-pdf/484/3/3879/28572367/stz189.pdf.
 
 \bibitem{ephem}
 Brandon Rhodes.
@@ -79,22 +55,5 @@ Lloyd Shapley.
 \bibitem{tikz}
 Till Tantau.
 \newblock The {PGF/TikZ} manual, 2021.
-
-\bibitem{altaz_schematic}
-Tomruen.
-\newblock Azimuth-altitude schematic, 2011.
-\newblock Accessed: March 13, 2023.
-
-\bibitem{tpoint_manual}
-Tpoint Software.
-\newblock {\em TPOINT}, 2009.
-\newblock Version 13.5.
-
-\bibitem{whitegreen2022}
-E.~White, F.~D. Ghigo, R.~M. Prestage, D.~T. Frayer, R.~J. Maddalena, P.~T.
-  Wallace, J.~J. Brandt, D.~Egan, J.~D. Nelson, and J.~Ray.
-\newblock Green {Bank} {Telescope}: {Overview} and analysis of metrology
-  systems and pointing performance.
-\newblock {\em Astronomy \& Astrophysics}, 659:A113, March 2022.
 
 \end{thebibliography}

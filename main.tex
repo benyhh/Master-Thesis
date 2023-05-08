@@ -15,6 +15,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{longtable}
+\usepackage{multirow}
 \usepackage{fancyhdr}
 %\usepackage{etoolbox} % for \ifthen
 \usepackage{listofitems} % for \readlist to create arrays
@@ -145,13 +146,13 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 \tableofcontents 
 
 \chapter{Introduction}
-\input{Chapters/introduction.tex}
+% \input{Chapters/introduction.tex}
 
 \chapter{Related Works}
-\input{Chapters/related_works.tex}
+% \input{Chapters/related_works.tex}
 
 \chapter{Atronomical Background}
-\input{Chapters/ast_background.tex}
+% \input{Chapters/ast_background.tex}
 
 
 \chapter{Machine Learning Background}
@@ -171,7 +172,11 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 \appendix
 \chapter*{Appendices}
 \section*{Appendix A}\label{sec:appendix_a}
-\input{Chapters/appendix.tex}
+\input{Chapters/appendix_a.tex}
+
+\section*{Appendix B}\label{sec:appendix_b}
+\input{Chapters/appendix_b.tex}
+
 
 \newpage
 
