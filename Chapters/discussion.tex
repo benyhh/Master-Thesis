@@ -1,6 +1,26 @@
 \section{Experiment 1: Base Pointing Model}
  
 
+
+\section{Experiment 2: Pointing Correction Model Version 2}
+
+Present the results in two way.
+
+Main results are NFLASH model with Case 1 and 2. This identifies that we need more data than provided in the period of case 1.
+Show the results with number of features and mean rms ratio, to show an estimate of which models yield the best performance.
+Then go onto sayin that this is not a good estimate of performance, as the results are biased. Therefore, we use the min val on last fold model,
+and present that as a result on unbiased performance.
+Then present the same results for all instrument models, to show that we need more data to generalize.
+
+The first research question is if we can use machine learning to increase the pointing accuracy using the same pointing strategy as today.
+We start by discussing case 1 and 2.
+The first case test a realistic case of training a model on a smaller period,
+and then using the model to predict the offset in a consecutive period.
+The results from this show 
+
+
+
+
 \section{Experiment 2: Pointing Correction Model}
 There are many interesting things to discuss about the pointing correction model.
 First of all, we considered two different cases of training and testing the models, case $1$ and $2$.
@@ -21,10 +41,12 @@ we have a less biased result.
 By choosing this strategy, we see from Table \ref{tab:pcorr_min_val_days_04} no increased performance for azimuth and a $5.0\%$ decreased pointing offset in elevation.
 This is still not a performance we could expect to see in practise,
 given that these results are obtained from by having a training/validation set that falls both before and after the test set in time.
-The only realistic result that show an actual expected performance, is the results of the model using a test set that is after the train/validation set in time, which is the last fold.
+The only realistic result that show an actual expected performance,
+is the results of the model using a test set that is after the train/validation set in time, which is the last fold.
 From Table \ref{tab:minval_fold5}, we see a $7.0\%$ and $9.4\%$ reduced RMS for the NFLASH230 model, which is a completely unbiased result.
-The features used to train the models are picked through the largest mutual information with the target value on the train/validation, and the model is tested on a time period after the training/validaiton period.
-These results compared to the model predicting the pointing offsets for all instruments tells us that the amount of training data is an important apect in this problem.
+The features used to train the models are picked through the largest mutual information with the target value on the train/validation,
+and the model is tested on a time period after the training/validaiton period.
+These results compared to the model predicting the pointing offsets for all instruments tells us that the amount of training data is an important aspect in this problem.
 There are multiple ways of increasing the performance further, the first one being the obvious more training data. 
 The second way to do it is by engineering better features.
 We spent a lot of time figuring out what features to construct, but the analysis thereafter could have been more thorough.
@@ -54,15 +76,3 @@ This discussion answers the first research question
     \item Need to present more of the transformed variables. could actually compare them with untransformed since the model can know all thei nformation even though correction isnt made.
 \end{itemize}
 
-
-Present the results in two way.
-
-Main results are NFLASH model with Case 1 and 2. This identifies that we need more data than provided in the period of case 1.
-Show the results with number of features and mean rms ratio, to show an estimate of which models yield the best performance.
-Then go onto sayin that this is not a good estimate of performance, as the results are biased. Therefore, we use the min val on last fold model,
-and present that as a result on unbiased performance.
-Then present the same results for all instrument models, to show that we need more data to generalize.
-
-
-In results sectyion, present first nflash with num features, then all instruments. Then nflash min val, then all instruments min val.0*** vfdos2*-
-r||

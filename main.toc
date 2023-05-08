@@ -1,62 +1,97 @@
 \babel@toc {USenglish}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Related Works}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Atronomical Background}{5}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Machine Learning Background}{6}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Supervised learning}{6}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Loss/Cost}{6}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Loss Functions}{6}{subsection.4.2.1}%
-\contentsline {section}{\numberline {4.3}Train/test set}{7}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Scaling}{7}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Decision Trees}{8}{section.4.5}%
-\contentsline {paragraph}{Bagging}{8}{section*.2}%
-\contentsline {paragraph}{Random Forest}{9}{section*.3}%
-\contentsline {paragraph}{Boosting}{9}{section*.4}%
-\contentsline {paragraph}{Gradient Boosting}{9}{section*.5}%
-\contentsline {section}{\numberline {4.6}Neural Networks}{10}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Backpropagation}{11}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Gradient Descent}{12}{subsection.4.6.2}%
-\contentsline {subsection}{\numberline {4.6.3}Stochastic Gradient Descent}{12}{subsection.4.6.3}%
-\contentsline {subsection}{\numberline {4.6.4}Momentum GPT}{13}{subsection.4.6.4}%
-\contentsline {subsection}{\numberline {4.6.5}Adam GPT}{13}{subsection.4.6.5}%
-\contentsline {subsection}{\numberline {4.6.6}Activation functions}{14}{subsection.4.6.6}%
-\contentsline {paragraph}{Tanh}{14}{section*.9}%
-\contentsline {paragraph}{ReLU}{14}{section*.10}%
-\contentsline {paragraph}{GeLU}{14}{section*.11}%
-\contentsline {section}{\numberline {4.7}Model Explainability}{15}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}SHAP}{15}{subsection.4.7.1}%
-\contentsline {subsection}{\numberline {4.7.2}SAGE}{16}{subsection.4.7.2}%
-\contentsline {section}{\numberline {4.8}Mutual Information}{16}{section.4.8}%
-\contentsline {chapter}{\numberline {5}Method}{17}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Cleaning pointing scan data}{17}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Cleaning criteria}{18}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Pointing scan classifier}{18}{subsection.5.1.2}%
-\contentsline {subsubsection}{Method}{18}{section*.12}%
-\contentsline {subsubsection}{Results}{19}{section*.14}%
-\contentsline {section}{\numberline {5.2}Scan duration analysis}{19}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Analysis}{19}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Algorithm}{20}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Results}{20}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Feature Engineering}{22}{section.5.3}%
-\contentsline {paragraph}{Median values}{22}{section*.19}%
-\contentsline {paragraph}{Sum of all change}{22}{section*.20}%
-\contentsline {paragraph}{Change since the last correction}{23}{section*.21}%
-\contentsline {paragraph}{Max change in time interval}{23}{section*.22}%
-\contentsline {paragraph}{Position of the sun}{23}{section*.23}%
-\contentsline {subsection}{\numberline {5.3.1}List of features}{23}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Machine Learning Experiments}{24}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Experiment 1: Pointing Model using Neural Networks}{24}{subsection.5.4.1}%
-\contentsline {subsubsection}{Feature Selection}{24}{section*.24}%
-\contentsline {subsubsection}{Model Architecture}{24}{section*.25}%
-\contentsline {subsubsection}{Loss Function and Model Evaluation}{27}{section*.28}%
-\contentsline {subsection}{\numberline {5.4.2}Experiment 2: Pointing Correction Model}{27}{subsection.5.4.2}%
-\contentsline {subsubsection}{Feature Selection}{28}{section*.30}%
-\contentsline {subsubsection}{Model Architecture}{28}{section*.31}%
-\contentsline {subsubsection}{Model Evaluation}{29}{section*.33}%
-\contentsline {chapter}{\numberline {6}Results}{30}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Experiment 1: Pointing Model using Neural Networks}{30}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Correction Model}{30}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Discussion}{34}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusion}{35}{chapter.8}%
-\contentsline {section}{\numberline {.1}Transformation of pointing offsets and corrections}{36}{section.Alph0.1}%
-\contentsline {chapter}{Bibliography}{40}{appendix*.48}%
+\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Related Works}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Pointing Models in Radio Telescopes}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Machine Learning in Astronomy}{5}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Challenges and Opportunities}{5}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Atronomical Background}{7}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Astronomy Terms}{7}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}The Celestial Sphere}{7}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Altitude-Azimuth Coordinate System}{7}{subsection.3.1.2}%
+\contentsline {section}{\numberline {3.2}Radio/(sub)-mm telescope basics}{9}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Pointing model}{9}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Analytical Model}{10}{subsection.3.3.1}%
+\contentsline {subsubsection}{Harmonic terms}{10}{section*.4}%
+\contentsline {subsubsection}{Az/El non-perpendicularity (NPAE)}{11}{section*.5}%
+\contentsline {subsubsection}{Horizontal displacement of Nasmyth rotator}{11}{section*.6}%
+\contentsline {subsubsection}{Left-right collimation error}{11}{section*.7}%
+\contentsline {subsubsection}{Azimuth and elevation index error}{11}{section*.8}%
+\contentsline {subsubsection}{Azimuth axis misalignment}{12}{section*.9}%
+\contentsline {subsection}{\numberline {3.3.2}Pointing corrections}{12}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Research questions and related works}{13}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Database}{13}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Raw Data}{13}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}The Monitor Database}{13}{subsection.3.5.2}%
+\contentsline {paragraph}{Azimuth and Elevation}{13}{section*.12}%
+\contentsline {paragraph}{Temperature Measurements}{14}{section*.13}%
+\contentsline {paragraph}{Hexapod}{15}{section*.15}%
+\contentsline {paragraph}{Tiltmeter}{15}{section*.16}%
+\contentsline {paragraph}{Weather data}{15}{section*.17}%
+\contentsline {paragraph}{Disp abs?}{15}{section*.18}%
+\contentsline {paragraph}{Automatic adjustments}{15}{section*.19}%
+\contentsline {paragraph}{Data frequency}{15}{section*.20}%
+\contentsline {subsection}{\numberline {3.5.3}Pointing scan data}{17}{subsection.3.5.3}%
+\contentsline {paragraph}{Line-pointing}{17}{section*.23}%
+\contentsline {paragraph}{Continuum Scan}{18}{section*.25}%
+\contentsline {paragraph}{Pointing scan timestamp}{19}{section*.27}%
+\contentsline {paragraph}{Instruments}{20}{section*.28}%
+\contentsline {subsection}{\numberline {3.5.4}Tiltmeter dump files}{20}{subsection.3.5.4}%
+\contentsline {chapter}{\numberline {4}Machine Learning Background}{22}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Supervised learning}{22}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Loss/Cost}{22}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Loss Functions}{22}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.3}Train/test set}{23}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Scaling}{23}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Decision Trees}{24}{section.4.5}%
+\contentsline {paragraph}{Bagging}{24}{section*.31}%
+\contentsline {paragraph}{Random Forest}{25}{section*.32}%
+\contentsline {paragraph}{Boosting}{25}{section*.33}%
+\contentsline {paragraph}{Gradient Boosting}{25}{section*.34}%
+\contentsline {section}{\numberline {4.6}Neural Networks}{26}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Backpropagation}{27}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Gradient Descent}{28}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Stochastic Gradient Descent}{28}{subsection.4.6.3}%
+\contentsline {subsection}{\numberline {4.6.4}Momentum}{29}{subsection.4.6.4}%
+\contentsline {subsection}{\numberline {4.6.5}Adam}{29}{subsection.4.6.5}%
+\contentsline {subsection}{\numberline {4.6.6}Activation functions}{30}{subsection.4.6.6}%
+\contentsline {paragraph}{Tanh}{30}{section*.38}%
+\contentsline {paragraph}{ReLU}{30}{section*.39}%
+\contentsline {paragraph}{GeLU}{30}{section*.40}%
+\contentsline {section}{\numberline {4.7}Model Explainability}{31}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}SHAP}{31}{subsection.4.7.1}%
+\contentsline {subsection}{\numberline {4.7.2}SAGE}{32}{subsection.4.7.2}%
+\contentsline {section}{\numberline {4.8}Mutual Information}{32}{section.4.8}%
+\contentsline {chapter}{\numberline {5}Method}{33}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Cleaning pointing scan data}{33}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Cleaning criteria}{34}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Pointing scan classifier}{34}{subsection.5.1.2}%
+\contentsline {subsubsection}{Method}{34}{section*.41}%
+\contentsline {subsubsection}{Results}{35}{section*.43}%
+\contentsline {section}{\numberline {5.2}Scan duration analysis}{35}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Analysis}{35}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Algorithm}{36}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Results}{36}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Feature Engineering}{38}{section.5.3}%
+\contentsline {paragraph}{Median values}{38}{section*.48}%
+\contentsline {paragraph}{Sum of all change}{38}{section*.49}%
+\contentsline {paragraph}{Change since the last correction}{39}{section*.50}%
+\contentsline {paragraph}{Max change in time interval}{39}{section*.51}%
+\contentsline {paragraph}{Position of the sun}{39}{section*.52}%
+\contentsline {subsection}{\numberline {5.3.1}List of features}{39}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Machine Learning Experiments}{40}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Experiment 1: Pointing Model using Neural Networks}{40}{subsection.5.4.1}%
+\contentsline {subsubsection}{Feature Selection}{40}{section*.53}%
+\contentsline {subsubsection}{Model Architecture}{40}{section*.54}%
+\contentsline {subsubsection}{Loss Function and Model Evaluation}{43}{section*.57}%
+\contentsline {subsection}{\numberline {5.4.2}Experiment 2: Pointing Correction Model}{43}{subsection.5.4.2}%
+\contentsline {subsubsection}{Feature Selection}{44}{section*.59}%
+\contentsline {subsubsection}{Model Architecture}{44}{section*.60}%
+\contentsline {subsubsection}{Model Evaluation}{45}{section*.62}%
+\contentsline {chapter}{\numberline {6}Results}{46}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Experiment 1: Pointing Model using Neural Networks}{46}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Correction Model Version 2}{48}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Experiment 2: Pointing Correction Model}{51}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Discussion}{52}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Conclusion}{53}{chapter.8}%
+\contentsline {section}{\numberline {.1}Transformation of pointing offsets and corrections}{54}{section.Alph0.1}%
+\contentsline {chapter}{Bibliography}{59}{appendix*.82}%

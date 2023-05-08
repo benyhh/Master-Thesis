@@ -16,193 +16,299 @@
 \providecommand\HyField@AuxAddToFields[1]{}
 \providecommand\HyField@AuxAddToCoFields[2]{}
 \babel@aux{USenglish}{}
-\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{4}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {2}Related Works}{4}{chapter.2}\protected@file@percent }
+\citation{whitegreen2022}
+\citation{greve1996pointing}
+\citation{mlastgravlens}
+\citation{mlastgravitationalwaves}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Related Works}{5}{chapter.2}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {3}Atronomical Background}{5}{chapter.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Pointing Models in Radio Telescopes}{5}{section.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Machine Learning in Astronomy}{5}{section.2.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Challenges and Opportunities}{5}{section.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Atronomical Background}{7}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Machine Learning Background}{6}{chapter.4}\protected@file@percent }
-\@writefile{lof}{\addvspace {10\p@ }}
-\@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Supervised learning}{6}{section.4.1}\protected@file@percent }
-\newlabel{sec:supervised_learning}{{4.1}{6}{Supervised learning}{section.4.1}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Loss/Cost}{6}{section.4.2}\protected@file@percent }
-\newlabel{sec:loss_cost}{{4.2}{6}{Loss/Cost}{section.4.2}{}}
-\newlabel{eq:mse}{{4.1}{6}{Loss/Cost}{equation.4.2.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Loss Functions}{6}{subsection.4.2.1}\protected@file@percent }
-\newlabel{eq:mse1}{{4.2}{7}{Loss Functions}{equation.4.2.2}{}}
-\newlabel{eq:totaloff}{{4.3}{7}{Loss Functions}{equation.4.2.3}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Train/test set}{7}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Scaling}{7}{section.4.4}\protected@file@percent }
-\citation{Mehta_2019}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Decision Trees}{8}{section.4.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Bagging}{8}{section*.2}\protected@file@percent }
-\citation{morde_vishal_nodate}
-\citation{morde_vishal_nodate}
-\@writefile{toc}{\contentsline {paragraph}{Random Forest}{9}{section*.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Boosting}{9}{section*.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Gradient Boosting}{9}{section*.5}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Decision tree with 3 decision nodes and 5 leaf nodes.\relax }}{9}{figure.caption.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Astronomy Terms}{7}{section.3.1}\protected@file@percent }
+\newlabel{sec:ast_terms}{{3.1}{7}{Astronomy Terms}{section.3.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}The Celestial Sphere}{7}{subsection.3.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Altitude-Azimuth Coordinate System}{7}{subsection.3.1.2}\protected@file@percent }
+\newlabel{sec:altaz_coords}{{3.1.2}{7}{Altitude-Azimuth Coordinate System}{subsection.3.1.2}{}}
+\citation{altaz_schematic}
+\citation{altaz_schematic}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The altitude-azimuth coordinate system used at APEX. Source \cite  {altaz_schematic}\relax }}{8}{figure.caption.2}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:decitiontree}{{4.1}{9}{Decision tree with 3 decision nodes and 5 leaf nodes.\relax }{figure.caption.6}{}}
+\newlabel{fig:altaz_coords}{{3.1}{8}{The altitude-azimuth coordinate system used at APEX. Source \cite {altaz_schematic}\relax }{figure.caption.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Radio/(sub)-mm telescope basics}{9}{section.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The main parts of a radio telescope.\relax }}{9}{figure.caption.3}\protected@file@percent }
+\newlabel{fig:radio_telescope}{{3.2}{9}{The main parts of a radio telescope.\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Pointing model}{9}{section.3.3}\protected@file@percent }
+\newlabel{sec:pt_model}{{3.3}{9}{Pointing model}{section.3.3}{}}
+\citation{tpoint_manual}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Analytical Model}{10}{subsection.3.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Harmonic terms}{10}{section*.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Az/El non-perpendicularity (NPAE)}{11}{section*.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Horizontal displacement of Nasmyth rotator}{11}{section*.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Left-right collimation error}{11}{section*.7}\protected@file@percent }
+\newlabel{eq:pmodel_ca}{{3.10}{11}{Left-right collimation error}{equation.3.3.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Azimuth and elevation index error}{11}{section*.8}\protected@file@percent }
+\newlabel{eq:pmodel_ie}{{3.12}{11}{Azimuth and elevation index error}{equation.3.3.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Azimuth axis misalignment}{12}{section*.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces The terms in the analytical model. \textcolor {red}{Table not complete.} \relax }}{12}{table.caption.10}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Pointing corrections}{12}{subsection.3.3.2}\protected@file@percent }
+\newlabel{eq:ca}{{3.17}{12}{Pointing corrections}{equation.3.3.17}{}}
+\newlabel{eq:ie}{{3.18}{12}{Pointing corrections}{equation.3.3.18}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Research questions and related works}{13}{section.3.4}\protected@file@percent }
+\newlabel{sec:research_qs}{{3.4}{13}{Research questions and related works}{section.3.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Database}{13}{section.3.5}\protected@file@percent }
+\newlabel{sec:database}{{3.5}{13}{Database}{section.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Raw Data}{13}{subsection.3.5.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Extract of raw data obtained with NFLASH230. The data file also includes the source, which is irrelevant to this project.\relax }}{13}{table.caption.11}\protected@file@percent }
+\newlabel{tab:raw_datanflash230}{{3.2}{13}{Extract of raw data obtained with NFLASH230. The data file also includes the source, which is irrelevant to this project.\relax }{table.caption.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}The Monitor Database}{13}{subsection.3.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Azimuth and Elevation}{13}{section*.12}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Temperature Measurements}{14}{section*.13}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Linear correlation between temperature measures. The values are sampled by the median value at each pointing scan.\relax }}{14}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:corr_temp}{{3.3}{14}{Linear correlation between temperature measures. The values are sampled by the median value at each pointing scan.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {paragraph}{Hexapod}{15}{section*.15}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Tiltmeter}{15}{section*.16}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Weather data}{15}{section*.17}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Disp abs?}{15}{section*.18}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Automatic adjustments}{15}{section*.19}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Data frequency}{15}{section*.20}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces The frequency in data points per minute of different variables in the monitor database.\relax }}{16}{table.caption.21}\protected@file@percent }
+\newlabel{tab:data_frequency}{{3.3}{16}{The frequency in data points per minute of different variables in the monitor database.\relax }{table.caption.21}{}}
+\newlabel{subfig:scan_az}{{3.4a}{17}{Azimuth angle\relax }{figure.caption.22}{}}
+\newlabel{sub@subfig:scan_az}{{a}{17}{Azimuth angle\relax }{figure.caption.22}{}}
+\newlabel{subfig:scan_el}{{3.4b}{17}{Elevation angle.\relax }{figure.caption.22}{}}
+\newlabel{sub@subfig:scan_el}{{b}{17}{Elevation angle.\relax }{figure.caption.22}{}}
+\newlabel{subfig:scan_temp1}{{3.4c}{17}{Temperature measurements at temperature sensor $1$.\relax }{figure.caption.22}{}}
+\newlabel{sub@subfig:scan_temp1}{{c}{17}{Temperature measurements at temperature sensor $1$.\relax }{figure.caption.22}{}}
+\newlabel{subfig:scan_tilt1t}{{3.4d}{17}{Temperature measurements at tiltmeter $1$.\relax }{figure.caption.22}{}}
+\newlabel{sub@subfig:scan_tilt1t}{{d}{17}{Temperature measurements at tiltmeter $1$.\relax }{figure.caption.22}{}}
+\newlabel{subfig:scan_winddir}{{3.4e}{17}{Wind direction data from the weather station, measured in degrees from North, where clockwise is the positive angle direction.\relax }{figure.caption.22}{}}
+\newlabel{sub@subfig:scan_winddir}{{e}{17}{Wind direction data from the weather station, measured in degrees from North, where clockwise is the positive angle direction.\relax }{figure.caption.22}{}}
+\newlabel{subfig:scan_windspeed}{{3.4f}{17}{Wind speed data from the weather station.\relax }{figure.caption.22}{}}
+\newlabel{sub@subfig:scan_windspeed}{{f}{17}{Wind speed data from the weather station.\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Scatter plots that show different sensory data from before, during, and after a pointing scan. The red line denotes the timestamp for a scan in the pointing scan database. The red dots indicate when the telescope is observing, while the blue dots indicate when the telescope is idle or preparing to observe.\relax }}{17}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:features_during_scans}{{3.4}{17}{Scatter plots that show different sensory data from before, during, and after a pointing scan. The red line denotes the timestamp for a scan in the pointing scan database. The red dots indicate when the telescope is observing, while the blue dots indicate when the telescope is idle or preparing to observe.\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Pointing scan data}{17}{subsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Line-pointing}{17}{section*.23}\protected@file@percent }
+\newlabel{subfig:good_line}{{3.5a}{18}{Line-pointing with little noise and a good Gaussian fit.\relax }{figure.caption.24}{}}
+\newlabel{sub@subfig:good_line}{{a}{18}{Line-pointing with little noise and a good Gaussian fit.\relax }{figure.caption.24}{}}
+\newlabel{subfig:bad_line}{{3.5b}{18}{Noisy line-pointing with bad Gaussian fit.\relax }{figure.caption.24}{}}
+\newlabel{sub@subfig:bad_line}{{b}{18}{Noisy line-pointing with bad Gaussian fit.\relax }{figure.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The two figures show line-pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The table shows the amplitude, full width at half maximum (FWHM), offset, and the uncertainty of these measures, for azimuth and elevation. The figures also show the correction applied during the pointing ($ca$ and $ie$), along with other metrics.\relax }}{18}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:line_pointings}{{3.5}{18}{The two figures show line-pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The table shows the amplitude, full width at half maximum (FWHM), offset, and the uncertainty of these measures, for azimuth and elevation. The figures also show the correction applied during the pointing ($ca$ and $ie$), along with other metrics.\relax }{figure.caption.24}{}}
+\@writefile{toc}{\contentsline {paragraph}{Continuum Scan}{18}{section*.25}\protected@file@percent }
+\newlabel{subfig:good_continuous}{{3.6a}{19}{Line-pointing with little noise and a good Gaussian fit.\relax }{figure.caption.26}{}}
+\newlabel{sub@subfig:good_continuous}{{a}{19}{Line-pointing with little noise and a good Gaussian fit.\relax }{figure.caption.26}{}}
+\newlabel{subfig:bad_continuous}{{3.6b}{19}{Noisy line-pointing with bad Gaussian fit.\relax }{figure.caption.26}{}}
+\newlabel{sub@subfig:bad_continuous}{{b}{19}{Noisy line-pointing with bad Gaussian fit.\relax }{figure.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.\relax }}{19}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:continueous_pointings}{{3.6}{19}{The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.\relax }{figure.caption.26}{}}
+\@writefile{toc}{\contentsline {paragraph}{Pointing scan timestamp}{19}{section*.27}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Instruments}{20}{section*.28}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces The number of times each instrument was used for a pointing scan in $2022$. There are $8847$ scans in total.\relax }}{20}{table.caption.29}\protected@file@percent }
+\newlabel{tab:instrument_usage}{{3.4}{20}{The number of times each instrument was used for a pointing scan in $2022$. There are $8847$ scans in total.\relax }{table.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Tiltmeter dump files}{20}{subsection.3.5.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Extract from a tiltmeter dump file.\relax }}{21}{table.caption.30}\protected@file@percent }
+\newlabel{tab:tiltmeter_example}{{3.5}{21}{Extract from a tiltmeter dump file.\relax }{table.caption.30}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Machine Learning Background}{22}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Supervised learning}{22}{section.4.1}\protected@file@percent }
+\newlabel{sec:supervised_learning}{{4.1}{22}{Supervised learning}{section.4.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Loss/Cost}{22}{section.4.2}\protected@file@percent }
+\newlabel{sec:loss_cost}{{4.2}{22}{Loss/Cost}{section.4.2}{}}
+\newlabel{eq:mse}{{4.1}{22}{Loss/Cost}{equation.4.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Loss Functions}{22}{subsection.4.2.1}\protected@file@percent }
+\newlabel{eq:mse1}{{4.2}{23}{Loss Functions}{equation.4.2.2}{}}
+\newlabel{eq:totaloff}{{4.3}{23}{Loss Functions}{equation.4.2.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Train/test set}{23}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Scaling}{23}{section.4.4}\protected@file@percent }
+\citation{Mehta_2019}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Decision Trees}{24}{section.4.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Bagging}{24}{section*.31}\protected@file@percent }
+\citation{morde_vishal_nodate}
+\citation{morde_vishal_nodate}
+\@writefile{toc}{\contentsline {paragraph}{Random Forest}{25}{section*.32}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Boosting}{25}{section*.33}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Gradient Boosting}{25}{section*.34}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Decision tree with 3 decision nodes and 5 leaf nodes.\relax }}{25}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:decitiontree}{{4.1}{25}{Decision tree with 3 decision nodes and 5 leaf nodes.\relax }{figure.caption.35}{}}
 \citation{universal_approximation}
 \citation{tikz}
 \citation{tikz}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Evolution of XGBoost. \cite  {morde_vishal_nodate}\relax }}{10}{figure.caption.7}\protected@file@percent }
-\newlabel{fig:evolution_of_xgb}{{4.2}{10}{Evolution of XGBoost. \cite {morde_vishal_nodate}\relax }{figure.caption.7}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Neural Networks}{10}{section.4.6}\protected@file@percent }
-\newlabel{eq:act_neuron}{{4.7}{10}{Neural Networks}{equation.4.6.7}{}}
-\newlabel{eq:z_neuron}{{4.8}{10}{Neural Networks}{equation.4.6.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Evolution of XGBoost. \cite  {morde_vishal_nodate}\relax }}{26}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:evolution_of_xgb}{{4.2}{26}{Evolution of XGBoost. \cite {morde_vishal_nodate}\relax }{figure.caption.36}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Neural Networks}{26}{section.4.6}\protected@file@percent }
+\newlabel{eq:act_neuron}{{4.7}{26}{Neural Networks}{equation.4.6.7}{}}
+\newlabel{eq:z_neuron}{{4.8}{26}{Neural Networks}{equation.4.6.8}{}}
 \citation{backprop_original}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces This is an illustration of how information is passed through and processed in a neural network. Generated using TikZ \cite  {tikz}\relax }}{11}{figure.caption.8}\protected@file@percent }
-\newlabel{fig:nnfig}{{4.3}{11}{This is an illustration of how information is passed through and processed in a neural network. Generated using TikZ \cite {tikz}\relax }{figure.caption.8}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Backpropagation}{11}{subsection.4.6.1}\protected@file@percent }
-\newlabel{eq:bp1}{{4.9}{11}{Backpropagation}{equation.4.6.9}{}}
-\newlabel{eq:bp2}{{4.10}{11}{Backpropagation}{equation.4.6.10}{}}
-\newlabel{eq:bp3}{{4.11}{11}{Backpropagation}{equation.4.6.11}{}}
-\newlabel{eq:bp4}{{4.12}{11}{Backpropagation}{equation.4.6.12}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Gradient Descent}{12}{subsection.4.6.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Stochastic Gradient Descent}{12}{subsection.4.6.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}Momentum GPT}{13}{subsection.4.6.4}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.5}Adam GPT}{13}{subsection.4.6.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.6}Activation functions}{14}{subsection.4.6.6}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Tanh}{14}{section*.9}\protected@file@percent }
-\newlabel{eq:tanh}{{4.24}{14}{Tanh}{equation.4.6.24}{}}
-\@writefile{toc}{\contentsline {paragraph}{ReLU}{14}{section*.10}\protected@file@percent }
-\newlabel{eq:relu}{{4.25}{14}{ReLU}{equation.4.6.25}{}}
-\@writefile{toc}{\contentsline {paragraph}{GeLU}{14}{section*.11}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces This is an illustration of how information is passed through and processed in a neural network. Generated using TikZ \cite  {tikz}\relax }}{27}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:nnfig}{{4.3}{27}{This is an illustration of how information is passed through and processed in a neural network. Generated using TikZ \cite {tikz}\relax }{figure.caption.37}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.1}Backpropagation}{27}{subsection.4.6.1}\protected@file@percent }
+\newlabel{eq:bp1}{{4.9}{27}{Backpropagation}{equation.4.6.9}{}}
+\newlabel{eq:bp2}{{4.10}{27}{Backpropagation}{equation.4.6.10}{}}
+\newlabel{eq:bp3}{{4.11}{27}{Backpropagation}{equation.4.6.11}{}}
+\newlabel{eq:bp4}{{4.12}{27}{Backpropagation}{equation.4.6.12}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.2}Gradient Descent}{28}{subsection.4.6.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.3}Stochastic Gradient Descent}{28}{subsection.4.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.4}Momentum}{29}{subsection.4.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.5}Adam}{29}{subsection.4.6.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6.6}Activation functions}{30}{subsection.4.6.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Tanh}{30}{section*.38}\protected@file@percent }
+\newlabel{eq:tanh}{{4.24}{30}{Tanh}{equation.4.6.24}{}}
+\@writefile{toc}{\contentsline {paragraph}{ReLU}{30}{section*.39}\protected@file@percent }
+\newlabel{eq:relu}{{4.25}{30}{ReLU}{equation.4.6.25}{}}
+\@writefile{toc}{\contentsline {paragraph}{GeLU}{30}{section*.40}\protected@file@percent }
 \citation{SHAP}
 \citation{SAGE}
 \citation{shapley_value_1953}
 \citation{covert_shap_sage}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Model Explainability}{15}{section.4.7}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}SHAP}{15}{subsection.4.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Model Explainability}{31}{section.4.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.1}SHAP}{31}{subsection.4.7.1}\protected@file@percent }
 \citation{sage_paper}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}SAGE}{16}{subsection.4.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Mutual Information}{16}{section.4.8}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Method}{17}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7.2}SAGE}{32}{subsection.4.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Mutual Information}{32}{section.4.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Method}{33}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {5.1}Cleaning pointing scan data}{17}{section.5.1}\protected@file@percent }
-\newlabel{sec:cleaning_pt_scan}{{5.1}{17}{Cleaning pointing scan data}{section.5.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Cleaning criteria}{18}{subsection.5.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Pointing scan classifier}{18}{subsection.5.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Method}{18}{section*.12}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces This table presents a list of parameters we sampled during hyperparameter tuning for the pointing scan classifier. The table includes names, sampled distributions and corresponding ranges, and parameter values for the best model.\relax }}{18}{table.caption.13}\protected@file@percent }
-\newlabel{tab:xgb_hyperparameters_clf}{{5.1}{18}{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing scan classifier. The table includes names, sampled distributions and corresponding ranges, and parameter values for the best model.\relax }{table.caption.13}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results}{19}{section*.14}\protected@file@percent }
-\newlabel{subfig:pr_curve}{{5.1a}{19}{Precision-recall curve on the test set.\relax }{figure.caption.15}{}}
-\newlabel{sub@subfig:pr_curve}{{a}{19}{Precision-recall curve on the test set.\relax }{figure.caption.15}{}}
-\newlabel{subfig:map_curve}{{5.1b}{19}{Average precision for different classification threshold.\relax }{figure.caption.15}{}}
-\newlabel{sub@subfig:map_curve}{{b}{19}{Average precision for different classification threshold.\relax }{figure.caption.15}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Precision-recall and average precision curve for the XGBoost classifier when classifying good and bad pointing scans in the test set.\relax }}{19}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:pointing_scan_clf}{{5.1}{19}{Precision-recall and average precision curve for the XGBoost classifier when classifying good and bad pointing scans in the test set.\relax }{figure.caption.15}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.2}Scan duration analysis}{19}{section.5.2}\protected@file@percent }
-\newlabel{sec:scan_duration_analysis}{{5.2}{19}{Scan duration analysis}{section.5.2}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Analysis}{19}{subsection.5.2.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces This table shows the tiltmeter dump file containing the telescope state flag, and how we find the start ($\Delta = 1$) and end ($\Delta = -1$) of a scan.\relax }}{20}{table.caption.16}\protected@file@percent }
-\newlabel{tab:scan_flag_difference}{{5.2}{20}{This table shows the tiltmeter dump file containing the telescope state flag, and how we find the start ($\Delta = 1$) and end ($\Delta = -1$) of a scan.\relax }{table.caption.16}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Algorithm}{20}{subsection.5.2.2}\protected@file@percent }
-\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Find start and end of pointing scan\relax }}{20}{algorithm.1}\protected@file@percent }
-\newlabel{alg:scan_times}{{1}{20}{Find start and end of pointing scan\relax }{algorithm.1}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Results}{20}{subsection.5.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }}{21}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:scan_times_box}{{5.2}{21}{Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }{figure.caption.17}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }}{22}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:scan_times_date}{{5.3}{22}{Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }{figure.caption.18}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Feature Engineering}{22}{section.5.3}\protected@file@percent }
-\newlabel{sec:feature_engineering}{{5.3}{22}{Feature Engineering}{section.5.3}{}}
-\@writefile{toc}{\contentsline {paragraph}{Median values}{22}{section*.19}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Sum of all change}{22}{section*.20}\protected@file@percent }
-\newlabel{eq:positive_int}{{5.1}{22}{Sum of all change}{equation.5.3.1}{}}
-\newlabel{eq:negative_int}{{5.2}{22}{Sum of all change}{equation.5.3.2}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Cleaning pointing scan data}{33}{section.5.1}\protected@file@percent }
+\newlabel{sec:cleaning_pt_scan}{{5.1}{33}{Cleaning pointing scan data}{section.5.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.1}Cleaning criteria}{34}{subsection.5.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1.2}Pointing scan classifier}{34}{subsection.5.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Method}{34}{section*.41}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces This table presents a list of parameters we sampled during hyperparameter tuning for the pointing scan classifier. The table includes names, sampled distributions and corresponding ranges, and parameter values for the best model.\relax }}{34}{table.caption.42}\protected@file@percent }
+\newlabel{tab:xgb_hyperparameters_clf}{{5.1}{34}{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing scan classifier. The table includes names, sampled distributions and corresponding ranges, and parameter values for the best model.\relax }{table.caption.42}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Results}{35}{section*.43}\protected@file@percent }
+\newlabel{subfig:pr_curve}{{5.1a}{35}{Precision-recall curve on the test set.\relax }{figure.caption.44}{}}
+\newlabel{sub@subfig:pr_curve}{{a}{35}{Precision-recall curve on the test set.\relax }{figure.caption.44}{}}
+\newlabel{subfig:map_curve}{{5.1b}{35}{Average precision for different classification threshold.\relax }{figure.caption.44}{}}
+\newlabel{sub@subfig:map_curve}{{b}{35}{Average precision for different classification threshold.\relax }{figure.caption.44}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Precision-recall and average precision curve for the XGBoost classifier when classifying good and bad pointing scans in the test set.\relax }}{35}{figure.caption.44}\protected@file@percent }
+\newlabel{fig:pointing_scan_clf}{{5.1}{35}{Precision-recall and average precision curve for the XGBoost classifier when classifying good and bad pointing scans in the test set.\relax }{figure.caption.44}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Scan duration analysis}{35}{section.5.2}\protected@file@percent }
+\newlabel{sec:scan_duration_analysis}{{5.2}{35}{Scan duration analysis}{section.5.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}Analysis}{35}{subsection.5.2.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces This table shows the tiltmeter dump file containing the telescope state flag, and how we find the start ($\Delta = 1$) and end ($\Delta = -1$) of a scan.\relax }}{36}{table.caption.45}\protected@file@percent }
+\newlabel{tab:scan_flag_difference}{{5.2}{36}{This table shows the tiltmeter dump file containing the telescope state flag, and how we find the start ($\Delta = 1$) and end ($\Delta = -1$) of a scan.\relax }{table.caption.45}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Algorithm}{36}{subsection.5.2.2}\protected@file@percent }
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces Find start and end of pointing scan\relax }}{36}{algorithm.1}\protected@file@percent }
+\newlabel{alg:scan_times}{{1}{36}{Find start and end of pointing scan\relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}Results}{36}{subsection.5.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }}{37}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:scan_times_box}{{5.2}{37}{Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }{figure.caption.46}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }}{38}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:scan_times_date}{{5.3}{38}{Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }{figure.caption.47}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Feature Engineering}{38}{section.5.3}\protected@file@percent }
+\newlabel{sec:feature_engineering}{{5.3}{38}{Feature Engineering}{section.5.3}{}}
+\@writefile{toc}{\contentsline {paragraph}{Median values}{38}{section*.48}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Sum of all change}{38}{section*.49}\protected@file@percent }
+\newlabel{eq:positive_int}{{5.1}{38}{Sum of all change}{equation.5.3.1}{}}
+\newlabel{eq:negative_int}{{5.2}{38}{Sum of all change}{equation.5.3.2}{}}
 \citation{ephem}
-\@writefile{toc}{\contentsline {paragraph}{Change since the last correction}{23}{section*.21}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Max change in time interval}{23}{section*.22}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Position of the sun}{23}{section*.23}\protected@file@percent }
-\newlabel{eq:sun_az_diff}{{5.6}{23}{Position of the sun}{equation.5.3.6}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}List of features}{23}{subsection.5.3.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {5.4}Machine Learning Experiments}{24}{section.5.4}\protected@file@percent }
-\newlabel{sec:ml_exp}{{5.4}{24}{Machine Learning Experiments}{section.5.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Experiment 1: Pointing Model using Neural Networks}{24}{subsection.5.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Feature Selection}{24}{section*.24}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Model Architecture}{24}{section*.25}\protected@file@percent }
-\newlabel{subfig:regular}{{5.4a}{26}{\textbf {Regular neural network:} This is the standard neural network architecture without any feature separation. All features are connected to the same layers.\relax }{figure.caption.26}{}}
-\newlabel{sub@subfig:regular}{{a}{26}{\textbf {Regular neural network:} This is the standard neural network architecture without any feature separation. All features are connected to the same layers.\relax }{figure.caption.26}{}}
-\newlabel{subfig:comb_sep1}{{5.4b}{26}{\textbf {Neural network with separated features 1:} In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer without any nonlinear activation function.\relax }{figure.caption.26}{}}
-\newlabel{sub@subfig:comb_sep1}{{b}{26}{\textbf {Neural network with separated features 1:} In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer without any nonlinear activation function.\relax }{figure.caption.26}{}}
-\newlabel{subfig:comb_sep2}{{5.4c}{26}{\textbf {Neural network with separated features 2}: Similar to the previous architecture, the geometric and harmonic features are separated from the other features. However, they are also processed by a nonlinear activation function before being connected to the output layer.\relax }{figure.caption.26}{}}
-\newlabel{sub@subfig:comb_sep2}{{c}{26}{\textbf {Neural network with separated features 2}: Similar to the previous architecture, the geometric and harmonic features are separated from the other features. However, they are also processed by a nonlinear activation function before being connected to the output layer.\relax }{figure.caption.26}{}}
-\newlabel{subfig:comb_sep3}{{5.4d}{26}{\textbf {Neural network with separated features 3:} In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.\relax }{figure.caption.26}{}}
-\newlabel{sub@subfig:comb_sep3}{{d}{26}{\textbf {Neural network with separated features 3:} In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.\relax }{figure.caption.26}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces These architectures were used to train a base pointing model on raw data.\relax }}{26}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:nn_architecture}{{5.4}{26}{These architectures were used to train a base pointing model on raw data.\relax }{figure.caption.26}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.\relax }}{27}{table.caption.27}\protected@file@percent }
-\newlabel{tab:nn_hyperparameters}{{5.3}{27}{This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.\relax }{table.caption.27}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Loss Function and Model Evaluation}{27}{section*.28}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Experiment 2: Pointing Correction Model}{27}{subsection.5.4.2}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces This figure shows two cross-validation cases: the orange region represents the train and validation set, the red region represents the test set, and the blue region is unused for evaluation. In \textbf  {Case 1}, the dataset is split into six equal-sized folds sorted by date. For the selected fold, we use the last part (colored red) for testing and the remaining part (colored orange) for training and validation. This process is repeated six times, once for each fold. In \textbf  {Case 2}, the dataset is again split into six equal-sized folds sorted by date. However, we use one whole fold for testing this time and the remaining five for training and validation. This process is repeated six times, with each fold used exactly once for testing.\relax }}{28}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:datasplit_cases}{{5.5}{28}{This figure shows two cross-validation cases: the orange region represents the train and validation set, the red region represents the test set, and the blue region is unused for evaluation. In \textbf {Case 1}, the dataset is split into six equal-sized folds sorted by date. For the selected fold, we use the last part (colored red) for testing and the remaining part (colored orange) for training and validation. This process is repeated six times, once for each fold. In \textbf {Case 2}, the dataset is again split into six equal-sized folds sorted by date. However, we use one whole fold for testing this time and the remaining five for training and validation. This process is repeated six times, with each fold used exactly once for testing.\relax }{figure.caption.29}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Feature Selection}{28}{section*.30}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{Model Architecture}{28}{section*.31}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces This table presents a list of parameters we sampled during hyperparameter tuning for the pointing correction model. The table includes names, sampled distributions, and corresponding ranges.\relax }}{29}{table.caption.32}\protected@file@percent }
-\newlabel{tab:xgb_hyperparameters_pcorr}{{5.4}{29}{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing correction model. The table includes names, sampled distributions, and corresponding ranges.\relax }{table.caption.32}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Model Evaluation}{29}{section*.33}\protected@file@percent }
-\newlabel{eq:mean_rms_compared}{{5.13}{29}{Model Evaluation}{equation.5.4.13}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Results}{30}{chapter.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Change since the last correction}{39}{section*.50}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Max change in time interval}{39}{section*.51}\protected@file@percent }
+\@writefile{toc}{\contentsline {paragraph}{Position of the sun}{39}{section*.52}\protected@file@percent }
+\newlabel{eq:sun_az_diff}{{5.6}{39}{Position of the sun}{equation.5.3.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}List of features}{39}{subsection.5.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Machine Learning Experiments}{40}{section.5.4}\protected@file@percent }
+\newlabel{sec:ml_exp}{{5.4}{40}{Machine Learning Experiments}{section.5.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}Experiment 1: Pointing Model using Neural Networks}{40}{subsection.5.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Feature Selection}{40}{section*.53}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Model Architecture}{40}{section*.54}\protected@file@percent }
+\newlabel{subfig:regular}{{5.4a}{42}{\textbf {Regular neural network:} This is the standard neural network architecture without any feature separation. All features are connected to the same layers.\relax }{figure.caption.55}{}}
+\newlabel{sub@subfig:regular}{{a}{42}{\textbf {Regular neural network:} This is the standard neural network architecture without any feature separation. All features are connected to the same layers.\relax }{figure.caption.55}{}}
+\newlabel{subfig:comb_sep1}{{5.4b}{42}{\textbf {Neural network with separated features 1:} In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer without any nonlinear activation function.\relax }{figure.caption.55}{}}
+\newlabel{sub@subfig:comb_sep1}{{b}{42}{\textbf {Neural network with separated features 1:} In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer without any nonlinear activation function.\relax }{figure.caption.55}{}}
+\newlabel{subfig:comb_sep2}{{5.4c}{42}{\textbf {Neural network with separated features 2}: Similar to the previous architecture, the geometric and harmonic features are separated from the other features. However, they are also processed by a nonlinear activation function before being connected to the output layer.\relax }{figure.caption.55}{}}
+\newlabel{sub@subfig:comb_sep2}{{c}{42}{\textbf {Neural network with separated features 2}: Similar to the previous architecture, the geometric and harmonic features are separated from the other features. However, they are also processed by a nonlinear activation function before being connected to the output layer.\relax }{figure.caption.55}{}}
+\newlabel{subfig:comb_sep3}{{5.4d}{42}{\textbf {Neural network with separated features 3:} In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.\relax }{figure.caption.55}{}}
+\newlabel{sub@subfig:comb_sep3}{{d}{42}{\textbf {Neural network with separated features 3:} In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.\relax }{figure.caption.55}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces These architectures were used to train a base pointing model on raw data.\relax }}{42}{figure.caption.55}\protected@file@percent }
+\newlabel{fig:nn_architecture}{{5.4}{42}{These architectures were used to train a base pointing model on raw data.\relax }{figure.caption.55}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.\relax }}{43}{table.caption.56}\protected@file@percent }
+\newlabel{tab:nn_hyperparameters}{{5.3}{43}{This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.\relax }{table.caption.56}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Loss Function and Model Evaluation}{43}{section*.57}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Experiment 2: Pointing Correction Model}{43}{subsection.5.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces This figure shows two cross-validation cases: the orange region represents the train and validation set, the red region represents the test set, and the blue region is unused for evaluation. In \textbf  {Case 1}, the dataset is split into six equal-sized folds sorted by date. For the selected fold, we use the last part (colored red) for testing and the remaining part (colored orange) for training and validation. This process is repeated six times, once for each fold. In \textbf  {Case 2}, the dataset is again split into six equal-sized folds sorted by date. However, we use one whole fold for testing this time and the remaining five for training and validation. This process is repeated six times, with each fold used exactly once for testing.\relax }}{44}{figure.caption.58}\protected@file@percent }
+\newlabel{fig:datasplit_cases}{{5.5}{44}{This figure shows two cross-validation cases: the orange region represents the train and validation set, the red region represents the test set, and the blue region is unused for evaluation. In \textbf {Case 1}, the dataset is split into six equal-sized folds sorted by date. For the selected fold, we use the last part (colored red) for testing and the remaining part (colored orange) for training and validation. This process is repeated six times, once for each fold. In \textbf {Case 2}, the dataset is again split into six equal-sized folds sorted by date. However, we use one whole fold for testing this time and the remaining five for training and validation. This process is repeated six times, with each fold used exactly once for testing.\relax }{figure.caption.58}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Feature Selection}{44}{section*.59}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Model Architecture}{44}{section*.60}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces This table presents a list of parameters we sampled during hyperparameter tuning for the pointing correction model. The table includes names, sampled distributions, and corresponding ranges.\relax }}{45}{table.caption.61}\protected@file@percent }
+\newlabel{tab:xgb_hyperparameters_pcorr}{{5.4}{45}{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing correction model. The table includes names, sampled distributions, and corresponding ranges.\relax }{table.caption.61}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Model Evaluation}{45}{section*.62}\protected@file@percent }
+\newlabel{eq:mean_rms_compared}{{5.13}{45}{Model Evaluation}{equation.5.4.13}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Results}{46}{chapter.6}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {6.1}Experiment 1: Pointing Model using Neural Networks}{30}{section.6.1}\protected@file@percent }
-\newlabel{tab:exp1_rms_folds_best_model}{{\caption@xref {tab:exp1_rms_folds_best_model}{ on input line 21}}{30}{Experiment 1: Pointing Model using Neural Networks}{table.caption.34}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces RMS on all folds for the best model for all arcitechtures\relax }}{30}{table.caption.34}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Correction Model}{30}{section.6.2}\protected@file@percent }
-\newlabel{tab:exp1_hyperparameters_best_model}{{\caption@xref {tab:exp1_hyperparameters_best_model}{ on input line 39}}{31}{Experiment 1: Pointing Model using Neural Networks}{table.caption.35}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Hyperparameters for the best model of each architecture\relax }}{31}{table.caption.35}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Features selected by hyperparameter search for each model\relax }}{31}{table.caption.36}\protected@file@percent }
-\newlabel{tab:exp1_features}{{6.3}{31}{Features selected by hyperparameter search for each model\relax }{table.caption.36}{}}
-\newlabel{tab:results_all_days}{{\caption@xref {tab:results_all_days}{ on input line 111}}{32}{Experiment 2: Pointing Correction Model}{table.caption.37}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces $tmp2022\_clean\_clf\_results\_table$ Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset. The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier. The training and validation data is split on days, meaning that all the scans for a given day are in the training or validation set and not both. The test set is unaffected by this.\relax }}{32}{table.caption.37}\protected@file@percent }
-\newlabel{tab:results_nflash_days}{{\caption@xref {tab:results_nflash_days}{ on input line 138}}{33}{Experiment 2: Pointing Correction Model}{table.caption.38}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces $tmp2022\_clean\_clf\_nflash230\_results\_table$ Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset. The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier. The training and validation data is split on days, meaning that all the scans for a given day are in the training or validation set and not both. The test set is unaffected by this.\relax }}{33}{table.caption.38}\protected@file@percent }
-\newlabel{tab:results_minval_days04}{{\caption@xref {tab:results_minval_days04}{ on input line 178}}{33}{Experiment 2: Pointing Correction Model}{table.caption.39}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.\relax }}{33}{table.caption.39}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{34}{chapter.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Experiment 1: Pointing Model using Neural Networks}{46}{section.6.1}\protected@file@percent }
+\newlabel{tab:exp1_rms_folds_best_model}{{\caption@xref {tab:exp1_rms_folds_best_model}{ on input line 21}}{46}{Experiment 1: Pointing Model using Neural Networks}{table.caption.63}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces RMS on all folds for the best model for all arcitechtures\relax }}{46}{table.caption.63}\protected@file@percent }
+\newlabel{tab:exp1_hyperparameters_best_model}{{\caption@xref {tab:exp1_hyperparameters_best_model}{ on input line 39}}{47}{Experiment 1: Pointing Model using Neural Networks}{table.caption.64}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces Hyperparameters for the best model of each architecture\relax }}{47}{table.caption.64}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Features selected by hyperparameter search for each model\relax }}{47}{table.caption.65}\protected@file@percent }
+\newlabel{tab:exp1_features}{{6.3}{47}{Features selected by hyperparameter search for each model\relax }{table.caption.65}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Correction Model Version 2}{48}{section.6.2}\protected@file@percent }
+\newlabel{tab:results_nflash_days}{{\caption@xref {tab:results_nflash_days}{ on input line 131}}{49}{Experiment 2: Pointing Correction Model Version 2}{table.caption.66}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.4}{\ignorespaces $tmp2022\_clean\_clf\_nflash230\_results\_table$ Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset. The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier. The training and validation data is split on days, meaning that all the scans for a given day are in the training or validation set and not both. The test set is unaffected by this.\relax }}{49}{table.caption.66}\protected@file@percent }
+\newlabel{tab:results_all_days}{{\caption@xref {tab:results_all_days}{ on input line 158}}{49}{Experiment 2: Pointing Correction Model Version 2}{table.caption.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces $tmp2022\_clean\_clf\_results\_table$ Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset. The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier. The training and validation data is split on days, meaning that all the scans for a given day are in the training or validation set and not both. The test set is unaffected by this.\relax }}{49}{table.caption.67}\protected@file@percent }
+\newlabel{tab:results_minval_days04}{{\caption@xref {tab:results_minval_days04}{ on input line 186}}{50}{Experiment 2: Pointing Correction Model Version 2}{table.caption.68}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.\relax }}{50}{table.caption.68}\protected@file@percent }
+\newlabel{tab:minval_fold5}{{\caption@xref {tab:minval_fold5}{ on input line 204}}{50}{Experiment 2: Pointing Correction Model Version 2}{table.caption.69}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Performance when choosing min validation for the last fold.\relax }}{50}{table.caption.69}\protected@file@percent }
+\newlabel{tab:results_minval_val_test_days_04_n230}{{\caption@xref {tab:results_minval_val_test_days_04_n230}{ on input line 220}}{50}{Experiment 2: Pointing Correction Model Version 2}{table.caption.70}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Validation and test performance for Case 1 and 2, only NFLASH230. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{50}{table.caption.70}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Experiment 2: Pointing Correction Model}{51}{section.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{52}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusion}{35}{chapter.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusion}{53}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\newlabel{sec:appendix_a}{{8}{36}{Appendix A}{section*.41}{}}
-\newlabel{tab:minval_fold5}{{\caption@xref {tab:minval_fold5}{ on input line 273}}{36}{Appendix A}{table.caption.42}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.5$.\relax }}{36}{table.caption.42}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces All\relax }}{36}{table.caption.43}\protected@file@percent }
-\newlabel{sec:appendix_b}{{8}{36}{Appendix B}{section*.46}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {.1}Transformation of pointing offsets and corrections}{36}{section.Alph0.1}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces NFLASH230\relax }}{37}{table.caption.44}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Validation and test performance for Case 2, all instruments left and nflash230 right. Performance when choosing the number of features showing best performance.\relax }}{37}{table.caption.45}\protected@file@percent }
-\newlabel{eq:ca_tilde}{{1}{38}{Transformation of pointing offsets and corrections}{equation.Alph0.1.1}{}}
-\newlabel{eq:ie_tilde}{{2}{38}{Transformation of pointing offsets and corrections}{equation.Alph0.1.2}{}}
-\newlabel{eq:off_az_tilde}{{3}{38}{Transformation of pointing offsets and corrections}{equation.Alph0.1.3}{}}
-\newlabel{eq:off_el_tilde}{{4}{38}{Transformation of pointing offsets and corrections}{equation.Alph0.1.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces \textbf  {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf  {Transformed:} Pointing offsets and corrections according to equations \eqref  {eq:ca_tilde}, \eqref  {eq:ie_tilde}, \eqref  {eq:off_az_tilde}, and \eqref  {eq:off_el_tilde}.\relax }}{39}{table.caption.47}\protected@file@percent }
-\newlabel{tab:offset_and_corrections}{{5}{39}{\textbf {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf {Transformed:} Pointing offsets and corrections according to equations \eqref {eq:ca_tilde}, \eqref {eq:ie_tilde}, \eqref {eq:off_az_tilde}, and \eqref {eq:off_el_tilde}.\relax }{table.caption.47}{}}
+\newlabel{sec:appendix_a}{{8}{54}{Appendix A}{section*.72}{}}
+\newlabel{tab:minval_fold5_whole}{{\caption@xref {tab:minval_fold5_whole}{ on input line 275}}{54}{Appendix A}{table.caption.73}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Performance when choosing min validation for the last fold.\relax }}{54}{table.caption.73}\protected@file@percent }
+\newlabel{tab:results_minval_days04_whole}{{\caption@xref {tab:results_minval_days04_whole}{ on input line 293}}{54}{Appendix A}{table.caption.74}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.\relax }}{54}{table.caption.74}\protected@file@percent }
+\newlabel{sec:appendix_b}{{8}{54}{Appendix B}{section*.80}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {.1}Transformation of pointing offsets and corrections}{54}{section.Alph0.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces All\relax }}{55}{table.caption.75}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces NFLASH230\relax }}{55}{table.caption.76}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Validation and test performance for Case 2, all instruments left and nflash230 right. Performance when choosing the number of features showing best performance.\relax }}{56}{table.caption.77}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Validation and test performance for Case 1 and 2, all instruments. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{56}{table.caption.78}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Validation and test performance for Case 1 and 2, only NFLASH230. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{57}{table.caption.79}\protected@file@percent }
+\newlabel{eq:ca_tilde}{{1}{57}{Transformation of pointing offsets and corrections}{equation.Alph0.1.1}{}}
+\newlabel{eq:ie_tilde}{{2}{57}{Transformation of pointing offsets and corrections}{equation.Alph0.1.2}{}}
+\newlabel{eq:off_az_tilde}{{3}{57}{Transformation of pointing offsets and corrections}{equation.Alph0.1.3}{}}
+\newlabel{eq:off_el_tilde}{{4}{57}{Transformation of pointing offsets and corrections}{equation.Alph0.1.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces \textbf  {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf  {Transformed:} Pointing offsets and corrections according to equations \eqref  {eq:ca_tilde}, \eqref  {eq:ie_tilde}, \eqref  {eq:off_az_tilde}, and \eqref  {eq:off_el_tilde}.\relax }}{58}{table.caption.81}\protected@file@percent }
+\newlabel{tab:offset_and_corrections}{{8}{58}{\textbf {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf {Transformed:} Pointing offsets and corrections according to equations \eqref {eq:ca_tilde}, \eqref {eq:ie_tilde}, \eqref {eq:off_az_tilde}, and \eqref {eq:off_el_tilde}.\relax }{table.caption.81}{}}
 \bibstyle{plain}
 \bibdata{citations.bib}
-\bibcite{universal_approximation}{{1}{}{{}}{{}}}
-\bibcite{covert_shap_sage}{{2}{}{{}}{{}}}
-\bibcite{SAGE}{{3}{}{{}}{{}}}
-\bibcite{sage_paper}{{4}{}{{}}{{}}}
-\bibcite{SHAP}{{5}{}{{}}{{}}}
-\bibcite{Mehta_2019}{{6}{}{{}}{{}}}
-\bibcite{morde_vishal_nodate}{{7}{}{{}}{{}}}
-\bibcite{ephem}{{8}{}{{}}{{}}}
-\bibcite{backprop_original}{{9}{}{{}}{{}}}
-\bibcite{shapley_value_1953}{{10}{}{{}}{{}}}
-\bibcite{tikz}{{11}{}{{}}{{}}}
+\bibcite{greve1996pointing}{{1}{}{{}}{{}}}
+\bibcite{universal_approximation}{{2}{}{{}}{{}}}
+\bibcite{covert_shap_sage}{{3}{}{{}}{{}}}
+\bibcite{SAGE}{{4}{}{{}}{{}}}
+\bibcite{sage_paper}{{5}{}{{}}{{}}}
+\bibcite{mlastgravitationalwaves}{{6}{}{{}}{{}}}
+\bibcite{SHAP}{{7}{}{{}}{{}}}
+\bibcite{Mehta_2019}{{8}{}{{}}{{}}}
+\bibcite{morde_vishal_nodate}{{9}{}{{}}{{}}}
+\bibcite{mlastgravlens}{{10}{}{{}}{{}}}
+\bibcite{ephem}{{11}{}{{}}{{}}}
+\bibcite{backprop_original}{{12}{}{{}}{{}}}
+\bibcite{shapley_value_1953}{{13}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{59}{appendix*.82}\protected@file@percent }
+\bibcite{tikz}{{14}{}{{}}{{}}}
+\bibcite{altaz_schematic}{{15}{}{{}}{{}}}
+\bibcite{tpoint_manual}{{16}{}{{}}{{}}}
+\bibcite{whitegreen2022}{{17}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{40}{appendix*.48}\protected@file@percent }
-\gdef \@abspage@last{42}
+\gdef \@abspage@last{62}

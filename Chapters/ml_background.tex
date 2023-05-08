@@ -255,7 +255,7 @@ which adjusts the learning rate dynamically based on the history of the gradient
 These modifications can improve the stability and convergence speed of SGD.
 
 
-\subsection{Momentum GPT}
+\subsection{Momentum}
 
 In practice, SGD is mostly used with momentum.
 Momentum serves as a memory of previous momenta and can improve the convergence speed of SGD, particularly in areas of the function space with low gradients, such as local minima.
@@ -275,7 +275,7 @@ To address this, adaptive momentum methods like Adam have been proposed, which a
 These methods can improve the convergence speed and stability of momentum-based optimization algorithms.
 
 
-\subsection{Adam GPT}
+\subsection{Adam}
 Adam is an optimization algorithm that combines the benefits of both SGD with momentum and adaptive learning rate methods.
 It uses a running average of the first and second moments of the gradient to compute per-parameter adaptive learning rates.
 Adam updates the parameters iteratively as follows:
