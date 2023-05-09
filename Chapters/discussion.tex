@@ -1,67 +1,123 @@
 \section{Experiment 1: Base Pointing Model}
  
 
-
 \section{Experiment 2: Pointing Correction Model Version 2}
+The first research question addressed in this thesis is whether machine learning can enhance the pointing accuracy of a radio telescope using the same pointing strategy as currently employed.
+To investigate this question, we explore a realistic scenario (case 1) in which a model is trained on a smaller period of data and used to predict the offset of consecutive scans for a period afterwards.
+We focus now on the model predicting the offsets of only NFLASH230. 
+The results from this case, presented in Table \ref{tab:results_minval_val_test_days_04_n230}, demonstrate that the model's performance on the validation set is promising,
+with the root-mean-square (RMS) ratio in the range of approximately $0.80$-$0.85$ for azimuth and elevation,
+which corresponds to a $15$-$20\%$ reduction in pointing offset.
+However, we observe that this performance does not transfer to the following test period,
+in which the RMS ratios are in the range of $1.16$-$1.46$, indicating a $16$-$46\%$ increase in pointing offset.
+There are several possible reasons for the poor performance of the model on the test set.
+One of the limitations of tree-based models, such as XGBoost, is that they are unable to generalize well to new data that is different from the training data,
+as they predict solely on logical conditions seen in the training set.
+If the factors that affect the pointing offset change over time and the new data is very different from the training data, the model is likely to perform poorly. 
+Furthermore, another potential explanation for the poor performance could be that the dataset is too small, and the model overfits on the validation set.
+The results of this experiment suggest that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
+To train a proper complex model, a larger amount of data is required, at least more than the number of samples in the training and validation sets for case 1, being \textcolor{red}{add samples here}.
+The findings also indicate that choosing the complexity of the model with the best performance on the validation set may not necessarily lead to the best performance on the test set.
+We further explore this aspect by examining Table \ref{tab:results_nflash_days}, which demonstrates the mean RMS ratio on the test set using the same number of features for all the folds.
+This provides an idea of the complexity that might provide the best performing models on the test set.
+Even though the model with the best performance on the validation set is not chosen, which could potentially be a lucky performance or overfitted,
+no improvement is observed in the current pointing model on the test set.
+However, the results show better performance than the first table \ref{tab:results_minval_val_test_days_04_n230}.
+The same trends are observed when predicting offsets from all instruments \ref{tab:results_minval_val_test_days_04_all,tab:results_all_days}. \\
 
-Present the results in two way.
+Moving on to case 2, which tests whether the amount of data is a limitation for enhancing the pointing accuracy.
+This test case is less realistic because the data is split into $6$ folds and cross-validation is performed,
+and for all folds except for the last one, the test period will be either before or between the training/validation set, making the results less applicable in practice.
+Results from this case indicate that a larger time period helps the model generalize better, which is expected as a larger period includes more variation that can help the model capture the relationships between features.
+We start by looking at the same table \ref{tab:results_minval_val_test_days_04_n230}.
+Here, we also see a good performnce on the on the validation set across all folds, with a $9$-$20\%$ reduced pointing offset on the validation set.
+This shows that more training data helps the model generalize, which is somewhat expected considering that a larger time period includes more variation,
+which helps the model learn what causes the offsets.
+The average RMS ratio over all folds on the test set for case 2 is $0.958$ for azimuth and $0.941$ for elevation.
+With the standard deviations, the $95\%$ confidence intervals would be put at $[0.850, 1.066]$ for azimuth and $[0.786, 1.010]$ for elevation.
+Given that the upper bound of both confidence intervals are larger than $1$, and the fact that the testing case is not realistic,
+we cannot conclude that the model is able to reduce the pointing offset in a robust and consistent manner.
+For an unbiased result that reflects expected performance in practice, the RMS ratio for the last fold in Table \ref{tab:results_minval_val_test_days_04_n230} is used,
+showing a $7.0\%$ and $9.4\%$ reduced RMS for azimuth and elevation, respectively.
+This indicates that a possible pointing strategy could be training a model on multiple months worth of data and then using the model for a couple of weeks.
+However, given the limited data available in this project, this could not be tested thoroughly.
+If more data were available, a similar analysis could be performed with the start and end time of both the train/validation and test set moved by two weeks,
+and iteratively train new models to predict the offsets for the next time period.
+This could verify whether the improved performance repeats.\\
 
-Main results are NFLASH model with Case 1 and 2. This identifies that we need more data than provided in the period of case 1.
-Show the results with number of features and mean rms ratio, to show an estimate of which models yield the best performance.
-Then go onto sayin that this is not a good estimate of performance, as the results are biased. Therefore, we use the min val on last fold model,
-and present that as a result on unbiased performance.
-Then present the same results for all instrument models, to show that we need more data to generalize.
+In case 2, the model predicting offsets from all instruments shows results similar to the model predicting only NFLASH230 offsets, though with slightly worse performance.
+The reduced performance is likely due to less of training data available for the other instruments.
+The difference in performance between these two models provides some insights.
+First, it suggests that various factors influence the different instruments differently.
+Otherwise, we would expect the larger model to perform better than the smaller.
+The reason that each instruments are affected differently can be the different mounting locations at the telescope.
+Different mounting locations mean that the path of photons leading to the receiver can vary, leading to distinct factors affecting the pointing.\\
 
-The first research question is if we can use machine learning to increase the pointing accuracy using the same pointing strategy as today.
-We start by discussing case 1 and 2.
-The first case test a realistic case of training a model on a smaller period,
-and then using the model to predict the offset in a consecutive period.
-The results from this show 
+There are multiple steps we can take to further improve this analysis. 
+
+
+
 
 
 
 
 \section{Experiment 2: Pointing Correction Model}
-There are many interesting things to discuss about the pointing correction model.
-First of all, we considered two different cases of training and testing the models, case $1$ and $2$.
-In case $1$, we use smaller amounts of data for training and testing each model, and in case $2$, we used more data for trainig and testing.
-The models using smaller amounts of data for training a model, and then testing the performance on some scans coming after the training period, 
-did not offer any improvement what so ever. This shows that the models perhaps require more data in order to learn meaningful relationships in the data.
-The models did, however, show great results on the validation set, with validation RMS compared ratio in the range $0.8$-$0.9$ \textcolor{red}{Include table in appendix}.
-This shows that the models are able to learn something from the data, but that there is not enough data to generalize well onto new data.
-There is also a clear difference in the complexity for Azimuth and Elevation models, showing that finding relations in the dataset
-that affect elevation offsets are easier to learn than that of azimuth. 
-In the context of the first research question, we wanted to see if a machine learning model can use data to learn what causes the pointing offsets.
-The results show that it is possible to slighly improve the pointing accuracy. 
-For the model predicting offsets for all instruments, the performance on the test sets are improved by $2\%$ for azimuth and $4.5\%$ for elevation.
-That is if we choose the number of features to train the models for azimuth and elevation based on the performance on the test set.
-Doing this, however, lead to a bias in the results, leading to the conclusion that we may not be able to expect a slight improvement by implementing this strategy in practise.
-However, if we choose the approach of selecting the number of feature that yield the best performance on the validation set, and then use that model to correct the pointing for the next period in time,
-we have a less biased result. 
-By choosing this strategy, we see from Table \ref{tab:pcorr_min_val_days_04} no increased performance for azimuth and a $5.0\%$ decreased pointing offset in elevation.
-This is still not a performance we could expect to see in practise,
-given that these results are obtained from by having a training/validation set that falls both before and after the test set in time.
-The only realistic result that show an actual expected performance,
-is the results of the model using a test set that is after the train/validation set in time, which is the last fold.
-From Table \ref{tab:minval_fold5}, we see a $7.0\%$ and $9.4\%$ reduced RMS for the NFLASH230 model, which is a completely unbiased result.
-The features used to train the models are picked through the largest mutual information with the target value on the train/validation,
-and the model is tested on a time period after the training/validaiton period.
-These results compared to the model predicting the pointing offsets for all instruments tells us that the amount of training data is an important aspect in this problem.
-There are multiple ways of increasing the performance further, the first one being the obvious more training data. 
-The second way to do it is by engineering better features.
-We spent a lot of time figuring out what features to construct, but the analysis thereafter could have been more thorough.
-After making all the features, we performed correlion analysis on the whole dataset, which proved to not contain much correlation at all.
-However, we did not perform the same analysis on shorter time periods, which could have been more fruitful.
-Doing this could have helped us grain more insights in what could bring us better predictions.
-This might not have impacted the performance, since the features were picked based on the mutual information on the time period of the training/validation data.
-There could also have been better ways of engineering some of the features, for instance temperature features.
-We considered the different temperature measurements located at various locations,
-but what we did not do is constructing features based on the difference in temperature at the different locations.
-Making these features, and then performing analysis on shorter periods could have provided much more insightfull features.\\
-This discussion answers the first research question
+The first research question is if we can use machine learning to increase the pointing accuracy using the same pointing strategy as today.
+We start by discussing case 1, which test a realistic scenario of training a model on a smaller period,
+and then using the model to predict the offset of the consecutive scans for a period.
+We look first at the model using NFLASH230 data only.
+The results from this case show that the performance on the validation set is good \ref{tab:results_minval_val_test_days_04_n230},
+with the RMS ratio being in the range $\tilde{}0.80$-$0.85$ for azimuth and elevation.
+That corresponds to a $15$-$20\%$ reduced pointing offset.
+This performance does not transfer to the following test period,
+for which the RMS ratios are in the range $1.16$-$1.46$, corresponding to a $16$-$46\%$ increased pointing offset.
+There could be multiple reasons for the drastically worse performance set.
+One possibility is that the relationships learned by the model change over time, therefore the model is not able to perform well.
+This is one limitation of tree based models like XGBoost.
+Because the model is predicting solely on logical conditions seen in the training set,
+it is not able to generalize well to new data.
+A neural network could potentially perform better on unseen data, as it train a continuous function.
+Another reason is that the dataset is too small, and the performance on the validation set is based on luck.
+In other words, model overfits on the validation set.
+From this project, it is clear that learning the relationships in the data that affects the pointing offset is not easy, and a complex model might be essential.
+And in order to train a proper complex model, we need large amounts of data,
+at least more than the \textcolor{red}{train set num} and \textcolor{red}{train set num} samples in the training and validation set respectively.
+The resutls we just discussed, uses a strategy where we choose the complexity of the model with the best performance on the validation set.
+We now look at Table \ref{tab:results_nflash_days}, which shows the mean RMS ratio on the test set using the same number of features $k$ for all the folds.
+This gives an idea on what complexity could provide the best models.
+It shows that even though we do not choose the model with the best performance on the validation set, which could potentionally be a lucky performance or overfitted,
+we still do not see any improvement of the current pointing model on the test set.
+We do however see better results than in the first table \ref{tab:results_minval_val_test_days_04_n230}.
+If we look at the model using the data from all instruments, we see similar results \ref{tab:results_minval_val_test_days_04_all} \ref{tab:results_all_days}.\\
+
+Now onto case 2, which show a less realistic test case, but can give an idea on if the amount of data is a limitation.
+This test case is less realistic because we split the data into $6$ folds and perform cross validation.
+For all folds except for the last one, the test period will be either before, or between the training/validaiton set.
+Therefore, these results does not reflect expected performance in practise.
+We start by looking at the same table \ref{tab:results_minval_val_test_days_04_n230},
+with results from the NFLASH230 model choosing the best model from the validation set, and tests the performance on the test set.
+Again, we see a good performance on the validation set across all folds, with a $9$-$20\%$ reduced pointing offset, for azimuth and elevation models.
+Now, we also see a reduced pointing offset even on the test set.
+This shows that more training data helps the model generalize,
+which is somewhat expected considering that a larger time period includes more variation, which helps the model capture relations between features.
+The average RMS ratio over all folds for case 2 is $0.958$ for azimuth and $0.941$ for elevation.
+With the standard deviations, the $95\%$ confidence intervals would be put at $[0.850, 1.066]$ for azimuth and $[0.786, 1.010]$ for elevation.
+The results show that there is something to be learnt in the data, and this pointing strategy could potentially lead to improved pointing.
+For a completely unbiased result, which show a performance that could have been achieved in practice,
+we look at the RMS ratio for the last fold in Table \ref{tab:results_minval_val_test_days_04_n230}.
+This shows a $7.0\%$ and $9.4\%$ reduced RMS for azimuth and elevation respectively,
+which indicates that a possible pointing strategy could be training a model on multiple months worth of data, and then use the model for a couple of weeks.
+Given we only have six months of data, this could not be tested more thoroughly.
+If we had more data, we could trained a model on the same amount of data, but moving the start and end time of both the train/validation and test set by two weeks, and
+see if the improved performance repeats.
 
 
 
+
+% \begin{align}
+%     CI_{Az} &= \bar{r}_{RMS_Az} \pm 1.96 \cdot \sigma_Az = [0.958 - 1.96\cdot 0.055, 0.958 + 1.96\cdot 0.055] = [0.850, 1.066]  \\
+%     CI_{El} &= \bar{r}_{RMS_El} \pm 1.96 \cdot \sigma_El = [0.941 - 1.96\cdot 0.079, 0.941 + 1.96\cdot 0.079] = [0.786, 1.010]
+% \end{align}
 
 
 
@@ -72,7 +128,8 @@ This discussion answers the first research question
     \item Perhaps other tests
     \item Can be used now and we would expect slight improvement, atleast for nflash230
     \item Future work is testing if it can reduce number of pointing scans and have similar performance
-    \item Better feature engineering and analysis. Plot over time, correlations in shorter time periods.
+    \item Better feature engineering and analysis.
+    Plot over time, correlations in shorter time periods.
     \item Need to present more of the transformed variables. could actually compare them with untransformed since the model can know all thei nformation even though correction isnt made.
 \end{itemize}
 

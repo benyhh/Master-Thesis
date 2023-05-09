@@ -89,9 +89,11 @@
 \contentsline {subsubsection}{Model Evaluation}{45}{section*.62}%
 \contentsline {chapter}{\numberline {6}Results}{46}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Experiment 1: Pointing Model using Neural Networks}{46}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Correction Model Version 2}{48}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Experiment 2: Pointing Correction Model}{51}{section.6.3}%
+\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Correction Model}{48}{section.6.2}%
 \contentsline {chapter}{\numberline {7}Discussion}{52}{chapter.7}%
-\contentsline {chapter}{\numberline {8}Conclusion}{53}{chapter.8}%
-\contentsline {section}{\numberline {.1}Transformation of pointing offsets and corrections}{54}{section.Alph0.1}%
-\contentsline {chapter}{Bibliography}{59}{appendix*.82}%
+\contentsline {section}{\numberline {7.1}Experiment 1: Base Pointing Model}{52}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Correction Model Version 2}{52}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Experiment 2: Pointing Correction Model}{53}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Conclusion}{56}{chapter.8}%
+\contentsline {section}{\numberline {.1}Transformation of pointing offsets and corrections}{57}{section.Alph0.1}%
+\contentsline {chapter}{Bibliography}{62}{appendix*.83}%

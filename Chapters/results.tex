@@ -18,7 +18,6 @@ Table \ref{tab:exp1_features} lists the features used in each of the best model 
 
 \begin{table}[!htbp]
     \centering
-    \label{tab:exp1_rms_folds_best_model}
     \caption{RMS on all folds for the best model for all arcitechtures}
     \begin{tabular}{lcccccccc}
         \toprule
@@ -32,11 +31,11 @@ Table \ref{tab:exp1_features} lists the features used in each of the best model 
         Sep 3 & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
         \bottomrule
     \end{tabular}
+    \label{tab:exp1_rms_folds_best_model}
 \end{table}
 
 \begin{table}[!htbp]
     \centering
-    \label{tab:exp1_hyperparameters_best_model}
     \caption{Hyperparameters for the best model of each architecture}
     \begin{tabular}{lccccc}
         \toprule
@@ -48,12 +47,12 @@ Table \ref{tab:exp1_features} lists the features used in each of the best model 
         Sep3    &  Tanh & [26] & 0.0039 & 358 & MSD \\
         \bottomrule
     \end{tabular}
+    \label{tab:exp1_hyperparameters_best_model}
 \end{table}
 
 \begin{table}[!htbp]
     \centering
     \caption{Features selected by hyperparameter search for each model}
-    \label{tab:exp1_features}
     \begin{tabular}{|l|cccc|}
         \hline
         Feature & Sep 1 & Sep 2 & Sep 3 & Regular \\ \hline
@@ -81,11 +80,22 @@ Table \ref{tab:exp1_features} lists the features used in each of the best model 
         TEMPERATURE MEDIAN 1 & & & x & \\ \hline
         TILT1T MEDIAN 1 & & & x & \\ \hline
     \end{tabular}
+    \label{tab:exp1_features}
 \end{table}
 
 \newpage
-\section{Experiment 2: Pointing Correction Model Version 2}
+
+
+
+\section{Experiment 2: Pointing Correction Model}
 In this section we present the results from the second experiment.
+Before we present the results in this section, we remind of the measure RMS ratio \eqref{eq:mean_rms_compared}, which we will use frequently.
+The measure compares the current pointing model to the machine learning model, and a value less than $1$ denotes an improvement of the current model.
+
+Table \ref{tab:results_minval_val_test_days_04_n230} shows both the validation and test RMS ratio on all folds for the NFLASH230 model.
+Here, we see that the model's performance on the validation set is very good in both test cases.
+On the test set, however, the performance is not as good. 
+
 Table \ref{tab:results_nflash_days} shows the main results of case 1 and 2 for the model trained on only NFLASH230 data.
 It shows the mean RMS ratio \eqref{eq:mean_rms_compared} and the associated standard deviation for the azimuth and elevation models.
 By inspection, we see that the machine learning model does not provide any improvement over the current pointing model,
@@ -121,14 +131,66 @@ when choosing the model complexity with best performance on the validation set.
 For NFLASH230, the RMS ratio is $0.930$ for azimuth and $0.906$ for elevation, being a $7.0\%$ and $9.4\%$ improvement respectively.
 For all instruments, the RMS ratio is $1.027$ for azimuth and $0.951$ for elevation, being a $2.7\%$ worse performance for azimuth and a $4.9\%$ improvement for elevation.
 
-Table \ref{tab:results_minval_val_test_days_04_n230} shows both the validation and test RMS ratio on all folds for the NFLASH230 model.
-Here, we see that the model's performance on the validation set is very good in both test cases.
-On the test set, however, the performance is not as good. As we saw in the previous tables,
-the only performance better than the current model is for test case 2.
+For a list of the $50$ features with the most mutual information to the target variable, see \ref{tab:exp2_top50_features} in the Appendix \ref{sec:appendix_a}.
+
+\begin{table}
+    \centering
+    \caption{Validation and test performance for Case 1 and 2, only NFLASH230.
+    Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
+    \begin{tabular}{lccccc}
+        \toprule
+        & & \multicolumn{2}{c}{Case 1 RMS ratio} & \multicolumn{2}{c}{Case 2 RMS ratio} \\
+        \cmidrule{3-4} \cmidrule{5-6}
+        Target & Fold & Validation & Test &  Validaiton &  Test \\
+        \midrule
+        \multirow{6}{*}{Az} & 1 &  0.848 &       1.188 &      0.846 &       1.043 \\
+                            & 2 &  0.841 &       1.427 &      0.870 &       0.962 \\
+                            & 3 &  0.840 &       1.462 &      0.923 &       0.882 \\
+                            & 4 &  0.837 &       1.266 &      0.873 &       0.989 \\
+                            & 5 &  0.846 &       1.242 &      0.879 &       0.944 \\
+                            & 6 &  0.837 &       1.318 &      0.907 &       0.930 \\
+        \hline
+        \multirow{6}{*}{El} & 1 &  0.835 &       1.173 &      0.887 &       1.030 \\
+                            & 2 &  0.831 &       1.188 &      0.889 &       0.973 \\
+                            & 3 &  0.831 &       1.204 &      0.886 &       1.025 \\
+                            & 4 &  0.812 &       1.198 &      0.826 &       0.844 \\
+                            & 5 &  0.815 &       1.166 &      0.802 &       0.870 \\
+                            & 6 &  0.810 &       1.262 &      0.825 &       0.906 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:results_minval_val_test_days_04_n230}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{Validation and test performance for Case 1 and 2, all instruments.
+    Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
+    \begin{tabular}{lccccc}
+        \toprule
+        & & \multicolumn{2}{c}{Case 1 RMS ratio} & \multicolumn{2}{c}{Case 2 RMS ratio} \\
+        \cmidrule{3-4} \cmidrule{5-6}
+        Target & Fold & Validation & Test &  Validaiton &  Test \\
+        \midrule
+        \multirow{6}{*}{Az} & 1 &  0.870 &       1.642 &      0.881 &       1.233 \\
+                            & 2 &  0.861 &       1.626 &      0.971 &       0.928 \\
+                            & 3 &  0.876 &       1.784 &      0.897 &       1.016 \\
+                            & 4 &  0.866 &       1.613 &      0.938 &       0.950 \\
+                            & 5 &  0.862 &       1.935 &      0.927 &       0.942 \\
+                            & 6 &  0.874 &       1.779 &      0.923 &       1.027 \\
+                            \hline
+        \multirow{6}{*}{El} & 1 &  0.832 &       1.193 &      0.948 &       0.965 \\
+        & 2 &  0.831 &       1.141 &      0.924 &       1.051 \\
+                            & 3 &  0.824 &       1.129 &      0.929 &       1.094 \\
+                            & 4 &  0.816 &       1.172 &      0.822 &       0.922 \\
+                            & 5 &  0.818 &       1.196 &      0.828 &       0.978 \\
+                            & 6 &  0.822 &       1.186 &      0.831 &       0.951 \\
+                            \bottomrule
+    \end{tabular}
+    \label{tab:results_minval_val_test_days_04_all}
+\end{table}
 
 \begin{table}[!htbp]
     \centering
-    \label{tab:results_nflash_days}
     \caption{$tmp2022\_clean\_clf\_nflash230\_results\_table$
     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
     The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
@@ -151,11 +213,11 @@ the only performance better than the current model is for test case 2.
         50 &     1.202 &     0.131 &     1.062 &     0.022 &  &  0.945 &     0.073 &     0.940 &     0.075 \\
         \bottomrule
     \end{tabular}
+    \label{tab:results_nflash_days}
 \end{table}
 
 \begin{table}[!htbp]
     \centering
-    \label{tab:results_all_days}
     \caption{$tmp2022\_clean\_clf\_results\_table$
     Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
     The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
@@ -178,12 +240,12 @@ the only performance better than the current model is for test case 2.
         50 &     1.758 &     0.121 &     1.061 &     0.027 &  &  1.018 &     0.114 &     0.955 &     0.029 \\
         \bottomrule
     \end{tabular}
+    \label{tab:results_all_days}
 \end{table}
 
 
 \begin{table}[!htbp]
     \centering
-    \label{tab:results_minval_days04}
     \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
     \begin{tabular}{lcccc c cccc}
         \toprule
@@ -213,69 +275,8 @@ the only performance better than the current model is for test case 2.
         Only NFLASH230   & 1.204 & 1.262 & & 0.930 & 0.906  \\
     \bottomrule
     \end{tabular}
+    \label{tab:results_minval_days04}
 \end{table}
-
-\begin{table}
-    \centering
-    \label{tab:results_minval_val_test_days_04_n230}
-    \caption{Validation and test performance for Case 1 and 2, only NFLASH230.
-    Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
-    \begin{tabular}{lccccc}
-        \toprule
-        Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
-        \midrule
-        \multirow{6}{*}{Az} & 1 &  0.848 &       1.188 &      0.846 &       1.043 \\
-                            & 2 &  0.841 &       1.427 &      0.870 &       0.962 \\
-                            & 3 &  0.840 &       1.462 &      0.923 &       0.882 \\
-                            & 4 &  0.837 &       1.266 &      0.873 &       0.989 \\
-                            & 5 &  0.846 &       1.242 &      0.879 &       0.944 \\
-                            & 6 &  0.837 &       1.318 &      0.907 &       0.930 \\
-        \multirow{6}{*}{El} & 1 &  0.835 &       1.173 &      0.887 &       1.030 \\
-                            & 2 &  0.831 &       1.188 &      0.889 &       0.973 \\
-                            & 3 &  0.831 &       1.204 &      0.886 &       1.025 \\
-                            & 4 &  0.812 &       1.198 &      0.826 &       0.844 \\
-                            & 5 &  0.815 &       1.166 &      0.802 &       0.870 \\
-                            & 6 &  0.810 &       1.262 &      0.825 &       0.906 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
-
-
-\section{Experiment 2: Pointing Correction Model}
-Table \ref{tab:results_all_days} and \ref{tab:results_nflash_days} show the main results from experiment $2$.
-They contain the average compared RMS \eqref{eq:mean_rms_compared} for azimuth and elevation models in case $1$ and $2$ for different numbers of features $k$ used to train the models.
-We cleaned the datasets we used to train these models using the cleaning criteria and XGBoost classifier.
-Table \ref{tab:results_all_days} shows results for models trained on scans from all instruments, while Table \ref{tab:results_nflash_days} shows results for models
-trained on scans from NFLASH230 only. For both datasets, case $1$ does not offer any improvement at all.
-On the other hand, models from case $2$ improve the pointing accuracy for most numbers of selected features $k$.
-
-First, the results from models predicting offsets for all instruments.
-Adding complexity seems to worsen the performance of azimuth models while improving the performance of elevation models.
-The best performance for azimuth models is for $k=2$ with $\bar{r}_{RMS}=0.980$ and $\sigma_{\bar{r}} = 0.059$ which is a slight improvement. 
-For elevation models, the best performance is for $k=50$ with $\bar{r}_{RMS}=0.955$ and $\sigma_{\bar{r}} = 0.029$.
-
-Second, the results from models predicting offsets for NFLASH230 only.
-The best models for azimuth are $k=2$ and $k=50$ with similar performance $\bar{r}_{RMS}=0.948$ and $\bar{r}_{RMS}=0.945$ respectively.
-For elevation models, $k=50$ offers the best performance, with $\bar{r}_{RMS}=0.940$.
-The standard deviations for these performance estimates are small.\\
-
-
-We also conducted the same experiment for two other datasets, with the offsets and pointing corrections transformed to simulate a pointing correction after every scan.
-We tested splitting the training and validation data completely randomly for all four datasets, unlike the presented results, where we dedicate a day to either training or validation.
-For these results, see Appendix A (\ref{sec:appendix_a}).
-
-
-
-Table \ref{tab:results_minval_days04} show the performane of the pointing correction model if we choose always choose the model with the lowest validation
-loss on and use that model for the test set. It should the performance estimate and standard deviation for the two different cases, and for different datasets.
-The data training and validation data is split on whole days, and the validation size is $0.43\%$ of the training/validation set.
-This does not offer any improvement over the result presented above, but for an NFLASH230 model, this still proves to be a viable strategy.
-The performance using this strategy for NFLASH230 is $\bar{r}_{RMS}=0.958$ for azimuth and $\bar{r}_{RMS}=0.941$ for elevation. 
-Standard deviations are also small.
-
-For a list of the $50$ features with the most mutual information to the target variable, see \ref{tab:exp2_top50_features} in the Appendix \ref{sec:appendix_a}.
-
-
 
 
 
