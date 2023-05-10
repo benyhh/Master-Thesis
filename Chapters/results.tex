@@ -1,11 +1,33 @@
 
 \section{Experiment 1: Pointing Model using Neural Networks}
 
-Table \ref{tab:exp1_rms_folds_best_model} show the RMS in arcseconds on all the folds for the different model arcitechtures.
-The results are from the models with the smallest mean RMS for each of the arcitechtures.
-From the mean RMS over all folds, we see that the different arcitechtures offer similar performance.
+Table \ref{tab:exp1_rms_folds_best_model} show the RMS in arcseconds on the test set over all folds for the different model arcitechtures.
+The models presented in this table are the ones with the lowest mean RMS across all test folds.
+A linear regression model is included for comparison. 
+It is clear that neural network architectures significantly outperform the linear regressiom model.
+From the mean RMS over all folds, we see that the different neural network arcitechtures offer similar performance.
 We also see that the RMS of fold $1$ is by far worse than the other folds.
 The lowest mean RMS is from the architecture where the non-linear features are connected to the geometrical and harmonic features.\\
+
+\begin{table}[!htbp]
+    \centering
+    \caption{RMS on all folds for the best model for all arcitechtures. The different arcitechtures are desribed in Figure \ref{fig:nn_architecture}.}
+    \begin{tabular}{lcccccccc}
+        \toprule
+        & \multicolumn{6}{c}{RMS [$''$] on test fold} & & \\
+        \cmidrule(lr){2-7}
+        Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
+        \midrule
+        Regular           & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
+        Seperated 1       & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
+        Seperated 2       & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
+        Seperated 3       & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
+        Linear regression & 70.55 & 40.19 & 51.17 & 49.69 & 36.86 & 37.29 & 47.63 & 12.81 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:exp1_rms_folds_best_model}
+\end{table}
+
 
 Table \ref{tab:exp1_hyperparameters_best_model} show the hyperparameter used for the best models.
 All arcitechtures perform better with a single hidden layer.
@@ -14,29 +36,9 @@ The regular neural network also have more neurons in the hidden layer and a high
 The batch size is also varying. There seem to be some similarities between the hyperaprameters chosen for the three arcitectures with seperate features.
 However, given the large standard deviation of the mean RMS, there is probably bigger issues than hyperparameter tuning.\\
 
-Table \ref{tab:exp1_features} lists the features used in each of the best model for all the arcitechtures tested.
-
 \begin{table}[!htbp]
     \centering
-    \caption{RMS on all folds for the best model for all arcitechtures}
-    \begin{tabular}{lcccccccc}
-        \toprule
-        & \multicolumn{6}{c}{RMS on test fold} & & \\
-        \cmidrule(lr){2-7}
-        Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
-        \midrule
-        Regular & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
-        Sep 1 & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
-        Sep 2 & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
-        Sep 3 & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:exp1_rms_folds_best_model}
-\end{table}
-
-\begin{table}[!htbp]
-    \centering
-    \caption{Hyperparameters for the best model of each architecture}
+    \caption{Hyperparameters used in the best performing model for each arcitechture.}
     \begin{tabular}{lccccc}
         \toprule
         Architecture & Activation & Hidden Layers & Learning Rate & Batch Size & Loss \\
@@ -50,35 +52,40 @@ Table \ref{tab:exp1_features} lists the features used in each of the best model 
     \label{tab:exp1_hyperparameters_best_model}
 \end{table}
 
+
+
+Table \ref{tab:exp1_features} lists the features selected for the best performing models.
+
+
 \begin{table}[!htbp]
     \centering
-    \caption{Features selected by hyperparameter search for each model}
-    \begin{tabular}{|l|cccc|}
+    \caption{Features used in the best performing model for each arcitechture.}
+    \begin{tabular}{|l|ccccc|}
         \hline
-        Feature & Sep 1 & Sep 2 & Sep 3 & Regular \\ \hline
-        COMMANDAZ & x & x & x & x \\ \hline
-        COMMANDEL & x & x & x & x \\ \hline
-        DISP ABS3 MEDIAN 1 & x & x & x & x \\ \hline
-        CA & x & x & x & \\ \hline
-        NPAE & x & x & x & \\ \hline
-        Constant & x & x & x & \\ \hline
-        $\cos{(El)}$ & x & x & x & \\ \hline
-        $\cos{(2\cdot El)}$ & x & x & x & \\ \hline
-        $\cos{(3\cdot El)}$ & x & x & x & \\ \hline
-        $\cos{(4\cdot El)}$ & x & x & x & \\ \hline
-        $\cos{(5\cdot El)}$ & x & x & x & \\ \hline
-        $\sin{(El)}$ & x & x & x & \\ \hline
-        $\sin{(2 \cdot El)}$ & x & x & x & \\ \hline
-        $\sin{(3 \cdot El)}$ & x & x & x & \\ \hline
-        $\sin{(4 \cdot El)}$ & x & x & x & \\ \hline
-        $\sin{(5 \cdot El)}$ & x & x & x & \\ \hline
-        WINDSPEED VAR 5 & x & x & x & \\ \hline
-        DEL TILTTEMP MEDIAN 1 & x & x & x & \\ \hline
-        DAZ DISP MEDIAN 1 & & & x & \\ \hline
-        POSITIONY MEDIAN 1 & & & x & \\ \hline
-        TILT1Y MEDIAN 1 & & & x & \\ \hline
-        TEMPERATURE MEDIAN 1 & & & x & \\ \hline
-        TILT1T MEDIAN 1 & & & x & \\ \hline
+        Feature & Sep 1 & Sep 2 & Sep 3 & Regular & \\ \hline
+        COMMANDAZ & x & x & x & x & \\ \hline
+        COMMANDEL & x & x & x & x & \\ \hline
+        DISP ABS3 & x & x & x & x & \\ \hline
+        CA & x & x & x & & \\ \hline
+        NPAE & x & x & x & & \\ \hline
+        Constant & x & x & x & & \\ \hline
+        $\cos{(\text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(2\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(3\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(4\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(5\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(\text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(2 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(3 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(4 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(5 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        Turbulence & x & x & x & & \\ \hline
+        DEL TILTTEMP & x & x & x & & \\ \hline
+        DAZ DISP & & & x & & \\ \hline
+        POSITIONY & & & x & & \\ \hline
+        TILT1Y & & & x & & \\ \hline
+        TEMPERATURE & & & x & & \\ \hline
+        TILT1T & & & x & & \\ \hline
     \end{tabular}
     \label{tab:exp1_features}
 \end{table}
@@ -87,53 +94,21 @@ Table \ref{tab:exp1_features} lists the features used in each of the best model 
 
 
 
+
 \section{Experiment 2: Pointing Correction Model}
-In this section we present the results from the second experiment.
-Before we present the results in this section, we remind of the measure RMS ratio \eqref{eq:mean_rms_compared}, which we will use frequently.
-The measure compares the current pointing model to the machine learning model, and a value less than $1$ denotes an improvement of the current model.
+In this section, we present the results obtained from the second experiment.
+Prior to presenting the results, we provide a reminder of the RMS ratio measure \eqref{eq:mean_rms_compared}, which will be frequently used in this section.
+This measure is used to compare the current pointing model to the machine learning model, and a value less than $1$ indicates an improvement of the current model. \\
 
-Table \ref{tab:results_minval_val_test_days_04_n230} shows both the validation and test RMS ratio on all folds for the NFLASH230 model.
-Here, we see that the model's performance on the validation set is very good in both test cases.
-On the test set, however, the performance is not as good. 
+Table \ref{tab:results_minval_val_test_days_04_n230} presents the validation and test RMS ratios for all folds of the NFLASH230 model in case 1 and case 2.
+Recall that models were trained with different numbers of features $k$, and these results are from the model with the best performance on the validation set.
+The results show that the model's performance on the validation set is very good in both case 1 and 2.
+However, this does not generalize well to the test set, with the performance on the test set for case 1 being significantly worse than the current model for all folds.
+In contrast, for case 2, the performance on the test set is better than the current model for most of the folds.
+Table \ref{tab:results_minval_val_test_days_04_all} presents the same results for the model predicting the offsets of all instruments.
+This model exhibits similar trends, although its performance on the test set is not as good as the NFLASH230 model.\\
 
-Table \ref{tab:results_nflash_days} shows the main results of case 1 and 2 for the model trained on only NFLASH230 data.
-It shows the mean RMS ratio \eqref{eq:mean_rms_compared} and the associated standard deviation for the azimuth and elevation models.
-By inspection, we see that the machine learning model does not provide any improvement over the current pointing model,
-apart from a slight improvement of an average of $1.8\%$ reduced RMS over all folds, with a standard deviation of $1.4\%$ for the azimuth model with number of features $k=2$.\\
-
-Case 2 on the other hand are more promising. For azimuth, the best RMS ratio is $0.948$ with a standard deviation of $0.021$,
-which is an average improvement of $5.6\%$ reduced RMS over all folds, with a standard deviation of $2.1\%$. 
-The number of features for these results are $k=2$. Using $k=50$ features show similar results, with $0.945$ RMS ratio and standard deviation of $0.073$.
-For elevation, the best RMS ratio is $0.940$ with a standard deviation of $0.075$, using $k=50$ features.\\
-
-Table \ref{tab:results_all_days} shows the same results for case 1 and 2, but for the model trained on all data from all instruments.
-We see the same trends, with case 1 showing no improvement, and case 2 showing a slight improvement for azimuth and elevation.
-The best RMS ratio for azimuth in case 2 is $0.980$ with a standard deviation of $0.059$, using $k=2$ features.
-For elevation, the best model is the one with $k=50$ features, with a RMS ratio of $0.955$ and standard deviation of $0.029$.\\
-
-So there are some similarities for the model trained on only NFLASH230 data and the model trained on all data from all instruments.
-Elevation models show slightly better results than azimuth models, and a higher complexity seem to gain better results for elevation mdoels.
-The model predicting only NFLASH230 offsets also performs better than the model predicting offsets from all instruments.\\
-
-Table \ref{tab:results_minval_days04} also show the mean RMS ratio and standard deviation for the model case 1 and 2.
-This table shows the result for both the model predicting only NFLASH230 offsets and the model predicting offsets from all instruments.
-The difference is that the table now shows the performance given that the model with the best performance on the validation set is chosen for each fold.
-This provides a unbiased estimate of the performance of a pointing strategy, since we do not choose arcitechture based on observed performance.
-For case 1, we yet again see no improvement over the current pointing model. For case 2, we see no improvement for the model predicting all instruments,
-but a small improvement for the model predicting only NFLASH230 offsets. The RMS ratio for azimuth is $0.958$ with a standard deviation of $0.055$.
-The RMS ratio for elevation given this strategy is $0.941$ with a standard deviation of $0.079$.\\
-
-So far, only case 2 has provided signs of improving the pointing accuracy.
-The problem is that for all the folds in the cross validation uses test data that is either before, or in the middle of the training/validation set in time.
-The exception for this is the last fold where the test set falls after the training and validaiton in time.
-Table \ref{tab:minval_fold5} show the RMS ratio for the last fold in the cross validaiton,
-when choosing the model complexity with best performance on the validation set.
-For NFLASH230, the RMS ratio is $0.930$ for azimuth and $0.906$ for elevation, being a $7.0\%$ and $9.4\%$ improvement respectively.
-For all instruments, the RMS ratio is $1.027$ for azimuth and $0.951$ for elevation, being a $2.7\%$ worse performance for azimuth and a $4.9\%$ improvement for elevation.
-
-For a list of the $50$ features with the most mutual information to the target variable, see \ref{tab:exp2_top50_features} in the Appendix \ref{sec:appendix_a}.
-
-\begin{table}
+\begin{table}[!htbp]
     \centering
     \caption{Validation and test performance for Case 1 and 2, only NFLASH230.
     Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
@@ -143,14 +118,14 @@ For a list of the $50$ features with the most mutual information to the target v
         \cmidrule{3-4} \cmidrule{5-6}
         Target & Fold & Validation & Test &  Validaiton &  Test \\
         \midrule
-        \multirow{6}{*}{Az} & 1 &  0.848 &       1.188 &      0.846 &       1.043 \\
+        \multirow{6}{*}{Azimuth} & 1 &  0.848 &       1.188 &      0.846 &       1.043 \\
                             & 2 &  0.841 &       1.427 &      0.870 &       0.962 \\
                             & 3 &  0.840 &       1.462 &      0.923 &       0.882 \\
                             & 4 &  0.837 &       1.266 &      0.873 &       0.989 \\
                             & 5 &  0.846 &       1.242 &      0.879 &       0.944 \\
                             & 6 &  0.837 &       1.318 &      0.907 &       0.930 \\
         \hline
-        \multirow{6}{*}{El} & 1 &  0.835 &       1.173 &      0.887 &       1.030 \\
+        \multirow{6}{*}{Elevation} & 1 &  0.835 &       1.173 &      0.887 &       1.030 \\
                             & 2 &  0.831 &       1.188 &      0.889 &       0.973 \\
                             & 3 &  0.831 &       1.204 &      0.886 &       1.025 \\
                             & 4 &  0.812 &       1.198 &      0.826 &       0.844 \\
@@ -161,7 +136,8 @@ For a list of the $50$ features with the most mutual information to the target v
     \label{tab:results_minval_val_test_days_04_n230}
 \end{table}
 
-\begin{table}
+\newpage 
+\begin{table}[!htbp]
     \centering
     \caption{Validation and test performance for Case 1 and 2, all instruments.
     Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
@@ -171,15 +147,15 @@ For a list of the $50$ features with the most mutual information to the target v
         \cmidrule{3-4} \cmidrule{5-6}
         Target & Fold & Validation & Test &  Validaiton &  Test \\
         \midrule
-        \multirow{6}{*}{Az} & 1 &  0.870 &       1.642 &      0.881 &       1.233 \\
+        \multirow{6}{*}{Azimuth} & 1 &  0.870 &       1.642 &      0.881 &       1.233 \\
                             & 2 &  0.861 &       1.626 &      0.971 &       0.928 \\
                             & 3 &  0.876 &       1.784 &      0.897 &       1.016 \\
                             & 4 &  0.866 &       1.613 &      0.938 &       0.950 \\
                             & 5 &  0.862 &       1.935 &      0.927 &       0.942 \\
                             & 6 &  0.874 &       1.779 &      0.923 &       1.027 \\
                             \hline
-        \multirow{6}{*}{El} & 1 &  0.832 &       1.193 &      0.948 &       0.965 \\
-        & 2 &  0.831 &       1.141 &      0.924 &       1.051 \\
+        \multirow{6}{*}{Elevation} & 1 &  0.832 &       1.193 &      0.948 &       0.965 \\
+                            & 2 &  0.831 &       1.141 &      0.924 &       1.051 \\
                             & 3 &  0.824 &       1.129 &      0.929 &       1.094 \\
                             & 4 &  0.816 &       1.172 &      0.822 &       0.922 \\
                             & 5 &  0.818 &       1.196 &      0.828 &       0.978 \\
@@ -189,13 +165,31 @@ For a list of the $50$ features with the most mutual information to the target v
     \label{tab:results_minval_val_test_days_04_all}
 \end{table}
 
+
+In addition to Table \ref{tab:results_minval_val_test_days_04_n230} and Table \ref{tab:results_minval_val_test_days_04_all},
+we also evaluated the performance of the NFLASH230 model with different complexities.
+Table \ref{tab:results_nflash_days} shows the mean RMS ratio \eqref{eq:mean_rms_compared} on the test set,
+and the associated standard deviation for the azimuth and elevation models when using the same number of features $k$ on all folds.
+By inspection, we see that the machine learning model does not provide any improvement over the current pointing model for case 1, apart from a slight improvement of an average of $1.8\%$ reduced RMS with a standard deviation of $1.4\%$ for the azimuth model with number of features $k=2$.
+However, case 2 shows more promising results.
+For azimuth, the best RMS ratio is $0.948$ with a standard deviation of $0.021$, which is an average improvement of $5.6\%$ reduced RMS over all folds, with a standard deviation of $2.1\%$.
+The number of features for these results is $k=2$.
+Using $k=50$ features shows similar results, with $0.945$ RMS ratio and a standard deviation of $0.073$.\\
+
+For elevation, the best RMS ratio is $0.940$ with a standard deviation of $0.075$, using $k=50$ features.
+Table \ref{tab:results_all_days} shows the same results for case 1 and 2, but for the model trained on all data from all instruments.
+We see the same trends, with case 1 showing no improvement, and case 2 showing a slight improvement for azimuth and elevation.
+The best RMS ratio for azimuth in case 2 is $0.980$ with a standard deviation of $0.059$, using $k=2$ features.
+For elevation, the best model is the one with $k=50$ features, with a RMS ratio of $0.955$ and standard deviation of $0.029$.
+Overall, the elevation models show slightly better results than azimuth models.
+Additionally, the model predicting only NFLASH230 offsets performs better than the model predicting offsets from all instruments. \\
+
+
 \begin{table}[!htbp]
     \centering
-    \caption{$tmp2022\_clean\_clf\_nflash230\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain only NFLASH230 and is cleaned using the regular criteria and the XGBoost classifier.
-    The training and validation data is split on days, meaning that all the scans for a given day
-    are in the training or validation set and not both. The test set is unaffected by this.}
+    \caption{%$tmp2022\_clean\_clf\_nflash230\_results\_table$
+    Resulting RMS ratio (see Eq. \eqref{eq:mean_rms_compared}) on unseen test sets from case $1$ and $2$ (see Figure \ref{fig:datasplit_cases}) for the NFLASH230 model,
+    using different number of features $k$ in the model.}
     \begin{tabular}{ccccc c cccc}
         \toprule
         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
@@ -218,11 +212,9 @@ For a list of the $50$ features with the most mutual information to the target v
 
 \begin{table}[!htbp]
     \centering
-    \caption{$tmp2022\_clean\_clf\_results\_table$
-    Resulting RMS from Case $1$ and $2$ for XGBoost model predicting pointing offset.
-    The dataset used to get these results contain all scans and is cleaned using the regular criteria and the XGBoost classifier.
-    The training and validation data is split on days, meaning that all the scans for a given day
-    are in the training or validation set and not both. The test set is unaffected by this.}
+    \caption{%$tmp2022\_clean\_clf\_results\_table$
+    Resulting RMS ratio (see Eq. \eqref{eq:mean_rms_compared}) on unseen test sets from case $1$ and $2$ (see Figure \ref{fig:datasplit_cases}) for the model predicting offsets from all instruments,
+    using different number of features $k$ in the model.}
     \begin{tabular}{ccccc c cccc}
         \toprule
         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
@@ -243,13 +235,31 @@ For a list of the $50$ features with the most mutual information to the target v
     \label{tab:results_all_days}
 \end{table}
 
+\newpage
+
+Table \ref{tab:results_minval_days04} presents an unbiased estimate of the performance of this approach,
+since we choose model for the test set purely based on performance on the validation set.
+It shows mean RMS ratio for the test set over all folds for both models in Tables \ref{tab:results_minval_val_test_days_04_n230} and \ref{tab:results_minval_val_test_days_04_all}.
+The results indicate that there is no improvement over the current pointing model for case 1.
+However, for case 2, the model predicting only NFLASH230 offsets shows a small improvement over the current model,
+with an RMS ratio of $0.958$ for azimuth and $0.941$ for elevation, both with standard deviations of $0.055$ and $0.079$, respectively.\\
+
+Although the results of case 1 have not shown any improvement over the current pointing model, case 2 has demonstrated potential for improving the pointing accuracy.
+However, it is important to note that the test data used in the cross-validation process for case 2 is either before or in the middle of the training and validation sets in time, except for the last fold.
+In the last fold, the test set falls after the training and validation in time, and for the NFLASH230 model,
+the RMS ratio on this fold was $0.930$ for azimuth and $0.906$ for elevation, which represents a $7.0\%$ and $9.4\%$ improvement, respectively.
+In contrast, for all instruments, the RMS ratio was $1.027$ for azimuth and $0.951$ for elevation, representing a $2.7\%$ worse performance for azimuth and a $4.9\%$ improvement for elevation.
+This results, is the most realistic and unbiased estimate we have on the performance of these models.
+
+For a list of the $50$ features with the most mutual information to the target variable, please refer to Table \ref{tab:exp2_top50_features} in Appendix A \ref{sec:appendix_a}.
+
 
 \begin{table}[!htbp]
     \centering
-    \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
+    \caption{Mean RMS ratio on test set (mean over values in Tables \ref{tab:results_minval_val_test_days_04_n230} and \ref{tab:results_minval_val_test_days_04_all}).}
     \begin{tabular}{lcccc c cccc}
         \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+        \multicolumn{1}{c}{} & \multicolumn{4}{c}{RMS ratio case 1} & & \multicolumn{4}{c}{RMS ratio case 2} \\
         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
@@ -259,24 +269,5 @@ For a list of the $50$ features with the most mutual information to the target v
         Only NFLASH230    &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
         \bottomrule
     \end{tabular}
-\end{table}
-
-\begin{table}[!htbp]
-    \centering
-    \label{tab:minval_fold5}
-    \caption{Performance when choosing min validation for the last fold.}
-    \begin{tabular}{lcc c cc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Case 1} & & \multicolumn{2}{c}{Case 2} \\
-        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
-        Dataset &  Azimuth  &  Elevation  & & Azimuth  &  Elevation  \\
-        \midrule
-        All instruments  & 1.779 & 1.186 & & 1.027 & 0.951  \\
-        Only NFLASH230   & 1.204 & 1.262 & & 0.930 & 0.906  \\
-    \bottomrule
-    \end{tabular}
     \label{tab:results_minval_days04}
 \end{table}
-
-
-

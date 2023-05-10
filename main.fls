@@ -1591,6 +1591,10 @@ INPUT ./Chapters/discussion.tex
 INPUT Chapters/discussion.tex
 INPUT ./Chapters/discussion.tex
 INPUT Chapters/discussion.tex
+INPUT ./Chapters/conclusion.tex
+INPUT Chapters/conclusion.tex
+INPUT ./Chapters/conclusion.tex
+INPUT Chapters/conclusion.tex
 INPUT ./Chapters/appendix_a.tex
 INPUT Chapters/appendix_a.tex
 INPUT ./Chapters/appendix_a.tex
