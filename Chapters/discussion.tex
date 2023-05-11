@@ -57,16 +57,12 @@ While it improves the performance on the validation set, it worsens the performa
 This indicates that there are some correlation between the azimuth and elevation correction that change over time.
 % Surprisingly, some features such as the azimuth angle of the sun and the $X$ position of the subreflector (POSITIONX) worsen the performance on the validation set, but improve it on the test set.
 % We do not have a clear explanation for this behavior.
-Notably, the COMMANDAZ and COMMANDEL features, which are included in every model, do not affect the performance of the model at all.
-This suggests that the analytical pointing model, which is based solely on azimuth and elevation, is performing very well, and the sources of offsets are likely attributed to other factors.
+Notably, the COMMANDAZ and COMMANDEL features, which are included in every model, do not affect the azimuth or elevation model's performance.
+This suggests that the analytical pointing model, which is based solely on azimuth and elevation, is performing very well, and the sources of offsets are likely attributed to factors other than the pointing direction.
 We also find that the continuous month feature is the second most important feature in the elevation model, after the elevation correction $ie$.
-However, the model's performance on the test set does not benefit from this feature, as its value is larger in the test set than in the training and validation sets,
-This observation indicates that the input coordinates are not useful for the model.
-In summary, the SAGE analysis provides valuable insights into the factors that contribute to the model's performance on unseen data.
-The azimuth correction $ca$ is the most important feature, while the elevation correction $ie$ shows a mixed effect on the model's performance.
-Other features such as the azimuth angle of the sun and the x position of the subreflector exhibit an unexpected behavior.
-Finally, the continuous month feature is not useful for the model, likely due to its lack of variability in the test set.
-
+However, the model's performance on the test set does not benefit from this feature, as its value is larger in the test set than in the training and validation sets.
+This is one of the weaknesses of tree-based models.
+Training the model on the previous years' data could solve this problem, as long as there are not other big changes in the structure or mounting of the instruments.
 
 % We now look at the results from the SAGE analysis on the validation and test set, shown in Figures \ref{fig:sage_lastfold_nflash230_az} and \ref{fig:sage_lastfold_nflash230_el},
 % for the same model we discussed in the previous paragraph.
