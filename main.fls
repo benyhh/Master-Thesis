@@ -1561,6 +1561,11 @@ INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
 INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
+INPUT ./Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT ./Canva/datasplits.png
 INPUT ./Other figures/regular_nn.tex
 INPUT Other figures/regular_nn.tex
 INPUT ./Other figures/regular_nn.tex
@@ -1578,15 +1583,50 @@ INPUT ./Other figures/combined_nn_sep3.tex
 INPUT Other figures/combined_nn_sep3.tex
 INPUT ./Other figures/combined_nn_sep3.tex
 INPUT Other figures/combined_nn_sep3.tex
-INPUT ./Canva/datasplits.png
-INPUT ./Canva/datasplits.png
-INPUT Canva/datasplits.png
-INPUT ./Canva/datasplits.png
-INPUT ./Canva/datasplits.png
 INPUT ./Chapters/results.tex
 INPUT Chapters/results.tex
 INPUT ./Chapters/results.tex
 INPUT Chapters/results.tex
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
 INPUT ./Chapters/discussion.tex
 INPUT Chapters/discussion.tex
 INPUT ./Chapters/discussion.tex

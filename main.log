@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  10 MAY 2023 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  11 MAY 2023 14:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1021,24 +1021,24 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
  [1]
 Package hyperref Info: Option `pageanchor' set `true' on input line 143.
  (./main.toc
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 4.
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 3.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 4.
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 3.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 4.
+(Font)              <10.95> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 3.
  (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1053,31 +1053,31 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 Chapter 1.
 (./Chapters/introduction.tex) [4
 
-]
+] [5]
 Chapter 2.
-(./Chapters/related_works.tex [5
+(./Chapters/related_works.tex [6
 
-]) [6]
+]) [7]
 Chapter 3.
 (./Chapters/ast_background.tex
 Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
-[7
+[8
 
 ]
-<Astronomy/Azimuth-Altitude_schematic.png, id=508, 1927.2pt x 1856.9375pt>
+<Astronomy/Azimuth-Altitude_schematic.png, id=513, 1927.2pt x 1856.9375pt>
 File: Astronomy/Azimuth-Altitude_schematic.png Graphic file (type png)
 <use Astronomy/Azimuth-Altitude_schematic.png>
 Package pdftex.def Info: Astronomy/Azimuth-Altitude_schematic.png  used on input line 38.
 (pdftex.def)             Requested size: 390.37012pt x 376.1128pt.
-<Astronomy/radio_telescope.png, id=511, 474.27188pt x 440.39531pt>
+<Astronomy/radio_telescope.png, id=516, 474.27188pt x 440.39531pt>
 File: Astronomy/radio_telescope.png Graphic file (type png)
 <use Astronomy/radio_telescope.png>
 Package pdftex.def Info: Astronomy/radio_telescope.png  used on input line 54.
 (pdftex.def)             Requested size: 390.37012pt x 362.49734pt.
- [8 <./Astronomy/Azimuth-Altitude_schematic.png>] [9 <./Astronomy/radio_telescope.png>]
+ [9 <./Astronomy/Azimuth-Altitude_schematic.png>] [10 <./Astronomy/radio_telescope.png>]
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 117.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1086,28 +1086,28 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [10]
+ [11]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 145.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [11] [12] [13]
-<Correlation/Correlation_temp.pdf, id=572, 1156.32pt x 1156.32pt>
+) [12] [13] [14]
+<Correlation/Correlation_temp.pdf, id=577, 1156.32pt x 1156.32pt>
 File: Correlation/Correlation_temp.pdf Graphic file (type pdf)
 <use Correlation/Correlation_temp.pdf>
 Package pdftex.def Info: Correlation/Correlation_temp.pdf  used on input line 342.
 (pdftex.def)             Requested size: 390.37012pt x 390.35585pt.
- [14 <./Correlation/Correlation_temp.pdf>] [15]
-<Feature during scans/scan_ACTUALAZ_335.pdf, id=631, 722.7pt x 433.62pt>
+ [15 <./Correlation/Correlation_temp.pdf>] [16]
+<Feature during scans/scan_ACTUALAZ_335.pdf, id=636, 722.7pt x 433.62pt>
 File: Feature during scans/scan_ACTUALAZ_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_ACTUALAZ_335.pdf>
 Package pdftex.def Info: Feature during scans/scan_ACTUALAZ_335.pdf  used on input line 441.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_ACTUALEL_335.pdf, id=632, 722.7pt x 433.62pt>
+<Feature during scans/scan_ACTUALEL_335.pdf, id=637, 722.7pt x 433.62pt>
 File: Feature during scans/scan_ACTUALEL_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_ACTUALEL_335.pdf>
 Package pdftex.def Info: Feature during scans/scan_ACTUALEL_335.pdf  used on input line 447.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_TEMP1_335.pdf, id=633, 722.7pt x 433.62pt>
+<Feature during scans/scan_TEMP1_335.pdf, id=638, 722.7pt x 433.62pt>
 File: Feature during scans/scan_TEMP1_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_TEMP1_335.pdf>
 Package pdftex.def Info: Feature during scans/scan_TEMP1_335.pdf  used on input line 454.
@@ -1118,73 +1118,73 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 455.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 455.
-<Feature during scans/scan_TILT1T_335.pdf, id=634, 722.7pt x 433.62pt>
+<Feature during scans/scan_TILT1T_335.pdf, id=639, 722.7pt x 433.62pt>
 File: Feature during scans/scan_TILT1T_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_TILT1T_335.pdf>
 Package pdftex.def Info: Feature during scans/scan_TILT1T_335.pdf  used on input line 460.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_WINDDIRECTION_335.pdf, id=635, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDDIRECTION_335.pdf, id=640, 722.7pt x 433.62pt>
 File: Feature during scans/scan_WINDDIRECTION_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_WINDDIRECTION_335.pdf>
 Package pdftex.def Info: Feature during scans/scan_WINDDIRECTION_335.pdf  used on input line 467.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_WINDSPEED_335.pdf, id=636, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDSPEED_335.pdf, id=641, 722.7pt x 433.62pt>
 File: Feature during scans/scan_WINDSPEED_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_WINDSPEED_335.pdf>
 Package pdftex.def Info: Feature during scans/scan_WINDSPEED_335.pdf  used on input line 473.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
- [16] [17 <./Feature during scans/scan_ACTUALAZ_335.pdf> <./Feature during scans/scan_ACTUALEL_335.pdf> <./Feature during scans/scan_TEMP1_335.pdf> <./Feature during scans/scan_TILT1T_335.pdf> <./Feature during scans/scan_WINDDIRECTION_335.pdf> <./Feature during scans/scan_WINDSPEED_335.pdf>]
-<Pointing Scans/good_line.png, id=960, 645.612pt x 448.67625pt>
+ [17] [18 <./Feature during scans/scan_ACTUALAZ_335.pdf> <./Feature during scans/scan_ACTUALEL_335.pdf> <./Feature during scans/scan_TEMP1_335.pdf> <./Feature during scans/scan_TILT1T_335.pdf> <./Feature during scans/scan_WINDDIRECTION_335.pdf> <./Feature during scans/scan_WINDSPEED_335.pdf>]
+<Pointing Scans/good_line.png, id=965, 645.612pt x 448.67625pt>
 File: Pointing Scans/good_line.png Graphic file (type png)
 <use Pointing Scans/good_line.png>
 Package pdftex.def Info: Pointing Scans/good_line.png  used on input line 502.
 (pdftex.def)             Requested size: 298.75394pt x 207.6259pt.
-<Pointing Scans/bad_line.png, id=962, 651.6345pt x 448.67625pt>
+<Pointing Scans/bad_line.png, id=967, 651.6345pt x 448.67625pt>
 File: Pointing Scans/bad_line.png Graphic file (type png)
 <use Pointing Scans/bad_line.png>
 Package pdftex.def Info: Pointing Scans/bad_line.png  used on input line 509.
 (pdftex.def)             Requested size: 298.75394pt x 205.7021pt.
-<Pointing Scans/good_continuous.png, id=964, 686.565pt x 453.49425pt>
+<Pointing Scans/good_continuous.png, id=969, 686.565pt x 453.49425pt>
 File: Pointing Scans/good_continuous.png Graphic file (type png)
 <use Pointing Scans/good_continuous.png>
 Package pdftex.def Info: Pointing Scans/good_continuous.png  used on input line 528.
 (pdftex.def)             Requested size: 298.75394pt x 197.33067pt.
-<Pointing Scans/bad_continuous.png, id=965, 686.565pt x 453.49425pt>
+<Pointing Scans/bad_continuous.png, id=970, 686.565pt x 453.49425pt>
 File: Pointing Scans/bad_continuous.png Graphic file (type png)
 <use Pointing Scans/bad_continuous.png>
 Package pdftex.def Info: Pointing Scans/bad_continuous.png  used on input line 535.
 (pdftex.def)             Requested size: 298.75394pt x 197.33067pt.
- [18 <./Pointing Scans/good_line.png> <./Pointing Scans/bad_line.png>] [19 <./Pointing Scans/good_continuous.png> <./Pointing Scans/bad_continuous.png>]
+ [19 <./Pointing Scans/good_line.png> <./Pointing Scans/bad_line.png>] [20 <./Pointing Scans/good_continuous.png> <./Pointing Scans/bad_continuous.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 556--559
 
  []
 
-) [20] [21]
+) [21] [22]
 Chapter 4.
 (./Chapters/ml_background.tex
 Underfull \hbox (badness 10000) in paragraph at lines 11--17
 
  []
 
-[22
+[23
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
-[23] [24]
-<Other figures/decisiontree_example.PNG, id=1020, 1033.61156pt x 804.00375pt>
+[24] [25]
+<Other figures/decisiontree_example.PNG, id=1025, 1033.61156pt x 804.00375pt>
 File: Other figures/decisiontree_example.PNG Graphic file (type png)
 <use Other figures/decisiontree_example.PNG>
 Package pdftex.def Info: Other figures/decisiontree_example.PNG  used on input line 134.
 (pdftex.def)             Requested size: 390.37012pt x 303.64758pt.
-<Other figures/evolution_of_xgb.png, id=1021, 542.025pt x 288.3272pt>
+<Other figures/evolution_of_xgb.png, id=1026, 542.025pt x 288.3272pt>
 File: Other figures/evolution_of_xgb.png Graphic file (type png)
 <use Other figures/evolution_of_xgb.png>
 Package pdftex.def Info: Other figures/evolution_of_xgb.png  used on input line 141.
 (pdftex.def)             Requested size: 390.37012pt x 207.6614pt.
- [25 <./Other figures/decisiontree_example.PNG>] (./Other figures/nn_with_eqs.tex 
+ [26 <./Other figures/decisiontree_example.PNG>] (./Other figures/nn_with_eqs.tex 
 Neural network activation
 contour: Using real outline for `$w_{1,1}$' on input line 36.
 contour: Using real outline for `$w_{1,2}$' on input line 36.
@@ -1192,16 +1192,16 @@ contour: Using real outline for `$w_{1,3}$' on input line 36.
 contour: Using real outline for `$w_{1,4}$' on input line 36.
 contour: Using real outline for `$w_{1,n}$' on input line 36.
 contour: Using real outline for `$b_1$' on input line 41.
-) [26 <./Other figures/evolution_of_xgb.png>]
+) [27 <./Other figures/evolution_of_xgb.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
-[27]
+[28]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instead on input line 216.
 
-[28] [29] [30]
+[29] [30] [31]
 Underfull \hbox (badness 10000) in paragraph at lines 345--351
 
  []
@@ -1216,14 +1216,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 373--376
 
  []
 
-[31]
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 382--384
 
  []
 
-) [32]
+) [33]
 Chapter 5.
-(./Chapters/method.tex [33
+(./Chapters/method.tex [34
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 46--52
@@ -1235,51 +1235,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--80
 
  []
 
-[34]
-<Clf/precision_recall_curve_both.pdf, id=1127, 578.16pt x 397.485pt>
+[35]
+<Clf/precision_recall_curve_both.pdf, id=1133, 578.16pt x 397.485pt>
 File: Clf/precision_recall_curve_both.pdf Graphic file (type pdf)
 <use Clf/precision_recall_curve_both.pdf>
 Package pdftex.def Info: Clf/precision_recall_curve_both.pdf  used on input line 89.
 (pdftex.def)             Requested size: 195.1881pt x 134.19089pt.
-<Clf/mAP_curve_both.pdf, id=1128, 578.16pt x 397.485pt>
+<Clf/mAP_curve_both.pdf, id=1134, 578.16pt x 397.485pt>
 File: Clf/mAP_curve_both.pdf Graphic file (type pdf)
 <use Clf/mAP_curve_both.pdf>
 Package pdftex.def Info: Clf/mAP_curve_both.pdf  used on input line 95.
 (pdftex.def)             Requested size: 195.1881pt x 134.19089pt.
- [35 <./Clf/precision_recall_curve_both.pdf> <./Clf/mAP_curve_both.pdf>]
+ [36 <./Clf/precision_recall_curve_both.pdf> <./Clf/mAP_curve_both.pdf>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 156.
 
 Underfull \hbox (badness 10000) in paragraph at lines 192--199
 
  []
 
-[36]
-<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=1211, 1806.75pt x 722.7pt>
+[37]
+<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=1187, 1806.75pt x 722.7pt>
 File: Tiltmeter plots/scan_duration_distribution_rx.pdf Graphic file (type pdf)
 <use Tiltmeter plots/scan_duration_distribution_rx.pdf>
-Package pdftex.def Info: Tiltmeter plots/scan_duration_distribution_rx.pdf  used on input line 214.
+Package pdftex.def Info: Tiltmeter plots/scan_duration_distribution_rx.pdf  used on input line 213.
 (pdftex.def)             Requested size: 438.17488pt x 175.27107pt.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 214--215
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 213--214
  [][] 
  []
 
-<Tiltmeter plots/scan_duration_distribution_date.pdf, id=1212, 1300.86pt x 722.7pt>
+<Tiltmeter plots/scan_duration_distribution_date.pdf, id=1188, 1300.86pt x 722.7pt>
 File: Tiltmeter plots/scan_duration_distribution_date.pdf Graphic file (type pdf)
 <use Tiltmeter plots/scan_duration_distribution_date.pdf>
-Package pdftex.def Info: Tiltmeter plots/scan_duration_distribution_date.pdf  used on input line 221.
+Package pdftex.def Info: Tiltmeter plots/scan_duration_distribution_date.pdf  used on input line 220.
 (pdftex.def)             Requested size: 438.17488pt x 243.43205pt.
 
-Overfull \hbox (39.83629pt too wide) in paragraph at lines 221--222
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 220--221
  [][] 
  []
 
-[37 <./Tiltmeter plots/scan_duration_distribution_rx.pdf>] [38 <./Tiltmeter plots/scan_duration_distribution_date.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 309--312
+[38 <./Tiltmeter plots/scan_duration_distribution_rx.pdf>] [39 <./Tiltmeter plots/scan_duration_distribution_date.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 308--311
 
  []
 
-[39] [40] (./Other figures/regular_nn.tex 
+[40]
+<Canva/datasplits.png, id=1325, 1445.4pt x 482.55281pt>
+File: Canva/datasplits.png Graphic file (type png)
+<use Canva/datasplits.png>
+Package pdftex.def Info: Canva/datasplits.png  used on input line 401.
+(pdftex.def)             Requested size: 390.37012pt x 130.3278pt.
+ [41] [42 <./Canva/datasplits.png>] [43] (./Other figures/regular_nn.tex 
 Neural network large 
  Layer 1, 2, 3, 4,) (./Other figures/combined_nn_sep1.tex 
 Neural network large 
@@ -1305,99 +1311,153 @@ Neural network large
  3Here (N1-3) {l3} 
  3Here (N1-1) {l3} 
  3Here (N1-2) {l3} 
- 3Here (N1-3) {l3} 4,) [41] [42] [43]
-<Canva/datasplits.png, id=1383, 1445.4pt x 482.55281pt>
-File: Canva/datasplits.png Graphic file (type png)
-<use Canva/datasplits.png>
-Package pdftex.def Info: Canva/datasplits.png  used on input line 516.
-(pdftex.def)             Requested size: 390.37012pt x 130.3278pt.
- [44 <./Canva/datasplits.png>]) [45]
+ 3Here (N1-3) {l3} 4,) [44] [45]) [46]
 Chapter 6.
 (./Chapters/results.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--11
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--38
+Underfull \hbox (badness 10000) in paragraph at lines 7--14
 
  []
 
-[46
+[47
 
-] [47]
-Underfull \hbox (badness 10000) in paragraph at lines 99--102
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--110
+]
+Underfull \hbox (badness 10000) in paragraph at lines 73--82
 
  []
 
 [48]
-Underfull \hbox (badness 10000) in paragraph at lines 169--178
+Underfull \hbox (badness 10000) in paragraph at lines 83--90
+
+ []
+
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 144--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 179--186
-
- []
-
-[49] [50]
-Underfull \hbox (badness 10000) in paragraph at lines 240--246
-
- []
-
-
-Overfull \hbox (15.48792pt too wide) in paragraph at lines 260--273
+Overfull \hbox (15.48792pt too wide) in paragraph at lines 163--176
  [][] 
  []
 
-) [51]
+<Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf, id=1416, 867.24pt x 578.16pt>
+File: Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf Graphic file (type pdf)
+<use Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf>
+Package pdftex.def Info: Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf  used on input line 184.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+<Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf, id=1417, 867.24pt x 578.16pt>
+File: Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf Graphic file (type pdf)
+<use Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf>
+Package pdftex.def Info: Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf  used on input line 191.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+[50]
+<Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf, id=1424, 867.24pt x 578.16pt>
+File: Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf Graphic file (type pdf)
+<use Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf>
+Package pdftex.def Info: Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf  used on input line 204.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+<Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf, id=1425, 867.24pt x 578.16pt>
+File: Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf Graphic file (type pdf)
+<use Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf>
+Package pdftex.def Info: Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf  used on input line 211.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+ [51 <./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf> <./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf>]
+<Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf, id=1516, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf  used on input line 224.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+<Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf, id=1517, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf  used on input line 231.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+ [52 <./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf> <./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf>]
+Overfull \vbox (13.8932pt too high) has occurred while \output is active []
+
+ [53 <./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf> <./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf>]
+<Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf, id=1712, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf  used on input line 243.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+<Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf, id=1713, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf  used on input line 250.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+
+Overfull \vbox (13.8932pt too high) has occurred while \output is active []
+
+ [54 <./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf> <./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 264--271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 292--298
+
+ []
+
+[55] [56])
 Chapter 7.
 (./Chapters/discussion.tex
-
-LaTeX Warning: Reference `tab:results_minval_val_test_days_04_all,tab:results_all_days' on page 52 undefined on input line 51.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 30--52
+Underfull \hbox (badness 10000) in paragraph at lines 2--24
 
  []
 
-[52
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--43
+
+ []
+
+[57
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 53--72
-
- []
-
-[53]
-Underfull \hbox (badness 10000) in paragraph at lines 73--80
+Underfull \hbox (badness 10000) in paragraph at lines 44--51
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 94--101
+Underfull \hbox (badness 10000) in paragraph at lines 65--72
+
+ []
+
+[58]
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--109
+Underfull \hbox (badness 10000) in paragraph at lines 148--158
 
  []
 
-[54]) [55]
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--164
+
+ []
+
+[59]
+Underfull \hbox (badness 10000) in paragraph at lines 165--180
+
+ []
+
+) [60]
 Chapter 8.
-(./Chapters/conclusion.tex) [56
+(./Chapters/conclusion.tex [61
 
-] [57] (./Chapters/appendix_a.tex
+]) [62] (./Chapters/appendix_a.tex
 Overfull \hbox (23.06062pt too wide) in paragraph at lines 295--309
  [][] 
  []
@@ -1427,9 +1487,9 @@ Overfull \hbox (70.93047pt too wide) in alignment at lines 330--405
  [] [] [] [] [] [] [] [] [] 
  []
 
-[58
+[63
 
-] [59]
+] [64]
 Overfull \hbox (59.2848pt too wide) in paragraph at lines 413--434
  [][] 
  []
@@ -1439,25 +1499,22 @@ Overfull \hbox (59.2848pt too wide) in paragraph at lines 439--460
  [][] 
  []
 
-) (./Chapters/appendix_b.tex [60] [61] [62]) [63] [64] (./main.bbl
+) (./Chapters/appendix_b.tex [65] [66] [67]) [68] [69] (./main.bbl
 Underfull \hbox (badness 1342) in paragraph at lines 52--62
 \OT1/lmr/m/n/10.95 (+20) 3896, Jan-uary 2019.  []eprint: https://academic.oup.com/mnras/article-
  []
 
-[65
+[70
 
-]) [66] (./main.aux)
-
-LaTeX Warning: There were undefined references.
-
+]) [71] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6249997CEDC6FACCD62009ADE184384E;12732.
+(rerunfilecheck)             Checksum: 79EA653B8A421FED59400BDE5A79D3DE;12859.
  ) 
 Here is how much of TeX's memory you used:
- 30176 strings out of 476024
- 559278 string characters out of 5794017
+ 30263 strings out of 476024
+ 563184 string characters out of 5794017
  1981382 words of memory out of 5000000
- 49436 multiletter control sequences out of 15000+600000
+ 49504 multiletter control sequences out of 15000+600000
  620042 words of font info for 225 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,22n,80p,1043b,1178s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1465,10 +1522,10 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{https://www.atlast.uio.no} has been referenced but does not exist, replaced by a fixed one
 
 {c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmib10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (68 pages, 1754237 bytes).
+Output written on main.pdf (73 pages, 1962334 bytes).
 PDF statistics:
- 1722 PDF objects out of 1728 (max. 8388607)
- 1101 compressed objects within 12 object streams
- 298 named destinations out of 1000 (max. 500000)
- 53992 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 2114 PDF objects out of 2487 (max. 8388607)
+ 1164 compressed objects within 12 object streams
+ 308 named destinations out of 1000 (max. 500000)
+ 54032 words of extra memory for PDF output out of 61914 (max. 10000000)
 

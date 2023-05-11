@@ -1,50 +1,16 @@
-\section{Experiment 1: Base Pointing Model}
-To address the research question of whether machine learning models can replace the traditional analytical linear regression models commonly used in radio/(sub-)mm telescopes,
-we utilized raw data from the apex telescope containing input and observed coordinates for azimuth and elevation coordinates.
-Typically, linear regression models are fitted to this kind of raw data using multiple geometrical terms and empirical terms.
-As a benchmark, we used a linear regression model and compared its performance against four different neural network architectures (see Figure \ref{fig:nn_architecture}).
-Our goal was to determine if a machine learning approach could outperform the linear regression model, and if so, which type of architecture performs the best.
-We employed cross-validation with six folds and found that all neural network architectures significantly outperformed the linear regression model.
-The mean RMS of the linear regression model was $47.63''$ with a standard deviation of $12.81''$, whereas all neural network architectures fell within the range of $16''$-$19''$ with deviations of $5''$-$7''$.
-Although all the neural network architectures had similar performance and standard deviation, we cannot conclude that any of them is better than the others.
-Overall, our results indicate that machine learning models can outperform traditional analytical models for pointing offset prediction in radio telescopes,
-and we encourage further research in this area to explore the full potential of machine learning techniques.\\
-
-Analysis of the hyperparameters selected for the top-performing models reveals that a majority of them are relatively simple in structure.
-Interestingly, none of the models employed two hidden layers.
-Additionally, the architectures that incorporated distinct layers for the terms employed in the analytical pointing models exhibited lower neuron counts in their nonlinear layers.
-This can be attributed to the fact that the level of complexity required for the input features provided to the nonlinear layers is assumed to be lower when other aspects of the model are responsible for handling certain types of factors.
-Thus, the observed pattern of hyperparameter selection is consistent with the expectation based on arcitechture.\\
-
-We now examine the features selected by each of the models, shown in Table \ref{tab:exp1_features}.
-All the models received COMMANDAZ and COMMANDEL, and the "Seperated" neural networks all received the harmonic features as inputs in the linear part of the network.
-The rest of the features were randomly selected.
-We see that there are not a lot of nonlinear features utilized by the models, showing that the factors that affect the pointing error are hard to model with the current training set.
-Perhaps more data is needed to figure out more complex relations between the features that can help further increase the pointing models performance.
-
-
-\begin{itemize}
-    \item comment on the features in the best models
-    \item comment on parameters?
-    \item comment on that this might not be the most realistic test of performance, but it shows that it outperformas linear regression
-    \item could be suitable given that it is maybe easier to maintain, but need to find better realistic test case. If we had all optical data for instance taht is used to fit the linear model, we could compare,
-    \item With a realistic ase, we could actually test robustness too.
-\end{itemize}
-
-
-\section{Experiment 2: Pointing Correction Model Version 2}
-The first research question addressed in this thesis is whether machine learning can enhance the pointing accuracy of a radio telescope using the same pointing strategy as currently employed.
-To investigate this question, we explore a realistic scenario (case 1) in which a model is trained on a smaller period of data and used to predict the offset of consecutive scans for a period afterwards.
+\section{Experiment 1: Pointing Correction Model}
+The first research question addressed in this thesis is whether machine learning can enhance the pointing accuracy of a radio telescope using the current pointing strategy.
+To investigate this question, we explore a realistic scenario (case 1) in which a model is trained on a smaller period of data and used to predict the offset of consecutive scans for a period afterward.
 We focus now on the model predicting the offsets of only NFLASH230. 
 The results from this case, presented in Table \ref{tab:results_minval_val_test_days_04_n230}, demonstrate that the model's performance on the validation set is promising,
 with the root-mean-square (RMS) ratio in the range of approximately $0.80$-$0.85$ for azimuth and elevation,
 which corresponds to a $15$-$20\%$ reduction in pointing offset.
-However, we observe that this performance does not transfer to the following test period,
-in which the RMS ratios are in the range of $1.16$-$1.46$, indicating a $16$-$46\%$ increase in pointing offset.
-There are several possible reasons for the poor performance of the model on the test set.
-One of the limitations of tree-based models, such as XGBoost, is that they are unable to generalize well to new data that is different from the training data,
+However, this performance does not transfer to the following test period,
+in which the RMS ratios are $1.16$-$1.46$, indicating a $16$-$46\%$ increase in pointing offset.
+There are several possible reasons for the model's poor performance on the test set.
+One of the limitations of tree-based models, such as XGBoost, is that they typically do not generalize well to new data that is different from the training data,
 as they predict solely on logical conditions seen in the training set.
-If the factors that affect the pointing offset change over time and the new data is very different from the training data, the model is likely to perform poorly. 
+If the factors affecting the pointing offset change over time and the new data is very different from the training data, the model will likely perform poorly. 
 Furthermore, another potential explanation for the poor performance could be that the dataset is too small, and the model overfits on the validation set.
 The results of this experiment suggest that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
 To train a proper complex model, a larger amount of data is required, at least more than the number of samples in the training and validation sets for case 1, being \textcolor{red}{add samples here}.
@@ -53,8 +19,8 @@ We further explore this aspect by examining Table \ref{tab:results_nflash_days},
 This provides an idea of the complexity that might provide the best performing models on the test set.
 Even though the model with the best performance on the validation set is not chosen, which could potentially be a lucky performance or overfitted,
 no improvement is observed in the current pointing model on the test set.
-However, the results show better performance than the first table \ref{tab:results_minval_val_test_days_04_n230}.
-The same trends are observed when predicting offsets from all instruments \ref{tab:results_minval_val_test_days_04_all,tab:results_all_days}. \\
+However, the results show better performance than the first Table \ref{tab:results_minval_val_test_days_04_n230}.
+The same trends are observed when predicting offsets from all instruments in Tables \ref{tab:results_minval_val_test_days_04_all} and \ref{tab:results_all_days}. \\
 
 Moving on to case 2, which tests whether the amount of data is a limitation for enhancing the pointing accuracy.
 This test case is less realistic because the data is split into $6$ folds and cross-validation is performed,
@@ -66,8 +32,7 @@ This shows that more training data helps the model generalize, which is somewhat
 which helps the model learn what causes the offsets.
 The average RMS ratio over all folds on the test set for case 2 is $0.958$ for azimuth and $0.941$ for elevation.
 With the standard deviations, the $95\%$ confidence intervals would be put at $[0.850, 1.066]$ for azimuth and $[0.786, 1.010]$ for elevation.
-Given that the upper bound of both confidence intervals are larger than $1$, and the fact that the testing case is not realistic,
-we cannot conclude that the model is able to reduce the pointing offset in a robust and consistent manner.
+Given that the upper bound of both confidence intervals are larger than $1$, and the fact that the testing case is not realistic, we cannot conclude that the model can reduce the pointing offset in a robust and consistent manner.
 For an unbiased result that reflects expected performance in practice, the RMS ratio for the last fold in Table \ref{tab:results_minval_val_test_days_04_n230} is used,
 showing a $7.0\%$ and $9.4\%$ reduced RMS for azimuth and elevation, respectively.
 This indicates that a possible pointing strategy could be training a model on multiple months worth of data and then using the model for a couple of weeks.
@@ -80,7 +45,7 @@ In case 2, the model predicting offsets from all instruments shows results simil
 The reduced performance is likely due to less of training data available for the other instruments.
 The difference in performance between these two models provides some insights.
 First, it suggests that various factors influence the different instruments differently.
-Otherwise, we would expect the larger model to perform better than the smaller.
+Otherwise, we expect the larger model to perform better than the smaller.
 The reason that each instruments are affected differently can be the different mounting locations at the telescope.
 Different mounting locations mean that the path of photons leading to the receiver can vary, leading to distinct factors affecting the pointing.\\
 
@@ -101,7 +66,7 @@ Another option to consider for predicting the pointing offsets is to use neural 
 These models offer several advantages if trained successfully.
 For instance, they can handle multiple outputs and thus only require a single model.
 By training the neural network with two outputs, it can simultaneously consider the offsets in azimuth and elevation, and explore the correlation between them.
-It would also be beneficial to continuously fine-tune the network as new pointing scans become available.
+It would also be beneficial to fine-tune the network as new pointing scans become available continuously.
 Despite their potential benefits, our initial tests with neural networks did not yield satisfactory results,
 likely due to the limited amount of training data available.\\
 
@@ -114,10 +79,11 @@ In this case, reducing pointing offsets is not a primary objective of the machin
 Instead, maintaining the same level of pointing accuracy while conducting fewer pointing scans would be a satisfactory outcome.\\
 
 
-\begin{itemize}
-    \item comment on parameters
-    \item discuss the adjustments made by system,a nd that the analytical poinitng models change over time too, which can make it harder for amodel, considering there are many other factors to ocnsider.
-\end{itemize}
+
+% \begin{itemize}
+%     \item comment on parameters
+%     \item discuss the adjustments made by system,a nd that the analytical poinitng models change over time too, which can make it harder for amodel, considering there are many other factors to ocnsider.
+% \end{itemize}
 
 % \section{Experiment 2: Pointing Correction Model}
 % The first research question is if we can use machine learning to increase the pointing accuracy using the same pointing strategy as today.
@@ -177,3 +143,43 @@ Instead, maintaining the same level of pointing accuracy while conducting fewer 
 %     CI_{El} &= \bar{r}_{RMS_El} \pm 1.96 \cdot \sigma_El = [0.941 - 1.96\cdot 0.079, 0.941 + 1.96\cdot 0.079] = [0.786, 1.010]
 % \end{align}
 
+
+\section{Experiment 2: Pointing Model using Neural Networks}
+To address the second research question of whether machine learning models can replace the traditional analytical linear regression models commonly used in radio/(sub-)mm telescopes,
+we utilized raw data from the apex telescope containing input and observed coordinates for azimuth and elevation.
+Typically, linear regression models are fitted to this raw data using multiple geometrical and empirical terms.
+As a benchmark, we used a linear regression model and compared its performance against four different neural network architectures (see Figure \ref{fig:nn_architecture}).
+Our goal was to determine if a machine learning approach could outperform the linear regression model and, if so, which type of architecture performs the best.
+We employed cross-validation with six folds and found that all neural network architectures significantly outperformed the linear regression model.
+The mean RMS of the linear regression model was $47.63''$ with a standard deviation of $12.81''$, whereas all neural network architectures fell within the range of $16''$-$19''$ with deviations of $5''$-$7''$.
+Although all the neural network architectures had similar performance and standard deviation, we cannot conclude that any of them is better than the others.
+Overall, our results indicate that machine learning models can outperform traditional analytical models for pointing offset prediction in radio telescopes,
+and we encourage further research in this area to explore the full potential of machine learning techniques.\\
+
+Analysis of the hyperparameters selected for the top-performing models reveals that most of them are relatively simple in structure.
+Interestingly, none of the models employed two hidden layers.
+Additionally, the architectures incorporating distinct layers for the terms employed in the analytical pointing models exhibited lower neuron counts in their nonlinear layers.
+This is likely because the level of complexity required for the input features provided to the nonlinear layers is assumed to be lower when other aspects of the model are responsible for handling certain factors.
+Thus, the observed pattern of hyperparameter selection is consistent with the expectation based on architecture.\\
+
+Table \ref{tab:exp1_features} presents the features selected by each model.
+All the models included COMMANDAZ and COMMANDEL as inputs for the nonlinear layers. The "Separated" neural networks incorporated the harmonic features as inputs in the linear part of the network.
+We sampled the remaining features randomly.
+Interestingly, the models used few nonlinear features, indicating that the factors influencing pointing error are difficult to model with the current training set.
+Obtaining more data may be necessary to establish more complex relationships between features that can improve the performance of the pointing models.
+Notably, the regular neural network utilized only one additional feature, namely DISP\_ABS (which still requires explanation).
+This finding suggests that a neural network utilizing only the azimuth and elevation angle could outperform a linear regression model.
+However, linear regression models have advantages in terms of transparency and robustness, as they are inherently linear, and all the features in the model are independent of each other,
+resulting in a model that is unlikely to result in significant pointing errors.
+This is an important consideration when using machine learning models, which can be challenging to interpret.
+Their robustness must be thoroughly tested before being deployed in practical settings.
+These considerations also underlie the design of the "Separated" neural network architectures.
+We wanted to utilize the robustness of linear regression on the terms used in the current analytical pointing model while incorporating new features. 
+Considering that the experiment demonstrated negligible performance differences between the separate neural networks and the regular
+one and that the best models only choose a few features, we conclude that additional training data is required to see if this is a feasible approach.\\
+
+While the experiment did not demonstrate the performance that would be expected from using such models in practice,
+it indicates that a neural network could provide a more efficient and effective model than a linear regression model.
+Moreover, a neural network can be fine-tuned with newly obtained data, making it an appealing model.
+If this approach is shown to be reliable and high-performing, it could be the preferred choice for more advanced telescopes, as it may require less manual analysis to develop and maintain a pointing model.
+However, further testing with additional data is needed to confirm the feasibility of this approach.

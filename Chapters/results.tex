@@ -1,101 +1,5 @@
 
-\section{Experiment 1: Pointing Model using Neural Networks}
-
-Table \ref{tab:exp1_rms_folds_best_model} show the RMS in arcseconds on the test set over all folds for the different model arcitechtures.
-The models presented in this table are the ones with the lowest mean RMS across all test folds.
-A linear regression model is included for comparison. 
-It is clear that neural network architectures significantly outperform the linear regressiom model.
-From the mean RMS over all folds, we see that the different neural network arcitechtures offer similar performance.
-We also see that the RMS of fold $1$ is by far worse than the other folds.
-The lowest mean RMS is from the architecture where the non-linear features are connected to the geometrical and harmonic features.\\
-
-\begin{table}[!htbp]
-    \centering
-    \caption{RMS on all folds for the best model for all arcitechtures. The different arcitechtures are desribed in Figure \ref{fig:nn_architecture}.}
-    \begin{tabular}{lcccccccc}
-        \toprule
-        & \multicolumn{6}{c}{RMS [$''$] on test fold} & & \\
-        \cmidrule(lr){2-7}
-        Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
-        \midrule
-        Regular           & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
-        Seperated 1       & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
-        Seperated 2       & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
-        Seperated 3       & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
-        Linear regression & 70.55 & 40.19 & 51.17 & 49.69 & 36.86 & 37.29 & 47.63 & 12.81 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:exp1_rms_folds_best_model}
-\end{table}
-
-
-Table \ref{tab:exp1_hyperparameters_best_model} show the hyperparameter used for the best models.
-All arcitechtures perform better with a single hidden layer.
-The regular neural network uses ReLU activation and MSE loss, while the other arcitechtures use Tanh activation and MSD loss.
-The regular neural network also have more neurons in the hidden layer and a higher learning rate.
-The batch size is also varying. There seem to be some similarities between the hyperaprameters chosen for the three arcitectures with seperate features.
-However, given the large standard deviation of the mean RMS, there is probably bigger issues than hyperparameter tuning.\\
-
-\begin{table}[!htbp]
-    \centering
-    \caption{Hyperparameters used in the best performing model for each arcitechture.}
-    \begin{tabular}{lccccc}
-        \toprule
-        Architecture & Activation & Hidden Layers & Learning Rate & Batch Size & Loss \\
-        \midrule
-        Regular &  ReLU & [82] & 0.0199 & 334 & MSE \\
-        Sep1    &  Tanh & [40] & 0.0098 & 101 & MSD \\
-        Sep2    &  Tanh & [40] & 0.0098 & 101 & MSD \\
-        Sep3    &  Tanh & [26] & 0.0039 & 358 & MSD \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:exp1_hyperparameters_best_model}
-\end{table}
-
-
-
-Table \ref{tab:exp1_features} lists the features selected for the best performing models.
-
-
-\begin{table}[!htbp]
-    \centering
-    \caption{Features used in the best performing model for each arcitechture.}
-    \begin{tabular}{|l|ccccc|}
-        \hline
-        Feature & Sep 1 & Sep 2 & Sep 3 & Regular & \\ \hline
-        COMMANDAZ & x & x & x & x & \\ \hline
-        COMMANDEL & x & x & x & x & \\ \hline
-        DISP ABS3 & x & x & x & x & \\ \hline
-        CA & x & x & x & & \\ \hline
-        NPAE & x & x & x & & \\ \hline
-        Constant & x & x & x & & \\ \hline
-        $\cos{(\text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\cos{(2\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\cos{(3\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\cos{(4\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\cos{(5\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\sin{(\text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\sin{(2 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\sin{(3 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\sin{(4 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        $\sin{(5 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
-        Turbulence & x & x & x & & \\ \hline
-        DEL TILTTEMP & x & x & x & & \\ \hline
-        DAZ DISP & & & x & & \\ \hline
-        POSITIONY & & & x & & \\ \hline
-        TILT1Y & & & x & & \\ \hline
-        TEMPERATURE & & & x & & \\ \hline
-        TILT1T & & & x & & \\ \hline
-    \end{tabular}
-    \label{tab:exp1_features}
-\end{table}
-
-\newpage
-
-
-
-
-\section{Experiment 2: Pointing Correction Model}
+\section{Experiment 1: Pointing Correction Model}
 In this section, we present the results obtained from the second experiment.
 Prior to presenting the results, we provide a reminder of the RMS ratio measure \eqref{eq:mean_rms_compared}, which will be frequently used in this section.
 This measure is used to compare the current pointing model to the machine learning model, and a value less than $1$ indicates an improvement of the current model. \\
@@ -253,7 +157,6 @@ This results, is the most realistic and unbiased estimate we have on the perform
 
 For a list of the $50$ features with the most mutual information to the target variable, please refer to Table \ref{tab:exp2_top50_features} in Appendix A \ref{sec:appendix_a}.
 
-
 \begin{table}[!htbp]
     \centering
     \caption{Mean RMS ratio on test set (mean over values in Tables \ref{tab:results_minval_val_test_days_04_n230} and \ref{tab:results_minval_val_test_days_04_all}).}
@@ -271,3 +174,183 @@ For a list of the $50$ features with the most mutual information to the target v
     \end{tabular}
     \label{tab:results_minval_days04}
 \end{table}
+
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf}
+        \caption{NFLASH230 elevation model}
+        \label{subfig:hist_lastfold_nflash230_az}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[t]{\textwidth}
+       \centering
+       \includegraphics[width=\textwidth]{Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf}
+       \caption{NFLASH230 elevation model}
+       \label{subfig:hist_lastfold_nflash230_el}
+    \end{subfigure}
+    \caption{Distribution of offsets with and without XGBoost NFLASH230 pointing correction model}
+    \label{fig:histogram_selected_result_xgb}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf}
+        \caption{NFLASH230 azimuth model}
+        \label{subfig:sortpred_lastfold_nflash230_az}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[t]{\textwidth}
+       \centering
+       \includegraphics[width=1\textwidth]{Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf}
+       \caption{NFLASH230 elevation model}
+       \label{subfig:sortpred_lastfold_nflash230_el}
+    \end{subfigure}
+    \caption{Offset predictions by the XGBoost NFLASH230 pointing correction model. Predicted and observed values, sorted in ascending order by observed value}
+    \label{fig:sortpred_selected_result_xgb}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.92\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf}
+        \caption{Validation set}
+        \label{subfig:sage_lastfold_nflash230_az_val}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[t]{0.92\textwidth}
+       \centering
+       \includegraphics[width=1\textwidth]{Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf}
+       \caption{Test set}
+       \label{subfig:sage_lastfold_nflash230_az_test}
+    \end{subfigure}
+    \caption{SAGE values for the NFLASH230 azimuth pointing correction model on the a) validation set, and b) test set.}
+    \label{fig:sage_lastfold_nflash230_az}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.92\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf}
+        \caption{Validation set}
+        \label{subfig:sage_lastfold_nflash230_el_val}
+    \end{subfigure}
+    \\
+    \begin{subfigure}[t]{0.92\textwidth}
+       \centering
+       \includegraphics[width=1\textwidth]{Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf}
+       \caption{Test set}
+       \label{subfig:sage_lastfold_nflash230_el_test}
+    \end{subfigure}
+    \caption{SAGE values for the NFLASH230 elevation pointing correction model on the a) validation set, and b) test set.}
+    \label{fig:sage_lastfold_nflash230_el}
+\end{figure}
+
+
+
+
+
+\section{Experiment 2: Pointing Model using Neural Networks}
+
+Table \ref{tab:exp1_rms_folds_best_model} show the RMS in arcseconds on the test set over all folds for the different model arcitechtures.
+The models presented in this table are the ones with the lowest mean RMS across all test folds.
+A linear regression model is included for comparison. 
+It is clear that neural network architectures significantly outperform the linear regressiom model.
+From the mean RMS over all folds, we see that the different neural network arcitechtures offer similar performance.
+We also see that the RMS of fold $1$ is by far worse than the other folds.
+The lowest mean RMS is from the architecture where the non-linear features are connected to the geometrical and harmonic features.\\
+
+\begin{table}[!htbp]
+    \centering
+    \caption{RMS on all folds for the best model for all arcitechtures. The different arcitechtures are desribed in Figure \ref{fig:nn_architecture}.}
+    \begin{tabular}{lcccccccc}
+        \toprule
+        & \multicolumn{6}{c}{RMS [$''$] on test fold} & & \\
+        \cmidrule(lr){2-7}
+        Network & 1 & 2 & 3 & 4 & 5 & 6 & Mean & STD\\
+        \midrule
+        Regular           & 28.06 & 19.34 & 12.28 & 13.25 & 17.19 & 16.33 & 17.74 & 5.19 \\
+        Seperated 1       & 30.69 & 16.93 & 13.76 & 10.04 & 15.77 & 13.61 & 16.80 & 6.57 \\
+        Seperated 2       & 27.34 & 20.75 & 12.65 & 24.17 & 13.64 & 16.69 & 19.21 & 5.38 \\
+        Seperated 3       & 30.27 & 20.59 & 14.01 & 10.76 & 13.67 & 10.34 & 16.61 & 6.97 \\
+        Linear regression & 70.55 & 40.19 & 51.17 & 49.69 & 36.86 & 37.29 & 47.63 & 12.81 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:exp1_rms_folds_best_model}
+\end{table}
+
+
+Table \ref{tab:exp1_hyperparameters_best_model} show the hyperparameter used for the best models.
+All arcitechtures perform better with a single hidden layer.
+The regular neural network uses ReLU activation and MSE loss, while the other arcitechtures use Tanh activation and MSD loss.
+The regular neural network also have more neurons in the hidden layer and a higher learning rate.
+The batch size is also varying. There seem to be some similarities between the hyperaprameters chosen for the three arcitectures with seperate features.
+However, given the large standard deviation of the mean RMS, there is probably bigger issues than hyperparameter tuning.\\
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Hyperparameters used in the best performing model for each arcitechture.}
+    \begin{tabular}{lccccc}
+        \toprule
+        Architecture & Activation & Hidden Layers & Learning Rate & Batch Size & Loss \\
+        \midrule
+        Regular &  ReLU & [82] & 0.0199 & 334 & MSE \\
+        Sep1    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+        Sep2    &  Tanh & [40] & 0.0098 & 101 & MSD \\
+        Sep3    &  Tanh & [26] & 0.0039 & 358 & MSD \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:exp1_hyperparameters_best_model}
+\end{table}
+
+
+
+Table \ref{tab:exp1_features} lists the features selected for the best performing models.
+
+
+\begin{table}[!htbp]
+    \centering
+    \caption{Features used in the best performing model for each arcitechture.}
+    \begin{tabular}{|l|ccccc|}
+        \hline
+        Feature & Sep 1 & Sep 2 & Sep 3 & Regular & \\ \hline
+        COMMANDAZ & x & x & x & x & \\ \hline
+        COMMANDEL & x & x & x & x & \\ \hline
+        DISP ABS3 & x & x & x & x & \\ \hline
+        CA & x & x & x & & \\ \hline
+        NPAE & x & x & x & & \\ \hline
+        Constant & x & x & x & & \\ \hline
+        $\cos{(\text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(2\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(3\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(4\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\cos{(5\cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(\text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(2 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(3 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(4 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        $\sin{(5 \cdot \text{COMMANDEL})}$ & x & x & x & & \\ \hline
+        Turbulence & x & x & x & & \\ \hline
+        DEL TILTTEMP & x & x & x & & \\ \hline
+        DAZ DISP & & & x & & \\ \hline
+        POSITIONY & & & x & & \\ \hline
+        TILT1Y & & & x & & \\ \hline
+        TEMPERATURE & & & x & & \\ \hline
+        TILT1T & & & x & & \\ \hline
+    \end{tabular}
+    \label{tab:exp1_features}
+\end{table}
+
+\newpage
+
+
+

@@ -205,8 +205,7 @@ To address this issue, we collected data for feature engineering over a shorter 
 It is important to note that using data from after a pointing scan has ended can be inaccurate, as the telescope may start observing a different source.
 When examining the scatter plot of scan durations, we observed clusters of scans around $60$-$70$ seconds, $120$-$130$ seconds, and so on.
 To ensure accuracy, we used the mean scan duration grouped by instrument and shorter than $100$ seconds as the cutoff for the duration of time from which we collected data.
-For the scans with an exact start and end time, we used this time period instead.
-\textcolor{red}{Add list of values}
+For the scans with an exact start and end time, we used this time period instead. \textcolor{red}{Add list of values}
 
 
 \begin{figure}[H]
@@ -363,127 +362,13 @@ Another measure tested is the total angle between the pointing and the sun's pos
 
 
 \section{Machine Learning Experiments}\label{sec:ml_exp}
-In this section, we will provide an overview of two machine learning experiments pertinent to the two research questions. \textcolor{red}{refer to section with research qs}
-The first experiment aims to investigate the effectiveness of neural networks in developing a pointing model that could replace the current linear model, which is created through linear regression.
-It explores the feasibility of a more sophisticated model in terms of pointing accuracy.
-The second experiment aims to examine the effectiveness of an XGBoost model in predicting pointing scan offsets to enhance the pointing accuracy.
+In this section, we will provide an overview of two machine learning experiments pertinent to the two research questions \ref{sec:introduction}.
+The first experiment aims to examine the effectiveness of an XGBoost model in predicting pointing scan offsets to enhance the pointing accuracy.
 The primary objective of this experiment is to assess whether the proposed model can outperform the current model in terms of pointing accuracy.
+The second experiment aims to investigate the effectiveness of neural networks in developing a pointing model that could replace the current linear model, which is created through linear regression.
+It explores the feasibility of a more sophisticated model in terms of pointing accuracy.
 
-\subsection{Experiment 1: Pointing Model using Neural Networks}
-This experiment uses the raw dataset containing input coordinates, $Az_{\text{input}}$ and $El_{\text{input}}$ respectively, and corresponding true observed values $Az_{\text{observed}}$ and $El_{\text{observed}}$.
-
-The goal is to find a model $f$ such that
-\begin{equation}
-    f(X) \approx (\delta_{\text{Az}}, \delta_{\text{El}}) = (Az_{\text{observed}}-Az_{\text{input}}, El_{\text{observed}}-El_{\text{input}})
-\end{equation}
-
-We split the data into a train, validation, and test set.
-The last $15\%$ of the data, which we sorted by date, is used for testing.
-We use the remaining $85\%$ of the data for training and validation and split this set into $20\%$ for training and $80\%$ for validation.
-This results in $\approx 76\%$ and $\approx 24\%$ of the total dataset used for training and validation.
-
-\subsubsection{Feature Selection}
-Selecting the right features is essential in improving the pointing model's accuracy.
-This model uses two types of features: geometrical and harmonic terms already part of the current linear base model and new features extracted from the telescope's database.
-We identified relevant features by calculating Pearson's and Spearman's rank correlation to the offsets for all features.
-We analyzed the correlation of the geometrical terms, and harmonic terms using sine and cosine functions of azimuth and elevation up to the fifth order.
-Then, we chose the terms with the strongest correlation to the model and used them in all models.
-We made a list of the features we extracted from the database that showed a correlation equal to or greater than 0.1.
-During model training, we randomly selected a subset of 2 to 19 features from this list and used them to train the model.
-
-\subsubsection{Model Architecture}
-This experiment utilized four different model architectures.
-The first architecture involved feeding all input data into one, two, or three hidden layers.
-The other three architectures incorporated machine learning techniques by separating the geometrical and harmonic terms of the input data from the other features and processing them using distinct architectures.
-With these approaches, we intend to keep the current model's simplicity and performance while incorporating new features.
-
-The following are the four different architectures:
-\begin{enumerate}
-    \item \textbf{Regular Neural Network:} All features are passed through the same layers, all with a nonlinear activation function.
-    See Figure \ref{subfig:regular}
-    \item \textbf{Neural Network with Separated Features 1:} This architecture separates the input features into two groups: geometric and harmonic features, and the rest of the features.
-    The geometric and harmonic features are connected directly to the linear output layer, while we pass the remaining features through layers with nonlinear activation functions.
-    See Figure \ref{subfig:comb_sep1}
-    \item \textbf{Neural Network with Separated Features 2:} This architecture is similar to the previous architecture,
-    but we feed the geometric and harmonic features through an additional layer of nonlinear activation function before connecting them to the output layer.
-    See Figure \ref{subfig:comb_sep2}
-    \item \textbf{Neural Network with Separated Features 3:} This architecture combines the previous two architectures by passing the regular features through a few hidden layers with nonlinear activation functions before concatenating them with the geometric and harmonic features.
-    We then pass the combined features through a final layer before connecting them to the output layer.
-    See Figure \ref{subfig:comb_sep3}
-\end{enumerate}
-These are visualized in Figure \ref{fig:nn_architecture}.
-
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \input{Other figures/regular_nn.tex}
-        \caption{\textbf{Regular neural network:}
-        This is the standard neural network architecture without any feature separation.
-        All features are connected to the same layers.}
-        \label{subfig:regular}
-    \end{subfigure}
-    \hfill
-   \begin{subfigure}[t]{0.49\textwidth}
-       \centering
-       \input{Other figures/combined_nn_sep1.tex}
-       \caption{\textbf{Neural network with separated features 1:}
-       In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer without any nonlinear activation function.}
-       \label{subfig:comb_sep1}
-\end{subfigure}
-\\~\\
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \input{Other figures/combined_nn_sep2.tex}
-        \caption{\textbf{Neural network with separated features 2}:
-        Similar to the previous architecture, the geometric and harmonic features are separated from the other features.
-        However, they are also processed by a nonlinear activation function before being connected to the output layer.}
-        \label{subfig:comb_sep2}
-    \end{subfigure}
-    \hfill
-       \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \input{Other figures/combined_nn_sep3.tex}
-        \caption{\textbf{Neural network with separated features 3:}
-        In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.}
-        \label{subfig:comb_sep3}
-    \end{subfigure}
-     \caption{These architectures were used to train a base pointing model on raw data.}
-     \label{fig:nn_architecture}
-\end{figure}
-
-The hyperparameters for the neural networks were randomly sampled from different distributions, as presented in Table \ref{tab:nn_hyperparameters}.
-Some parameters were consistent across all models, such as the Adam optimization algorithm and the mean squared error loss function.
-In total, \textcolor{red}{input the number of fitted NNs here} networks of each architecture are trained for $300$ epochs.
-We pick the model from the epoch with the best performance on the validation set.
-\begin{table}[H]
-    \centering
-    \caption{This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.}
-    \begin{tabular}{lcc}
-    \hline
-    \textbf{Name} & \textbf{Distribution Type} & \textbf{Range} \\ \hline
-    hidden layers & uniform integer & [$1$,$3$] \\
-    hidden layer size & uniform integer & [$20$, $120$] \\
-    learning rate & uniform & [$0.001$, $0.02$] \\
-    batch size & uniform integer & [$32$, $512$] \\
-    activation & categorical & [gelu, tanh] \\ \hline
-    \end{tabular}
-    \label{tab:nn_hyperparameters}
-    \end{table}
-
-\subsubsection{Loss Function and Model Evaluation}
-To evaluate the performance of the models, we used the root mean squared (RMS), measured in arcseconds, on the test set.
-We calculate the RMS as follows:
-\begin{equation}
-    \text{RMS} = \sqrt{ \frac{1}{N} \sum_{i=1}^N \left( (\tilde{\delta}_{Az,i} - \delta_{Az,i})^2 + (\tilde{\delta}_{El,i} - \delta_{El,i})^2 \right)},
-\end{equation}
-where $\tilde{\delta}_{Az}$ and $\tilde{\delta}_{El}$ are the predicted offsets, while $\delta_{Az}$ and $\delta_{El}$ are the true values.
-$N$ is the number of observations in the test set.
-
-This RMS is used to compare the performance of the models.
-It will also be compared with a benchmark linear regression model to see if a machine learning approach offers any improvements.
-
-\subsection{Experiment 2: Pointing Correction Model}
+\subsection{Experiment 1: Pointing Correction Model}
 This experiment aims to improve the accuracy of the existing pointing model by training XGBoost models to predict offsets obtained from pointing scans.
 To accomplish this, we utilized two different datasets, which we processed using the cleaning outlined in section \ref{sec:cleaning_pt_scan}.
 The difference between these datasets is that one contains the scans from all instruments, while the other only contains the scans from NFLASH230.
@@ -582,3 +467,119 @@ This gives us an average ratio $\bar{r}_{RMS}$, which measures the improvement i
 If $\bar{r}_{RMS} < 1$, it indicates that the XGBoost model outperforms the current pointing correction method on average across all test folds.
 By comparing the average ratio $\bar{r}_{RMS}$ for the two different cross-validation cases in Figure \ref{fig:datasplit_cases} and the selected number of features,
 we can identify which models provide the best performance.
+
+
+
+\subsection{Experiment 2: Pointing Model using Neural Networks}
+This experiment uses the raw dataset containing input coordinates, $Az_{\text{input}}$ and $El_{\text{input}}$ respectively, and corresponding true observed values $Az_{\text{observed}}$ and $El_{\text{observed}}$.
+
+The goal is to find a model $f$ such that
+\begin{equation}
+    f(X) \approx (\delta_{\text{Az}}, \delta_{\text{El}}) = (Az_{\text{observed}}-Az_{\text{input}}, El_{\text{observed}}-El_{\text{input}})
+\end{equation}
+
+We split the data into a train, validation, and test set.
+The last $15\%$ of the data, which we sorted by date, is used for testing.
+We use the remaining $85\%$ of the data for training and validation and split this set into $20\%$ for training and $80\%$ for validation.
+This results in $\approx 76\%$ and $\approx 24\%$ of the total dataset used for training and validation.
+
+\subsubsection{Feature Selection}
+Selecting the right features is essential in improving the pointing model's accuracy.
+This model uses two types of features: geometrical and harmonic terms already part of the current linear base model and new features extracted from the telescope's database.
+We identified relevant features by calculating Pearson's and Spearman's rank correlation to the offsets for all features.
+We analyzed the correlation of the geometrical terms, and harmonic terms using sine and cosine functions of azimuth and elevation up to the fifth order.
+Then, we chose the terms with the strongest correlation to the model and used them in all models.
+We made a list of the features we extracted from the database that showed a correlation equal to or greater than 0.1.
+During model training, we randomly selected a subset of 2 to 19 features from this list and used them to train the model.
+
+\subsubsection{Model Architecture}
+This experiment utilized four different model architectures.
+The first architecture involved feeding all input data into one, two, or three hidden layers.
+The other three architectures incorporated machine learning techniques by separating the geometrical and harmonic terms of the input data from the other features and processing them using distinct architectures.
+With these approaches, we intend to keep the current model's simplicity and performance while incorporating new features.
+
+The following are the four different architectures:
+\begin{enumerate}
+    \item \textbf{Regular Neural Network:} All features are passed through the same layers, all with a nonlinear activation function.
+    See Figure \ref{subfig:regular}
+    \item \textbf{Neural Network with Separated Features 1:} This architecture separates the input features into two groups: geometric and harmonic features, and the rest of the features.
+    The geometric and harmonic features are connected directly to the linear output layer, while we pass the remaining features through layers with nonlinear activation functions.
+    See Figure \ref{subfig:comb_sep1}
+    \item \textbf{Neural Network with Separated Features 2:} This architecture is similar to the previous architecture,
+    but we feed the geometric and harmonic features through an additional layer of nonlinear activation function before connecting them to the output layer.
+    See Figure \ref{subfig:comb_sep2}
+    \item \textbf{Neural Network with Separated Features 3:} This architecture combines the previous two architectures by passing the regular features through a few hidden layers with nonlinear activation functions before concatenating them with the geometric and harmonic features.
+    We then pass the combined features through a final layer before connecting them to the output layer.
+    See Figure \ref{subfig:comb_sep3}
+\end{enumerate}
+These are visualized in Figure \ref{fig:nn_architecture}.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \input{Other figures/regular_nn.tex}
+        \caption{\textbf{Regular neural network:}
+        This is the standard neural network architecture without any feature separation.
+        All features are connected to the same layers.}
+        \label{subfig:regular}
+    \end{subfigure}
+    \hfill
+   \begin{subfigure}[t]{0.49\textwidth}
+       \centering
+       \input{Other figures/combined_nn_sep1.tex}
+       \caption{\textbf{Neural network with separated features 1:}
+       In this architecture, the geometric and harmonic features are separated from the other features and directly connected to the output layer without any nonlinear activation function.}
+       \label{subfig:comb_sep1}
+\end{subfigure}
+\\~\\
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \input{Other figures/combined_nn_sep2.tex}
+        \caption{\textbf{Neural network with separated features 2}:
+        Similar to the previous architecture, the geometric and harmonic features are separated from the other features.
+        However, they are also processed by a nonlinear activation function before being connected to the output layer.}
+        \label{subfig:comb_sep2}
+    \end{subfigure}
+    \hfill
+       \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \input{Other figures/combined_nn_sep3.tex}
+        \caption{\textbf{Neural network with separated features 3:}
+        In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.}
+        \label{subfig:comb_sep3}
+    \end{subfigure}
+     \caption{These architectures were used to train a base pointing model on raw data.}
+     \label{fig:nn_architecture}
+\end{figure}
+
+The hyperparameters for the neural networks were randomly sampled from different distributions, as presented in Table \ref{tab:nn_hyperparameters}.
+Some parameters were consistent across all models, such as the Adam optimization algorithm and the mean squared error loss function.
+In total, we trained $100$ networks of each architecture for $200$ epochs.
+We pick the model from the epoch with the best performance on the validation set.
+\begin{table}[H]
+    \centering
+    \caption{This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.}
+    \begin{tabular}{lcc}
+    \hline
+    \textbf{Name} & \textbf{Distribution Type} & \textbf{Range} \\ \hline
+    hidden layers & uniform integer & [$1$,$3$] \\
+    hidden layer size & uniform integer & [$20$, $120$] \\
+    learning rate & uniform & [$0.001$, $0.02$] \\
+    batch size & uniform integer & [$32$, $512$] \\
+    activation & categorical & [gelu, tanh] \\ \hline
+    \end{tabular}
+    \label{tab:nn_hyperparameters}
+    \end{table}
+
+\subsubsection{Loss Function and Model Evaluation}
+To evaluate the performance of the models, we used the root mean squared (RMS), measured in arcseconds, on the test set.
+We calculate the RMS as follows:
+\begin{equation}
+    \text{RMS} = \sqrt{ \frac{1}{N} \sum_{i=1}^N \left( (\tilde{\delta}_{Az,i} - \delta_{Az,i})^2 + (\tilde{\delta}_{El,i} - \delta_{El,i})^2 \right)},
+\end{equation}
+where $\tilde{\delta}_{Az}$ and $\tilde{\delta}_{El}$ are the predicted offsets, while $\delta_{Az}$ and $\delta_{El}$ are the true values.
+$N$ is the number of observations in the test set.
+
+This RMS is used to compare the performance of the models.
+It will also be compared with a benchmark linear regression model to see if a machine learning approach offers any improvements.
