@@ -90,14 +90,15 @@
 \contentsline {subsubsection}{Loss Function and Model Evaluation}{46}{section*.63}%
 \contentsline {chapter}{\numberline {6}Results}{47}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Experiment 1: Pointing Correction Model}{47}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Model using Neural Networks}{55}{section.6.2}%
-\contentsline {chapter}{\numberline {7}Discussion}{57}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{57}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{59}{section.7.2}%
-\contentsline {chapter}{\numberline {8}Conclusion}{61}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Experiment 1: Pointing Correction Model}{61}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Experiment 2: Pointing Model using Neural Networks}{62}{section.8.2}%
-\contentsline {section}{\numberline {.1}Appendix A}{63}{section.Alph0.1}%
-\contentsline {section}{\numberline {.2}Appendix B}{65}{section.Alph0.2}%
-\contentsline {section}{\numberline {.3}Transformation of pointing offsets and corrections}{65}{section.Alph0.3}%
-\contentsline {chapter}{Bibliography}{70}{appendix*.85}%
+\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Model using Neural Networks}{56}{section.6.2}%
+\contentsline {chapter}{\numberline {7}Discussion}{58}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{58}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{60}{section.7.2}%
+\contentsline {chapter}{\numberline {8}Conclusion}{62}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Experiment 1: Pointing Correction Model}{62}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Experiment 2: Pointing Model using Neural Networks}{63}{section.8.2}%
+\contentsline {section}{\numberline {.1}Appendix A}{64}{section.Alph0.1}%
+\contentsline {section}{\numberline {.2}Raw data correlation}{70}{section.Alph0.2}%
+\contentsline {section}{\numberline {.3}Appendix B}{70}{section.Alph0.3}%
+\contentsline {section}{\numberline {.4}Transformation of pointing offsets and corrections}{70}{section.Alph0.4}%
+\contentsline {chapter}{Bibliography}{72}{appendix*.87}%

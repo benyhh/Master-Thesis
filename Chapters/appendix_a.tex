@@ -534,62 +534,64 @@
     \end{tabular}
 \end{table}
 
-% \section{Raw data corrElation}
-% \begin{table}[!htbp]
-%     \centering
-%     \caption{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.}
-%     \begin{tabular}{lccc}
-%         \toprule
-%         Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
-%         \midrule
-%         WINDSPEED\_VAR\_5        &      $0.10$ &      $0.12$ &               $0.11$ \\
-%         DAZ\_TILT\_MEDIAN\_1      &      $0.09$ &      $0.03$ &               $0.14$ \\
-%         DAZ\_TILTTEMP\_MEDIAN\_1  &      $0.00$ &     -$0.06$ &               $0.30$ \\
-%         TILT1Y\_MEDIAN\_1        &      $0.08$ &      $0.02$ &               $0.13$ \\
-%         TEMP26\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.19$ \\
-%         TEMP27\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.21$ \\
-%         TEMP28\_MEDIAN\_1        &      $0.04$ &      $0.11$ &              $-0.25$ \\
-%         TEMPERATURE\_MEDIAN\_1   &      $0.04$ &      $0.12$ &              $-0.26$ \\
-%         POSITIONZ\_MEDIAN\_1     &      $0.05$ &      $0.11$ &              $-0.21$ \\
-%         DEWPOINT\_MEDIAN\_1      &      $0.08$ &      $0.12$ &              $-0.15$ \\
-%         DAZ\_TOTAL\_MEDIAN\_1     &      $0.09$ &      $0.03$ &               $0.13$ \\
-%         WINDSPEED\_MEDIAN\_1     &      $0.02$ &      $0.02$ &               $0.13$ \\
-%         HESE2                  &      $0.46$ &      $0.44$ &               $0.44$ \\
-%         HESE3                  &      $0.98$ &      $0.94$ &               $0.77$ \\
-%         HESE4                  &      $0.97$ &      $0.92$ &               $0.74$ \\
-%         HESE5                  &      $0.34$ &      $0.31$ &               $0.15$ \\
-%         HACA5                  &      $0.06$ &      $0.05$ &               $0.10$ \\
-%         HECE                   &      $1.00$ &      $0.96$ &               $0.78$ \\
-%         HECE2                  &      $1.00$ &      $0.96$ &               $0.78$ \\
-%         HECE3                  &      $0.76$ &      $0.72$ &               $0.52$ \\
-%         HSCA5                  &      $0.12$ &      $0.11$ &               $0.14$ \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
+\section{Raw data correlation}
+\begin{table}[!htbp]
+    \centering
+    \caption{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.}
+    \begin{tabular}{lccc}
+        \toprule
+        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+        \midrule
+        WINDSPEED\_VAR\_5        &      $0.10$ &      $0.12$ &               $0.11$ \\
+        DAZ\_TILT\_MEDIAN\_1      &      $0.09$ &      $0.03$ &               $0.14$ \\
+        DAZ\_TILTTEMP\_MEDIAN\_1  &      $0.00$ &     -$0.06$ &               $0.30$ \\
+        TILT1Y\_MEDIAN\_1        &      $0.08$ &      $0.02$ &               $0.13$ \\
+        TEMP26\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.19$ \\
+        TEMP27\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.21$ \\
+        TEMP28\_MEDIAN\_1        &      $0.04$ &      $0.11$ &              $-0.25$ \\
+        TEMPERATURE\_MEDIAN\_1   &      $0.04$ &      $0.12$ &              $-0.26$ \\
+        POSITIONZ\_MEDIAN\_1     &      $0.05$ &      $0.11$ &              $-0.21$ \\
+        DEWPOINT\_MEDIAN\_1      &      $0.08$ &      $0.12$ &              $-0.15$ \\
+        DAZ\_TOTAL\_MEDIAN\_1     &      $0.09$ &      $0.03$ &               $0.13$ \\
+        WINDSPEED\_MEDIAN\_1     &      $0.02$ &      $0.02$ &               $0.13$ \\
+        HESE2                  &      $0.46$ &      $0.44$ &               $0.44$ \\
+        HESE3                  &      $0.98$ &      $0.94$ &               $0.77$ \\
+        HESE4                  &      $0.97$ &      $0.92$ &               $0.74$ \\
+        HESE5                  &      $0.34$ &      $0.31$ &               $0.15$ \\
+        HACA5                  &      $0.06$ &      $0.05$ &               $0.10$ \\
+        HECE                   &      $1.00$ &      $0.96$ &               $0.78$ \\
+        HECE2                  &      $1.00$ &      $0.96$ &               $0.78$ \\
+        HECE3                  &      $0.76$ &      $0.72$ &               $0.52$ \\
+        HSCA5                  &      $0.12$ &      $0.11$ &               $0.14$ \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:raw_data_spearmans}
+\end{table}
 
-% \begin{table}[!htbp]
-%     \centering
-%     \caption{Features with Pearson's correlation $\geq 0.1$ to either one of the target values.}
-%     \begin{tabular}{lccc}
-%         \toprule
-%         Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
-%         \midrule
-%         TEMP26\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.12$ \\
-%         TEMP27\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.13$ \\
-%         DAZ\_TOTAL\_MEDIAN\_1     &      $0.12$ &      $0.08$ &               $0.07$ \\
-%         WINDSPEED\_MEDIAN\_1     &      $0.03$ &      $0.03$ &               $0.10$ \\
-%         AWAZ                   &      $0.00$ &     $-0.01$ &               $0.57$ \\
-%         HESE2                  &      $0.56$ &      $0.54$ &               $0.45$ \\
-%         HESE3                  &      $0.97$ &      $0.90$ &               $0.43$ \\
-%         HESE4                  &      $0.91$ &      $0.82$ &               $0.26$ \\
-%         HESE5                  &      $0.29$ &      $0.22$ &              $-0.11$ \\
-%         HECE                   &      $1.00$ &      $0.92$ &               $0.45$ \\
-%         HECE2                  &      $0.98$ &      $0.89$ &               $0.38$ \\
-%         HECE3                  &      $0.70$ &      $0.62$ &               $0.10$ \\
-%         HSCA                   &      $0.01$ &     $-0.00$ &               $0.53$ \\
-%         \bottomrule
-%         \end{tabular}
-% \end{table}
+\begin{table}[!htbp]
+    \centering
+    \caption{Features with Pearson's correlation $\geq 0.1$ to either one of the target values.}
+    \begin{tabular}{lccc}
+        \toprule
+        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+        \midrule
+        TEMP26\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.12$ \\
+        TEMP27\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.13$ \\
+        DAZ\_TOTAL\_MEDIAN\_1     &      $0.12$ &      $0.08$ &               $0.07$ \\
+        WINDSPEED\_MEDIAN\_1     &      $0.03$ &      $0.03$ &               $0.10$ \\
+        AWAZ                   &      $0.00$ &     $-0.01$ &               $0.57$ \\
+        HESE2                  &      $0.56$ &      $0.54$ &               $0.45$ \\
+        HESE3                  &      $0.97$ &      $0.90$ &               $0.43$ \\
+        HESE4                  &      $0.91$ &      $0.82$ &               $0.26$ \\
+        HESE5                  &      $0.29$ &      $0.22$ &              $-0.11$ \\
+        HECE                   &      $1.00$ &      $0.92$ &               $0.45$ \\
+        HECE2                  &      $0.98$ &      $0.89$ &               $0.38$ \\
+        HECE3                  &      $0.70$ &      $0.62$ &               $0.10$ \\
+        HSCA                   &      $0.01$ &     $-0.00$ &               $0.53$ \\
+        \bottomrule
+        \end{tabular}
+    \label{tab:raw_data_pearson}
+\end{table}
 
 
 

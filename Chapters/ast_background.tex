@@ -23,14 +23,15 @@ The interval for azimuth angles is $[-270^\circ,270^\circ]$ due to APEX's abilit
 On the other hand, elevation is the angle perpendicular to the horizontal plane, with zero degrees corresponding to the telescope pointing at the horizon and $90\degr$ to the telescope pointing at the zenith directly above it.
 This thesis will use elevation instead of altitude to describe this coordinate.\\
 
-Another angle term used in this thesis is the horizontal angle.
-We will use the term azimuth when referring to the telescope pointing and the horizontal angle for the pointing offset.
-The azimuth angle is the angle projected on the horizontal plane, while the horizontal angle is the angle measured on the celestial sphere and is dependent on elevation.
-It is essential to know this distinction when measuring offsets and applying its corrections to the pointing model.
 
-For example, we point at a source at $ Az=El=60\degr $ and observe that the source is $ 1\degr $ to the right.
-The horizontal offset is $1\degr$, while the azimuth offset is $1\degr/\cos{El}=2\degr$.
-Therefore, the azimuth angle must increase by twice the horizontal offset due to the influence of elevation.
+% Another angle term used in this thesis is the horizontal angle.
+% We will use the term azimuth when referring to the telescope pointing and the horizontal angle for the pointing offset.
+% The azimuth angle is the angle projected on the horizontal plane, while the horizontal angle is the angle measured on the celestial sphere and is dependent on elevation.
+% It is essential to know this distinction when measuring offsets and applying its corrections to the pointing model.
+
+% For example, we point at a source at $ Az=El=60\degr $ and observe that the source is $ 1\degr $ to the right.
+% The horizontal offset is $1\degr$, while the azimuth offset is $1\degr/\cos{El}=2\degr$.
+% Therefore, the azimuth angle must increase by twice the horizontal offset due to the influence of elevation.
 
 
 \begin{figure}[H]
@@ -88,7 +89,7 @@ which means that the signal is often hidden in the noise and needs to be extract
 Therefore, astronomers must know that the pointing is accurate before initiating a long integration on the source.
 
 The pointing model at APEX consists of two steps, an analytical model and additional pointing corrections performed at regular intervals based on recently observed pointing offsets.
-The analytical model consists of fitting a multiple terms to the many measurements of the pointing offset (difference between input coordinates and the observed coordinates of the source).
+The analytical model consists of fitting multiple terms to the many measurements of the pointing offset (difference between input coordinates and the observed coordinates of the source).
 These terms can be geometric terms or terms related to, for example, metrology data.
 The fitted terms are used for $1$-$2$ months and run in the background adjusting all input coordinates.
 The additional pointing corrections are performed by astronomers every $1$-$2$ hours during the observations and before observing a new target.
@@ -127,13 +128,13 @@ The following descriptions of the terms are taken directly from the \texttt{TPOI
 The analytical model has multiple harmonic terms, some geometrical and some empirical.
 The \texttt{TPOINT} software used to develop the analytical model suggests terms that improve the model's performance on the chosen dataset.
 The following terms are the empirical terms for azimuth.
-\begin{align}
+\begin{align}\label{eq:analytical_az}
     \Delta Az =&  c_1 \cdot \sin{Az} + c_2 \cdot \frac{\cos{2Az}}{\cos{El}} + c_3 \cdot \cos{3Az} + c_4 \cdot \sin{2Az} \\
     &+ c_5 \cdot \cos{2Az} + c_6 \cdot \frac{\cos{Az}}{\cos{El}} + c_7 \cdot \frac{\cos{5Az}}{\cos{El}},
 \end{align}
 and the terms for elevation are
 
-\begin{align}
+\begin{align}\label{eq:analytical_el}
     \Delta El =&  c_1 \cdot \sin{El} + c_2 \cdot \cos{El}+ c_3 \cdot \cos{2Az} + c_4 \cdot \sin{2Az} \\
     &+ c_5 \cdot \cos{3Az} + c_6 \cdot \sin{3Az} + c_7 \cdot \sin{4Az} + c_8 \cdot \sin{5Az}  
 \end{align}
@@ -260,7 +261,6 @@ where $\delta_{\text{Az}}$ and $\delta_{\text{El}}$ are the recently observed po
 The astronomers perform these pointing corrections every couple of hours to ensure the pointing is sufficient during science observations.
 
 Note that we divide the term CA \eqref{eq:pmodel_ca} by cosine elevation, which converts the observed horizontal offset to azimuth.
-
 
 \section{Research questions and related works} \label{sec:research_qs}
 \begin{itemize}
@@ -481,7 +481,7 @@ which lists the approximate number of data points per minute for each table used
 
 
 \subsection{Pointing scan data}
-During a pointing scan, the telescope observes a source with a known location to obtain a pointing offset.
+During a pointing scan, the telescope observes a source with a known location to obtain a pointing offset measured in arcseconds.
 The observers use this offset to recalibrate the pointing model. There are two types of pointing scans: Line-pointings and continuum scans.
 Figure \ref{fig:features_during_scans} shows the information in the monitor database from a pointing scan.
 
@@ -536,14 +536,18 @@ Figure \ref{fig:continueous_pointings} show examples of continuum scans and the 
          \caption{Noisy line-pointing with bad Gaussian fit.}
          \label{subfig:bad_continuous}
      \end{subfigure}
-    \caption{The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.}
+    \caption{The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. 
+    A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.}
     \label{fig:continueous_pointings}
 \end{figure}
 
 
 
 \paragraph{Pointing scan timestamp} 
-In the main database, each pointing scan has a timestamp in the format YYYY-MM-DD HH:MM:SS, with a one-second resolution. This timestamp does not reflect the actual start of a pointing scan. Also, there is not information in the database itself that indicates whether the telescope is observing, but this information can be extracted from some dump files from the tiltmeter, which includes a flag indicating whether the telescope is idle, preparing to observe, or observing. Combining this flag with the timestamps, we can obtain the accurate start and end time of a pointing scan. However, these tiltmeter dump files are only available for some time periods.
+In the main database, each pointing scan has a timestamp in the format YYYY-MM-DD HH:MM:SS, with a one-second resolution.
+This timestamp does not reflect the actual start of a pointing scan.
+Also, no information in the database itself indicates whether the telescope is observing, but this information can be extracted from some dump files from the tiltmeter, which includes a flag indicating whether the telescope is idle, preparing to observe, or observing.
+Combining this flag with the timestamps, we can obtain the accurate start and end time of a pointing scan. However, these tiltmeter dump files are only available for some time periods.
 
 \begin{itemize}
     \item Plots with scan times distribution

@@ -1592,6 +1592,8 @@ INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
 INPUT Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
 INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
 INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
 INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
 INPUT Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf

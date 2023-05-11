@@ -1,7 +1,7 @@
 \section{Experiment 1: Pointing Correction Model}
 The first research question addressed in this thesis is whether machine learning can enhance the pointing accuracy of a radio telescope using the current pointing strategy.
 To investigate this question, we explore a realistic scenario (case 1) in which a model is trained on a smaller period of data and used to predict the offset of consecutive scans for a period afterward.
-We focus now on the model predicting the offsets of only NFLASH230. 
+We focus now on the model predicting the offsets of only NFLASH230.
 The results from this case, presented in Table \ref{tab:results_minval_val_test_days_04_n230}, demonstrate that the model's performance on the validation set is promising,
 with the root-mean-square (RMS) ratio in the range of approximately $0.80$-$0.85$ for azimuth and elevation,
 which corresponds to a $15$-$20\%$ reduction in pointing offset.
@@ -9,44 +9,99 @@ However, this performance does not transfer to the following test period,
 in which the RMS ratios are $1.16$-$1.46$, indicating a $16$-$46\%$ increase in pointing offset.
 There are several possible reasons for the model's poor performance on the test set.
 One of the limitations of tree-based models, such as XGBoost, is that they typically do not generalize well to new data that is different from the training data,
-as they predict solely on logical conditions seen in the training set.
+as they predict solely based on logical conditions seen in the training set.
 If the factors affecting the pointing offset change over time and the new data is very different from the training data, the model will likely perform poorly. 
 Furthermore, another potential explanation for the poor performance could be that the dataset is too small, and the model overfits on the validation set.
 The results of this experiment suggest that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
 To train a proper complex model, a larger amount of data is required, at least more than the number of samples in the training and validation sets for case 1, being \textcolor{red}{add samples here}.
 The findings also indicate that choosing the complexity of the model with the best performance on the validation set may not necessarily lead to the best performance on the test set.
 We further explore this aspect by examining Table \ref{tab:results_nflash_days}, which demonstrates the mean RMS ratio on the test set using the same number of features for all the folds.
-This provides an idea of the complexity that might provide the best performing models on the test set.
+This provides an idea of the complexity that might provide the best-performing models on the test set.
 Even though the model with the best performance on the validation set is not chosen, which could potentially be a lucky performance or overfitted,
 no improvement is observed in the current pointing model on the test set.
 However, the results show better performance than the first Table \ref{tab:results_minval_val_test_days_04_n230}.
 The same trends are observed when predicting offsets from all instruments in Tables \ref{tab:results_minval_val_test_days_04_all} and \ref{tab:results_all_days}. \\
+
 
 Moving on to case 2, which tests whether the amount of data is a limitation for enhancing the pointing accuracy.
 This test case is less realistic because the data is split into $6$ folds and cross-validation is performed,
 and for all folds except for the last one, the test period will be either before or between the training/validation set, making the results less applicable in practice.
 Results from this case indicate that a larger time period helps the model generalize better, which is expected as a larger period includes more variation that can help the model capture the relationships between features.
 We start by looking at the same table \ref{tab:results_minval_val_test_days_04_n230}.
-Here, we also see a good performnce on the on the validation set across all folds, with a $9$-$20\%$ reduced pointing offset on the validation set.
+Here, we also see a good performance on the validation set across all folds, with a $9$-$20\%$ reduced pointing offset on the validation set.
 This shows that more training data helps the model generalize, which is somewhat expected considering that a larger time period includes more variation,
 which helps the model learn what causes the offsets.
 The average RMS ratio over all folds on the test set for case 2 is $0.958$ for azimuth and $0.941$ for elevation.
 With the standard deviations, the $95\%$ confidence intervals would be put at $[0.850, 1.066]$ for azimuth and $[0.786, 1.010]$ for elevation.
-Given that the upper bound of both confidence intervals are larger than $1$, and the fact that the testing case is not realistic, we cannot conclude that the model can reduce the pointing offset in a robust and consistent manner.
-For an unbiased result that reflects expected performance in practice, the RMS ratio for the last fold in Table \ref{tab:results_minval_val_test_days_04_n230} is used,
+Given that the upper bound of both confidence intervals is larger than one and the testing case is not realistic, we cannot conclude that the model can reduce the pointing offset robustly and consistently.
+For an unbiased result that reflects expected performance in practice, we look at the RMS ratio for the last fold in Table \ref{tab:results_minval_val_test_days_04_n230},
 showing a $7.0\%$ and $9.4\%$ reduced RMS for azimuth and elevation, respectively.
+These results are the ones visualized in the histograms and plots in Figures \ref{fig:histogram_selected_result_xgb} and \ref{fig:sortpred_selected_result_xgb}, respectively.
+It is not apparent from the histogram with the azimuth model results that the model performs better than the current model.
+What we can see, however, is a shift in offsets towards the left, indicating more negative offsets.
+This is consistent with the sorted prediction plot \ref{subfig:sortpred_lastfold_nflash230_az}, which shows a bias towards positive predictions.
+There also seem to be slightly less large negative offsets.
+Looking at the elevation histogram \ref{subfig:hist_lastfold_nflash230_el} and plot \ref{subfig:sortpred_lastfold_nflash230_el}, we can make the same analysis.
+The histogram shows a shift towards the left, and the sorted prediction plot shows a bias toward positive predictions.
+We do also see that there are more offsets in the center bin in the histogram (meaning more smaller offsets).
+The tails in the sorted prediction plots also seem steep, indicating that the cleaning could have been better.\\
+
+
+We now discuss the results of the SAGE analysis on the validation and test sets for the model discussed in the previous paragraph,
+as shown in Figures \ref{fig:sage_lastfold_nflash230_az} and \ref{fig:sage_lastfold_nflash230_el}.
+This analysis helps us understand the factors that improve and worsen the models' performance on unseen data, thereby providing insights into how the models can be improved.
+
+For the azimuth model, we observe that the azimuth correction $ca$ is the most important feature, contributing significantly to the model's performance on both the validation and test sets.
+However, the elevation correction $ie$ shows a mixed effect on the model's performance.
+While it improves the performance on the validation set, it worsens the performance on the test set.
+This indicates that there are some correlation between the azimuth and elevation correction that change over time.
+% Surprisingly, some features such as the azimuth angle of the sun and the $X$ position of the subreflector (POSITIONX) worsen the performance on the validation set, but improve it on the test set.
+% We do not have a clear explanation for this behavior.
+Notably, the COMMANDAZ and COMMANDEL features, which are included in every model, do not affect the performance of the model at all.
+This suggests that the analytical pointing model, which is based solely on azimuth and elevation, is performing very well, and the sources of offsets are likely attributed to other factors.
+We also find that the continuous month feature is the second most important feature in the elevation model, after the elevation correction $ie$.
+However, the model's performance on the test set does not benefit from this feature, as its value is larger in the test set than in the training and validation sets,
+This observation indicates that the input coordinates are not useful for the model.
+In summary, the SAGE analysis provides valuable insights into the factors that contribute to the model's performance on unseen data.
+The azimuth correction $ca$ is the most important feature, while the elevation correction $ie$ shows a mixed effect on the model's performance.
+Other features such as the azimuth angle of the sun and the x position of the subreflector exhibit an unexpected behavior.
+Finally, the continuous month feature is not useful for the model, likely due to its lack of variability in the test set.
+
+
+% We now look at the results from the SAGE analysis on the validation and test set, shown in Figures \ref{fig:sage_lastfold_nflash230_az} and \ref{fig:sage_lastfold_nflash230_el},
+% for the same model we discussed in the previous paragraph.
+% Analyzing which features improve and worsen the performance on unseen data is a good way of understanding what makes the model better and worse.
+% We start by looking at the sage values for the azimuth model \ref{fig:sage_lastfold_nflash230_az}.
+% It shows that the azimuth correction $ca$ applied during the given pointing scan stands for most of the good predictions on both the validation and test set.
+% The elevation correction $ie$ improves the performance on the validation set, but worsen the performance on new data.
+% Interestingly enough, there are features like the azimuth angle of the sun and x position of the subreflector that makes the performance on the validation set worse, but improve the performance on the test set.
+% We cannot explain this behavior either.
+% Interestingly enough, COMMANDAZ and COMMANDEL, which is incorporated in every model, does not affect the performance of the model at all.
+% This indicates that the analytical pointing model, which is only based on azimuth and elevation, is performing very well,
+% and the reasons for the offsets are attributed to other factors.
+% One interesting note, is that the continuous month feature in the elevation model is the second most important feature, after the elevation fcorrection $ie$.
+% However, on the test set, the month continuous variable does not help the model at all.
+% This is very expected behavior, as this value is larger on all the pointing scans in the test set, and therefore it cannot help the model,
+% as there is nothing trained on the month being larger than it is in the training and validation set.
+% Again here, we see taht the input coordinates are of no use for the model.
+
+
+
+In summary of the results from case 2, we see promising results with machine learning models further reducing the offsets slightly.  
 This indicates that a possible pointing strategy could be training a model on multiple months worth of data and then using the model for a couple of weeks.
 However, given the limited data available in this project, this could not be tested thoroughly.
-If more data were available, a similar analysis could be performed with the start and end time of both the train/validation and test set moved by two weeks,
-and iteratively train new models to predict the offsets for the next time period.
+If more data were available,
+a similar analysis could be performed with the start and end time of both the train/validation and test set moved by two weeks and iteratively train new models to predict the offsets for the next time period.
 This could verify whether the improved performance repeats.\\
 
+
+
 In case 2, the model predicting offsets from all instruments shows results similar to the model predicting only NFLASH230 offsets, though with slightly worse performance.
-The reduced performance is likely due to less of training data available for the other instruments.
+The reduced performance is likely due to less training data available for the other instruments.
 The difference in performance between these two models provides some insights.
 First, it suggests that various factors influence the different instruments differently.
-Otherwise, we expect the larger model to perform better than the smaller.
-The reason that each instruments are affected differently can be the different mounting locations at the telescope.
+Otherwise, we expect the larger model to perform better than the smaller model.
+The reason that each instrument can be affected differently is because of the different mounting locations at the telescope.
 Different mounting locations mean that the path of photons leading to the receiver can vary, leading to distinct factors affecting the pointing.\\
 
 
@@ -57,7 +112,7 @@ it may be preferable to create terms based on the difference between multiple te
 
 Another step is to integrate corrections for $ca$ and $ie$ into the offset that we intend to predict.
 These corrections are applied at each pointing scan and display the strongest correlation to the target offset of all the features,
-and we therefore incorporated them in all the models.
+and we, therefore, incorporate them in all the models.
 By transforming the offsets $\delta_{az}=\delta_{az} + ca$ and $\delta_{el}=\delta_{el} + ie$, we can then eliminate $ca$ and $ie$ from the input to the models.
 This could remove a layer of complexity for the model.\\
 
@@ -65,7 +120,7 @@ This could remove a layer of complexity for the model.\\
 Another option to consider for predicting the pointing offsets is to use neural networks.
 These models offer several advantages if trained successfully.
 For instance, they can handle multiple outputs and thus only require a single model.
-By training the neural network with two outputs, it can simultaneously consider the offsets in azimuth and elevation, and explore the correlation between them.
+By training the neural network with two outputs, it can simultaneously consider the offsets in azimuth and elevation and explore the correlation between them.
 It would also be beneficial to fine-tune the network as new pointing scans become available continuously.
 Despite their potential benefits, our initial tests with neural networks did not yield satisfactory results,
 likely due to the limited amount of training data available.\\

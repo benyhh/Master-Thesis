@@ -31,6 +31,8 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.1}Pointing Models in Radio Telescopes}{6}{section.2.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Machine Learning in Astronomy}{6}{section.2.2}\protected@file@percent }
 \@writefile{toc}{\contentsline {section}{\numberline {2.3}Challenges and Opportunities}{6}{section.2.3}\protected@file@percent }
+\citation{altaz_schematic}
+\citation{altaz_schematic}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Atronomical Background}{8}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -39,8 +41,6 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}The Celestial Sphere}{8}{subsection.3.1.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Altitude-Azimuth Coordinate System}{8}{subsection.3.1.2}\protected@file@percent }
 \newlabel{sec:altaz_coords}{{3.1.2}{8}{Altitude-Azimuth Coordinate System}{subsection.3.1.2}{}}
-\citation{altaz_schematic}
-\citation{altaz_schematic}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces The altitude-azimuth coordinate system used at APEX. Source \cite  {altaz_schematic}\relax }}{9}{figure.caption.3}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:altaz_coords}{{3.1}{9}{The altitude-azimuth coordinate system used at APEX. Source \cite {altaz_schematic}\relax }{figure.caption.3}{}}
@@ -52,6 +52,8 @@
 \citation{tpoint_manual}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Analytical Model}{11}{subsection.3.3.1}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Harmonic terms}{11}{section*.5}\protected@file@percent }
+\newlabel{eq:analytical_az}{{3.3}{11}{Harmonic terms}{equation.3.3.3}{}}
+\newlabel{eq:analytical_el}{{3.5}{11}{Harmonic terms}{equation.3.3.5}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Az/El non-perpendicularity (NPAE)}{12}{section*.6}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Horizontal displacement of Nasmyth rotator}{12}{section*.7}\protected@file@percent }
 \@writefile{toc}{\contentsline {subsubsection}{Left-right collimation error}{12}{section*.8}\protected@file@percent }
@@ -260,48 +262,48 @@
 \newlabel{tab:results_all_days}{{6.4}{49}{Resulting RMS ratio (see Eq. \eqref {eq:mean_rms_compared}) on unseen test sets from case $1$ and $2$ (see Figure \ref {fig:datasplit_cases}) for the model predicting offsets from all instruments, using different number of features $k$ in the model.\relax }{table.caption.67}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {6.5}{\ignorespaces Mean RMS ratio on test set (mean over values in Tables \ref {tab:results_minval_val_test_days_04_n230} and \ref {tab:results_minval_val_test_days_04_all}).\relax }}{50}{table.caption.68}\protected@file@percent }
 \newlabel{tab:results_minval_days04}{{6.5}{50}{Mean RMS ratio on test set (mean over values in Tables \ref {tab:results_minval_val_test_days_04_n230} and \ref {tab:results_minval_val_test_days_04_all}).\relax }{table.caption.68}{}}
-\newlabel{subfig:hist_lastfold_nflash230_az}{{6.1a}{51}{NFLASH230 elevation model\relax }{figure.caption.69}{}}
-\newlabel{sub@subfig:hist_lastfold_nflash230_az}{{a}{51}{NFLASH230 elevation model\relax }{figure.caption.69}{}}
-\newlabel{subfig:hist_lastfold_nflash230_el}{{6.1b}{51}{NFLASH230 elevation model\relax }{figure.caption.69}{}}
-\newlabel{sub@subfig:hist_lastfold_nflash230_el}{{b}{51}{NFLASH230 elevation model\relax }{figure.caption.69}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Distribution of offsets with and without XGBoost NFLASH230 pointing correction model\relax }}{51}{figure.caption.69}\protected@file@percent }
-\newlabel{fig:histogram_selected_result_xgb}{{6.1}{51}{Distribution of offsets with and without XGBoost NFLASH230 pointing correction model\relax }{figure.caption.69}{}}
+\newlabel{subfig:hist_lastfold_nflash230_az}{{6.1a}{51}{NFLASH230 elevation model. The XGB model reduced the offsets by $7.0\%$.\relax }{figure.caption.69}{}}
+\newlabel{sub@subfig:hist_lastfold_nflash230_az}{{a}{51}{NFLASH230 elevation model. The XGB model reduced the offsets by $7.0\%$.\relax }{figure.caption.69}{}}
+\newlabel{subfig:hist_lastfold_nflash230_el}{{6.1b}{51}{NFLASH230 elevation model. The XGB model reduced the offsets by $9.4\%$.\relax }{figure.caption.69}{}}
+\newlabel{sub@subfig:hist_lastfold_nflash230_el}{{b}{51}{NFLASH230 elevation model. The XGB model reduced the offsets by $9.4\%$.\relax }{figure.caption.69}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Distribution of offsets with and without XGBoost NFLASH230 pointing correction model for \textbf  {a)} azimuth model and \textbf  {b)} elevation model.\relax }}{51}{figure.caption.69}\protected@file@percent }
+\newlabel{fig:histogram_selected_result_xgb}{{6.1}{51}{Distribution of offsets with and without XGBoost NFLASH230 pointing correction model for \textbf {a)} azimuth model and \textbf {b)} elevation model.\relax }{figure.caption.69}{}}
 \newlabel{subfig:sortpred_lastfold_nflash230_az}{{6.2a}{52}{NFLASH230 azimuth model\relax }{figure.caption.70}{}}
 \newlabel{sub@subfig:sortpred_lastfold_nflash230_az}{{a}{52}{NFLASH230 azimuth model\relax }{figure.caption.70}{}}
 \newlabel{subfig:sortpred_lastfold_nflash230_el}{{6.2b}{52}{NFLASH230 elevation model\relax }{figure.caption.70}{}}
 \newlabel{sub@subfig:sortpred_lastfold_nflash230_el}{{b}{52}{NFLASH230 elevation model\relax }{figure.caption.70}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Offset predictions by the XGBoost NFLASH230 pointing correction model. Predicted and observed values, sorted in ascending order by observed value\relax }}{52}{figure.caption.70}\protected@file@percent }
-\newlabel{fig:sortpred_selected_result_xgb}{{6.2}{52}{Offset predictions by the XGBoost NFLASH230 pointing correction model. Predicted and observed values, sorted in ascending order by observed value\relax }{figure.caption.70}{}}
-\newlabel{subfig:sage_lastfold_nflash230_az_val}{{6.3a}{53}{Validation set\relax }{figure.caption.71}{}}
-\newlabel{sub@subfig:sage_lastfold_nflash230_az_val}{{a}{53}{Validation set\relax }{figure.caption.71}{}}
-\newlabel{subfig:sage_lastfold_nflash230_az_test}{{6.3b}{53}{Test set\relax }{figure.caption.71}{}}
-\newlabel{sub@subfig:sage_lastfold_nflash230_az_test}{{b}{53}{Test set\relax }{figure.caption.71}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces SAGE values for the NFLASH230 azimuth pointing correction model on the a) validation set, and b) test set.\relax }}{53}{figure.caption.71}\protected@file@percent }
-\newlabel{fig:sage_lastfold_nflash230_az}{{6.3}{53}{SAGE values for the NFLASH230 azimuth pointing correction model on the a) validation set, and b) test set.\relax }{figure.caption.71}{}}
-\newlabel{subfig:sage_lastfold_nflash230_el_val}{{6.4a}{54}{Validation set\relax }{figure.caption.72}{}}
-\newlabel{sub@subfig:sage_lastfold_nflash230_el_val}{{a}{54}{Validation set\relax }{figure.caption.72}{}}
-\newlabel{subfig:sage_lastfold_nflash230_el_test}{{6.4b}{54}{Test set\relax }{figure.caption.72}{}}
-\newlabel{sub@subfig:sage_lastfold_nflash230_el_test}{{b}{54}{Test set\relax }{figure.caption.72}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces SAGE values for the NFLASH230 elevation pointing correction model on the a) validation set, and b) test set.\relax }}{54}{figure.caption.72}\protected@file@percent }
-\newlabel{fig:sage_lastfold_nflash230_el}{{6.4}{54}{SAGE values for the NFLASH230 elevation pointing correction model on the a) validation set, and b) test set.\relax }{figure.caption.72}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Model using Neural Networks}{55}{section.6.2}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces RMS on all folds for the best model for all arcitechtures. The different arcitechtures are desribed in Figure \ref {fig:nn_architecture}.\relax }}{55}{table.caption.73}\protected@file@percent }
-\newlabel{tab:exp1_rms_folds_best_model}{{6.6}{55}{RMS on all folds for the best model for all arcitechtures. The different arcitechtures are desribed in Figure \ref {fig:nn_architecture}.\relax }{table.caption.73}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Hyperparameters used in the best performing model for each arcitechture.\relax }}{55}{table.caption.74}\protected@file@percent }
-\newlabel{tab:exp1_hyperparameters_best_model}{{6.7}{55}{Hyperparameters used in the best performing model for each arcitechture.\relax }{table.caption.74}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Features used in the best performing model for each arcitechture.\relax }}{56}{table.caption.75}\protected@file@percent }
-\newlabel{tab:exp1_features}{{6.8}{56}{Features used in the best performing model for each arcitechture.\relax }{table.caption.75}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{57}{chapter.7}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Offset predictions by the XGBoost NFLASH230 pointing correction model Predicted and observed values, sorted in ascending order by observed value. \textbf  {a)} Azimuth model and \textbf  {b)} elevation model.\relax }}{52}{figure.caption.70}\protected@file@percent }
+\newlabel{fig:sortpred_selected_result_xgb}{{6.2}{52}{Offset predictions by the XGBoost NFLASH230 pointing correction model Predicted and observed values, sorted in ascending order by observed value. \textbf {a)} Azimuth model and \textbf {b)} elevation model.\relax }{figure.caption.70}{}}
+\newlabel{subfig:sage_lastfold_nflash230_az_val}{{6.3a}{54}{Validation set\relax }{figure.caption.71}{}}
+\newlabel{sub@subfig:sage_lastfold_nflash230_az_val}{{a}{54}{Validation set\relax }{figure.caption.71}{}}
+\newlabel{subfig:sage_lastfold_nflash230_az_test}{{6.3b}{54}{Test set\relax }{figure.caption.71}{}}
+\newlabel{sub@subfig:sage_lastfold_nflash230_az_test}{{b}{54}{Test set\relax }{figure.caption.71}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces SAGE values for the NFLASH230 azimuth pointing correction model on the a) validation set, and b) test set.\relax }}{54}{figure.caption.71}\protected@file@percent }
+\newlabel{fig:sage_lastfold_nflash230_az}{{6.3}{54}{SAGE values for the NFLASH230 azimuth pointing correction model on the a) validation set, and b) test set.\relax }{figure.caption.71}{}}
+\newlabel{subfig:sage_lastfold_nflash230_el_val}{{6.4a}{55}{Validation set\relax }{figure.caption.72}{}}
+\newlabel{sub@subfig:sage_lastfold_nflash230_el_val}{{a}{55}{Validation set\relax }{figure.caption.72}{}}
+\newlabel{subfig:sage_lastfold_nflash230_el_test}{{6.4b}{55}{Test set\relax }{figure.caption.72}{}}
+\newlabel{sub@subfig:sage_lastfold_nflash230_el_test}{{b}{55}{Test set\relax }{figure.caption.72}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces SAGE values for the NFLASH230 elevation pointing correction model on the \textbf  {a)} validation set, and \textbf  {b)} test set.\relax }}{55}{figure.caption.72}\protected@file@percent }
+\newlabel{fig:sage_lastfold_nflash230_el}{{6.4}{55}{SAGE values for the NFLASH230 elevation pointing correction model on the \textbf {a)} validation set, and \textbf {b)} test set.\relax }{figure.caption.72}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}Experiment 2: Pointing Model using Neural Networks}{56}{section.6.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.6}{\ignorespaces RMS on all folds for the best model for all arcitechtures. The different arcitechtures are desribed in Figure \ref {fig:nn_architecture}.\relax }}{56}{table.caption.73}\protected@file@percent }
+\newlabel{tab:exp1_rms_folds_best_model}{{6.6}{56}{RMS on all folds for the best model for all arcitechtures. The different arcitechtures are desribed in Figure \ref {fig:nn_architecture}.\relax }{table.caption.73}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.7}{\ignorespaces Hyperparameters used in the best performing model for each arcitechture.\relax }}{56}{table.caption.74}\protected@file@percent }
+\newlabel{tab:exp1_hyperparameters_best_model}{{6.7}{56}{Hyperparameters used in the best performing model for each arcitechture.\relax }{table.caption.74}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.8}{\ignorespaces Features used in the best performing model for each arcitechture.\relax }}{57}{table.caption.75}\protected@file@percent }
+\newlabel{tab:exp1_features}{{6.8}{57}{Features used in the best performing model for each arcitechture.\relax }{table.caption.75}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Discussion}{58}{chapter.7}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{57}{section.7.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{58}{section.7.1}\protected@file@percent }
 \citation{whitegreen2022}
-\@writefile{toc}{\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{59}{section.7.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusion}{61}{chapter.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{60}{section.7.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {8}Conclusion}{62}{chapter.8}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {8.1}Experiment 1: Pointing Correction Model}{61}{section.8.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {8.2}Experiment 2: Pointing Model using Neural Networks}{62}{section.8.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.1}Experiment 1: Pointing Correction Model}{62}{section.8.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {8.2}Experiment 2: Pointing Model using Neural Networks}{63}{section.8.2}\protected@file@percent }
 \gdef \LT@i {\LT@entry 
     {5}{169.02116pt}\LT@entry 
     {1}{25.07922pt}\LT@entry 
@@ -312,27 +314,32 @@
     {1}{47.26665pt}\LT@entry 
     {1}{25.07922pt}\LT@entry 
     {1}{75.9541pt}}
-\@writefile{toc}{\contentsline {section}{\numberline {.1}Appendix A}{63}{section.Alph0.1}\protected@file@percent }
-\newlabel{sec:appendix_a}{{.1}{63}{Appendix A}{section.Alph0.1}{}}
-\newlabel{tab:minval_fold5_whole}{{\caption@xref {tab:minval_fold5_whole}{ on input line 275}}{63}{Appendix A}{table.caption.77}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Performance when choosing min validation for the last fold.\relax }}{63}{table.caption.77}\protected@file@percent }
-\newlabel{tab:results_minval_days04_whole}{{\caption@xref {tab:results_minval_days04_whole}{ on input line 293}}{63}{Appendix A}{table.caption.78}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.\relax }}{63}{table.caption.78}\protected@file@percent }
-\newlabel{tab:exp2_top50_features}{{3}{63}{Appendix A}{table.Alph0.3}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces All\relax }}{65}{table.caption.79}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {.2}Appendix B}{65}{section.Alph0.2}\protected@file@percent }
-\newlabel{sec:appendix_b}{{.2}{65}{Appendix B}{section.Alph0.2}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {.3}Transformation of pointing offsets and corrections}{65}{section.Alph0.3}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces NFLASH230\relax }}{66}{table.caption.80}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Validation and test performance for Case 2, all instruments left and nflash230 right. Performance when choosing the number of features showing best performance.\relax }}{66}{table.caption.81}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Validation and test performance for Case 1 and 2, all instruments. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{67}{table.caption.82}\protected@file@percent }
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Validation and test performance for Case 1 and 2, only NFLASH230. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{67}{table.caption.83}\protected@file@percent }
-\newlabel{eq:ca_tilde}{{1}{68}{Transformation of pointing offsets and corrections}{equation.Alph0.3.1}{}}
-\newlabel{eq:ie_tilde}{{2}{68}{Transformation of pointing offsets and corrections}{equation.Alph0.3.2}{}}
-\newlabel{eq:off_az_tilde}{{3}{68}{Transformation of pointing offsets and corrections}{equation.Alph0.3.3}{}}
-\newlabel{eq:off_el_tilde}{{4}{68}{Transformation of pointing offsets and corrections}{equation.Alph0.3.4}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces \textbf  {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf  {Transformed:} Pointing offsets and corrections according to equations \eqref  {eq:ca_tilde}, \eqref  {eq:ie_tilde}, \eqref  {eq:off_az_tilde}, and \eqref  {eq:off_el_tilde}.\relax }}{69}{table.caption.84}\protected@file@percent }
-\newlabel{tab:offset_and_corrections}{{9}{69}{\textbf {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf {Transformed:} Pointing offsets and corrections according to equations \eqref {eq:ca_tilde}, \eqref {eq:ie_tilde}, \eqref {eq:off_az_tilde}, and \eqref {eq:off_el_tilde}.\relax }{table.caption.84}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {.1}Appendix A}{64}{section.Alph0.1}\protected@file@percent }
+\newlabel{sec:appendix_a}{{.1}{64}{Appendix A}{section.Alph0.1}{}}
+\newlabel{tab:minval_fold5_whole}{{\caption@xref {tab:minval_fold5_whole}{ on input line 275}}{64}{Appendix A}{table.caption.77}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Performance when choosing min validation for the last fold.\relax }}{64}{table.caption.77}\protected@file@percent }
+\newlabel{tab:results_minval_days04_whole}{{\caption@xref {tab:results_minval_days04_whole}{ on input line 293}}{64}{Appendix A}{table.caption.78}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.\relax }}{64}{table.caption.78}\protected@file@percent }
+\newlabel{tab:exp2_top50_features}{{3}{64}{Appendix A}{table.Alph0.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces All\relax }}{66}{table.caption.79}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces NFLASH230\relax }}{67}{table.caption.80}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Validation and test performance for Case 2, all instruments left and nflash230 right. Performance when choosing the number of features showing best performance.\relax }}{67}{table.caption.81}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Validation and test performance for Case 1 and 2, all instruments. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{68}{table.caption.82}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Validation and test performance for Case 1 and 2, only NFLASH230. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{68}{table.caption.83}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.\relax }}{69}{table.caption.84}\protected@file@percent }
+\newlabel{tab:raw_data_spearmans}{{9}{69}{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.\relax }{table.caption.84}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Features with Pearson's correlation $\geq 0.1$ to either one of the target values.\relax }}{69}{table.caption.85}\protected@file@percent }
+\newlabel{tab:raw_data_pearson}{{10}{69}{Features with Pearson's correlation $\geq 0.1$ to either one of the target values.\relax }{table.caption.85}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {.2}Raw data correlation}{70}{section.Alph0.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {.3}Appendix B}{70}{section.Alph0.3}\protected@file@percent }
+\newlabel{sec:appendix_b}{{.3}{70}{Appendix B}{section.Alph0.3}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {.4}Transformation of pointing offsets and corrections}{70}{section.Alph0.4}\protected@file@percent }
+\newlabel{eq:ca_tilde}{{1}{70}{Transformation of pointing offsets and corrections}{equation.Alph0.4.1}{}}
+\newlabel{eq:ie_tilde}{{2}{70}{Transformation of pointing offsets and corrections}{equation.Alph0.4.2}{}}
+\newlabel{eq:off_az_tilde}{{3}{70}{Transformation of pointing offsets and corrections}{equation.Alph0.4.3}{}}
+\newlabel{eq:off_el_tilde}{{4}{70}{Transformation of pointing offsets and corrections}{equation.Alph0.4.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces \textbf  {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf  {Transformed:} Pointing offsets and corrections according to equations \eqref  {eq:ca_tilde}, \eqref  {eq:ie_tilde}, \eqref  {eq:off_az_tilde}, and \eqref  {eq:off_el_tilde}.\relax }}{71}{table.caption.86}\protected@file@percent }
+\newlabel{tab:offset_and_corrections}{{11}{71}{\textbf {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf {Transformed:} Pointing offsets and corrections according to equations \eqref {eq:ca_tilde}, \eqref {eq:ie_tilde}, \eqref {eq:off_az_tilde}, and \eqref {eq:off_el_tilde}.\relax }{table.caption.86}{}}
 \bibstyle{plain}
 \bibdata{citations.bib}
 \bibcite{greve1996pointing}{{1}{}{{}}{{}}}
@@ -348,10 +355,10 @@
 \bibcite{ephem}{{11}{}{{}}{{}}}
 \bibcite{backprop_original}{{12}{}{{}}{{}}}
 \bibcite{shapley_value_1953}{{13}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{Bibliography}{70}{appendix*.85}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{Bibliography}{72}{appendix*.87}\protected@file@percent }
 \bibcite{tikz}{{14}{}{{}}{{}}}
 \bibcite{altaz_schematic}{{15}{}{{}}{{}}}
 \bibcite{tpoint_manual}{{16}{}{{}}{{}}}
 \bibcite{whitegreen2022}{{17}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\gdef \@abspage@last{73}
+\gdef \@abspage@last{75}

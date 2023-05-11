@@ -176,25 +176,34 @@ For a list of the $50$ features with the most mutual information to the target v
 \end{table}
 
 
+\newpage 
+Figure \ref{fig:histogram_selected_result_xgb} show the distribution of NFLASH230 offsets with and without the machine learning model corrections.
+These are the distrubtion of offsets of the unseen test set for the last fold.
+
+
 
 \begin{figure}[H]
     \centering
     \begin{subfigure}[t]{\textwidth}
         \centering
         \includegraphics[width=\textwidth]{Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf}
-        \caption{NFLASH230 elevation model}
+        \caption{NFLASH230 elevation model. The XGB model reduced the offsets by $7.0\%$.}
         \label{subfig:hist_lastfold_nflash230_az}
     \end{subfigure}
     \\
     \begin{subfigure}[t]{\textwidth}
        \centering
        \includegraphics[width=\textwidth]{Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf}
-       \caption{NFLASH230 elevation model}
+       \caption{NFLASH230 elevation model. The XGB model reduced the offsets by $9.4\%$.}
        \label{subfig:hist_lastfold_nflash230_el}
     \end{subfigure}
-    \caption{Distribution of offsets with and without XGBoost NFLASH230 pointing correction model}
+    \caption{Distribution of offsets with and without XGBoost NFLASH230 pointing correction model for \textbf{a)} azimuth model and \textbf{b)} elevation model.}
     \label{fig:histogram_selected_result_xgb}
 \end{figure}
+
+
+Figure \ref{fig:sortpred_selected_result_xgb} show the predicted and observed pointing NFLASH230 offsets for all samples in the unseen test set of the last fold.
+The samples are sorted by the true value in anscending order.
 
 
 \begin{figure}[H]
@@ -212,10 +221,15 @@ For a list of the $50$ features with the most mutual information to the target v
        \caption{NFLASH230 elevation model}
        \label{subfig:sortpred_lastfold_nflash230_el}
     \end{subfigure}
-    \caption{Offset predictions by the XGBoost NFLASH230 pointing correction model. Predicted and observed values, sorted in ascending order by observed value}
+    \caption{Offset predictions by the XGBoost NFLASH230 pointing correction model
+     Predicted and observed values, sorted in ascending order by observed value. \textbf{a)} Azimuth model and \textbf{b)} elevation model.}
     \label{fig:sortpred_selected_result_xgb}
 \end{figure}
 
+
+
+Figure \ref{fig:sage_lastfold_nflash230_az} show the SAGE values for the NFLASH230 azimuth pointing correction model on the validation set (subfigure \ref{subfig:sage_lastfold_nflash230_az_val}) and test set (subfigure \ref{subfig sub@subfig:sage_lastfold_nflash230_el_val}).
+The same plots for the elevation models are presented in Figure \ref{fig:sage_lastfold_nflash230_el}.
 
 \begin{figure}[H]
     \centering
@@ -251,7 +265,7 @@ For a list of the $50$ features with the most mutual information to the target v
        \caption{Test set}
        \label{subfig:sage_lastfold_nflash230_el_test}
     \end{subfigure}
-    \caption{SAGE values for the NFLASH230 elevation pointing correction model on the a) validation set, and b) test set.}
+    \caption{SAGE values for the NFLASH230 elevation pointing correction model on the \textbf{a)} validation set, and \textbf{b)} test set.}
     \label{fig:sage_lastfold_nflash230_el}
 \end{figure}
 
