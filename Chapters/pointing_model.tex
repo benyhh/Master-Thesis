@@ -163,7 +163,7 @@ where AW is the misalignment alignment in the east-west direction.
     \end{tabular}
 \end{table}
 
-\subsection{Pointing corrections} 
+\subsection{Pointing Corrections} 
 The analytical pointing model can only reduce the pointing offsets to about an average of \textcolor{red}{$x$ arcseconds}.
 In order to reduce the pointing offsets even further, the astronomers at APEX update the pointing model by pointing at a source with known coordinates.
 This operation is called a pointing scan, and by observing the resulting pointing offsets from the known source,
@@ -178,19 +178,7 @@ The astronomers perform these pointing corrections every couple of hours to ensu
 
 Note that we divide the term CA \eqref{eq:pmodel_ca} by cosine elevation, which converts the observed horizontal offset to azimuth.
 
-\section{Research questions and related works} \label{sec:research_qs}
-\begin{itemize}
-    \item Reduce poitning offsets with machine learning model
-    \item Replace analytical model with machine learning model
-    \item reduce the frequency of pointing scans while maintaining pointing accuracy with machine learning model
-\end{itemize}
-
-\begin{itemize}
-    \item Article about analytical model
-    \item ...
-\end{itemize}
-
-\section{Database} \label{sec:database}
+\section{APEX Database} \label{sec:database}
 
 
 \subsection{Raw Data}
@@ -203,8 +191,9 @@ Table \ref{tab:raw_datanflash230} is included to provide an example of this data
 
 \begin{table}[h]
     \centering
-    \caption{Extract of raw data obtained with NFLASH230. The data file also includes the source, which is irrelevant to this project.}
+    \caption[Raw NFLASH230 data]{Extract of raw data obtained with NFLASH230. The data file also includes the source, which is irrelevant to this project.}
     \begin{tabular}{ccccc}
+        \toprule
          & \multicolumn{2}{c}{Input} & \multicolumn{2}{c}{Observed} \\ 
         \cline{2-3} \cline{4-5}
         Date & Azimuth & Elevation & Azimuth & Elevation \\ 
@@ -217,6 +206,7 @@ Table \ref{tab:raw_datanflash230} is included to provide an example of this data
         2022-01-22 13:54:31 & $94.04365$ & $18.148405$ & $94.492505$ & $17.981161$ \\
         2022-01-22 14:15:35 & $148.569964$ & $89.044036$ & $147.783271$ & $88.852306$ \\
         2022-01-22 14:18:15 & $215.664924$ & $49.563821$ & $216.104389$ & $49.386438$ \\
+        \bottomrule
     \end{tabular}
     \label{tab:raw_datanflash230}
     \end{table}
@@ -228,7 +218,7 @@ The monitor database is critical in this project, providing valuable sensory dat
 In this section, we will explore the data contained within the monitor database and identify the most relevant variables to our purposes.
 We got a copy of the database containing data from 01.01.2022 to 17.09.2022.
 
-\paragraph{Azimuth and Elevation}
+\subsubsection{Azimuth and Elevation}
 The database includes tables for the input azimuth and elevation, labeled COMMANDAZ and COMMANDEL.
 These tables contain the raw coordinates before the pointing model has adjusted the pointing.
 
@@ -242,7 +232,7 @@ The frequency of these measurements is $6$ data points per minute.
 Figure \ref{subfig:scan_az} show these measurements for the duration of a pointing scan, along with additional data points before and after the scan.
 
 
-\paragraph{Temperature Measurements}
+\subsubsection{Temperature Measurements}
 Multiple instruments located at different locations on the telescope measure the temperature and store the measurements in the database.
 The tables that contain these measurements are labeled TEMPERATURE, TEMP1 through TEMP6, TEMP26 through TEMP28, and TILT1T. 
 Figure \ref{fig:corr_temp} indicates that many of these measurements are highly correlated.
@@ -256,45 +246,45 @@ for the duration of a pointing scan and additional data points before and after 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.98\textwidth]{Correlation/Correlation_temp.pdf}
-    \caption{Linear correlation between temperature measures.
+    \caption[Correlation between temperature mesasurements]{Linear correlation between temperature measurements at APEX.
     The values are sampled by the median value at each pointing scan.}
     \label{fig:corr_temp}
 \end{figure}
 
-\paragraph{Hexapod}
+\subsubsection{Hexapod}
 The secondary mirror, also known as the subreflector, is supported by a hexapod.
 The hexapod moves in three dimensions and rotates around azimuth and elevation axes.
 There are five measures associated with the hexapod: POSITIONX, POSITIONY, POSITIONZ, ROTATIONX, and ROTATIONY.
 These measures are essential for positioning the secondary mirror and ensuring accurate pointing. The frequency of these measurements is $6$ data points per minute.
 
-\paragraph{Tiltmeter}
+\subsubsection{Tiltmeter}
 The telescope has two tiltmeters that measure its tilt or inclination to the vertical direction.
 One tiltmeter aligns with the telescope's pointing, while the other is orthogonal.
 They label these tiltmeters as TILT1X and TILT1Y, respectively, and they take measurements at a frequency of $12$ data points per minute.
 
-\paragraph{Weather data}
+\subsubsection{Weather data}
 The weather station at the telescope provides measurements of various weather parameters, including dew point, humidity, pressure, wind speed, and wind direction.
 The instruments take measurements at a frequency of $5$ data points per minute.
 The figures \ref{sub@subfig:scan_winddir} and \ref{subfig:scan_windspeed} show wind direction and speed measurements for the time period around a pointing scan.
 
 
-\paragraph{Disp abs?}
+\subsubsection{Disp abs?}
 
 Frequency of $12$ data points per minute.
 
-\paragraph{Automatic adjustments}
+\subsubsection{Automatic adjustments}
 Automatic adjustments based on readings from various sensors ensure accurate and stable pointing of the telescope.
 These adjustments account for systematic errors previously modeled and are based on measurements from tiltmeters, temperature sensors installed at different locations, and other relevant data sources.
 Some system at the telescope automatically makes these adjustments, and the tables in the database that contain information about these adjustments start with DAZ or DEL, denoting adjustments in azimuth and elevation, respectively.
 The frequency of this data is $12$ data points per minute.
 Table \ref{tab:data_frequency} shows a comprehensive list of these variables.
 
-\paragraph{Data frequency}
+\subsubsection{Data frequency}
 The monitor database provides data with varying frequencies, as shown in Table \ref{tab:data_frequency},
 which lists the approximate number of data points per minute for each table used in this project.
 
 \begin{table}[H]
-    \caption{The frequency in data points per minute of different variables in the monitor database.}
+    \caption[Database frequencies]{The frequency in data points per minute of different variables in the monitor database.}
     \centering
     \begin{tabular}{lr}
         \toprule
@@ -390,18 +380,18 @@ which lists the approximate number of data points per minute for each table used
         \caption{Wind speed data from the weather station.}
         \label{subfig:scan_windspeed}
     \end{subfigure}
-     \caption{Scatter plots that show different sensory data from before, during, and after a pointing scan. The red line denotes the timestamp for a scan in the pointing scan database.
+     \caption[Features during pointing scans]{Scatter plots that show different sensory data from before, during, and after a pointing scan. The red line denotes the timestamp for a scan in the pointing scan database.
      The red dots indicate when the telescope is observing, while the blue dots indicate when the telescope is idle or preparing to observe.}
      \label{fig:features_during_scans}
 \end{figure}
 
 
-\subsection{Pointing scan data}
+\subsection{Pointing Scan Data}
 During a pointing scan, the telescope observes a source with a known location to obtain a pointing offset measured in arcseconds.
 The observers use this offset to recalibrate the pointing model. There are two types of pointing scans: Line-pointings and continuum scans.
 Figure \ref{fig:features_during_scans} shows the information in the monitor database from a pointing scan.
 
-\paragraph{Line-pointing}
+\subsubsection{Line-pointing}
 A line-pointing involves pointing at an extended source. 
 The telescope then makes ten scans, recording the flux intensity from the source, five vertically and five horizontally,
 around the center of the pointing, as shown in figure \ref{fig:line_pointings}.
@@ -426,13 +416,13 @@ A Gaussian is fitted to these points, and the table shows the resulting amplitud
          \caption{Noisy line-pointing with bad Gaussian fit.}
          \label{subfig:bad_line}
      \end{subfigure}
-    \caption{The two figures show line-pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing.
+    \caption[Line pointing panel]{The two figures show line-pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing.
     The table shows the amplitude, full width at half maximum (FWHM), offset, and the uncertainty of these measures, for azimuth and elevation.
     The figures also show the correction applied during the pointing ($ca$ and $ie$), along with other metrics.}
     \label{fig:line_pointings}
 \end{figure}
 
-\paragraph{Continuum Scan}
+\subsubsection{Continuum Scan}
 Not all sources have emission lines; for these sources, the telescope performs a continuum scan instead. In this case, a source is continuously scanned in azimuth and elevation while recording the flux intensity.
 A Gaussian curve is fitted to the recorded flux intensity to determine the offsets, amplitude, and full width at half maximum (FWHM).
 Figure \ref{fig:continueous_pointings} show examples of continuum scans and the corresponding Gaussian fits.
@@ -452,27 +442,20 @@ Figure \ref{fig:continueous_pointings} show examples of continuum scans and the 
          \caption{Noisy line-pointing with bad Gaussian fit.}
          \label{subfig:bad_continuous}
      \end{subfigure}
-    \caption{The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. 
+    \caption[Continuum scan panel]{The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. 
     A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.}
     \label{fig:continueous_pointings}
 \end{figure}
 
 
 
-\paragraph{Pointing scan timestamp} 
+\subsubsection{Pointing scan timestamp} 
 In the main database, each pointing scan has a timestamp in the format YYYY-MM-DD HH:MM:SS, with a one-second resolution.
 This timestamp does not reflect the actual start of a pointing scan.
 Also, no information in the database itself indicates whether the telescope is observing, but this information can be extracted from some dump files from the tiltmeter, which includes a flag indicating whether the telescope is idle, preparing to observe, or observing.
 Combining this flag with the timestamps, we can obtain the accurate start and end time of a pointing scan. However, these tiltmeter dump files are only available for some time periods.
 
-\begin{itemize}
-    \item Plots with scan times distribution
-    \item proportion of scans we have the accurate time for
-    \item What we did for hte other scans
-    \item mention some deviation
-\end{itemize}
-
-\paragraph{Instruments}
+\subsubsection{Instruments}
 The observing instruments on the telescope operate at various frequencies.
 Table \ref{tab:instrument_usage} provides information on the frequency range covered by each instrument,
 along with the number of scans performed using each instrument throughout the year 2022.\\
@@ -481,7 +464,7 @@ The broad range of frequencies at which astronomical phenomena emit electromagne
 APEX's \href{https://www.eso.org/sci/facilities/apex/cfp/cfp110/instrument_summary.html.html}{website} provides a complete list of instruments along with their descriptions.
 \begin{table}[H]
     \centering
-    \caption{The number of times each instrument was used for a pointing scan in $2022$. There are $8847$ scans in total.}
+    \caption[Number of scans for each instrument]{The number of times each instrument was used for a pointing scan in $2022$. There are $8847$ scans in total.}
     \begin{tabular}{lcr}
         \toprule
         Instrument & Frequency band [GHz] &\# of scans \\
@@ -502,7 +485,7 @@ APEX's \href{https://www.eso.org/sci/facilities/apex/cfp/cfp110/instrument_summa
 
 
 
-\subsection{Tiltmeter dump files}
+\subsection{Tiltmeter Dump Files}
 The tiltmeter dump files are a small part of the database and are only used to analyze when pointing scans start and end.
 There are 280 of these files, and all have filenames in the format "Tiltmeter\_YYYY-MM-DD.dump," which indicates the data's date.
 These files contain seven columns: datetime, azimuth, elevation, tilt1x, tilt1y, tilt1t, and the scan flag.
@@ -512,7 +495,7 @@ Table \ref{tab:tiltmeter_example} shows an extract of the datetime and scan flag
 
 \begin{table}[H]
     \centering
-    \caption{Extract from a tiltmeter dump file.}
+    \caption[Tiltmeter dump file]{Extract from a tiltmeter dump file. It shows the timetamp, and a variable denoting if the telescope is a) idle, b) Preparing to observer, or c) observing.}
     \begin{tabular}{cc}
         \toprule
         Datetime & Scan flag \\

@@ -1,4 +1,4 @@
-\section{Astronomy Terms}\label{sec:ast_terms}
+\section{Astronomy Background}\label{sec:ast_terms}
 \subsection{The Celestial Sphere}
 The celestial sphere is a fundamental concept in astronomy.
 It is an imaginary sphere with an arbitrary radius centered on Earth, and it allows us to represent the positions of celestial objects conveniently and intuitively.
@@ -36,27 +36,42 @@ This thesis will use elevation instead of altitude to describe this coordinate.\
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\textwidth]{Astronomy/Azimuth-Altitude_schematic.png}
-    \caption{The altitude-azimuth coordinate system used at APEX. Source \cite{altaz_schematic}}
+    \includegraphics[width=0.6\textwidth]{Astronomy/Azimuth-Altitude_schematic.png}
+    \caption[Altitude-azimuth coordinate system]{The altitude-azimuth coordinate system used at APEX. Source \cite{altaz_schematic}}
     \label{fig:altaz_coords}
 \end{figure}
 
 
 
 
-\section{Radio/(sub)-mm telescope basics}
+\subsection{Radio/(Sub)-mm Telescope Basics}
+In this section, we present an overview of the fundamental components of a radio/(sub)-mm telescope.
+As illustrated in subfigure \ref{subfig:radio_telescope}, the basic operation of a cassegrain single-dish telescope involves collecting electromagnetic radiation with a primary mirror, which is then reflected onto a secondary mirror (subreflector).
+The photons are subsequently redirected towards the interior of the telescope where they are converted into an electrical signal by an attached receiver (instrument).
+The electric signal is then processed and recorded for further analysis.
 
-
-
-
+Additionally, subfigure \ref{subfig:beamwidth} provides a visual representation of the telescope's beamwidth.
+This angular resolution is determined by physical characteristics such as the diameter of the primary dish and the frequency of the electromagnetic radiation.
+The half-power beamwidth, is defined as the angle between the two points on the beam at which the radiation power is half its maximum, which is the measure commonly used for beamwidth.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\textwidth]{Astronomy/radio_telescope.png}
-    \caption{The main parts of a radio telescope.}
-    \label{fig:radio_telescope}
+    \begin{subfigure}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Astronomy/radio_telescope.png}
+        \caption{Radio telescope basics.}
+        \label{subfig:radio_telescope}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+       \centering
+       \includegraphics[width=\textwidth]{Astronomy/beamwidth_sketch_cropped.png}
+       \caption{Telescope beam sketch.}
+       \label{subfig:beamwidth}
+    \end{subfigure}
+    \caption[Radio telescope basics]{\textbf{a)} Basics of how a radio telescope works and \textbf{b)} Sktech of a telescope's beam.}
+    \label{fig:telescope_info}
 \end{figure}
-
 
 % \section{Problem description}
 % \textcolor{red}{This section have to be fixed completely}

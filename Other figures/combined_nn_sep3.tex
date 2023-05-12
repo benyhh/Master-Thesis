@@ -72,11 +72,11 @@
       % CONNECTIONS
       \ifnum\lay=2 % connect to previous layer
         \foreach \j in {1,...,\Nnod[\prev]}{ % loop over nodes in previous layer
-          \draw[connect,white,line width=1.2] (M3-\j) -- (N\lay-\i);
-          \draw[connect] (M3-\j) -- (N\lay-\i);
+          \draw[connect,white,line width=1.2] (M2-\j) -- (N\lay-\i);
+          \draw[connect] (M2-\j) -- (N\lay-\i);
           %\draw[connect] (N\prev-\j.0) -- (N\lay-\i.180); % connect to left
           \message{^^J Nprev \nprev}
-          \node[node 2,minimum size=18] at (M3-\j) {}; % draw node over lines
+          \node[node 2,minimum size=18] at (M2-\j) {}; % draw node over lines
           \node[node 2,minimum size=18] at (N\lay-\j) {}; % draw node over lines
         }
       \fi % else: nothing to connect first layer
@@ -108,6 +108,14 @@
     }
   }
 
+  \node[shift = {(-1.5,0)}] at (N2-2){
+    $\begin{aligned}
+      \text{Geom}&\text{etric}\\
+      +&\\
+      \text{Harm}&\text{onics}
+    \end{aligned}$
+  };
+  \node[shift = {(-1.5,-0.85)}] at (N2-2){Nonlinear};
 
 
 \end{tikzpicture}

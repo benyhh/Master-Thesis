@@ -1,5 +1,5 @@
 
-This section of the thesis outlines the methodology used for data analysis, cleaning, transformation, feature engineering, and machine learning experiments.
+This chapter of the thesis outlines the methodology used for data analysis, cleaning, transformation, and feature engineering.
 Data-driven methods have the potential to learn all relations in the data, but the size of the dataset limits this.
 Therefore, cleaning the data and selecting features containing information relevant to the desired output is essential.
 With the system's complexity, identifying relevant features can be challenging.
@@ -15,7 +15,7 @@ could be helpful in predicting the target variable.
 The outcome of the data analysis informs our decisions on which features to use in the models.
 
 
-\section{Cleaning pointing scan data} \label{sec:cleaning_pt_scan}
+\section{Cleaning Pointing Scan Data} \label{sec:cleaning_pt_scan}
 
 When utilizing data-driven modeling for predictive purposes, ensuring that the dataset is clean and informative is crucial.
 In this project, various factors may impact the quality of the data, and therefore, we implemented measures to clean the data based on our knowledge of the telescope's operation.
@@ -26,7 +26,7 @@ Consequently, having outliers in the training data can be more damaging than rem
 Therefore, we have a strict approach when cleaning the data to ensure high-quality datasets for model training.
 
 
-\subsection{Cleaning criteria}
+\subsection{Cleaning Criteria}
 To eliminate unreliable or unusable scans, we applied criteria informed by the insights of astronomers at APEX.
 The following list outlines the criteria used to filter out such scans:
 \begin{itemize}
@@ -41,7 +41,7 @@ The following list outlines the criteria used to filter out such scans:
 \end{itemize}   
 After this filtering, there are $5901$ out of $8862$ scans left.
         
-\subsection{Pointing scan classifier} 
+\subsection{Pointing Scan Classifier} 
 \subsubsection{Method}
 In addition to cleaning the data based on the criteria above, we had to remove the outright bad pointing scans (like \ref{subfig:bad_continuous} \ref{subfig:bad_line}, \ref{subfig:bad_line}).
 The scan quality is often obvious when inspecting the data visually, but it is hard to develop suitable measures to identify which scans are good or bad.
@@ -58,7 +58,7 @@ We split the data into $80\%$ for training and the rest for testing, correspondi
 
 \begin{table}[H]
     \centering
-    \caption{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing scan classifier.
+    \caption[Hyperparemter search space XGBoost pointing scan classifier]{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing scan classifier.
     The table includes names, sampled distributions and corresponding ranges, and parameter values for the best model.}
     \begin{tabular}{lccc}
         \toprule
@@ -96,7 +96,7 @@ $5326$ scans for the rest of the analysis.
        \caption{Average precision for different classification threshold.}
        \label{subfig:map_curve}
     \end{subfigure}
-     \caption{Precision-recall and average precision curve for the XGBoost classifier when classifying good and bad pointing scans in the test set.}
+     \caption[Performance plots of XGBoost pointing scan classifier]{Precision-recall and average precision curve for the XGBoost classifier when classifying good and bad pointing scans in the test set.}
      \label{fig:pointing_scan_clf}
 \end{figure}
 
@@ -116,7 +116,7 @@ $5326$ scans for the rest of the analysis.
 %     \label{fig:xgb_clf_sage}
 % \end{figure}
 
-\section{Scan duration analysis}\label{sec:scan_duration_analysis}
+\section{Scan Duration Analysis}\label{sec:scan_duration_analysis}
 As mentioned in the database section \ref{sec:database}, the scans' timestamps are not the accurate start time of a scan.
 The tiltmeter dump files with the flag indicating whether the telescope is idle, preparing to observe, or observing,
 is the only accurate data we have when the telescope performs a pointing scan.
@@ -143,7 +143,7 @@ Table \ref{tab:scan_flag_difference} shows an example of the resulting table.
         11:21:26 & IDLE & $0$ & $-1$ \\
         \bottomrule
     \end{tabular}
-    \caption{This table shows the tiltmeter dump file containing the telescope state flag,
+    \caption[Tiltmeter dump file with $\Delta$ for analysis]{This table shows the tiltmeter dump file containing the telescope state flag,
             and how we find the start ($\Delta = 1$) and end ($\Delta = -1$) of a scan.}
     \label{tab:scan_flag_difference}
 \end{table}
@@ -153,7 +153,7 @@ Table \ref{tab:scan_flag_difference} shows an example of the resulting table.
 With the scan timestamp and the observing flag from tiltmeter dumps, we used the following algorithm to obtain the start and end of pointing scans.
 
 \begin{algorithm}[H]
-    \caption{Find start and end of pointing scan}
+    \caption{Algorithm that finds the start and end of pointing scan}
     \label{alg:scan_times}
     \begin{algorithmic}
         \Require{\\
@@ -211,14 +211,14 @@ For the scans with an exact start and end time, we used this time period instead
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_rx.pdf}
-    \caption{Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
+    \caption[Box plots with pointing scan duration and start time]{Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
     \label{fig:scan_times_box}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_date.pdf}
-    \caption{Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
+    \caption[Scatter plot with pointing scan duration and start time throughout 2022.]{Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
     \label{fig:scan_times_date}
 \end{figure}
 
@@ -315,7 +315,7 @@ Another measure tested is the total angle between the pointing and the sun's pos
     \theta = \cos \textit{Az}_t \cdot \cos \textit{El}_t\cdot \cos \textit{Az}_\odot \cdot \cos \textit{El}_\odot + \sin \textit{Az}_t \cdot \cos \textit{El}_t\cdot \sin \textit{Az}_\odot \cdot \cos \textit{El}_\odot + \sin \textit{El}_t \cdot \sin \textit{El}_\odot
 \end{equation}
 
-\subsection{List of features}
+\subsection{List of Features}
 \textcolor{red}{add a list of all features for different calculations here}
 
 % \begin{table}[H]

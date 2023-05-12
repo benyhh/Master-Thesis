@@ -1,27 +1,29 @@
 \babel@toc {USenglish}{}\relax 
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces The altitude-azimuth coordinate system used at APEX. Source \cite {altaz_schematic}\relax }}{13}{figure.caption.7}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces The main parts of a radio telescope.\relax }}{14}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Pictures of the APEX telescope\relax }}{11}{figure.caption.7}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Altitude-azimuth coordinate system}}{13}{figure.caption.8}%
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Radio telescope basics}}{14}{figure.caption.9}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Linear correlation between temperature measures. The values are sampled by the median value at each pointing scan.\relax }}{21}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Scatter plots that show different sensory data from before, during, and after a pointing scan. The red line denotes the timestamp for a scan in the pointing scan database. The red dots indicate when the telescope is observing, while the blue dots indicate when the telescope is idle or preparing to observe.\relax }}{24}{figure.caption.27}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces The two figures show line-pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The table shows the amplitude, full width at half maximum (FWHM), offset, and the uncertainty of these measures, for azimuth and elevation. The figures also show the correction applied during the pointing ($ca$ and $ie$), along with other metrics.\relax }}{25}{figure.caption.29}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces The two panels show continuum pointing scans. a) is good and clean, and b) is noisy and unreliable. A Gaussian is fit both for the azimuth and elevation pointing. The amplitude, full width at half maximum, offset, and the uncertainty of these measures are shown for both of the fits.\relax }}{26}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Correlation between temperature mesasurements}}{21}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Features during pointing scans}}{24}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Line pointing panel}}{25}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Continuum scan panel}}{26}{figure.caption.32}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Decision tree with 3 decision nodes and 5 leaf nodes.\relax }}{32}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Evolution of XGBoost. \cite {morde_vishal_nodate}\relax }}{33}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces This is an illustration of how information is passed through and processed in a neural network. Generated using TikZ \cite {tikz}\relax }}{34}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Decision tree}}{32}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Evolution of XGBoost}}{33}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Neural Network with equations}}{34}{figure.caption.39}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Precision-recall and average precision curve for the XGBoost classifier when classifying good and bad pointing scans in the test set.\relax }}{43}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }}{45}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.\relax }}{46}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces This figure shows two cross-validation cases: the orange region represents the train and validation set, the red region represents the test set, and the blue region is unused for evaluation. In \textbf {Case 1}, the dataset is split into six equal-sized folds sorted by date. For the selected fold, we use the last part (colored red) for testing and the remaining part (colored orange) for training and validation. This process is repeated six times, once for each fold. In \textbf {Case 2}, the dataset is again split into six equal-sized folds sorted by date. However, we use one whole fold for testing this time and the remaining five for training and validation. This process is repeated six times, with each fold used exactly once for testing.\relax }}{49}{figure.caption.54}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces These architectures were used to train a base pointing model on raw data.\relax }}{52}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Performance plots of XGBoost pointing scan classifier}}{43}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Box plots with pointing scan duration and start time}}{45}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Scatter plot with pointing scan duration and start time throughout 2022.}}{46}{figure.caption.49}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Distribution of offsets with and without XGBoost NFLASH230 pointing correction model for \textbf {a)} azimuth model and \textbf {b)} elevation model.\relax }}{58}{figure.caption.69}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Offset predictions by the XGBoost NFLASH230 pointing correction model Predicted and observed values, sorted in ascending order by observed value. \textbf {a)} Azimuth model and \textbf {b)} elevation model.\relax }}{59}{figure.caption.70}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces SAGE values for the NFLASH230 azimuth pointing correction model on the a) validation set, and b) test set.\relax }}{61}{figure.caption.71}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces SAGE values for the NFLASH230 elevation pointing correction model on the \textbf {a)} validation set, and \textbf {b)} test set.\relax }}{62}{figure.caption.72}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data split cases for pointing correction model}}{50}{figure.caption.55}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Neural network architectures for pointing model}}{53}{figure.caption.57}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Offset distribution with and without pointing correction model}}{60}{figure.caption.64}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Sorted offset prediction and true values}}{61}{figure.caption.65}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces SAGE values for NFLASH230 elevation pointing correction model}}{63}{figure.caption.66}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces SAGE values for NFLASH230 elevation pointing correction model}}{64}{figure.caption.67}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

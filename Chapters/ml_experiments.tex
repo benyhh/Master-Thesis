@@ -1,12 +1,11 @@
 
-\section{Machine Learning Experiments}\label{sec:ml_exp}
-In this section, we will provide an overview of two machine learning experiments pertinent to the two research questions \ref{sec:introduction}.
+This chapter provides an overview of two machine learning experiments related to the two research questions \ref{sec:introduction}.
 The first experiment aims to examine the effectiveness of an XGBoost model in predicting pointing scan offsets to enhance the pointing accuracy.
 The primary objective of this experiment is to assess whether the proposed model can outperform the current model in terms of pointing accuracy.
 The second experiment aims to investigate the effectiveness of neural networks in developing a pointing model that could replace the current linear model, which is created through linear regression.
 It explores the feasibility of a more sophisticated model in terms of pointing accuracy.
 
-\subsection{Experiment 1: Pointing Correction Model} \label{sec:exp1}
+\section{Experiment 1: Pointing Correction Model} \label{sec:exp1}
 This experiment aims to improve the accuracy of the existing pointing model by training XGBoost models to predict offsets obtained from pointing scans.
 To accomplish this, we utilized two different datasets, which we processed using the cleaning outlined in section \ref{sec:cleaning_pt_scan}.
 The difference between these datasets is that one contains the scans from all instruments, while the other only contains the scans from NFLASH230.
@@ -37,7 +36,7 @@ This does not amount to precisely the same percentage of scans for the given spl
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.98\textwidth]{Canva/datasplits.png}
-    \caption{This figure shows two cross-validation cases: the orange region represents the train and validation set, the red region represents the test set, and the blue region is unused for evaluation.
+    \caption[Data split cases for pointing correction model]{This figure shows two cross-validation cases: the orange region represents the train and validation set, the red region represents the test set, and the blue region is unused for evaluation.
     In \textbf{Case 1}, the dataset is split into six equal-sized folds sorted by date.
     For the selected fold, we use the last part (colored red) for testing and the remaining part (colored orange) for training and validation.
     This process is repeated six times, once for each fold.
@@ -50,13 +49,13 @@ This does not amount to precisely the same percentage of scans for the given spl
 
 
 
-\subsubsection{Feature Selection}
+\subsection{Feature Selection}
 We trained models using a range of features, specifically $k=[2,5,10,20,30,40,50]$ features.
 We selected the $k$ features that had the greatest mutual information for each model with the target value.
 This approach helps us identify the most important features to improve the model's performance. Selecting a subset of features can reduce the noise in the data. 
 By selecting different numbers of features, we can explore the trade-off between model complexity and performance.\textcolor{red}{write and ref to mutual info in theory section}.
 
-\subsubsection{Model Architecture}
+\subsection{Model Architecture}
 We performed a Bayesian hyperparameter search for each model using the parameter space in Table \ref{tab:xgb_hyperparameters_pcorr}.
 The search space includes eight hyperparameters that affect the model's complexity, such as the maximum depth of the trees, the regularization strength, and the learning rate.
 We used a uniform or log-uniform distribution to sample each hyperparameter within a specific range.
@@ -66,7 +65,7 @@ The models were validated using the MSE, and we picked the model with the best p
 
 \begin{table}[H]
     \centering
-    \caption{This table presents a list of parameters we sampled during hyperparameter tuning for the pointing correction model. The table includes names, sampled distributions, and corresponding ranges.}
+    \caption[Hyperparameter search space for XGBoost pointing correction model]{This table presents a list of parameters we sampled during hyperparameter tuning for XGBoost the pointing correction model. The table includes names, sampled distributions, and corresponding ranges.}
     \begin{tabular}{lcc}
         \toprule
         \textbf{Parameter} & \textbf{Sample Distribution} & \textbf{Range} \\ \hline
@@ -85,30 +84,35 @@ The models were validated using the MSE, and we picked the model with the best p
 
 
 
-\subsubsection{Model Evaluation}
+\subsection{Model Evaluation}
 To evaluate the performance of the models, we calculated the RMS on each test fold and compared it to the current RMS of the telescope on the same data.
 The RMS is calculated for azimuth and elevation separately since an XGBoost model only can predict one target.
-For a fold $j$ and target either azimuth or elevation, we calculate the RMS by
+Given fold $j$ and target either azimuth or elevation, we calculate the RMS by
 \begin{equation}
     RMS_{\text{target},j} = \sqrt{\frac{1}{N_j}\sum_{i=1}^{N_j} (\tilde{\delta}_{\text{target},ji} - \delta_{\text{target},ji})^2},
 \end{equation}
 where $\tilde{\delta}_{\text{target},ji}$ is the predicted pointing offset and $\delta_{\text{target},ji}$ is the true pointing offset for the $i$th pointing scan in fold $j$.
 $N_j$ is the number of pointing scans in fold $j$. 
-We then computed the ratio $r_{RMS,j}$ of the model's RMS to the current RMS for each fold.
-If the ratio is less than $1$, it indicates that the XGBoost model provides an improvement over the current performance of the telescope for a given fold.
+
+The measure we used for evaluating an analyzing the results is the RMS ratio between the XGBoost pointing correction model and the current model, given by
+\begin{equation}\label{eq:rms_compared}
+    r_{RMS,j} = \frac{RMS_{\text{target},j}}{RMS_{\text{current},j}}.
+\end{equation}
+This measure is useful because it compares our results to the current performance of the telescope.
+If $r_{RMS,j}<1$, it indicates that the XGBoost model provides an improvement over the current performance of the telescope for a given fold.
 
 To obtain an overall measure of the model's performance compared to the current performance of the telescope, we averaged the ratios $r_{RMS,j}$ over all six test folds
 \begin{equation} \label{eq:mean_rms_compared}
     \bar{r}_{RMS} = \sum_{i=1}^6 \frac{RMS_{model,j}}{RMS_{current,j}}.
 \end{equation}
-This gives us an average ratio $\bar{r}_{RMS}$, which measures the improvement in performance provided by the XGBoost model.
+This gives us an average ratio $\bar{r}_{RMS}$, which measures the expected performance of the pointing correction model.
 If $\bar{r}_{RMS} < 1$, it indicates that the XGBoost model outperforms the current pointing correction method on average across all test folds.
-By comparing the average ratio $\bar{r}_{RMS}$ for the two different cross-validation cases in Figure \ref{fig:datasplit_cases} and the selected number of features,
+By comparing the average ratio $\bar{r}_{RMS}$ for the two different cross-validation cases in Figure \ref{fig:datasplit_cases},
 we can identify which models provide the best performance.
 
 
 
-\subsection{Experiment 2: Pointing Model using Neural Networks}
+\section{Experiment 2: Pointing Model using Neural Networks}
 This experiment uses the raw dataset containing input coordinates, $Az_{\text{input}}$ and $El_{\text{input}}$ respectively, and corresponding true observed values $Az_{\text{observed}}$ and $El_{\text{observed}}$.
 
 The goal is to find a model $f$ such that
@@ -121,7 +125,7 @@ The last $15\%$ of the data, which we sorted by date, is used for testing.
 We use the remaining $85\%$ of the data for training and validation and split this set into $20\%$ for training and $80\%$ for validation.
 This results in $\approx 76\%$ and $\approx 24\%$ of the total dataset used for training and validation.
 
-\subsubsection{Feature Selection}
+\subsection{Feature Selection}
 Selecting the right features is essential in improving the pointing model's accuracy.
 This model uses two types of features: geometrical and harmonic terms (some of which are part of the current analytical pointing model [\eqref{eq:analytical_az},\eqref{eq:analytical_el}]) and new features extracted from the telescope's database.
 We identified relevant features by calculating Pearson's and Spearman's rank correlation to the offsets for all features.
@@ -132,7 +136,7 @@ During model training, we randomly selected a subset of 2 to 19 features from th
 This way of choosing features does not consider complex dependencies between the features that can affect the offsets.
 However, training neural networks is computationally heavy, so we must carefully select the features we test.
 
-\subsubsection{Model Architecture}
+\subsection{Model Architecture}
 This experiment utilized four different model architectures.
 The first architecture involved feeding all input data into one, two, or three hidden layers.
 The other three architectures incorporated machine learning techniques by separating the geometrical and harmonic terms of the input data from the other features and processing them using distinct architectures.
@@ -189,7 +193,7 @@ These are visualized in Figure \ref{fig:nn_architecture}.
         In this architecture, we concatenate the processed regular features to the geometric and harmonic features before being connected to the output layer.}
         \label{subfig:comb_sep3}
     \end{subfigure}
-     \caption{These architectures were used to train a base pointing model on raw data.}
+     \caption[Neural network architectures for pointing model]{The different architectures tested for the pointing model.}
      \label{fig:nn_architecture}
 \end{figure}
 
@@ -199,7 +203,7 @@ In total, we trained $100$ networks of each architecture for $200$ epochs.
 We pick the model from the epoch with the best performance on the validation set.
 \begin{table}[H]
     \centering
-    \caption{This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.}
+    \caption[Hyperparameter search space for neural network pointing models]{This table presents a list of parameters we sampled during hyperparameter tuning for the base pointing model. The table includes names, the distribution we sampled from, and corresponding ranges.}
     \begin{tabular}{lcc}
     \hline
     \textbf{Name} & \textbf{Distribution Type} & \textbf{Range} \\ \hline
@@ -212,7 +216,7 @@ We pick the model from the epoch with the best performance on the validation set
     \label{tab:nn_hyperparameters}
     \end{table}
 
-\subsubsection{Loss Function and Model Evaluation}
+\subsection{Loss Function and Model Evaluation}
 To evaluate the performance of the models, we used the root mean squared (RMS), measured in arcseconds, on the test set.
 We calculate the RMS as follows:
 \begin{equation}

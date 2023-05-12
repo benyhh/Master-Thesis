@@ -1,4 +1,4 @@
-\section{Supervised learning} \label{sec:supervised_learning}
+\section{Supervised Learning} \label{sec:supervised_learning}
 Supervised learning is a subfield of machine learning that refers to training a model to predict a specific target value based on input data.
 In this context, we refer to the input data as "features." The training is supervised when paired with the corresponding target value for prediction.
 There are two types of supervised learning, regression and classification. 
@@ -42,7 +42,7 @@ and $\mathcal{L}_{\text{MSD}}$ reduces the offsets more evenly. \\
 
 For models with a single output azimuth or elevation, we use the regular mean squared error \eqref{eq:mse}
 
-\section{Train/test set}
+\section{Train/Test Set}
 Machine learning models can be highly complex and fit all the data points in a dataset.
 While this can result in perfect predictions on the training data, it often leads to poor performance on new data, a phenomenon known as overfitting.
 To counteract this, the data is typically split into two parts - a training set and a validation set.
@@ -131,15 +131,15 @@ Repeated iteration with small steps in the gradient direction helps reduce both 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\textwidth]{Other figures/decisiontree_example.PNG}
-    \caption{Decision tree with 3 decision nodes and 5 leaf nodes.}
+    \includegraphics[width=0.8\textwidth]{Other figures/decisiontree_example.PNG}
+    \caption[Decision tree]{AN example of a decision tree with 3 decision nodes and 5 leaf nodes.}
     \label{fig:decitiontree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.98\textwidth]{Other figures/evolution_of_xgb.png}
-    \caption{Evolution of XGBoost.
+    \caption[Evolution of XGBoost]{Evolution of XGBoost.
 \cite{morde_vishal_nodate}}
     \label{fig:evolution_of_xgb}
 \end{figure}
@@ -170,7 +170,7 @@ will be helpful when explaining how to optimize a neural network and can be cons
 \begin{figure}[H]
     \centering
     \input{Other figures/nn_with_eqs.tex}
-    \caption{This is an illustration of how information is passed through and processed in a neural network.
+    \caption[Neural Network with equations]{This is an illustration of how information is passed through and processed in a neural network.
 Generated using TikZ \cite{tikz}}
     \label{fig:nnfig}
 \end{figure}
@@ -299,7 +299,7 @@ Furthermore, the memory of previous first and second-order gradient estimates en
 As a result, Adam is widely used and has become the de facto standard optimization algorithm in deep learning.
 
 
-\subsection{Activation functions}
+\subsection{Activation Functions}
 Activation functions play a crucial role in training a neural network by allowing it to learn non-linear relationships between inputs and outputs.
 Different activation functions have varying properties; we will discuss some of the most common ones in this section.
 Properties like non-linearity, differentiability, monotonicity, smoothness, and zero-centering are important for activation functions.

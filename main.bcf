@@ -2348,15 +2348,12 @@
   <bcf:bibdata section="0">
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">altaz_schematic</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">morde_vishal_nodate</bcf:citekey>
-    <bcf:citekey order="3" intorder="1">tikz</bcf:citekey>
     <bcf:citekey order="4" intorder="1">Dong2018</bcf:citekey>
-    <bcf:citekey order="5" intorder="1">grav_deformation</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">whitegreen2022</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">greve1996pointing</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">mlastgravlens</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">mlastgravitationalwaves</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">GravDeformation</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">mlastgravlens</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">mlastgravitationalwaves</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">whitegreen2022</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">greve1996pointing</bcf:citekey>
     <bcf:citekey order="10" intorder="1">altaz_schematic</bcf:citekey>
     <bcf:citekey order="11" intorder="1">altaz_schematic</bcf:citekey>
     <bcf:citekey order="12" intorder="1">tpoint_manual</bcf:citekey>
@@ -2385,4 +2382,13 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
+  <bcf:datalist section="0"
+                name="none/global//global/global"
+                type="entry"
+                sortingtemplatename="none"
+                sortingnamekeytemplatename="global"
+                labelprefix=""
+                uniquenametemplatename="global"
+                labelalphanametemplatename="global">
+  </bcf:datalist>
 </bcf:controlfile>

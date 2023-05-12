@@ -1346,10 +1346,6 @@ INPUT ./Chapters/thesis_structure.tex
 INPUT Chapters/thesis_structure.tex
 INPUT ./Chapters/thesis_structure.tex
 INPUT Chapters/thesis_structure.tex
-INPUT ./main.toc
-INPUT main.toc
-INPUT main.toc
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
@@ -1394,6 +1390,10 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./main.toc
+INPUT main.toc
+INPUT main.toc
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 OUTPUT main.toc
@@ -1429,6 +1429,17 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./Astronomy/apex_primary_mirror_cropped.jpeg
+INPUT ./Astronomy/apex_primary_mirror_cropped.jpeg
+INPUT Astronomy/apex_primary_mirror_cropped.jpeg
+INPUT ./Astronomy/apex_primary_mirror_cropped.jpeg
+INPUT ./Astronomy/apex_primary_mirror_cropped.jpeg
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT ./Astronomy/apex_subreflector.jpeg
+INPUT ./Astronomy/apex_subreflector.jpeg
+INPUT Astronomy/apex_subreflector.jpeg
+INPUT ./Astronomy/apex_subreflector.jpeg
+INPUT ./Astronomy/apex_subreflector.jpeg
 INPUT ./Chapters/related_works.tex
 INPUT Chapters/related_works.tex
 INPUT ./Chapters/related_works.tex
@@ -1447,6 +1458,11 @@ INPUT ./Astronomy/radio_telescope.png
 INPUT Astronomy/radio_telescope.png
 INPUT ./Astronomy/radio_telescope.png
 INPUT ./Astronomy/radio_telescope.png
+INPUT ./Astronomy/beamwidth_sketch_cropped.png
+INPUT ./Astronomy/beamwidth_sketch_cropped.png
+INPUT Astronomy/beamwidth_sketch_cropped.png
+INPUT ./Astronomy/beamwidth_sketch_cropped.png
+INPUT ./Astronomy/beamwidth_sketch_cropped.png
 INPUT ./Chapters/pointing_model.tex
 INPUT Chapters/pointing_model.tex
 INPUT ./Chapters/pointing_model.tex
@@ -1472,7 +1488,6 @@ INPUT ./Feature during scans/scan_ACTUALAZ_335.pdf
 INPUT Feature during scans/scan_ACTUALAZ_335.pdf
 INPUT ./Feature during scans/scan_ACTUALAZ_335.pdf
 INPUT ./Feature during scans/scan_ACTUALAZ_335.pdf
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT ./Feature during scans/scan_ACTUALEL_335.pdf
 INPUT ./Feature during scans/scan_ACTUALEL_335.pdf
 INPUT Feature during scans/scan_ACTUALEL_335.pdf
@@ -1559,10 +1574,10 @@ INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
-INPUT ./Chapters/method.tex
-INPUT Chapters/method.tex
-INPUT ./Chapters/method.tex
-INPUT Chapters/method.tex
+INPUT ./Chapters/data_processing.tex
+INPUT Chapters/data_processing.tex
+INPUT ./Chapters/data_processing.tex
+INPUT Chapters/data_processing.tex
 INPUT ./Clf/precision_recall_curve_both.pdf
 INPUT ./Clf/precision_recall_curve_both.pdf
 INPUT Clf/precision_recall_curve_both.pdf
@@ -1585,6 +1600,10 @@ INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
 INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
+INPUT ./Chapters/ml_experiments.tex
+INPUT Chapters/ml_experiments.tex
+INPUT ./Chapters/ml_experiments.tex
+INPUT Chapters/ml_experiments.tex
 INPUT ./Canva/datasplits.png
 INPUT ./Canva/datasplits.png
 INPUT Canva/datasplits.png

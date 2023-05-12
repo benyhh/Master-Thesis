@@ -102,7 +102,7 @@ top=3cm,bottom=2.5cm]{geometry}
 \makeindex
 \usepackage[totoc]{idxlayout}   % for index in the toc
 \usepackage[nottoc, notlof, notlot]{tocbibind}  % for references/bibliography in the toc
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 % \usepackage{booktabs}				% for citing
 \usepackage{float}					% for placing figures
 % \usepackage[ruled,vlined,linesnumbered]{algorithm2e} %for pseudocoding
@@ -159,7 +159,7 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 \input{Chapters/astronomy.tex}
 
 \part{Background and Theory}
-\chapter{Pointing Model at APEX}
+\chapter{APEX Pointing Model and Database}
 \input{Chapters/pointing_model.tex}
 
 
@@ -167,9 +167,11 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 \input{Chapters/ml_background.tex}
 
 \part{Data Processing \& Methods}
-\chapter{Data Cleaning}
-\input{Chapters/method.tex}
+\chapter{Data Processing}
+\input{Chapters/data_processing.tex}
 
+\chapter{Machine Learning Experiments}
+\input{Chapters/ml_experiments.tex}
 
 
 \part{Results \& Discussion}
