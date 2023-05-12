@@ -86,7 +86,7 @@ top=3cm,bottom=2.5cm]{geometry}
     }
 %\hyperbaseurl{}   % hyperlinks are relative to this root
 
-\setcounter{tocdepth}{4}  % levels in table of contents
+\setcounter{tocdepth}{2}  % levels in table of contents
 
 
 % prevent orhpans and widows
@@ -101,9 +101,8 @@ top=3cm,bottom=2.5cm]{geometry}
 \raggedbottom
 \makeindex
 \usepackage[totoc]{idxlayout}   % for index in the toc
-\usepackage[nottoc]{tocbibind}  % for references/bibliography in the toc
+\usepackage[nottoc, notlof, notlot]{tocbibind}  % for references/bibliography in the toc
 \usepackage{natbib}
-
 % \usepackage{booktabs}				% for citing
 \usepackage{float}					% for placing figures
 % \usepackage[ruled,vlined,linesnumbered]{algorithm2e} %for pseudocoding
@@ -142,42 +141,55 @@ top=3cm,bottom=2.5cm]{geometry}
 color=blue,image = {teleskopgutt2},
 supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Claudia Cicone (UiO)}]
 
+\chapter*{Abstract}
+\chapter*{Acknowledgements}
+\chapter*{Thesis Structure}
+\input{Chapters/thesis_structure.tex}
+
 
 \tableofcontents 
 
-\chapter{Introduction}\label{sec:introduction}
+\listoffigures
+\listoftables
+
+
+\chapter{Background \& Motivation}\label{sec:introduction}
 \input{Chapters/introduction.tex}
-
-\chapter{Related Works}
 \input{Chapters/related_works.tex}
+\input{Chapters/astronomy.tex}
 
-\chapter{Atronomical Background}
-\input{Chapters/ast_background.tex}
+\part{Background and Theory}
+\chapter{Pointing Model at APEX}
+\input{Chapters/pointing_model.tex}
 
 
-\chapter{Machine Learning Background}
+\chapter{Machine Learning Theory}
 \input{Chapters/ml_background.tex}
 
-\chapter{Method}
+\part{Data Processing \& Methods}
+\chapter{Data Cleaning}
 \input{Chapters/method.tex}
 
-\chapter{Results}
+
+
+\part{Results \& Discussion}
+\chapter{Results \& Discussion}
 \input{Chapters/results.tex}
 
-\chapter{Discussion}
-\input{Chapters/discussion.tex}
+% \chapter{Discussion}
+% \input{Chapters/discussion.tex}
 
 \chapter{Conclusion}
 \input{Chapters/conclusion.tex}
 
 
 % \pagestyle{plain}
+\part{Appendices}
 \appendix
-\chapter*{Appendices}
-\section{Appendix A}\label{sec:appendix_a}
+\chapter{Results \& Tables}\label{sec:appendix_a}
 \input{Chapters/appendix_a.tex}
 
-\section{Appendix B}\label{sec:appendix_b}
+\chapter{Additional methods}\label{sec:appendix_b}
 \input{Chapters/appendix_b.tex}
 
 

@@ -26,6 +26,12 @@ Ian Covert, Scott Lundberg, and Su-In Lee.
 \newblock Understanding global feature contributions with additive importance
   measures, 2020.
 
+\bibitem{Dong2018}
+Jian Dong, Li~Fu, Qinghui Liu, and Zhiqiang Shen.
+\newblock Measuring and analyzing thermal deformations of the primary reflector
+  of the tianma radio telescope.
+\newblock {\em Experimental Astronomy}, 45, 2018.
+
 \bibitem{mlastgravitationalwaves}
 Daniel George and E.A. Huerta.
 \newblock Deep learning for real-time gravitational wave detection and
@@ -88,6 +94,12 @@ Tomruen.
 Tpoint Software.
 \newblock {\em TPOINT}, 2009.
 \newblock Version 13.5.
+
+\bibitem{GravDeformation}
+Sebastian von Hoerner and Woon~Yin Wong.
+\newblock Gravitational deformation and astigmatism of tiltable radio
+  telescopes.
+\newblock {\em IEEE Transactions on Antennas and Propagation}, 23, 1975.
 
 \bibitem{whitegreen2022}
 E.~White, F.~D. Ghigo, R.~M. Prestage, D.~T. Frayer, R.~J. Maddalena, P.~T.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  11 MAY 2023 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.3.3)  12 MAY 2023 14:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -868,7 +868,7 @@ Package: ragged2e 2023/02/25 v3.4 ragged2e Package
 \RaggedRightParindent=\skip100
 \JustifyingParindent=\skip101
 )
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 137.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 136.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (c:/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -878,24 +878,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 137.
-LaTeX Font Info:    ... okay on input line 137.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
  (c:/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count364
@@ -915,18 +915,18 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2022/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \microtypecontext on input line 137.
-Package microtype Info: Applying patch `item' on input line 137.
-Package microtype Info: Applying patch `toc' on input line 137.
-Package microtype Info: Applying patch `eqnum' on input line 137.
-Package microtype Info: Applying patch `footnote' on input line 137.
+LaTeX Info: Redefining \microtypecontext on input line 136.
+Package microtype Info: Applying patch `item' on input line 136.
+Package microtype Info: Applying patch `toc' on input line 136.
+Package microtype Info: Applying patch `eqnum' on input line 136.
+Package microtype Info: Applying patch `footnote' on input line 136.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 137.
+LaTeX Info: Redefining \showhyphens on input line 136.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -972,55 +972,61 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 137.
+Package hyperref Info: Link coloring ON on input line 136.
 (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
 
-Package hyperref Info: Option `pageanchor' set `false' on input line 143.
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 143.
+Package hyperref Info: Option `pageanchor' set `false' on input line 142.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 142.
  (c:/texlive/2022/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 13.29996pt on input line 143.
+(Font)              scaled to size 13.29996pt on input line 142.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 5.69998pt on input line 143.
-<folder/uio-fp-navn-eng.pdf, id=320, 469.755pt x 123.46124pt>
+(Font)              scaled to size 5.69998pt on input line 142.
+<folder/uio-fp-navn-eng.pdf, id=384, 469.755pt x 123.46124pt>
 File: folder/uio-fp-navn-eng.pdf Graphic file (type pdf)
 <use folder/uio-fp-navn-eng.pdf>
-Package pdftex.def Info: folder/uio-fp-navn-eng.pdf  used on input line 143.
+Package pdftex.def Info: folder/uio-fp-navn-eng.pdf  used on input line 142.
 (pdftex.def)             Requested size: 138.56935pt x 36.41953pt.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 13.29996pt on input line 143.
-<folder/uio-fp-segl.pdf, id=321, 232.87pt x 232.87pt>
+(Font)              scaled to size 13.29996pt on input line 142.
+<folder/uio-fp-segl.pdf, id=385, 232.87pt x 232.87pt>
 File: folder/uio-fp-segl.pdf Graphic file (type pdf)
 <use folder/uio-fp-segl.pdf>
-Package pdftex.def Info: folder/uio-fp-segl.pdf  used on input line 143.
+Package pdftex.def Info: folder/uio-fp-segl.pdf  used on input line 142.
 (pdftex.def)             Requested size: 67.43301pt x 67.43106pt.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 30.3999pt on input line 143.
+(Font)              scaled to size 30.3999pt on input line 142.
 
 
-Package xcolor Warning: Incompatible color definition on input line 143.
+Package xcolor Warning: Incompatible color definition on input line 142.
 
-<teleskopgutt2.jpeg, id=322, 1129.21875pt x 697.10437pt>
+<teleskopgutt2.jpeg, id=386, 1129.21875pt x 697.10437pt>
 File: teleskopgutt2.jpeg Graphic file (type jpg)
 <use teleskopgutt2.jpeg>
-Package pdftex.def Info: teleskopgutt2.jpeg  used on input line 143.
+Package pdftex.def Info: teleskopgutt2.jpeg  used on input line 142.
 (pdftex.def)             Requested size: 597.51819pt x 263.75362pt.
 [1
 
 {c:/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./teleskopgutt2.jpeg> <./folder/uio-fp-navn-eng.pdf> <./folder/uio-fp-segl.pdf>]
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.99994pt on input line 143.
+(Font)              scaled to size 18.99994pt on input line 142.
  [1]
-Package hyperref Info: Option `pageanchor' set `true' on input line 143.
- (./main.toc
+Package hyperref Info: Option `pageanchor' set `true' on input line 142.
+ [1
+
+] [2
+
+] (./Chapters/thesis_structure.tex) [3
+
+] (./main.toc
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1043,42 +1049,64 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+) [4
 
-] [2])
+])
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
- [3]
+ [5] (./main.lof [6
+
+])
+\tf@lof=\write8
+\openout8 = `main.lof'.
+
+ [7] (./main.lot [8
+
+])
+\tf@lot=\write9
+\openout9 = `main.lot'.
+
+ [9]
 Chapter 1.
-(./Chapters/introduction.tex) [4
+(./Chapters/introduction.tex
+Underfull \hbox (badness 10000) in paragraph at lines 2--8
 
-] [5]
-Chapter 2.
-(./Chapters/related_works.tex [6
+ []
 
-]) [7]
-Chapter 3.
-(./Chapters/ast_background.tex
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--17
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 18.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 18.
+) (./Chapters/related_works.tex [10
+
+] [11]) (./Chapters/astronomy.tex
 Underfull \hbox (badness 10000) in paragraph at lines 15--25
 
  []
 
-<Astronomy/Azimuth-Altitude_schematic.png, id=510, 1927.2pt x 1856.9375pt>
+<Astronomy/Azimuth-Altitude_schematic.png, id=732, 1927.2pt x 1856.9375pt>
 File: Astronomy/Azimuth-Altitude_schematic.png Graphic file (type png)
 <use Astronomy/Azimuth-Altitude_schematic.png>
 Package pdftex.def Info: Astronomy/Azimuth-Altitude_schematic.png  used on input line 39.
 (pdftex.def)             Requested size: 390.37012pt x 376.1128pt.
-[8
-
-]
-<Astronomy/radio_telescope.png, id=521, 474.27188pt x 440.39531pt>
+[12]
+<Astronomy/radio_telescope.png, id=740, 474.27188pt x 440.39531pt>
 File: Astronomy/radio_telescope.png Graphic file (type png)
 <use Astronomy/radio_telescope.png>
 Package pdftex.def Info: Astronomy/radio_telescope.png  used on input line 55.
 (pdftex.def)             Requested size: 390.37012pt x 362.49734pt.
- [9 <./Astronomy/Azimuth-Altitude_schematic.png>] [10 <./Astronomy/radio_telescope.png>]
-LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 118.
+ [13 <./Astronomy/Azimuth-Altitude_schematic.png>]) [14 <./Astronomy/radio_telescope.png>] [15
+
+]
+Chapter 2.
+(./Chapters/pointing_model.tex
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 34.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmtt.fd
 File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1086,72 +1114,460 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [11]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 146.
+ [16
+
+]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 62.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [12] [13] [14]
-<Correlation/Correlation_temp.pdf, id=582, 1156.32pt x 1156.32pt>
+) [17] [18] [19] [20]
+<Correlation/Correlation_temp.pdf, id=807, 1156.32pt x 1156.32pt>
 File: Correlation/Correlation_temp.pdf Graphic file (type pdf)
 <use Correlation/Correlation_temp.pdf>
-Package pdftex.def Info: Correlation/Correlation_temp.pdf  used on input line 342.
+Package pdftex.def Info: Correlation/Correlation_temp.pdf  used on input line 258.
 (pdftex.def)             Requested size: 390.37012pt x 390.35585pt.
- [15 <./Correlation/Correlation_temp.pdf>] [16]
-<Feature during scans/scan_ACTUALAZ_335.pdf, id=641, 722.7pt x 433.62pt>
+ [21 <./Correlation/Correlation_temp.pdf>] [22]
+<Feature during scans/scan_ACTUALAZ_335.pdf, id=869, 722.7pt x 433.62pt>
 File: Feature during scans/scan_ACTUALAZ_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_ACTUALAZ_335.pdf>
-Package pdftex.def Info: Feature during scans/scan_ACTUALAZ_335.pdf  used on input line 441.
+Package pdftex.def Info: Feature during scans/scan_ACTUALAZ_335.pdf  used on input line 357.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_ACTUALEL_335.pdf, id=642, 722.7pt x 433.62pt>
+<Feature during scans/scan_ACTUALEL_335.pdf, id=870, 722.7pt x 433.62pt>
 File: Feature during scans/scan_ACTUALEL_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_ACTUALEL_335.pdf>
-Package pdftex.def Info: Feature during scans/scan_ACTUALEL_335.pdf  used on input line 447.
+Package pdftex.def Info: Feature during scans/scan_ACTUALEL_335.pdf  used on input line 363.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_TEMP1_335.pdf, id=643, 722.7pt x 433.62pt>
+<Feature during scans/scan_TEMP1_335.pdf, id=871, 722.7pt x 433.62pt>
 File: Feature during scans/scan_TEMP1_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_TEMP1_335.pdf>
-Package pdftex.def Info: Feature during scans/scan_TEMP1_335.pdf  used on input line 454.
+Package pdftex.def Info: Feature during scans/scan_TEMP1_335.pdf  used on input line 370.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 455.
+(Font)              <10> on input line 371.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 455.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 455.
-<Feature during scans/scan_TILT1T_335.pdf, id=644, 722.7pt x 433.62pt>
+(Font)              <7> on input line 371.
+<Feature during scans/scan_TILT1T_335.pdf, id=872, 722.7pt x 433.62pt>
 File: Feature during scans/scan_TILT1T_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_TILT1T_335.pdf>
-Package pdftex.def Info: Feature during scans/scan_TILT1T_335.pdf  used on input line 460.
+Package pdftex.def Info: Feature during scans/scan_TILT1T_335.pdf  used on input line 376.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_WINDDIRECTION_335.pdf, id=645, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDDIRECTION_335.pdf, id=873, 722.7pt x 433.62pt>
 File: Feature during scans/scan_WINDDIRECTION_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_WINDDIRECTION_335.pdf>
-Package pdftex.def Info: Feature during scans/scan_WINDDIRECTION_335.pdf  used on input line 467.
+Package pdftex.def Info: Feature during scans/scan_WINDDIRECTION_335.pdf  used on input line 383.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
-<Feature during scans/scan_WINDSPEED_335.pdf, id=646, 722.7pt x 433.62pt>
+<Feature during scans/scan_WINDSPEED_335.pdf, id=874, 722.7pt x 433.62pt>
 File: Feature during scans/scan_WINDSPEED_335.pdf Graphic file (type pdf)
 <use Feature during scans/scan_WINDSPEED_335.pdf>
-Package pdftex.def Info: Feature during scans/scan_WINDSPEED_335.pdf  used on input line 473.
+Package pdftex.def Info: Feature during scans/scan_WINDSPEED_335.pdf  used on input line 389.
 (pdftex.def)             Requested size: 195.1881pt x 117.11205pt.
- [17] [18 <./Feature during scans/scan_ACTUALAZ_335.pdf> <./Feature during scans/scan_ACTUALEL_335.pdf> <./Feature during scans/scan_TEMP1_335.pdf> <./Feature during scans/scan_TILT1T_335.pdf> <./Feature during scans/scan_WINDDIRECTION_335.pdf> <./Feature during scans/scan_WINDSPEED_335.pdf>]
-<Pointing Scans/good_line.png, id=970, 645.612pt x 448.67625pt>
+ [23] [24 <./Feature during scans/scan_ACTUALAZ_335.pdf> <./Feature during scans/scan_ACTUALEL_335.pdf> <./Feature during scans/scan_TEMP1_335.pdf> <./Feature during scans/scan_TILT1T_335.pdf> <./Feature during scans/scan_WINDDIRECTION_335.pdf> <./Feature during scans/scan_WINDSPEED_335.pdf>]
+<Pointing Scans/good_line.png, id=1198, 645.612pt x 448.67625pt>
 File: Pointing Scans/good_line.png Graphic file (type png)
 <use Pointing Scans/good_line.png>
-Package pdftex.def Info: Pointing Scans/good_line.png  used on input line 502.
+Package pdftex.def Info: Pointing Scans/good_line.png  used on input line 418.
 (pdftex.def)             Requested size: 298.75394pt x 207.6259pt.
-<Pointing Scans/bad_line.png, id=972, 651.6345pt x 448.67625pt>
+<Pointing Scans/bad_line.png, id=1200, 651.6345pt x 448.67625pt>
 File: Pointing Scans/bad_line.png Graphic file (type png)
 <use Pointing Scans/bad_line.png>
-Package pdftex.def Info: Pointing Scans/bad_line.png  used on input line 509.
+Package pdftex.def Info: Pointing Scans/bad_line.png  used on input line 425.
 (pdftex.def)             Requested size: 298.75394pt x 205.7021pt.
-<Pointing Scans/good_continuous.png, id=974, 686.565pt x 453.49425pt>
+<Pointing Scans/good_continuous.png, id=1202, 686.565pt x 453.49425pt>
 File: Pointing Scans/good_continuous.png Graphic file (type png)
 <use Pointing Scans/good_continuous.png>
-Package pdftex.def Info: Pointing Scans/good_continuous.png  used on input line 528.
+Package pdftex.def Info: Pointing Scans/good_continuous.png  used on input line 444.
 (pdftex.def)             Requested size: 298.75394pt x 197.33067pt.
-<Pointing Scans/bad_continuous.png, id=975, 686.565pt x 453.49425pt>
+<Pointing Scans/bad_continuous.png, id=1203, 686.565pt x 453.49425pt>
 File: Pointing Scans/bad_continuous.png Graphic file (type png)
 <use Pointing Scans/bad_continuous.png>
-Package pdftex.def Info: Pointing Scans/bad_continuous.png  used on input line 535.
+Package pdftex.def Info: Pointing Scans/bad_continuous.png  used on input line 451.
 (pdftex.def)             Requested size: 298.75394pt x 197.33067pt.
- [19 <./Pointing Scans/good_line.png
+ [25 <./Pointing Scans/good_line.png> <./Pointing Scans/bad_line.png>] [26 <./Pointing Scans/good_continuous.png> <./Pointing Scans/bad_continuous.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
+
+ []
+
+) [27] [28]
+Chapter 3.
+(./Chapters/ml_background.tex
+Underfull \hbox (badness 10000) in paragraph at lines 11--17
+
+ []
+
+[29
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
+
+ []
+
+[30] [31]
+<Other figures/decisiontree_example.PNG, id=1256, 1033.61156pt x 804.00375pt>
+File: Other figures/decisiontree_example.PNG Graphic file (type png)
+<use Other figures/decisiontree_example.PNG>
+Package pdftex.def Info: Other figures/decisiontree_example.PNG  used on input line 134.
+(pdftex.def)             Requested size: 390.37012pt x 303.64758pt.
+<Other figures/evolution_of_xgb.png, id=1257, 542.025pt x 288.3272pt>
+File: Other figures/evolution_of_xgb.png Graphic file (type png)
+<use Other figures/evolution_of_xgb.png>
+Package pdftex.def Info: Other figures/evolution_of_xgb.png  used on input line 141.
+(pdftex.def)             Requested size: 390.37012pt x 207.6614pt.
+ [32 <./Other figures/decisiontree_example.PNG>] (./Other figures/nn_with_eqs.tex 
+Neural network activation
+contour: Using real outline for `$w_{1,1}$' on input line 36.
+contour: Using real outline for `$w_{1,2}$' on input line 36.
+contour: Using real outline for `$w_{1,3}$' on input line 36.
+contour: Using real outline for `$w_{1,4}$' on input line 36.
+contour: Using real outline for `$w_{1,n}$' on input line 36.
+contour: Using real outline for `$b_1$' on input line 41.
+) [33 <./Other figures/evolution_of_xgb.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
+
+ []
+
+[34]
+
+Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instead on input line 216.
+
+[35] [36] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 345--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 352--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--376
+
+ []
+
+[38]
+Underfull \hbox (badness 10000) in paragraph at lines 382--384
+
+ []
+
+) [39] [40
+
+]
+Chapter 4.
+(./Chapters/method.tex [41
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 46--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
+
+ []
+
+[42]
+<Clf/precision_recall_curve_both.pdf, id=1364, 578.16pt x 397.485pt>
+File: Clf/precision_recall_curve_both.pdf Graphic file (type pdf)
+<use Clf/precision_recall_curve_both.pdf>
+Package pdftex.def Info: Clf/precision_recall_curve_both.pdf  used on input line 89.
+(pdftex.def)             Requested size: 195.1881pt x 134.19089pt.
+<Clf/mAP_curve_both.pdf, id=1365, 578.16pt x 397.485pt>
+File: Clf/mAP_curve_both.pdf Graphic file (type pdf)
+<use Clf/mAP_curve_both.pdf>
+Package pdftex.def Info: Clf/mAP_curve_both.pdf  used on input line 95.
+(pdftex.def)             Requested size: 195.1881pt x 134.19089pt.
+ [43 <./Clf/precision_recall_curve_both.pdf> <./Clf/mAP_curve_both.pdf>]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 156.
+
+Underfull \hbox (badness 10000) in paragraph at lines 192--199
+
+ []
+
+[44]
+<Tiltmeter plots/scan_duration_distribution_rx.pdf, id=1415, 1806.75pt x 722.7pt>
+File: Tiltmeter plots/scan_duration_distribution_rx.pdf Graphic file (type pdf)
+<use Tiltmeter plots/scan_duration_distribution_rx.pdf>
+Package pdftex.def Info: Tiltmeter plots/scan_duration_distribution_rx.pdf  used on input line 213.
+(pdftex.def)             Requested size: 438.17488pt x 175.27107pt.
+
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 213--214
+ [][] 
+ []
+
+<Tiltmeter plots/scan_duration_distribution_date.pdf, id=1416, 1300.86pt x 722.7pt>
+File: Tiltmeter plots/scan_duration_distribution_date.pdf Graphic file (type pdf)
+<use Tiltmeter plots/scan_duration_distribution_date.pdf>
+Package pdftex.def Info: Tiltmeter plots/scan_duration_distribution_date.pdf  used on input line 220.
+(pdftex.def)             Requested size: 438.17488pt x 243.43205pt.
+
+Overfull \hbox (39.83629pt too wide) in paragraph at lines 220--221
+ [][] 
+ []
+
+[45 <./Tiltmeter plots/scan_duration_distribution_rx.pdf>] [46 <./Tiltmeter plots/scan_duration_distribution_date.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
+
+ []
+
+[47] [48]
+<Canva/datasplits.png, id=1556, 1445.4pt x 482.55281pt>
+File: Canva/datasplits.png Graphic file (type png)
+<use Canva/datasplits.png>
+Package pdftex.def Info: Canva/datasplits.png  used on input line 402.
+(pdftex.def)             Requested size: 390.37012pt x 130.3278pt.
+ [49 <./Canva/datasplits.png>] [50] (./Other figures/regular_nn.tex 
+Neural network large 
+ Layer 1, 2, 3, 4,) (./Other figures/combined_nn_sep1.tex 
+Neural network large 
+ Layer 1, 2, 1, 2, 3, 4,) (./Other figures/combined_nn_sep2.tex 
+Neural network large 
+ Layer 1, 2, 3, 1, 2, 3, 4,) (./Other figures/combined_nn_sep3.tex 
+Neural network large 
+ Layer 1, 2, 3, 1, 2, 3, 4, 1, 2, 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 
+ Nprev 1 3, 1, 2, 3, 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 
+ 3Here (N1-1) {l3} 
+ 3Here (N1-2) {l3} 
+ 3Here (N1-3) {l3} 4,) [51] [52]) [53]
+Chapter 5.
+(./Chapters/results.tex
+Underfull \hbox (badness 10000) in paragraph at lines 3--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--14
+
+ []
+
+[54
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 73--82
+
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 83--90
+
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 144--150
+
+ []
+
+
+Overfull \hbox (15.48792pt too wide) in paragraph at lines 163--176
+ [][] 
+ []
+
+[57]
+<Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf, id=1644, 867.24pt x 578.16pt>
+File: Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf Graphic file (type pdf)
+<use Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf>
+Package pdftex.def Info: Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf  used on input line 189.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+<Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf, id=1645, 867.24pt x 578.16pt>
+File: Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf Graphic file (type pdf)
+<use Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf>
+Package pdftex.def Info: Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf  used on input line 196.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+<Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf, id=1647, 867.24pt x 578.16pt>
+File: Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf Graphic file (type pdf)
+<use Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf>
+Package pdftex.def Info: Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf  used on input line 213.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+<Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf, id=1648, 867.24pt x 578.16pt>
+File: Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf Graphic file (type pdf)
+<use Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf>
+Package pdftex.def Info: Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf  used on input line 220.
+(pdftex.def)             Requested size: 398.3386pt x 265.55983pt.
+ [58 <./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf> <./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf>]
+
+LaTeX Warning: Reference `subfig sub@subfig:sage_lastfold_nflash230_el_val' on page 59 undefined on input line 231.
+
+<Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf, id=1741, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf  used on input line 238.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+<Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf, id=1742, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf  used on input line 245.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+[59 <./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf> <./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf>] [60]
+Overfull \vbox (13.8932pt too high) has occurred while \output is active []
+
+ [61 <./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf> <./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf>]
+<Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf, id=1939, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf  used on input line 257.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+<Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf, id=1940, 1011.78pt x 867.24pt>
+File: Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf Graphic file (type pdf)
+<use Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf>
+Package pdftex.def Info: Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf  used on input line 264.
+(pdftex.def)             Requested size: 366.47076pt x 314.12495pt.
+
+Overfull \vbox (13.8932pt too high) has occurred while \output is active []
+
+ [62 <./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf> <./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 274--296
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--320
+
+ []
+
+[63]
+Underfull \hbox (badness 10000) in paragraph at lines 358--364
+
+ []
+
+[64]
+Underfull \hbox (badness 10000) in paragraph at lines 367--374
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 381--386
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 388--395
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 472--479
+
+ []
+
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 501--507
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--575
+
+ []
+
+[66] [67]
+Underfull \hbox (badness 10000) in paragraph at lines 576--581
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 582--598
+
+ []
+
+[68]) [69]
+Chapter 6.
+(./Chapters/conclusion.tex [70
+
+]) [71] [72
+
+]
+Appendix A.
+(./Chapters/appendix_a.tex
+Overfull \hbox (23.06062pt too wide) in paragraph at lines 295--309
+ [][] 
+ []
+
+
+Overfull \hbox (70.93047pt too wide) in alignment at lines 313--319
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (70.93047pt too wide) in alignment at lines 319--325
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (70.93047pt too wide) in alignment at lines 325--328
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (70.93047pt too wide) in alignment at lines 328--330
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (70.93047pt too wide) in alignment at lines 330--405
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+[73
+
+] [74]
+Overfull \hbox (59.2848pt too wide) in paragraph at lines 413--434
+ [][] 
+ []
+
+
+Overfull \hbox (59.2848pt too wide) in paragraph at lines 439--460
+ [][] 
+ []
+
+) [75] [76] [77] [78]
+Appendix B.
+(./Chapters/appendix_b.tex [79
+
+]) [80] (./main.bbl
+Underfull \hbox (badness 1342) in paragraph at lines 58--68
+\OT1/lmr/m/n/10.95 (+20) 3896, Jan-uary 2019.  []eprint: https://academic.oup.com/mnras/article-
+ []
+
+[81
+
+]) [82] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: CF0904E719163AA92D24473092A8C4DC;15804.
+ ) 
+Here is how much of TeX's memory you used:
+ 30371 strings out of 476024
+ 564696 string characters out of 5794017
+ 1988382 words of memory out of 5000000
+ 49563 multiletter control sequences out of 15000+600000
+ 631305 words of font info for 240 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 84i,22n,80p,1043b,1178s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc}<c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmib10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb><c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on main.pdf (84 pages, 2009099 bytes).
+PDF statistics:
+ 2352 PDF objects out of 2487 (max. 8388607)
+ 1387 compressed objects within 14 object streams
+ 332 named destinations out of 1000 (max. 500000)
+ 60824 words of extra memory for PDF output out of 61914 (max. 10000000)
+

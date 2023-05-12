@@ -1342,6 +1342,10 @@ INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT ./Chapters/thesis_structure.tex
+INPUT Chapters/thesis_structure.tex
+INPUT ./Chapters/thesis_structure.tex
+INPUT Chapters/thesis_structure.tex
 INPUT ./main.toc
 INPUT main.toc
 INPUT main.toc
@@ -1390,25 +1394,49 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 OUTPUT main.toc
+INPUT ./main.lof
+INPUT main.lof
+INPUT main.lof
+OUTPUT main.lof
+INPUT ./main.lot
+INPUT main.lot
+INPUT main.lot
+OUTPUT main.lot
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT ./Chapters/introduction.tex
 INPUT Chapters/introduction.tex
 INPUT ./Chapters/introduction.tex
 INPUT Chapters/introduction.tex
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmi9.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmsy9.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT ./Chapters/related_works.tex
 INPUT Chapters/related_works.tex
 INPUT ./Chapters/related_works.tex
 INPUT Chapters/related_works.tex
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT ./Chapters/ast_background.tex
-INPUT Chapters/ast_background.tex
-INPUT ./Chapters/ast_background.tex
-INPUT Chapters/ast_background.tex
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT ./Chapters/astronomy.tex
+INPUT Chapters/astronomy.tex
+INPUT ./Chapters/astronomy.tex
+INPUT Chapters/astronomy.tex
 INPUT ./Astronomy/Azimuth-Altitude_schematic.png
 INPUT ./Astronomy/Azimuth-Altitude_schematic.png
 INPUT Astronomy/Azimuth-Altitude_schematic.png
@@ -1419,6 +1447,10 @@ INPUT ./Astronomy/radio_telescope.png
 INPUT Astronomy/radio_telescope.png
 INPUT ./Astronomy/radio_telescope.png
 INPUT ./Astronomy/radio_telescope.png
+INPUT ./Chapters/pointing_model.tex
+INPUT Chapters/pointing_model.tex
+INPUT ./Chapters/pointing_model.tex
+INPUT Chapters/pointing_model.tex
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmtt.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmtt.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/ot1lmtt.fd
@@ -1452,28 +1484,20 @@ INPUT Feature during scans/scan_TEMP1_335.pdf
 INPUT ./Feature during scans/scan_TEMP1_335.pdf
 INPUT ./Feature during scans/scan_TEMP1_335.pdf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmmib10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmmib5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/cm/cmbsy10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT ./Feature during scans/scan_TILT1T_335.pdf
 INPUT ./Feature during scans/scan_TILT1T_335.pdf
 INPUT Feature during scans/scan_TILT1T_335.pdf
@@ -1509,3 +1533,168 @@ INPUT ./Pointing Scans/bad_continuous.png
 INPUT Pointing Scans/bad_continuous.png
 INPUT ./Pointing Scans/bad_continuous.png
 INPUT ./Pointing Scans/bad_continuous.png
+INPUT ./Chapters/ml_background.tex
+INPUT Chapters/ml_background.tex
+INPUT ./Chapters/ml_background.tex
+INPUT Chapters/ml_background.tex
+INPUT ./Other figures/decisiontree_example.PNG
+INPUT ./Other figures/decisiontree_example.PNG
+INPUT Other figures/decisiontree_example.PNG
+INPUT ./Other figures/decisiontree_example.PNG
+INPUT ./Other figures/decisiontree_example.PNG
+INPUT ./Other figures/evolution_of_xgb.png
+INPUT ./Other figures/evolution_of_xgb.png
+INPUT Other figures/evolution_of_xgb.png
+INPUT ./Other figures/evolution_of_xgb.png
+INPUT ./Other figures/evolution_of_xgb.png
+INPUT ./Other figures/nn_with_eqs.tex
+INPUT Other figures/nn_with_eqs.tex
+INPUT ./Other figures/nn_with_eqs.tex
+INPUT Other figures/nn_with_eqs.tex
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+INPUT ./Chapters/method.tex
+INPUT Chapters/method.tex
+INPUT ./Chapters/method.tex
+INPUT Chapters/method.tex
+INPUT ./Clf/precision_recall_curve_both.pdf
+INPUT ./Clf/precision_recall_curve_both.pdf
+INPUT Clf/precision_recall_curve_both.pdf
+INPUT ./Clf/precision_recall_curve_both.pdf
+INPUT ./Clf/precision_recall_curve_both.pdf
+INPUT ./Clf/mAP_curve_both.pdf
+INPUT ./Clf/mAP_curve_both.pdf
+INPUT Clf/mAP_curve_both.pdf
+INPUT ./Clf/mAP_curve_both.pdf
+INPUT ./Clf/mAP_curve_both.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_rx.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_rx.pdf
+INPUT Tiltmeter plots/scan_duration_distribution_rx.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_rx.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_rx.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
+INPUT Tiltmeter plots/scan_duration_distribution_date.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
+INPUT ./Tiltmeter plots/scan_duration_distribution_date.pdf
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri8.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
+INPUT ./Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT ./Canva/datasplits.png
+INPUT ./Other figures/regular_nn.tex
+INPUT Other figures/regular_nn.tex
+INPUT ./Other figures/regular_nn.tex
+INPUT Other figures/regular_nn.tex
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT ./Other figures/combined_nn_sep1.tex
+INPUT Other figures/combined_nn_sep1.tex
+INPUT ./Other figures/combined_nn_sep1.tex
+INPUT Other figures/combined_nn_sep1.tex
+INPUT ./Other figures/combined_nn_sep2.tex
+INPUT Other figures/combined_nn_sep2.tex
+INPUT ./Other figures/combined_nn_sep2.tex
+INPUT Other figures/combined_nn_sep2.tex
+INPUT ./Other figures/combined_nn_sep3.tex
+INPUT Other figures/combined_nn_sep3.tex
+INPUT ./Other figures/combined_nn_sep3.tex
+INPUT Other figures/combined_nn_sep3.tex
+INPUT ./Chapters/results.tex
+INPUT Chapters/results.tex
+INPUT ./Chapters/results.tex
+INPUT Chapters/results.tex
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
+INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k30_uncorr_az_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k30_uncorr_az_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_val_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT ./Results/XGB_ds2_tp5_k40_uncorr_el_test_SAGE.pdf
+INPUT ./Chapters/conclusion.tex
+INPUT Chapters/conclusion.tex
+INPUT ./Chapters/conclusion.tex
+INPUT Chapters/conclusion.tex
+INPUT ./Chapters/appendix_a.tex
+INPUT Chapters/appendix_a.tex
+INPUT ./Chapters/appendix_a.tex
+INPUT Chapters/appendix_a.tex
+INPUT ./Chapters/appendix_b.tex
+INPUT Chapters/appendix_b.tex
+INPUT ./Chapters/appendix_b.tex
+INPUT Chapters/appendix_b.tex
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT main.aux
+INPUT ./main.out
+INPUT ./main.out
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmex10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmmib10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr6.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmri8.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb
+INPUT c:/texlive/2022/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb

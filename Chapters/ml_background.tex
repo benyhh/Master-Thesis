@@ -103,23 +103,23 @@ This section will briefly cover the methods used to optimize decision trees for 
 \cite{Mehta_2019}
 
 
-\paragraph{Bagging}
+\subsection{Bagging}
 Bagging, also known as Bootstrap Aggregation, is a method for training an ensemble of models that contribute to the final prediction.
 Each model is trained using bootstrapped data (resampled from the original dataset with replacement), resulting in diverse decision trees.
 The final prediction is the average of all ensemble models.
 
-\paragraph{Random Forest}
+\subsection{Random Forest}
 Random forest is based on bagging, where each tree in the ensemble is made using only a randomly chosen subset of features.
 This often leads to better generalization and reduced overfitting.
 
-\paragraph{Boosting}
+\subsection{Boosting}
 In boosting, an ensemble is created, but the trees are not made independently.
 They are trained one by one, considering the previous trees.
 A sample weight is assigned to each sample used to train a tree based on the current ensemble's accuracy.
 Samples with significant prediction errors are assigned larger weights, and those with accurate predictions are assigned lower weights.
 The final prediction is a weighted sum of all ensemble predictions, with weights based on each tree's accuracy.
 
-\paragraph{Gradient Boosting}
+\subsection{Gradient Boosting}
 Like in regular boosting, an ensemble of trees is created iteratively by considering the errors made by previous trees.
 The process starts with a constant model that predicts the mean of all samples.
 The gradient of the loss function with respect to each sample is calculated, and a tree is made to predict these gradients.
@@ -313,20 +313,20 @@ Non-linearity enables the model to capture complex relationships, differentiabil
     \item Zero-centering balances the activation distribution within the model.
 \end{itemize}
 
-\paragraph{Tanh}
+\subsubsection{Tanh}
 Tanh, the hyperbolic tangent function is given by
 \begin{equation}\label{eq:tanh}
     Tanh(x) = \frac{e^x+e^{-x}}{e^x-e^{-x}}
 \end{equation}
 
-\paragraph{ReLU}
+\subsubsection{ReLU}
 The Rectified Linear Unit (ReLU) activation function pushes all negative values to zero while leaving positive values unchanged,
 which introduces non-linearity while solving the vanishing gradients problem by having a gradient of either 0 or 1 for negative and positive values, respectively.
 \begin{equation}\label{eq:relu}
     ReLU(x) = \begin{cases} x & \mbox{if } x > 0 \\ \mbox{0,} & \mbox{otherwise} \end{cases}
 \end{equation}
 
-\paragraph{GeLU}
+\subsubsection{GeLU}
 The Gaussian Error Linear Unit (GeLU) is a smooth approximation of the ReLU function, given by
 \begin{equation}
     GeLU(x) = x \Phi (x),

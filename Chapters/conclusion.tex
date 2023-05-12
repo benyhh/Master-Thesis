@@ -1,35 +1,73 @@
 \section{Experiment 1: Pointing Correction Model}
-The research question related to the first experiment was whether machine learning could enhance the pointing accuracy of a radio telescope using the current pointing strategy.
-We tested this by exploiting the training data in two ways, the first being training on a smaller period and testing on unseen pointing scan in a consecutive period, and the second being training and testing on a larger amount of data (see Figure \ref{fig:datasplit_cases}).
-The results for case 1 indicated that the model's performance on the validation set was promising, with a $15\%$-$20\%$ reduction in pointing offset.
-However, the performance did not transfer to the following test period, suggesting that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
-Moreover, choosing the complexity of the model with the best performance on the validation set may not necessarily lead to the best performance on the test set.
+In conclusion, our study addressed the research question of whether machine learning could enhance the pointing accuracy of a radio telescope.
+Our findings suggest that while machine learning has the potential to improve pointing accuracy, a more extensive dataset and a complex model may be necessary for consistent and robust performance.
+We tested two cases, one where we trained on a smaller period and tested on unseen data in a consecutive period, and another where we trained and tested on a longer period.
+The results indicated that a longer period or more training data helps the model generalize better, and the NFLASH230 model provided a reduction in offset for azimuth and elevation.
+However, given that the testing case is not entirely realistic, we cannot conclude that the model can reduce pointing offset in a robust and consistent manner.
+Therefore, further research is needed to verify the performance improvements of such a strategy.
 
-The results from case 2 indicated that a longer period or more training data helps the model generalize better,
-which we expected as a longer period includes more variation that can help the model capture the relationships between features.
-The average improvement provided by the NFLASH230 model in case 2 on unseen test data was a $4.2\%$ reduction in offset for azimuth and $5.9\%$ reduction for elevation.
-However, given that the testing case is not realistic, we cannot conclude that the model is able to reduce the pointing offset in a robust and consistent manner.
-The one entirely realistic test case for the NFLASH230 model provides a $7.0\%$ and $9.4\%$ reduction in offsets for azimuth and elevation, respectively. 
-
-In summary, this thesis provides insights into the limitations and possibilities of machine learning for enhancing the pointing accuracy of a radio telescope.
-The findings suggest that a more extensive dataset and a complex model may be necessary for consistent and robust performance.
-Moreover, a possible pointing strategy could be training a model on multiple months worth of data and then using the model for a couple of weeks.
-However, further research is needed to verify the performance improvements of such a strategy.
-
-In conclusion, our study has highlighted several potential avenues for future research to improve the accuracy and efficiency of pointing offset prediction in radio telescopes using machine learning techniques.
-One key area for improvement is feature engineering, where more informative features could be created to enhance model performance.
-This is especially important when dealing with limited training data.
+Furthermore, our study highlighted several potential avenues for future research to improve the accuracy and efficiency of pointing offset prediction in radio telescopes using machine learning techniques.
+One key area for improvement is feature engineering, where more informative features could be created to enhance model performance, especially when dealing with limited training data.
 We also suggest exploring neural networks, which offer advantages such as handling multiple outputs and continuous fine-tuning as new data becomes available.
-Although our initial tests did not yield satisfactory results,
-further investigation is necessary with more extensive training data to explore the potential of using neural networks for pointing offset prediction in radio/(sub-)mm telescopes.
+Although our initial tests did not yield satisfactory results, further investigation is necessary with more extensive training data to explore the potential of using neural networks for pointing offset prediction in radio/(sub-)mm telescopes.
 Finally, minimizing the number of pointing scans conducted by astronomers while maintaining similar pointing accuracy is another potential area for exploration.
 Overall, our study provides insights into future research directions to optimize the performance of machine learning models for pointing offset prediction in radio telescopes and highlights the potential for machine learning to improve this critical aspect of radio telescope operations.
 
+
+
+
 \section{Experiment 2: Pointing Model using Neural Networks}
-The second experiment aimed to investigate the potential of machine learning models to replace traditional analytical linear regression models in radio telescopes for pointing offset prediction.
-We utilized raw data from the APEX telescope and compared the performance of a linear regression model against four different neural network architectures.
-Our findings indicate that all the neural network architectures significantly outperformed the linear regression model, with mean RMS falling within $16''$-$19''$.
-We also observed that the top-performing neural network architectures were relatively simple in structure, and the models did not use many features as the nonlinear input.
-These results suggest that a neural network utilizing only the azimuth and elevation angle could outperform a linear regression model.
-However, the robustness of machine learning models must be thoroughly tested before being deployed in practical settings. More data is needed to establish complex relationships between features that can improve the performance of the pointing models.
-Overall, our results demonstrate the potential of machine learning techniques in this field, and we encourage further research to explore this potential fully.
+
+In this study, we investigated whether machine learning models can replace traditional analytical linear regression models for predicting pointing offsets in radio/(sub-)mm telescopes.
+To address this question, we used raw data from the apex telescope containing input and observed coordinates for azimuth and elevation.
+We fitted a linear regression model to the raw data and compared its performance against four different neural network architectures using cross-validation with six folds.
+
+Our results showed that all neural network architectures significantly outperformed the linear regression model, with mean RMS falling within the range of $16''$-$19''$ with deviations of $5''$-$7''$, while the mean RMS of the linear regression model was $47.63''$ with a standard deviation of $12.81''$.
+Although all the neural network architectures had similar performance and standard deviation, we cannot conclude that any of them is better than the others.
+
+The top-performing models we analyzed had relatively simple structures, with most of them not employing two hidden layers.
+Interestingly, the architectures incorporating distinct layers for the terms employed in the analytical pointing models exhibited lower neuron counts in their nonlinear layers.
+We also found that the models used few features for the nonlinear layers, suggesting that the factors influencing pointing error are difficult to model with the current data set.
+Obtaining more data may be necessary to establish more complex relationships between features that can improve the performance of the pointing models.
+
+While our experiment did not demonstrate the performance that would be expected from using such models in practice, it indicates that a neural network could provide a more efficient and effective model than a linear regression model.
+Moreover, a neural network can be fine-tuned with newly obtained data, making it an appealing model.
+If this approach is shown to be reliable and high-performing, it could be the preferred choice for more advanced telescopes, as it may require less manual analysis to develop and maintain a pointing model.
+However, further testing with additional data is needed to confirm the feasibility of this approach.
+
+
+% \section{Experiment 1: Pointing Correction Model v1}
+% The research question related to the first experiment was whether machine learning could enhance the pointing accuracy of a radio telescope using the current pointing strategy.
+% We tested this by exploiting the training data in two ways, the first being training on a smaller period and testing on unseen pointing scan in a consecutive period, and the second being training and testing on a larger amount of data (see Figure \ref{fig:datasplit_cases}).
+% The results for case 1 indicated that the model's performance on the validation set was promising, with a $15\%$-$20\%$ reduction in pointing offset.
+% However, the performance did not transfer to the following test period, suggesting that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
+% Moreover, choosing the complexity of the model with the best performance on the validation set may not necessarily lead to the best performance on the test set.
+
+% The results from case 2 indicated that a longer period or more training data helps the model generalize better,
+% which we expected as a longer period includes more variation that can help the model capture the relationships between features.
+% The average improvement provided by the NFLASH230 model in case 2 on unseen test data was a $4.2\%$ reduction in offset for azimuth and $5.9\%$ reduction for elevation.
+% However, given that the testing case is not realistic, we cannot conclude that the model is able to reduce the pointing offset in a robust and consistent manner.
+% The one entirely realistic test case for the NFLASH230 model provides a $7.0\%$ and $9.4\%$ reduction in offsets for azimuth and elevation, respectively. 
+
+% In summary, this thesis provides insights into the limitations and possibilities of machine learning for enhancing the pointing accuracy of a radio telescope.
+% The findings suggest that a more extensive dataset and a complex model may be necessary for consistent and robust performance.
+% Moreover, a possible pointing strategy could be training a model on multiple months worth of data and then using the model for a couple of weeks.
+% However, further research is needed to verify the performance improvements of such a strategy.
+
+% In conclusion, our study has highlighted several potential avenues for future research to improve the accuracy and efficiency of pointing offset prediction in radio telescopes using machine learning techniques.
+% One key area for improvement is feature engineering, where more informative features could be created to enhance model performance.
+% This is especially important when dealing with limited training data.
+% We also suggest exploring neural networks, which offer advantages such as handling multiple outputs and continuous fine-tuning as new data becomes available.
+% Although our initial tests did not yield satisfactory results,
+% further investigation is necessary with more extensive training data to explore the potential of using neural networks for pointing offset prediction in radio/(sub-)mm telescopes.
+% Finally, minimizing the number of pointing scans conducted by astronomers while maintaining similar pointing accuracy is another potential area for exploration.
+% Overall, our study provides insights into future research directions to optimize the performance of machine learning models for pointing offset prediction in radio telescopes and highlights the potential for machine learning to improve this critical aspect of radio telescope operations.
+
+% \section{Experiment 2: Pointing Model using Neural Networks v1}
+% The second experiment aimed to investigate the potential of machine learning models to replace traditional analytical linear regression models in radio telescopes for pointing offset prediction.
+% We utilized raw data from the APEX telescope and compared the performance of a linear regression model against four different neural network architectures.
+% Our findings indicate that all the neural network architectures significantly outperformed the linear regression model, with mean RMS falling within $16''$-$19''$.
+% We also observed that the top-performing neural network architectures were relatively simple in structure, and the models did not use many features as the nonlinear input.
+% These results suggest that a neural network utilizing only the azimuth and elevation angle could outperform a linear regression model.
+% However, the robustness of machine learning models must be thoroughly tested before being deployed in practical settings. More data is needed to establish complex relationships between features that can improve the performance of the pointing models.
+% Overall, our results demonstrate the potential of machine learning techniques in this field, and we encourage further research to explore this potential fully.
