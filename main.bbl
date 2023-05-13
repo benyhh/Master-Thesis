@@ -5,13 +5,40 @@ Jacob Baars, B.~Hooghoudt, P.~Mezger, and M.~Jonge.
 \newblock The iram 30-m millimeter radio telescope on pico veleta, spain.
 \newblock {\em Astronomy and Astrophysics}, 175:319--326, 02 1987.
 
-\bibitem{universal_approximation}
+\bibitem{Blakseth2022}
+Sindre~Stenen Blakseth, Adil Rasheed, Trond Kvamsdal, and Omer San.
+\newblock Deep neural network enabled corrective source term approach to hybrid
+  analysis and modeling.
+\newblock {\em Neural Networks}, 146, 2022.
+
+\bibitem{Breugel1999}
+W.~Van Breugel, C.~De Breuck, S.A. Stanford, D.~Stern, H.~Röttgering, and
+  G.~Miley.
+\newblock A radio galaxy at z = 5.19.
+\newblock {\em Astrophysical Journal}, 518, 1999.
+
+\bibitem{universalapproximation}
 Tianping Chen and Hong Chen.
 \newblock Universal approximation to nonlinear operators by neural networks
   with arbitrary activation functions and its application to dynamical systems.
 \newblock {\em IEEE Transactions on Neural Networks}, 6(4):911--917, 1995.
 
-\bibitem{covert_shap_sage}
+\bibitem{Coriat2011}
+M.~Coriat, S.~Corbel, L.~Prat, J.~C.A. Miller-Jones, D.~Cseh, A.~K. Tzioumis,
+  C.~Brocksopp, J.~Rodriguez, R.~P. Fender, and G.~R. Sivakoff.
+\newblock Radiatively efficient accreting black holes in the hard state: The
+  case study of h1743-322.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 414, 2011.
+
+\bibitem{Corstanje2017}
+A.~Corstanje, P.~Mitra, A.~Bonardi, S.~Buitink, H.~Falcke, B.~M. Hare, J.~R.
+  Hörandel, K.~Mulrey, A.~Nelles, J.~P. Rachen, L.~Rossetto, P.~Schellart,
+  O.~Scholten, S.~Ter Veen, S.~Thoudam, T.~N.G. Trinh, and T.~Winchen.
+\newblock The effect of the atmospheric refractive index on the radio signal of
+  extensive air showers using global data assimilation system (gdas).
+\newblock {\em Proceedings of Science}, 2017.
+
+\bibitem{covertshapsage}
 Ian Covert.
 \newblock Understanding shap and sage.
 \newblock \url{https://iancovert.com/blog/understanding-shap-sage/}, 2020.
@@ -21,7 +48,7 @@ Ian Covert, Scott Lundberg, and Su-In Lee.
 \newblock Understanding global feature contributions with additive importance
   measures, 2020.
 
-\bibitem{sage_paper}
+\bibitem{sagepaper}
 Ian Covert, Scott Lundberg, and Su-In Lee.
 \newblock Understanding global feature contributions with additive importance
   measures, 2020.
@@ -32,27 +59,43 @@ Jian Dong, Li~Fu, Qinghui Liu, and Zhiqiang Shen.
   of the tianma radio telescope.
 \newblock {\em Experimental Astronomy}, 45, 2018.
 
+\bibitem{Gawronski2005}
+Wodek Gawronski and Kamal Souccar.
+\newblock Control systems of the large millimeter telescope.
+\newblock {\em IEEE Antennas and Propagation Magazine}, 47, 2005.
+
 \bibitem{mlastgravitationalwaves}
 Daniel George and E.A. Huerta.
 \newblock Deep learning for real-time gravitational wave detection and
   parameter estimation: Results with advanced {LIGO} data.
 \newblock {\em Physics Letters B}, 778:64--70, mar 2018.
 
+\bibitem{Haarsma2000}
+D.~B. Haarsma, R.~B. Partridge, R.~A. Windhorst, and E.~A. Richards.
+\newblock Faint radio sources and star formation history.
+\newblock {\em The Astrophysical Journal}, 544, 2000.
+
 \bibitem{SHAP}
 Scott Lundberg and Su-In Lee.
 \newblock A unified approach to interpreting model predictions, 2017.
 
-\bibitem{Mehta_2019}
+\bibitem{Mehta2019}
 Pankaj Mehta, Marin Bukov, Ching-Hao Wang, Alexandre~G.R. Day, Clint
   Richardson, Charles~K. Fisher, and David~J. Schwab.
 \newblock A high-bias, low-variance introduction to machine learning for
   physicists.
 \newblock {\em Physics Reports}, 810:1--124, may 2019.
 
-\bibitem{morde_vishal_nodate}
+\bibitem{mordevishal}
 Vishal Morde.
 \newblock Xgboost algorithm: Long she may rein.
 \newblock Downloaded January 2023.
+
+\bibitem{tikznet}
+Izaak Neutelings.
+\newblock Neural networks with tikz.
+\newblock \url{https://tikz.net/neural_networks/}, 2021.
+\newblock Accessed: March 15, 2023.
 
 \bibitem{mlastgravlens}
 C~E Petrillo, C~Tortora, G~Vernardos, L~V~E Koopmans, G~Verdoes~Kleijn,
@@ -76,16 +119,26 @@ David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
 \newblock Learning representations by back-propagating errors.
 \newblock {\em Nature}, 323(6088):533--536, 1986.
 
-\bibitem{shapley_value_1953}
+\bibitem{Shannon1948}
+C.~E. Shannon.
+\newblock A mathematical theory of communication.
+\newblock {\em Bell System Technical Journal}, 27, 1948.
+
+\bibitem{shapleyvalue1953}
 Lloyd Shapley.
 \newblock A value for n-person games.
 \newblock {\em Contributions to the Theory of Games}, 2:307--317, 1953.
+
+\bibitem{stumpff1972}
+Peter Stumpff.
+\newblock Astronomical pointing theory for radio telescopes.
+\newblock {\em Kleinheubacher Reports}, 15:431, 1972.
 
 \bibitem{tikz}
 Till Tantau.
 \newblock The {PGF/TikZ} manual, 2021.
 
-\bibitem{altaz_schematic}
+\bibitem{altazschematic}
 Tomruen.
 \newblock Azimuth-altitude schematic, 2011.
 \newblock Accessed: March 13, 2023.

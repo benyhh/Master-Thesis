@@ -1342,10 +1342,10 @@ INPUT c:/texlive/2022/texmf-dist/fonts/vf/adobe/helvetic/phvr8t.vf
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/adobe/helvetic/phvr8r.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT ./Chapters/thesis_structure.tex
-INPUT Chapters/thesis_structure.tex
-INPUT ./Chapters/thesis_structure.tex
-INPUT Chapters/thesis_structure.tex
+INPUT ./Chapters/abstract.tex
+INPUT Chapters/abstract.tex
+INPUT ./Chapters/abstract.tex
+INPUT Chapters/abstract.tex
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmr6.tfm
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
@@ -1390,6 +1390,10 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./Chapters/thesis_structure.tex
+INPUT Chapters/thesis_structure.tex
+INPUT ./Chapters/thesis_structure.tex
+INPUT Chapters/thesis_structure.tex
 INPUT ./main.toc
 INPUT main.toc
 INPUT main.toc
@@ -1478,6 +1482,26 @@ INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT c:/texlive/2022/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/ts1-lmr10.tfm
 INPUT c:/texlive/2022/texmf-dist/fonts/tfm/public/lm/rm-lmri10.tfm
+INPUT ./Pointing Scans/good_line.png
+INPUT ./Pointing Scans/good_line.png
+INPUT Pointing Scans/good_line.png
+INPUT ./Pointing Scans/good_line.png
+INPUT ./Pointing Scans/good_line.png
+INPUT ./Pointing Scans/bad_line.png
+INPUT ./Pointing Scans/bad_line.png
+INPUT Pointing Scans/bad_line.png
+INPUT ./Pointing Scans/bad_line.png
+INPUT ./Pointing Scans/bad_line.png
+INPUT ./Pointing Scans/good_continuous.png
+INPUT ./Pointing Scans/good_continuous.png
+INPUT Pointing Scans/good_continuous.png
+INPUT ./Pointing Scans/good_continuous.png
+INPUT ./Pointing Scans/good_continuous.png
+INPUT ./Pointing Scans/bad_continuous.png
+INPUT ./Pointing Scans/bad_continuous.png
+INPUT Pointing Scans/bad_continuous.png
+INPUT ./Pointing Scans/bad_continuous.png
+INPUT ./Pointing Scans/bad_continuous.png
 INPUT ./Correlation/Correlation_temp.pdf
 INPUT ./Correlation/Correlation_temp.pdf
 INPUT Correlation/Correlation_temp.pdf
@@ -1528,26 +1552,6 @@ INPUT ./Feature during scans/scan_WINDSPEED_335.pdf
 INPUT Feature during scans/scan_WINDSPEED_335.pdf
 INPUT ./Feature during scans/scan_WINDSPEED_335.pdf
 INPUT ./Feature during scans/scan_WINDSPEED_335.pdf
-INPUT ./Pointing Scans/good_line.png
-INPUT ./Pointing Scans/good_line.png
-INPUT Pointing Scans/good_line.png
-INPUT ./Pointing Scans/good_line.png
-INPUT ./Pointing Scans/good_line.png
-INPUT ./Pointing Scans/bad_line.png
-INPUT ./Pointing Scans/bad_line.png
-INPUT Pointing Scans/bad_line.png
-INPUT ./Pointing Scans/bad_line.png
-INPUT ./Pointing Scans/bad_line.png
-INPUT ./Pointing Scans/good_continuous.png
-INPUT ./Pointing Scans/good_continuous.png
-INPUT Pointing Scans/good_continuous.png
-INPUT ./Pointing Scans/good_continuous.png
-INPUT ./Pointing Scans/good_continuous.png
-INPUT ./Pointing Scans/bad_continuous.png
-INPUT ./Pointing Scans/bad_continuous.png
-INPUT Pointing Scans/bad_continuous.png
-INPUT ./Pointing Scans/bad_continuous.png
-INPUT ./Pointing Scans/bad_continuous.png
 INPUT ./Chapters/ml_background.tex
 INPUT Chapters/ml_background.tex
 INPUT ./Chapters/ml_background.tex

@@ -4,19 +4,12 @@ For instance, Petrillo et al. \cite{mlastgravlens} used two convolutional neural
 George \& Huerta \cite{mlastgravitationalwaves} used a convolutional neural network to detect gravitational waves in real time at Laser Interferometer Gravitational-Wave Observatory(LIGO).
 Despite many use cases for machine learning in astronomy and the need for an accurate pointing model in radio telescopes,
 we have not found any studies that used machine learning to develop or maintain a pointing model for radio telescopes.
-In this section, we provide a brief review of the existing literature on pointing models in radio telescopes, as well as the potential use of machine learning for similar applications.
-
-\subsection{Pointing Models in Radio Telescopes}
 Traditional methods for pointing models in radio telescopes involve modeling the pointing error as a function of various parameters, such as azimuth, elevation, temperature, and time.
 These models are often complex and require significant effort to develop and maintain.
 Moreover, they can be limited by the accuracy of the models used for atmospheric refraction, instrumental error, and other sources of noise.
-
 Several papers have described various approaches to improve the pointing accuracy of radio telescopes.
 For example, White et al. \cite{whitegreen2022} developed a pointing model for the Green Bank Telescope using theoretical terms based on the telescope's structure and analysis on the thermal deformation of the telescope structure.
 Greve et al. \cite{greve1996pointing} studied seasonal effects on the pointing.
-
-
-\subsection{Challenges and Opportunities}
 The use of machine learning for pointing models in radio telescopes poses several challenges and opportunities.
 One of the main challenges is the need for large datasets, which can be difficult to obtain in the context of radio telescopes.
 Large datasets require extensive observational "pointing" campaigns which take time and subtract it from astrophysical observations.
@@ -25,5 +18,52 @@ and collect these datasets in a coherent way.
 Moreover, the accuracy of the pointing model depends on the accuracy of the data used for training, which can be affected by various sources of noise and error.
 Nonetheless, machine learning algorithms offer the potential for significant improvements in pointing accuracy,
 and can potentially reduce the complexity and maintenance requirements of traditional pointing models.
-Future research in this area could explore the development of machine learning algorithms that can handle the challenges unique to radio telescopes,
-and the integration of machine learning techniques into existing pointing models.
+Future research in this area could explore the development of machine learning algorithms that can handle the challenges unique to radio telescopes, and the integration of machine learning techniques into existing pointing models.
+Blakseth et al. \cite{Blakseth2022} demonstrated a similar approach by combining physics-based modeling with data-driven techniques, such as deep neural networks, to learn a corrective source term in numerical experiments on one-dimensional heat diffusion.
+This approach could potentially be adapted for a pointing model, where a hybrid model that combines theoretical and empirically-based corrective terms commonly used in pointing models today with sensor data could result in a more accurate and robust pointing model.
+Such a model could require less maintenance and development time, which would benefit science operations.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+% \section{Related Works}
+% The application of machine learning in astronomy has become increasingly popular in recent years, with various applications such as data analysis and prediction.
+% For instance, Petrillo et al. \cite{mlastgravlens} used two convolutional neural networks to detect gravitational lensing from images.
+% George \& Huerta \cite{mlastgravitationalwaves} used a convolutional neural network to detect gravitational waves in real time at Laser Interferometer Gravitational-Wave Observatory(LIGO).
+% Despite many use cases for machine learning in astronomy and the need for an accurate pointing model in radio telescopes,
+% we have not found any studies that used machine learning to develop or maintain a pointing model for radio telescopes.
+% However, Blakseth et al. \cite{Blakseth2022} combined physics-based modeling with data-driven techniques, such as deep neural networks, to learn a corrective source term in numerical experiments on one-dimensional heat diffusion.
+% A similar approach could be viable for a pointing model, where a hybrid model uses theoretically and emperically based corrective terms commonly used in pointing models today, combined with sensor data, make a mor accurate and robust pointing modelthat requires less maintanance or development time.
+% In this section, we provide a brief review of the existing literature on pointing models in radio telescopes, as well as the potential use of machine learning for similar applications.
+
+% \subsection{Pointing Models in Radio Telescopes}
+% Traditional methods for pointing models in radio telescopes involve modeling the pointing error as a function of various parameters, such as azimuth, elevation, temperature, and time.
+% These models are often complex and require significant effort to develop and maintain.
+% Moreover, they can be limited by the accuracy of the models used for atmospheric refraction, instrumental error, and other sources of noise.
+
+% Several papers have described various approaches to improve the pointing accuracy of radio telescopes.
+% For example, White et al. \cite{whitegreen2022} developed a pointing model for the Green Bank Telescope using theoretical terms based on the telescope's structure and analysis on the thermal deformation of the telescope structure.
+% Greve et al. \cite{greve1996pointing} studied seasonal effects on the pointing.
+
+
+% \subsection{Challenges and Opportunities}
+% The use of machine learning for pointing models in radio telescopes poses several challenges and opportunities.
+% One of the main challenges is the need for large datasets, which can be difficult to obtain in the context of radio telescopes.
+% Large datasets require extensive observational "pointing" campaigns which take time and subtract it from astrophysical observations.
+% Another challenge is to have access to such datasets (which are usually unpublished and used only internally by the staff at the observatories)
+% and collect these datasets in a coherent way. 
+% Moreover, the accuracy of the pointing model depends on the accuracy of the data used for training, which can be affected by various sources of noise and error.
+% Nonetheless, machine learning algorithms offer the potential for significant improvements in pointing accuracy,
+% and can potentially reduce the complexity and maintenance requirements of traditional pointing models.
+% Future research in this area could explore the development of machine learning algorithms that can handle the challenges unique to radio telescopes,
+% and the integration of machine learning techniques into existing pointing models.

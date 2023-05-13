@@ -1,0 +1,34 @@
+
+Radio/mm telescopes are critical for studying the universe, but accurate pointing is challenging due to the inability to verify the pointing accuracy in real-time.
+Recurring residual errors that are hard to model due to various factors, including thermal and gravitational deformation and environmental factors like humidity and wind, require regular correction, which can be time-consuming.
+In this thesis, we investigated machine learning approaches to predict and correct residual errors.
+We trained two XGBoost models, reducing azimuth and elevation RMSE by $7.0\%$ and $9.4\%$, respectively.
+We also developed neural network pointing models that outperformed the commonly used linear regression model.
+Our study highlights the importance of larger datasets for accurate pointing models.
+We used data from the APEX telescope in this study.
+
+
+% Radio/(sub)-mm telescopes are important tools to study the universe,
+% but a big weakness is being able to verify the accuracy of the poinitn when making observations.
+% This is because the sky bcakgorund signal is larger than the sources of interest, like galaxies and stars.
+% When making observations with a radio telescope, the pointing is blind, and we need to know that the accuarcy is high.
+% The pointing errors due to the angle of the pointing cooridnates can be modelled well, but there are recurring residual errors due to various facotr.
+% These include thermal deformation of the telescope components \cite{Dong2018}, gravitational deformation \cite{GravDeformation}, and other environmental factors like humidity \cite{Corstanje2017} and wind \cite{Gawronski2005}.
+% Some of these are harder to model, and therefore astronomers spend a lot of time regurarly correction these errors.
+% In addition, the poinitng model based inacurate mounting of telescope coponents take time to develop and maintain.
+% Developing these models requires lots of data obtained from pointing campaigns where multiple measurements are taken  aross the sky.
+
+% It also requires thorough analysis to find the best model.
+% This process has to be repeated every $1$-$2$ months.
+% In this thesis we investigated a machine learning approach for predicting the recurring residual errors, which can further reduce the pointing errors.
+% We trained two XGBoost models, one to correct the azimuth error (horizontal plane) and one to correct the elevation angle (vertical plane).
+% We tried trained the models on a lot of data in a longer time period, and less data in a shorter period.
+% We then tested the models in a consecutive period in time, on an unseen test set.
+% We found that trained on a shorter time does not generalize well to new unseen data, and that larger amounts of data is needed to make a good model.
+% On the models trained on the larger dataset, we found that the root mean squared error (RMSE) in azimuth was reduced by $7.0\%$, and the elevation by $9.4\%$.
+% We also investigated a machine learning approach for developing a pointing model from scratch, and compared it to the commonly used linear regression.
+% We tested four different neural networks arhitechtures that were designed to benefit from the design of the currently used pointing models, in addition to utilizing 
+% sensor data to further improve the performance.
+% The neural network pointing models had a RMSE of $16''$-$19''$ on an unseen test set, while the linear regression model had an RMSE of $47.63''$.
+% The neural network did not utilize a lot of the sensory data available, indicating that larger datasets are required.
+

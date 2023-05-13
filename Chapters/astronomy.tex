@@ -21,7 +21,7 @@ Azimuth is the angle around the axis perpendicular to the horizontal plane, with
 At APEX, the convention is to increase the azimuth angle in a clockwise direction.
 The interval for azimuth angles is $[-270^\circ,270^\circ]$ due to APEX's ability to rotate one and a half times around its axis in the horizontal plane.
 On the other hand, elevation is the angle perpendicular to the horizontal plane, with zero degrees corresponding to the telescope pointing at the horizon and $90\degr$ to the telescope pointing at the zenith directly above it.
-This thesis will use elevation instead of altitude to describe this coordinate.\\
+In this thesis, we used elevation instead of altitude to describe this coordinate.\\
 
 
 % Another angle term used in this thesis is the horizontal angle.
@@ -37,7 +37,7 @@ This thesis will use elevation instead of altitude to describe this coordinate.\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.6\textwidth]{Astronomy/Azimuth-Altitude_schematic.png}
-    \caption[Altitude-azimuth coordinate system]{The altitude-azimuth coordinate system used at APEX. Source \cite{altaz_schematic}}
+    \caption[Altitude-azimuth coordinate system]{The altitude-azimuth coordinate system used at APEX. Source \cite{altazschematic}}
     \label{fig:altaz_coords}
 \end{figure}
 
@@ -46,13 +46,16 @@ This thesis will use elevation instead of altitude to describe this coordinate.\
 
 \subsection{Radio/(Sub)-mm Telescope Basics}
 In this section, we present an overview of the fundamental components of a radio/(sub)-mm telescope.
-As illustrated in subfigure \ref{subfig:radio_telescope}, the basic operation of a cassegrain single-dish telescope involves collecting electromagnetic radiation with a primary mirror, which is then reflected onto a secondary mirror (subreflector).
-The photons are subsequently redirected towards the interior of the telescope where they are converted into an electrical signal by an attached receiver (instrument).
+As illustrated in subfigure \ref{subfig:radio_telescope}, the basic operation of a Cassegrain single-dish telescope involves collecting electromagnetic radiation with a primary mirror, which is then reflected onto a secondary mirror (subreflector).
+The photons are subsequently redirected toward the interior of the telescope, where they are converted into an electrical signal by an attached receiver (instrument).
 The electric signal is then processed and recorded for further analysis.
 
-Additionally, subfigure \ref{subfig:beamwidth} provides a visual representation of the telescope's beamwidth.
-This angular resolution is determined by physical characteristics such as the diameter of the primary dish and the frequency of the electromagnetic radiation.
-The half-power beamwidth, is defined as the angle between the two points on the beam at which the radiation power is half its maximum, which is the measure commonly used for beamwidth.
+Additionally, subfigure \ref{subfig:beamwidth} provides a visual representation of the telescope's beam.
+The telescope's beam indicates the source of the strongest signal detected by the telescope.
+The beam power weakens towards the edges, and an object needs to be located within the beam to be observable.
+The angular resolution of a telescope, or the solid angle it can observe, is determined by the width of its beam.
+Physical characteristics, including the primary dish diameter and the electromagnetic radiation frequency, determine the beam's width.
+The standard measure for beamwidth is the half-power beamwidth, or the angle between two points on the beam where the radiation power is half its maximum.
 
 \begin{figure}[H]
     \centering

@@ -1,3 +1,6 @@
+In this section, we present most of the machine learning concept utilized in our research.
+For more details on the theory in sections \ref{sec:supervised_learning} through \ref{sec:nns}, see \cite{Mehta2019}.
+
 \section{Supervised Learning} \label{sec:supervised_learning}
 Supervised learning is a subfield of machine learning that refers to training a model to predict a specific target value based on input data.
 In this context, we refer to the input data as "features." The training is supervised when paired with the corresponding target value for prediction.
@@ -42,7 +45,7 @@ and $\mathcal{L}_{\text{MSD}}$ reduces the offsets more evenly. \\
 
 For models with a single output azimuth or elevation, we use the regular mean squared error \eqref{eq:mse}
 
-\section{Train/Test Set}
+\section{Datasplitting}
 Machine learning models can be highly complex and fit all the data points in a dataset.
 While this can result in perfect predictions on the training data, it often leads to poor performance on new data, a phenomenon known as overfitting.
 To counteract this, the data is typically split into two parts - a training set and a validation set.
@@ -51,12 +54,11 @@ By using a separate set of data for validation, we can better estimate the model
 
 When the error on the training data is low, the model has low bias.
 However, if the model is too complex, it may also have high variance, meaning that it is overly sensitive to the training data and unable to generalize well to new data.
-A model with high variance may perform well on the training data, but its performance on new data may be poor.
 The key to building a good model is to balance bias and variance and to find the right level of complexity that will allow the model to generalize well.
 Proper selection of the train/test split ratio and other techniques, such as regularization, can help achieve this balance and improve the model's performance.
 
 One usually picks the machine learning model with the best performance on the validation set, but this performance is not a reasonable estimate of the expected performance on future predictions.
-That is because many models are usually trained, and the model with the best performance on the validation set could have gotten lucky.
+This is because multiple models are typically trained, and the model with the best performance on the validation set may have obtained its results by chance.
 Therefore, a third test set is used to get an unbiased estimate of the model's performance.
 The data in the test set is not used when training or validating and is only used to estimate the final model's performance.
 
@@ -67,9 +69,8 @@ The inputs to a model often contain different types of data with varying scales.
 Neural networks use weights to transform the input data, and each neuron in a fully connected network receives data from every input feature.
 If the input features have different scales, training the weights can be slow and unstable.
 Scaling the input data to have the same scale improves the speed and performance of the model.
-In contrast, tree-based models are not affected by the range scale of the data since they consist of tests and not mathematical operations.
-
-The most common scaling method is to standardize the data to have zero mean and a standard deviation of one. This is achieved by subtracting the mean and dividing by the standard deviation.
+The scaling of the data range does not influence tree-based models, as they operate through binary tests rather than mathematical calculations.
+For our research, we scaled the data to have zero mean and a standard deviation of one. This is called standardizing and is achieved by subtracting the mean and dividing by the standard deviation.
 Mathematically, the standardization of a feature $x$ is represented as:
 
 \begin{equation}
@@ -100,8 +101,6 @@ More than a single decision tree is required for complex problems.
 Various methods exist to improve decision tree models, as Figure \ref{fig:evolution_of_xgb} demonstrates.
 The final step in the figure is XGBoost (Extreme Gradient Boost), a highly efficient and high-performing machine learning algorithm.
 This section will briefly cover the methods used to optimize decision trees for prediction.
-\cite{Mehta_2019}
-
 
 \subsection{Bagging}
 Bagging, also known as Bootstrap Aggregation, is a method for training an ensemble of models that contribute to the final prediction.
@@ -114,7 +113,7 @@ This often leads to better generalization and reduced overfitting.
 
 \subsection{Boosting}
 In boosting, an ensemble is created, but the trees are not made independently.
-They are trained one by one, considering the previous trees.
+They are trained one by one, considering the errors of the previous trees.
 A sample weight is assigned to each sample used to train a tree based on the current ensemble's accuracy.
 Samples with significant prediction errors are assigned larger weights, and those with accurate predictions are assigned lower weights.
 The final prediction is a weighted sum of all ensemble predictions, with weights based on each tree's accuracy.
@@ -132,28 +131,27 @@ Repeated iteration with small steps in the gradient direction helps reduce both 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{Other figures/decisiontree_example.PNG}
-    \caption[Decision tree]{AN example of a decision tree with 3 decision nodes and 5 leaf nodes.}
+    \caption[Decision tree]{An example of a decision tree with three decision nodes and five leaf nodes.}
     \label{fig:decitiontree}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.98\textwidth]{Other figures/evolution_of_xgb.png}
-    \caption[Evolution of XGBoost]{Evolution of XGBoost.
-\cite{morde_vishal_nodate}}
+    \caption[Evolution of XGBoost]{The evolution of XGBoost. Source: \cite{mordevishal}}
     \label{fig:evolution_of_xgb}
 \end{figure}
 
-\section{Neural Networks}
+\section{Neural Networks}\label{sec:nns}
 A Neural Network (NN) is an Artificial Intelligence (AI) model composed of interconnected neurons inspired by biological neural networks in animal brains.
 These networks are arranged in layers, as shown in Figure \ref{fig:nnfig}, and consist of an input layer, one or more hidden layers, and an output layer.
 The size of the hidden layer(s) varies depending on the nature of the problem.
-A neural network processes input to produce an output, ideally close to the true value.
+A NN processes input to produce an output, ideally close to the true value.
 
 Each connection in an NN has a trainable weight $w_{jk}^l$, representing the weight from the $k^{th}$ neuron in layer $(l-1)$ to the $j^{th}$ neuron in layer $l$.
 Each neuron also has its own bias $b_j$, added to its output to prevent the input to its activation function $\sigma$ from being zero.
 The activation function $\sigma$ applied to the neuron's output is the final transformation before passing data to the next layer.
-This nonlinear function is crucial in allowing NNs to learn nonlinear relationships in data \cite{universal_approximation}.
+This nonlinear function is crucial in allowing NNs to learn nonlinear relationships in data \cite{universalapproximation}.
 
 The following is the mathematical explanation of how a neuron processes the outputs from the previous layer.
 
@@ -171,7 +169,8 @@ will be helpful when explaining how to optimize a neural network and can be cons
     \centering
     \input{Other figures/nn_with_eqs.tex}
     \caption[Neural Network with equations]{This is an illustration of how information is passed through and processed in a neural network.
-Generated using TikZ \cite{tikz}}
+    Adapted from work by Izaak Neutelings \cite{tikznet}.
+    Generated using TikZ \cite{tikz}}
     \label{fig:nnfig}
 \end{figure}
 
@@ -341,20 +340,19 @@ which is faster to compute than the original definition but can result in worse 
 For computational efficiency, we used this approximation.
 
 
-\section{Model Explainability}
+\section{Model Explainability}\label{sec:model_explainability}
 In the context of machine learning, SHAP \cite{SHAP} and SAGE \cite{SAGE} apply the same idea to determine the contribution of each feature to a prediction.
 SHAP provides a local explanation by computing the contribution of each feature to the prediction of a single data point.
 On the other hand, SAGE provides a global explanation by computing each feature's contribution to the model's overall prediction performance.
-These methods allow us to understand the relationship between the features and the prediction, particularly useful when the model is too complex to interpret.
+These methods allow us to understand the relationship between the features and the prediction, which is particularly useful when the model is too complex to interpret.
 Additionally, they provide a way to validate the model's fairness and bias.
 By understanding which features contribute the most to a prediction, one can determine if the model is fair or biased and if the prediction is trustworthy.\\
 
-Both SHAP and SAGE methods are based on Shapley values \cite{shapley_value_1953}, a concept in game theory introduced by Lloyd Shapley in 1951.
+Both SHAP and SAGE methods are based on Shapley values \cite{shapleyvalue1953}, a concept in game theory introduced by Lloyd Shapley in 1951.
 Shapley values determine each player's contribution to a group's surplus or overall value.
-The explanation below of Shapley values, SHAP, and SAGE is inspired by a blog post by Ian Covert \cite{covert_shap_sage}.\\
+The explanation below of Shapley values, SHAP, and SAGE is inspired by a blog post by Ian Covert \cite{covertshapsage}, the author of \cite{SAGE}.\\
 
 The Shapley value for a player $i$ in a cooperative game with $d$ players is
-
 \begin{equation}
     \phi_i(w) = \frac{1}{d} \sum_{S \subseteq D \backslash \{ i \} } \binom{d-1}{|S|}^{-1} \left[ w(S\cup \{ i \} ) - w(S) \right]
 \end{equation}
@@ -393,13 +391,13 @@ SAGE (Shapley Additive Global Importance) explains how every feature contributes
 For a given feature, the global feature importance is the average SHAP value (for that feature) across all samples in the dataset.
 This is, however, different from how it is calculated in practice.
 A paper by Ian Covert et al.
-\cite{sage_paper} on global feature importance proposes an algorithm that aims directly at a global feature explanation, unlike the SHAP values, which makes
+\cite{sagepaper} on global feature importance proposes an algorithm that aims directly at a global feature explanation, unlike the SHAP values, which makes
 it faster.
 This is the algorithm used for approximating the SAGE values for the features in the thesis.
 
 \section{Mutual Information}
 Mutual information is a fundamental measure of the statistical dependence between two random variables,
-providing a way to quantify the amount of information one variable conveys about the other.
+providing a way to quantify the amount of information one variable conveys about the other \cite{Shannon1948}.
 For a pair of discrete random variables $X$ and $Y$, we have 
 \begin{equation}
     I(X;Y) = \sum_{y} \sum_{x} p(x,y) \log \left( \frac{p(x,y)}{p(x)p(y)} \right),
