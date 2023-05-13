@@ -3,16 +3,15 @@ This chapter of the thesis outlines the methodology used for data analysis, clea
 Data-driven methods have the potential to learn all relations in the data, but the size of the dataset limits this.
 Therefore, cleaning the data and selecting features containing information relevant to the desired output is essential.
 With the system's complexity, identifying relevant features can be challenging.
-To address this, we employ data-driven modeling to help identify important features while using feature engineering to incorporate
+To address this, we employed data-driven modeling to help identify important features while using feature engineering to incorporate
 our understanding of the system and create informative features.
 
 Cleaning data involves removing irrelevant data that could confuse the model, thereby ensuring that the model learns from the most relevant information.
 Feature engineering involves incorporating domain knowledge into the model to create features that provide additional information.
 
-We perform data analysis to decide which features to train our models.
+We performed data analysis to decide which features to train our models.
 This analysis involves understanding the relationships between the different variables in the dataset and identifying which variables
 could be helpful in predicting the target variable.
-The outcome of the data analysis informs our decisions on which features to use in the models.
 
 
 \section{Cleaning Pointing Scan Data} \label{sec:cleaning_pt_scan}
@@ -21,7 +20,7 @@ When utilizing data-driven modeling for predictive purposes, ensuring that the d
 In this project, various factors may impact the quality of the data, and therefore, we implemented measures to clean the data based on our knowledge of the telescope's operation.
 We employed a criteria-based approach and a machine learning classifier to remove pointing scans from the dataset.
 During the removal of pointing scans, it is important to strike a balance between removing noise and retaining relevant information.
-Outliers in the training data can introduce bias into machine learning models, as these data points may not accurately represent real-world conditions.
+Outliers in the training data can introduce bias into machine learning models, as these data points may not accurately represent typical conditions.
 Consequently, having outliers in the training data can be more damaging than removing good pointing scans.
 Therefore, we have a strict approach when cleaning the data to ensure high-quality datasets for model training.
 
@@ -39,7 +38,7 @@ The following list outlines the criteria used to filter out such scans:
     \item Scans that are tracking tests
     \item Scans after 17.09.2022 since we only have sensory data until this point
 \end{itemize}   
-After this filtering, there are $5901$ out of $8862$ scans left.
+After this filtering, there were $5901$ out of $8862$ scans left.
         
 \subsection{Pointing Scan Classifier} 
 \subsubsection{Method}
@@ -48,13 +47,13 @@ The scan quality is often obvious when inspecting the data visually, but it is h
 Instead, we trained a classifier to predict whether a scan is of good or bad quality.
 We used an XGBoost classifier with 13 features as inputs, all of which are present in the pointing scan figures (\ref{fig:line_pointings} and \ref{fig:continueous_pointings}).
 The first 12 features are the amplitudes, FWHMs, pointing offsets, and these values' uncertainties.
-The last feature is the beamsize of the telescope for the given observing frequency.\\
+The last feature is the beamwidth of the telescope for the given observing frequency.\\
 
-We had to label a training set by manually looking at pointing scans.
-The size of the training set was $369$ samples with $270$ good and $99$ bad scans.
+We had to label a dataset set by manually looking at pointing scans.
+The size of the dataset set was $369$ samples with $270$ good and $99$ bad scans.
 Table \ref{tab:xgb_hyperparameters_clf} shows the hyperparameters and search ranges we used when optimizing this model, along with the resulting best parameter values.
-We also used \textit{scale\_pos\_weight} to consider the unbalanced classes, for which the value is the ratio of negative to positive classes (number of bad scans divided by number of good scans).
-We split the data into $80\%$ for training and the rest for testing, corresponding to $295$ and $74$ samples for training and testing, respectively.
+We also used \textit{scale\_pos\_weight} to consider the unbalanced classes, for which the value is the ratio of negative to positive classes (number of bad scans divided by the number of good scans).
+We split the data into $80\%$ for training and the rest for validating, corresponding to $295$ and $74$ samples for training and validation, respectively.
 
 \begin{table}[H]
     \centering
@@ -71,14 +70,14 @@ We split the data into $80\%$ for training and the rest for testing, correspondi
 \end{table}
 
 \subsubsection{Results}
-The XGBoost classifier performed well with a $97\%$ overall accuracy on the test set.
+The XGBoost classifier performed well with a $97\%$ overall accuracy on the validation set.
 Figure \ref{fig:pointing_scan_clf} shows the precision-recall curve on the left and the average precision curve on the right.
 From the precision-recall curve, it is clear that we can achieve close to $100\%$ precision while still having a high recall.
 We select a large threshold such that the classifier removes most bad scans from the training data,
 because a bad pointing scan is potentially more harmful for the model than discarding a few good scans.
 The average precision curve shows an optimal threshold for maximizing the precision, which is about $80\%$.\\
 
-Using the classifier to further clean the dataset, using prediction threshold $0.8$, we remove another $575$ scans, leaving us with
+We used the classifier to clean the dataset further, using prediction threshold $0.8$, we remove another $575$ scans, leaving us with
 $5326$ scans for the rest of the analysis.
 
 
@@ -126,7 +125,7 @@ Therefore, we need to combine the timestamp of the pointing scan with the flag i
 First, we convert the different scan flags to numbers.
 \textit{IDLE} and \textit{PREPARING} is the set $0$, and \textit{OBSERVING} is set to $1$.
 Then we can subtract the previous rows from all rows, resulting in the value $1$ when the scan starts, and $-1$ when it ends.
-Table \ref{tab:scan_flag_difference} shows an example of the resulting table.
+Table \ref{tab:scan_flag_difference} shows an example of the result.
 
 
 \begin{table}[H]
@@ -144,7 +143,7 @@ Table \ref{tab:scan_flag_difference} shows an example of the resulting table.
         \bottomrule
     \end{tabular}
     \caption[Tiltmeter dump file with $\Delta$ for analysis]{This table shows the tiltmeter dump file containing the telescope state flag,
-            and how we find the start ($\Delta = 1$) and end ($\Delta = -1$) of a scan.}
+            and how we found the start ($\Delta = 1$) and end ($\Delta = -1$) of a scan.}
     \label{tab:scan_flag_difference}
 \end{table}
 
@@ -223,15 +222,10 @@ For the scans with an exact start and end time, we used this time period instead
 \end{figure}
 
 
-
-
 \section{Feature Engineering}\label{sec:feature_engineering}
-There are two main features engineered for this project; features that represent the system during a pointing scan and features that represent changes since the last correction. 
-The idea behind this is simple. The correction used during a pointing scan represents the ideal correction for the system during the previous pointing scan.
-As there are a lot of factors and complex relationships, and we do not have large amounts of training data, it might be easier for the model to learn 
-how these changes affect the pointing rather than learning all the relationships.
-
-Table \textcolor{red}{ref table with a list of variables with median value} show all features.
+Feature engineering is important to ensure that the inputs for the machine learning models are as informative as possible.
+Informative features make it easier for the machine learning model to learn the relationship between features and target values.
+With limited training data, this is essential.
 
 % \textcolor{red}{Put this in feature engineering section}
 % \begin{align}
@@ -243,54 +237,24 @@ Table \textcolor{red}{ref table with a list of variables with median value} show
 % v_\textit{wind} = \sigma_\textit{wind}^2
 % \end{align}
 
-\subsection{Feature Transformation} 
-\subsubsection{Median values}
-The median value of variables during a pointing scan is the most used feature.
+\subsection{Median Values}
+From the scan duration analysis \ref{sec:scan_duration_analysis}, we know that the duration of a scan varies.
+Therefore, we use the median value during a pointing scan as a feature.
 
-\subsubsection{Sum of all change}
-To capture systematic error in pointing due to the telescope moving back and forth in azimuth and elevation,
-we sum over the positive and negative changes in these variables.
+\subsection{Turbulence}
+Turbulence could affect the pointing, and we used the simple model
+\begin{align}
+\tau_\textit{wind} = \sigma_\textit{wind}^2,
+\end{align}
+where the $\sigma_\textit{wind}^2$ variance in windspeed.
+We calculated the variance in a period of $5$ minutes before the pointing scan.
 
-Given the time of the last pointing correction $t_1$ and the start of a pointing scan $t_2$, the sum over the positive changes in a variable $x_i$ is given by
-\begin{equation}\label{eq:positive_int}
-    X = \sum_{i=t_1+1}^{t_2} \max(0, x_i-x_{i-1})
-\end{equation}
-
-Similarly, the sum of negative changes in a variable is
-\begin{equation}\label{eq:negative_int}
-    X = \sum_{i=t_1+1}^{t_2} \min(0, x_i-x_{i-1})
-\end{equation}
-
-We make these features with azimuth and elevation.
-
-\subsubsection{Change since the last correction}
-This feature is self-explanatory and is just the change in a variable since the pointing was corrected.
-\begin{equation}
-    \Delta x = x_{t_2} - x_{t_1}
-\end{equation}
-
-In order to make this feature more robust against noisy data,
-we instead consider the change in the median for a time interval around the last correction $t_1$ and the start of a pointing scan $t_2$
-
-\begin{equation}
-    \Delta x = \textit{median}(x_{t_2}, x_{t_2 - 1}, \dots, x_{t_2- p}) - \textit{median}(x_{t_1}, x_{t_1 + 1}, \dots, x_{t_1 + p}),
-\end{equation}
-where $p$ is the number of data points needed to cover a period of $P$ minutes, given by $p = P \cdot frequency$. The unit of frequency is data points per minute, found in Table \ref{tab:data_frequency}.
-
-\subsubsection{Max change in time interval}
-In case the speed of the temperature change affects the deformation of the telescope's structure, we find the maximum temperature change in a given time interval since the last pointing correction.
-
-\begin{equation}
-    X = \max (x_{t_1+p} - x_{t_1}, x_{t_1+p} - x_{t_1}, \dots, x_{t_2} - x_{t_2-p}),
-\end{equation}
-
-
-\subsubsection{Position of the sun}
+\subsection{Position of the Sun}
 Observers at the telescope report that the sun is affecting the pointing.
 It is most drastically affected when the sun sets or rises, likely due to rapid temperature change leading to deformation in the telescope structure.
 We also think the sun's position affects the pointing.
 For instance, if the sun is shining on the left side of the telescope, it will affect the pointing differently than if it is on the right side.
-Obtaining the sun's position for the telescope's location is done using the python module PyEphem \cite{ephem}.
+Obtaining the Sun's position for the telescope's location is done using the Python module PyEphem \cite{ephem}.
 
 Using the azimuth angle of the sun and the telescope, we can calculate the position of the sun with respect to the pointing with
 \begin{equation}\label{eq:sun_az_diff}
@@ -308,15 +272,31 @@ Therefore, we adjust the values accordingly
 
 Here, the interval of the difference in azimuth is fixed to the interval $(-180^\circ,180^\circ)$,
 where $0^\circ$ means the telescope is pointing towards the sun in the azimuth direction.
-$\Delta \textit{Az}_\odot = 90^\circ$ corresponds to the sun being direct to the left of the pointing direction. \\
+$\Delta \textit{Az}_\odot = 90^\circ$ corresponds to the sun being direct to the left of the pointing direction.
 
-Another measure tested is the total angle between the pointing and the sun's position. We calculate this using the following formula
+We also calculated the change of $\Delta Az_\odot$ in the past five minutes.
+Let $\Delta Az_\odot(t)$ denote the difference between the telescope's and the Sun's azimuth given time $t$ in minutes,
+then the change in the past five minutes are given by
 \begin{equation}
-    \theta = \cos \textit{Az}_t \cdot \cos \textit{El}_t\cdot \cos \textit{Az}_\odot \cdot \cos \textit{El}_\odot + \sin \textit{Az}_t \cdot \cos \textit{El}_t\cdot \sin \textit{Az}_\odot \cdot \cos \textit{El}_\odot + \sin \textit{El}_t \cdot \sin \textit{El}_\odot
+    \Delta_5 \Delta Az_\odot=\Delta Az_\odot(t)-\Delta Az_\odot(t-5)
 \end{equation}
 
-\subsection{List of Features}
-\textcolor{red}{add a list of all features for different calculations here}
+\subsection{Time based features}
+We also used time-based features to capture the time of day and year.
+There are seasonal changes that affect the pointing throughout the year, and there are environmental factors throughout the day that are correlated with the time of day.
+Therefore, we also used these features
+\begin{itemize}
+    \item \textbf{Continous month}: The number of months after 2022-01-01 00:00:00
+    \item \textbf{Integer month}: The number of integer months after 2022-01-01 00:00:00 
+    \item \textbf{Time of day}: The number of hours after 00:00:00 the given day
+\end{itemize}
+
+\subsection{Additional features}
+There are additional features from the pointing scan data that we used as features.
+The correction terms $CA$ \eqref{eq:ca} for azimuth and $IE$ \eqref{eq:ie} for elevation are used as inputs when predicting pointing offsets.
+In addition, we used the type of receiver as input.
+The environmental factors that cause pointing offsets might affect the different receivers differently; therefore, the model must consider this possibility.
+
 
 % \begin{table}[H]
 %     \centering

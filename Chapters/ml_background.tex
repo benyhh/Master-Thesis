@@ -37,7 +37,7 @@ The first loss function is the mean squared error
 where $N$ is the number of predictions. 
 \\
 For the second loss function, we use the mean squared distance
-\begin{equation}\label{eq:totaloff}
+\begin{equation}\label{eq:msd}
     \mathcal{L}_{\text{MSD}} = \frac{1}{N}\sum_i^N \left[ (y_{Az,i}-\Tilde{y}_{Az,i})^2 + (y_{El,i}-\Tilde{y}_{El,i})^2 \right],
 \end{equation}
 It is difficult to predict the effects of these loss functions if any at all, but one difference could be that $\mathcal{L}_{\text{MSE}}$ is more sensitive to outliers,
@@ -399,7 +399,7 @@ This is the algorithm used for approximating the SAGE values for the features in
 Mutual information is a fundamental measure of the statistical dependence between two random variables,
 providing a way to quantify the amount of information one variable conveys about the other \cite{Shannon1948}.
 For a pair of discrete random variables $X$ and $Y$, we have 
-\begin{equation}
+\begin{equation}\label{eq:mutual_info}
     I(X;Y) = \sum_{y} \sum_{x} p(x,y) \log \left( \frac{p(x,y)}{p(x)p(y)} \right),
 \end{equation}
 where $p(x,y)$, $p(x)$, and $p(y)$ are the joint and marginal probabilities, respectively.

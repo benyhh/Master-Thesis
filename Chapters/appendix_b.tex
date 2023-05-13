@@ -58,3 +58,82 @@ the corrections used for training and the resulting offset are similar to the on
     \bottomrule
     \end{tabular}
 \end{table}
+
+\section{Feature Engineering for Transformed Offsets and Corrections}
+\section{Feature Engineering}\label{sec:feature_engineering}
+There are two main features engineered for this project; features that represent the system during a pointing scan and features that represent changes since the last correction. 
+The idea behind this is simple. The correction used during a pointing scan represents the ideal correction for the system during the previous pointing scan.
+As there are a lot of factors and complex relationships, and we do not have large amounts of training data, it might be easier for the model to learn 
+how these changes affect the pointing rather than learning all the relationships.
+
+\subsection{Feature Transformation} 
+\subsubsection{Median values}
+The median value of variables during a pointing scan is the most used feature.
+
+\subsubsection{Sum of all change}
+To capture systematic error in pointing due to the telescope moving back and forth in azimuth and elevation,
+we sum over the positive and negative changes in these variables.
+
+Given the time of the last pointing correction $t_1$ and the start of a pointing scan $t_2$, the sum over the positive changes in a variable $x_i$ is given by
+\begin{equation}\label{eq:positive_int}
+    X = \sum_{i=t_1+1}^{t_2} \max(0, x_i-x_{i-1})
+\end{equation}
+
+Similarly, the sum of negative changes in a variable is
+\begin{equation}\label{eq:negative_int}
+    X = \sum_{i=t_1+1}^{t_2} \min(0, x_i-x_{i-1})
+\end{equation}
+
+We make these features with azimuth and elevation.
+
+\subsubsection{Change since the last correction}
+This feature is self-explanatory and is just the change in a variable since the pointing was corrected.
+\begin{equation}
+    \Delta x = x_{t_2} - x_{t_1}
+\end{equation}
+
+In order to make this feature more robust against noisy data,
+we instead consider the change in the median for a time interval around the last correction $t_1$ and the start of a pointing scan $t_2$
+
+\begin{equation}
+    \Delta x = \textit{median}(x_{t_2}, x_{t_2 - 1}, \dots, x_{t_2- p}) - \textit{median}(x_{t_1}, x_{t_1 + 1}, \dots, x_{t_1 + p}),
+\end{equation}
+where $p$ is the number of data points needed to cover a period of $P$ minutes, given by $p = P \cdot frequency$. The unit of frequency is data points per minute, found in Table \ref{tab:data_frequency}.
+
+\subsubsection{Max change in time interval}
+In case the speed of the temperature change affects the deformation of the telescope's structure, we find the maximum temperature change in a given time interval since the last pointing correction.
+
+\begin{equation}
+    X = \max (x_{t_1+p} - x_{t_1}, x_{t_1+p} - x_{t_1}, \dots, x_{t_2} - x_{t_2-p}),
+\end{equation}
+
+
+\subsubsection{Position of the sun}
+Observers at the telescope report that the sun is affecting the pointing.
+It is most drastically affected when the sun sets or rises, likely due to rapid temperature change leading to deformation in the telescope structure.
+We also think the sun's position affects the pointing.
+For instance, if the sun is shining on the left side of the telescope, it will affect the pointing differently than if it is on the right side.
+Obtaining the sun's position for the telescope's location is done using the python module PyEphem \cite{ephem}.
+
+Using the azimuth angle of the sun and the telescope, we can calculate the position of the sun with respect to the pointing with
+\begin{equation}\label{eq:sun_az_diff}
+    \Delta \textit{Az}_\odot = \textit{Az}_{\textit{t}} - \textit{Az}_\odot
+\end{equation}
+This will result in values outside the $[-180^\circ,180^\circ]$. An example is if $Az_\odot=179^\circ$ and $Az_t = -179^\circ$.
+The calculation in equation \eqref{eq:sun_az_diff} yield $-179^\circ-179^\circ=-358^\circ$,
+which corresponds to the sun being $358^\circ$ to the right of the telescope, while it ideally should be $2^\circ$ to the left.
+Therefore, we adjust the values accordingly
+%Write equations where \Delta Az_\odot above 180 is -= 360 and under 180 is += 360
+\begin{align}
+    \Delta Az_\odot = Az_\odot +360^\circ, \; \text{for} \; \Delta Az_\odot < 180^\circ\\
+    \Delta Az_\odot = Az_\odot -360^\circ, \; \text{for} \; \Delta Az_\odot > 180^\circ
+\end{align}
+
+Here, the interval of the difference in azimuth is fixed to the interval $(-180^\circ,180^\circ)$,
+where $0^\circ$ means the telescope is pointing towards the sun in the azimuth direction.
+$\Delta \textit{Az}_\odot = 90^\circ$ corresponds to the sun being direct to the left of the pointing direction. \\
+
+Another measure tested is the total angle between the pointing and the sun's position. We calculate this using the following formula
+\begin{equation}
+    \theta = \cos \textit{Az}_t \cdot \cos \textit{El}_t\cdot \cos \textit{Az}_\odot \cdot \cos \textit{El}_\odot + \sin \textit{Az}_t \cdot \cos \textit{El}_t\cdot \sin \textit{Az}_\odot \cdot \cos \textit{El}_\odot + \sin \textit{El}_t \cdot \sin \textit{El}_\odot
+\end{equation}

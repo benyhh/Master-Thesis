@@ -1,11 +1,11 @@
 
 \section{Results of Experiment 1: Pointing Correction Model}
-In this section, we present the results obtained from experiment $1$ \ref{sec:exp1}.
-Prior to presenting the results, we provide a reminder of the RMS ratio measure \eqref{eq:mean_rms_compared}, which will be frequently used in this section.
-This measure is used to compare the current pointing model to the machine learning model, and a value less than $1$ indicates an improvement of the current model. \\
+In this section, we present the results obtained from experiment $1$ introduced in section \ref{sec:exp1}.
+Prior to presenting the results, we provide a reminder of the RMS ratio measure \eqref{eq:mean_rms_compared}, which we frequently used in this section.
+We used this measure to compare the current pointing model to the machine learning model, and a value less than $1$ indicates an improvement of the current model. \\
 
 Table \ref{tab:results_minval_val_test_days_04_n230} presents the validation and test RMS ratios for all folds of the NFLASH230 model in case 1 and case 2.
-Recall that models were trained with different numbers of features $k$, and these results are from the model with the best performance on the validation set.
+Recall that models were trained with different numbers of features $k$, and these results are from the model with the best performance on the validation set (can be different $k$ for each fold).
 The results show that the model's performance on the validation set is very good in both case 1 and 2.
 However, this does not generalize well to the test set, with the performance on the test set for case 1 being significantly worse than the current model for all folds.
 In contrast, for case 2, the performance on the test set is better than the current model for most of the folds.
@@ -288,11 +288,11 @@ as they predict solely based on logical conditions seen in the training set.
 If the factors affecting the pointing offset change over time and the new data is very different from the training data, the model will likely perform poorly. 
 Furthermore, another potential explanation for the poor performance could be that the dataset is too small, and the model overfits on the validation set.
 The results of this experiment suggest that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
-To train a proper complex model, a larger amount of data is required, at least more than the number of samples in the training and validation sets for case 1, being \textcolor{red}{add samples here}.
+To train a proper complex model, a larger amount of data is required, at least more than the number of samples in the training and validation sets for case 1.
 The findings also indicate that choosing the complexity of the model with the best performance on the validation set may not necessarily lead to the best performance on the test set.
 We further explore this aspect by examining Table \ref{tab:results_nflash_days}, which demonstrates the mean RMS ratio on the test set using the same number of features for all the folds.
 This provides an idea of the complexity that might provide the best-performing models on the test set.
-Even though the model with the best performance on the validation set is not chosen, which could potentially be a lucky performance or overfitted,
+Even though the model with the best performance on the validation set is not chosen, which could be a lucky or overfitted performance,
 no improvement is observed in the current pointing model on the test set.
 However, the results show better performance than the first Table \ref{tab:results_minval_val_test_days_04_n230}.
 The same trends are observed when predicting offsets from all instruments in Tables \ref{tab:results_minval_val_test_days_04_all} and \ref{tab:results_all_days}. \\
