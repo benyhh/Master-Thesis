@@ -26,16 +26,16 @@
 *.csv
 *.xlsx
 *.txt
-*.PNG
-*.png
+# *.PNG
+# *.png
 *.csv
 *.xlsx
 *.PDF
-*.pdf
+# # *.pdf
 *.xml
-*.jpeg
-*.jpg
-*.JPEG
+# *.jpeg
+# *.jpg
+# *.JPEG
 *.tif
 *.tar
 *.tar.gz
