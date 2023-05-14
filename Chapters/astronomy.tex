@@ -1,10 +1,13 @@
+\newpage
+
 \section{Astronomy Background}\label{sec:ast_terms}
+In order to understand some of the parameters used in the pointing models, we need to introduce some basic concepts concerning astronomical coordinates 
 \subsection{The Celestial Sphere}
 The celestial sphere is a fundamental concept in astronomy.
 It is an imaginary sphere with an arbitrary radius centered on Earth, and it allows us to represent the positions of celestial objects conveniently and intuitively.
 Any astronomical observation is a 2D projection onto the celestial sphere,
 a tool astronomers use to specify the position of a target as it appears in the sky without using its physical distance from Earth
-(which requires a deeper knowledge of the physical properties of the astronomical target, usually acquired after many different observations)
+(which requires a deeper knowledge of the physical properties of the astronomical target, usually acquired after many different observations).
 We describe the position as two-dimensional angular coordinates on the sphere.
 While the celestial sphere is a universal concept, the coordinate system used to specify the location of a target can vary.
 
@@ -46,35 +49,17 @@ In this thesis, we used elevation instead of altitude to describe this coordinat
 
 \subsection{Radio/(Sub)-mm Telescope Basics}
 In this section, we present an overview of the fundamental components of a radio/(sub)-mm telescope.
-As illustrated in subfigure \ref{subfig:radio_telescope}, the basic operation of a Cassegrain single-dish telescope involves collecting electromagnetic radiation with a primary mirror, which is then reflected onto a secondary mirror (subreflector).
+As illustrated in Figure \ref{subfig:radio_telescope}, the basic operation of a Nasmyth-Cassegrain telescope design involves collecting electromagnetic radiation with a primary mirror, which is then reflected onto a secondary mirror (subreflector).
 The photons are subsequently redirected toward the interior of the telescope, where they are converted into an electrical signal by an attached receiver (instrument).
 The electric signal is then processed and recorded for further analysis.
 
-Additionally, subfigure \ref{subfig:beamwidth} provides a visual representation of the telescope's beam.
+Additionally, Figure \ref{subfig:beamwidth} provides a visual representation of the telescope's beam.
 The telescope's beam indicates the source of the strongest signal detected by the telescope.
-The beam power weakens towards the edges, and an object needs to be located within the beam to be observable.
+The beam power weakens towards the edges, and the goal is to place the source as the peak of the telescope's response, i.e., at the center of the beam
 The angular resolution of a telescope, or the solid angle it can observe, is determined by the width of its beam.
 Physical characteristics, including the primary dish diameter and the electromagnetic radiation frequency, determine the beam's width.
-The standard measure for beamwidth is the half-power beamwidth, or the angle between two points on the beam where the radiation power is half its maximum.
+The standard measure for beamwidth is the half-power beamwidth or the angle between two points on the beam where the radiation power is half its maximum.
 
-\begin{figure}[H]
-    \centering
-    \begin{subfigure}[t]{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Astronomy/radio_telescope.png}
-        \caption{Radio telescope basics.}
-        \label{subfig:radio_telescope}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[t]{0.49\textwidth}
-       \centering
-       \includegraphics[width=\textwidth]{Astronomy/beamwidth_sketch_cropped.png}
-       \caption{Telescope beam sketch.}
-       \label{subfig:beamwidth}
-    \end{subfigure}
-    \caption[Radio telescope basics]{\textbf{a)} Basics of how a radio telescope works and \textbf{b)} Sktech of a telescope's beam.}
-    \label{fig:telescope_info}
-\end{figure}
 
 % \section{Problem description}
 % \textcolor{red}{This section have to be fixed completely}

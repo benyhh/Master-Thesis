@@ -1,26 +1,25 @@
 \section{Experiment 1: Pointing Correction Model}
 The first research question addressed in this thesis is whether machine learning can enhance the pointing accuracy of a radio telescope using the current pointing strategy.
-To investigate this question, we explore a realistic scenario (case 1) in which a model is trained on a smaller period of data and used to predict the offset of consecutive scans for a period afterward.
-We focus now on the model predicting the offsets of only NFLASH230.
-The results from this case, presented in Table \ref{tab:results_minval_val_test_days_04_n230}, demonstrate that the model's performance on the validation set is promising,
-with the root-mean-square (RMS) ratio in the range of approximately $0.80$-$0.85$ for azimuth and elevation,
+To investigate this question, we explored a realistic scenario (case 1) in which we trained a model on a smaller period of data and used it to predict the offset of consecutive scans for a period afterward.
+We first focus on the NFLASH230 model.
+The results from this case, presented in Table \ref{tab:results_minval_val_test_days_04_n230}, demonstrated that the model's performance on the validation set is promising,
+with the RMS ratio in the range of approximately $0.80$-$0.85$ for azimuth and elevation,
 which corresponds to a $15$-$20\%$ reduction in pointing offset.
-However, this performance does not transfer to the following test period,
+However, this performance did not transfer to the following test period,
 in which the RMS ratios are $1.16$-$1.46$, indicating a $16$-$46\%$ increase in pointing offset.
 There are several possible reasons for the model's poor performance on the test set.
 One of the limitations of tree-based models, such as XGBoost, is that they typically do not generalize well to new data that is different from the training data,
 as they predict solely based on logical conditions seen in the training set.
-If the factors affecting the pointing offset change over time and the new data is very different from the training data, the model will likely perform poorly. 
+If the factors affecting the pointing offset change over time and the new data is different from the training data, the model will likely perform poorly. 
 Furthermore, another potential explanation for the poor performance could be that the dataset is too small, and the model overfits on the validation set.
 The results of this experiment suggest that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
-To train a proper complex model, a larger amount of data is required, at least more than the number of samples in the training and validation sets for case 1, being \textcolor{red}{add samples here}.
+In order to train a proper complex model, a larger dataset is required.
 The findings also indicate that choosing the complexity of the model with the best performance on the validation set may not necessarily lead to the best performance on the test set.
-We further explore this aspect by examining Table \ref{tab:results_nflash_days}, which demonstrates the mean RMS ratio on the test set using the same number of features for all the folds.
-This provides an idea of the complexity that might provide the best-performing models on the test set.
+We further explore this aspect by examining Table \ref{tab:results_nflash_days}, demonstrating the mean RMS ratio on the test set using the same number of features for all the folds.
+This provides an idea of the complexity that might provide the best-performing models on new data.
 Even though the model with the best performance on the validation set is not chosen, which could potentially be a lucky performance or overfitted,
-no improvement is observed in the current pointing model on the test set.
-However, the results show better performance than the first Table \ref{tab:results_minval_val_test_days_04_n230}.
-The same trends are observed when predicting offsets from all instruments in Tables \ref{tab:results_minval_val_test_days_04_all} and \ref{tab:results_all_days}. \\
+we do not observe any improvement over the current pointing model on the test set.
+We see the same trends when predicting offsets from all instruments, for which Tables \ref{tab:results_minval_val_test_days_04_all} and \ref{tab:results_all_days} show the results. \\
 
 
 Moving on to case 2, which tests whether the amount of data is a limitation for enhancing the pointing accuracy.

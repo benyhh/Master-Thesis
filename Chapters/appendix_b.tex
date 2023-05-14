@@ -26,7 +26,7 @@ This effect propagates throughout the whole dataset.
 The following formulas 
 \begin{align}
     \Tilde{ca}_i &= \Tilde{ca}_{i-1} + \Tilde{\delta}_{az,i-1}\label{eq:ca_tilde}\\
-    \Tilde{ie}_i &= \Tilde{ie}_{i-1} - \Tilde{\delta}_{el,i-1\label{eq:ie_tilde}}\\
+    \Tilde{ie}_i &= \Tilde{ie}_{i-1} - \Tilde{\delta}_{el,i-1}\label{eq:ie_tilde}\\
     \Tilde{\delta}_{az,i} &= \delta_{az,i} + ca_i - \Tilde{ca}_i\label{eq:off_az_tilde}\\
     \Tilde{\delta}_{el,i} &= \delta_{el,i} - ie_i + \Tilde{ie}_i\label{eq:off_el_tilde}
 \end{align}
@@ -60,7 +60,6 @@ the corrections used for training and the resulting offset are similar to the on
 \end{table}
 
 \section{Feature Engineering for Transformed Offsets and Corrections}
-\section{Feature Engineering}\label{sec:feature_engineering}
 There are two main features engineered for this project; features that represent the system during a pointing scan and features that represent changes since the last correction. 
 The idea behind this is simple. The correction used during a pointing scan represents the ideal correction for the system during the previous pointing scan.
 As there are a lot of factors and complex relationships, and we do not have large amounts of training data, it might be easier for the model to learn 
@@ -116,7 +115,7 @@ For instance, if the sun is shining on the left side of the telescope, it will a
 Obtaining the sun's position for the telescope's location is done using the python module PyEphem \cite{ephem}.
 
 Using the azimuth angle of the sun and the telescope, we can calculate the position of the sun with respect to the pointing with
-\begin{equation}\label{eq:sun_az_diff}
+\begin{equation}
     \Delta \textit{Az}_\odot = \textit{Az}_{\textit{t}} - \textit{Az}_\odot
 \end{equation}
 This will result in values outside the $[-180^\circ,180^\circ]$. An example is if $Az_\odot=179^\circ$ and $Az_t = -179^\circ$.

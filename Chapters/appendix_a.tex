@@ -310,100 +310,143 @@
 % %%% FEATURES FOR DIFFERNTE DATASETS WITH PCORR MODEL
 
 
-\begin{longtable}{|lcccccccc|}
-    \toprule
-    \label{tab:exp2_top50_features}
-    & \multicolumn{2}{c}{Regular} & \multicolumn{2}{c}{Regular N230} & \multicolumn{2}{c}{Transformed} & \multicolumn{2}{c|}{Transformed N230}\\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
-    Features & Az & El & Az & El & Az & El & Az & El \\  \hline
-    \endfirsthead
+% \begin{longtable}{|lcccc|}
+%     \caption{The $50$ features with the greatest mutual information to the target value (unsorted).}
+%     \toprule
+%     \label{tab:non}
+%     & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
+%     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+%     Features & Az & El & Az & El & Az & El & Az & El \\  \hline
+%     \endfirsthead
     
-    \toprule
-    & \multicolumn{2}{c}{Regular} & \multicolumn{2}{c}{Regular N230} & \multicolumn{2}{c}{Transformed} & \multicolumn{2}{c|}{Transformed N230}\\
-    \cmidrule(lr){2-3} \cmidrule(lr){4-5} \cmidrule(lr){6-7} \cmidrule(lr){8-9}
-    Features & Az & El & Az & El & Az & El & Az & El \\ \hline
-    \endhead
-    \multicolumn{9}{r}{{Continued on next page}} \\
-    \midrule
-    \endfoot
+%     \toprule
+%     & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
+%     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+%     Features & Az & El & Az & El & Az & El & Az & El \\ \hline
+%     \endhead
+%     \multicolumn{5}{r}{{Continued on next page}} \\
+%     \midrule
+%     \endfoot
     
-    \endlastfoot
-    ACTUALAZ\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
-    ACTUALAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ACTUALAZ\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALAZ\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALEL\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
-    ACTUALEL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ACTUALEL\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALEL\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    ACTUALVELOCITYAZ\_MAX &        &        &        &        &      x &      x &      x &      x \\ \hline
-    ACTUALVELOCITYEL\_MAX &        &        &        &        &      x &      x &      x &      x \\ \hline
-    COMMANDAZ\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
-    COMMANDAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    COMMANDAZ\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    COMMANDAZ\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    COMMANDEL\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
-    COMMANDEL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    COMMANDEL\_NEG\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    COMMANDEL\_POS\_CHANGE &        &        &        &        &        &        &      x &      x \\ \hline
-    DAZ\_DISP\_CHANGE\_I1 &        &        &        &        &      x &        &      x &      x \\ \hline
-    DAZ\_DISP\_MEDIAN &      x &        &      x &      x &      x &      x &      x &      x \\ \hline
-    DAZ\_TILTTEMP\_CHANGE\_I1 &        &        &        &        &        &        &      x &      x \\ \hline
-    DAZ\_TILTTEMP\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    DAZ\_TILT\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &        \\ \hline
-    DAZ\_TILT\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DAZ\_TOTAL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DEL\_DISP\_CHANGE\_I1 &        &        &        &        &        &        &      x &      x \\ \hline
-    DEL\_DISP\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    DEL\_SPEM\_CHANGE\_I1 &        &        &        &        &      x &      x &        &      x \\ \hline
-    DEL\_SPEM\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    DEL\_TILTTEMP\_MEDIAN &      x &      x &      x &      x &        &        &      x &        \\ \hline
-    DEL\_TILT\_CHANGE\_I1 &        &        &        &        &      x &      x &      x &      x \\ \hline
-    DEL\_TILT\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    DEL\_TOTAL\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DEWPOINT\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    DISP\_ABS1\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    DISP\_ABS2\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    DISP\_ABS3\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    DSUNAZ\_CHANGE\_P5 &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    HUMIDITY\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    POSITIONX\_MEDIAN &      x &      x &      x &      x &        &      x &        &        \\ \hline
-    POSITIONY\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    POSITIONZ\_MEDIAN &      x &      x &      x &        &      x &      x &        &        \\ \hline
-    PRESSURE\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ROTATIONX\_MEDIAN &      x &      x &        &      x &      x &      x &        &        \\ \hline
-    SUNAZ\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    SUNEL\_MEDIAN &        &        &      x &      x &        &        &        &        \\ \hline
-    TEMP1\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    TEMP26\_CHANGE\_I1 &        &        &        &        &        &        &        &      x \\ \hline
-    TEMP26\_MEDIAN &      x &      x &      x &      x &        &        &        &        \\ \hline
-    TEMP27\_MEDIAN &      x &      x &      x &      x &        &        &        &        \\ \hline
-    TEMP28\_MEDIAN &      x &      x &      x &      x &        &        &        &      x \\ \hline
-    TEMP2\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    TEMP3\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &        \\ \hline
-    TEMP4\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    TEMP5\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    TEMP6\_MEDIAN &      x &      x &      x &      x &      x &      x &        &        \\ \hline
-    TEMPERATURE\_MEDIAN &      x &      x &        &      x &      x &      x &      x &        \\ \hline
-    TILT1T\_MEDIAN &      x &      x &      x &      x &        &        &      x &        \\ \hline
-    TILT1X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT1Y\_MEDIAN &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    TILT2T\_MEDIAN &      x &      x &      x &      x &        &        &        &      x \\ \hline
-    TILT2X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT2Y\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT3T\_MEDIAN &      x &      x &      x &        &        &        &      x &        \\ \hline
-    TILT3X\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    TILT3Y\_MEDIAN &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    WINDDIRECTION\_MEDIAN &        &      x &      x &      x &        &        &        &      x \\ \hline
-    WINDSPEED\_MEDIAN &      x &      x &        &        &        &        &        &      x \\ \hline
-    WINDSPEED\_VARIANCE\_P5 &      x &      x &      x &      x &      x &      x &        &      x \\ \hline
-    ca &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    ie &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-    month &        &        &      x &      x &        &        &        &        \\ \hline
-    month\_continuous &      x &      x &      x &      x &        &        &      x &        \\ \hline
-    time\_of\_day &      x &      x &      x &      x &      x &      x &      x &      x \\ \hline
-\end{longtable}        
+%     \endlastfoot
+%     ACTUALAZ\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+%     ACTUALEL\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+%     COMMANDAZ\_MEDIAN       &      x &      x &      x &      x  \\ \hline
+%     COMMANDEL\_MEDIAN       &      x &      x &      x &      x  \\ \hline
+%     DAZ\_DISP\_MEDIAN       &      x &        &      x &      x  \\ \hline
+%     DAZ\_TILTTEMP\_MEDIAN &      x &      x &      x &      x   \\ \hline
+%     DAZ\_TILT\_MEDIAN      &      x &      x &      x &      x   \\ \hline
+%     DAZ\_TOTAL\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+%     DEL\_DISP\_MEDIAN      &      x &      x &      x &      x   \\ \hline
+%     DEL\_SPEM\_MEDIAN     &      x &      x &      x &      x   \\ \hline
+%     DEL\_TILTTEMP\_MEDIAN &      x &      x &      x &      x   \\ \hline
+%     DEL\_TILT\_MEDIAN     &      x &      x &      x &      x   \\ \hline
+%     DEL\_TOTAL\_MEDIAN    &      x &      x &      x &      x   \\ \hline
+%     DEWPOINT\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+%     DISP\_ABS1\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+%     DISP\_ABS2\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+%     DISP\_ABS3\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+%     DSUNAZ\_CHANGE\_P5    &      x &      x &      x &      x  \\ \hline
+%     HUMIDITY\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+%     POSITIONX\_MEDIAN     &      x &      x &      x &      x  \\ \hline
+%     POSITIONY\_MEDIAN     &      x &      x &      x &      x  \\ \hline
+%     POSITIONZ\_MEDIAN     &      x &      x &      x &         \\ \hline
+%     PRESSURE\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+%     ROTATIONX\_MEDIAN     &      x &      x &        &      x  \\ \hline
+%     SUNAZ\_MEDIAN        &      x &      x &      x &      x   \\ \hline
+%     SUNEL\_MEDIAN        &        &        &      x &      x   \\ \hline
+%     TEMP1\_MEDIAN        &      x &      x &      x &      x   \\ \hline
+%     TEMP26\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+%     TEMP27\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+%     TEMP28\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+%     TEMP2\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+%     TEMP3\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+%     TEMP4\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+%     TEMP5\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+%     TEMP6\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+%     TEMPERATURE\_MEDIAN  &      x &      x &        &      x    \\ \hline
+%     TILT1T\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+%     TILT1X\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+%     TILT1Y\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+%     TILT2T\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+%     TILT2X\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+%     TILT2Y\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+%     TILT3T\_MEDIAN       &      x &      x &      x &          \\ \hline
+%     TILT3X\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+%     TILT3Y\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+%     WINDDIRECTION\_MEDIAN &        &      x &      x &      x  \\ \hline
+%     WINDSPEED\_MEDIAN     &      x &      x &        &         \\ \hline
+%     WINDSPEED\_VARIANCE\_P5 &      x &      x &      x &      x  \\ \hline
+%     ca                   &      x &      x &      x &      x    \\ \hline
+%     ie                   &      x &      x &      x &      x    \\ \hline
+%     month                &        &        &      x &      x    \\ \hline
+%     month\_continuous    &      x &      x &      x &      x    \\ \hline
+%     time\_of\_day        &      x &      x &      x &      x    \\ \hline
+% \end{longtable}        
 
+\begin{table}
+    \caption{The $50$ features with the greatest mutual information to the target value (unsorted).}
+    \begin{tabular}{lcccc}
+        \toprule
+        & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        Features & Az & El & Az & El \\  \hline
+        ACTUALAZ\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+        ACTUALEL\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+        COMMANDAZ\_MEDIAN       &      x &      x &      x &      x  \\ \hline
+        COMMANDEL\_MEDIAN       &      x &      x &      x &      x  \\ \hline
+        DAZ\_DISP\_MEDIAN       &      x &        &      x &      x  \\ \hline
+        DAZ\_TILTTEMP\_MEDIAN &      x &      x &      x &      x   \\ \hline
+        DAZ\_TILT\_MEDIAN      &      x &      x &      x &      x   \\ \hline
+        DAZ\_TOTAL\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+        DEL\_DISP\_MEDIAN      &      x &      x &      x &      x   \\ \hline
+        DEL\_SPEM\_MEDIAN     &      x &      x &      x &      x   \\ \hline
+        DEL\_TILTTEMP\_MEDIAN &      x &      x &      x &      x   \\ \hline
+        DEL\_TILT\_MEDIAN     &      x &      x &      x &      x   \\ \hline
+        DEL\_TOTAL\_MEDIAN    &      x &      x &      x &      x   \\ \hline
+        DEWPOINT\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+        DISP\_ABS1\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+        DISP\_ABS2\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+        DISP\_ABS3\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+        DSUNAZ\_CHANGE\_P5    &      x &      x &      x &      x  \\ \hline
+        HUMIDITY\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+        POSITIONX\_MEDIAN     &      x &      x &      x &      x  \\ \hline
+        POSITIONY\_MEDIAN     &      x &      x &      x &      x  \\ \hline
+        POSITIONZ\_MEDIAN     &      x &      x &      x &         \\ \hline
+        PRESSURE\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+        ROTATIONX\_MEDIAN     &      x &      x &        &      x  \\ \hline
+        SUNAZ\_MEDIAN        &      x &      x &      x &      x   \\ \hline
+        SUNEL\_MEDIAN        &        &        &      x &      x   \\ \hline
+        TEMP1\_MEDIAN        &      x &      x &      x &      x   \\ \hline
+        TEMP26\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP27\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP28\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP2\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP3\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP4\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP5\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP6\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMPERATURE\_MEDIAN  &      x &      x &        &      x    \\ \hline
+        TILT1T\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+        TILT1X\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+        TILT1Y\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+        TILT2T\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+        TILT2X\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+        TILT2Y\_MEDIAN       &      x &      x &      x &      x    \\ \hline
+        TILT3T\_MEDIAN       &      x &      x &      x &          \\ \hline
+        TILT3X\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+        TILT3Y\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+        WINDDIRECTION\_MEDIAN &        &      x &      x &      x  \\ \hline
+        WINDSPEED\_MEDIAN     &      x &      x &        &         \\ \hline
+        WINDSPEED\_VARIANCE\_P5 &      x &      x &      x &      x  \\ \hline
+        ca                   &      x &      x &      x &      x    \\ \hline
+        ie                   &      x &      x &      x &      x    \\ \hline
+        month                &        &        &      x &      x    \\ \hline
+        month\_continuous    &      x &      x &      x &      x    \\ \hline
+        time\_of\_day        &      x &      x &      x &      x    \\ \hline
+    \end{tabular}        
+    \label{tab:exp2_top50_features}
+\end{table}
 
 %%% RESULTS PCORR FOR DIFFERENT FOLDS
 
@@ -458,6 +501,37 @@
         \bottomrule
         \end{tabular}
 \end{table}
+
+\begin{table}[!htbp]
+    \centering
+    \caption{NFLASH230}
+    \begin{tabular}{ccccccccc}
+        \toprule
+        \multicolumn{9}{c}{Azimuth} \\
+        \cmidrule{1-9}
+        \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
+        & by   & & & Max   & child  & of         & & \\
+        & tree & & & Depth & weight & estimators & & \\
+        \midrule
+        1 &      0.720 &  0.125 &          0.126 &      1 &             4 &       201 &       0.247 &      0.864 \\
+        2 &      0.777 &  0.988 &          0.017 &      1 &             6 &       468 &       0.763 &      0.962 \\
+        3 &      0.517 &  0.298 &          0.014 &      2 &             7 &       470 &       0.509 &      0.762 \\
+        4 &      0.972 &  0.773 &          0.116 &      5 &             1 &        30 &       0.006 &      0.802 \\
+        5 &      0.897 &  0.112 &          0.008 &      5 &            10 &       435 &       0.658 &      0.819 \\
+        6 &      0.935 &  0.011 &          0.064 &      1 &             6 &       224 &       0.228 &      0.748 \\
+        \hline
+        \multicolumn{9}{c}{Elevation} \\
+        \cmidrule{1-9}
+        1 &      0.600 &  0.156 &          0.007 &      5 &             2 &       140 &       0.047 &      0.792 \\
+        2 &      0.999 &  0.148 &          0.029 &      5 &             1 &        38 &       0.998 &      0.580 \\
+        3 &      0.955 &  0.237 &          0.014 &      3 &             6 &       210 &       0.613 &      0.712 \\
+        4 &      0.537 &  0.014 &          0.034 &      2 &            10 &       352 &       0.537 &      0.594 \\
+        5 &      0.686 &  0.324 &          0.081 &      1 &             1 &       371 &       0.368 &      0.966 \\
+        6 &      0.862 &  0.306 &          0.184 &      1 &            10 &       157 &       0.029 &      0.701 \\
+        \bottomrule
+        \end{tabular}
+\end{table}
+
 
 \begin{table}
     \centering

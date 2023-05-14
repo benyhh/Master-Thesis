@@ -1,11 +1,11 @@
 \babel@toc {USenglish}{}\relax 
-\contentsline {chapter}{\numberline {1}Background \& Motivation}{10}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{10}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Related Works}{11}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Astronomy Background}{12}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}The Celestial Sphere}{12}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Altitude-Azimuth Coordinate System}{12}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Radio/(Sub)-mm Telescope Basics}{13}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.2}Related Works}{12}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Astronomy Background}{13}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}The Celestial Sphere}{13}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Altitude-Azimuth Coordinate System}{13}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Radio/(Sub)-mm Telescope Basics}{14}{subsection.1.3.3}%
 \contentsline {part}{I\hspace {1em}Background and Theory}{15}{part.1}%
 \contentsline {chapter}{\numberline {2}APEX Pointing Model and Database}{16}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Pointing model}{16}{section.2.1}%
@@ -87,23 +87,24 @@
 \contentsline {part}{III\hspace {1em}Results \& Discussion}{55}{part.3}%
 \contentsline {chapter}{\numberline {6}Results \& Discussion}{56}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Results of Experiment 1: Pointing Correction Model}{56}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Discussion of Experiment 1: Pointing Correction Model}{65}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Results of Experiment 2: Pointing Model using Neural Networks}{68}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Discussion of Experiment 2: Pointing Model using Neural Networks}{68}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Conclusion}{72}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{72}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{72}{section.7.2}%
-\contentsline {part}{IV\hspace {1em}Appendices}{74}{part.4}%
-\contentsline {chapter}{\numberline {A}Results \& Tables}{75}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Raw data correlation}{77}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Additional methods}{81}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Transformation of Pointing Offsets and Corrections}{81}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Feature Engineering for Transformed Offsets and Corrections}{82}{section.B.2}%
-\contentsline {section}{\numberline {B.3}Feature Engineering}{82}{section.B.3}%
-\contentsline {subsection}{\numberline {B.3.1}Feature Transformation}{82}{subsection.B.3.1}%
-\contentsline {subsubsection}{Median values}{82}{section*.75}%
-\contentsline {subsubsection}{Sum of all change}{82}{section*.76}%
-\contentsline {subsubsection}{Change since the last correction}{83}{section*.77}%
-\contentsline {subsubsection}{Max change in time interval}{83}{section*.78}%
-\contentsline {subsubsection}{Position of the sun}{83}{section*.79}%
-\contentsline {chapter}{Bibliography}{85}{appendix*.80}%
+\contentsline {section}{\numberline {6.2}Discussion of Experiment 1: Pointing Correction Model}{64}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Results of Experiment 2: Pointing Model using Neural Networks}{67}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Discussion of Experiment 2: Pointing Model using Neural Networks}{67}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Conclusion}{71}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{71}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{71}{section.7.2}%
+\contentsline {part}{IV\hspace {1em}Appendices}{73}{part.4}%
+\contentsline {chapter}{\numberline {A}Results \& Tables}{74}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Raw data correlation}{74}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Additional Methods}{80}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Transformation of Pointing Offsets and Corrections}{80}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Feature Engineering for Transformed Offsets and Corrections}{81}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Feature Transformation}{81}{subsection.B.2.1}%
+\contentsline {subsubsection}{Median values}{81}{section*.76}%
+\contentsline {subsubsection}{Sum of all change}{81}{section*.77}%
+\contentsline {subsubsection}{Change since the last correction}{82}{section*.78}%
+\contentsline {subsubsection}{Max change in time interval}{82}{section*.79}%
+\contentsline {subsubsection}{Position of the sun}{82}{section*.80}%
+\contentsline {chapter}{\numberline {C}Supplementary Theory}{84}{appendix.C}%
+\contentsline {section}{\numberline {C.1}XGBoost Hyperparameters}{84}{section.C.1}%
+\contentsline {chapter}{Bibliography}{85}{appendix*.81}%

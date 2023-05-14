@@ -67,14 +67,14 @@ The models were validated using the MSE.
     \begin{tabular}{lcc}
         \toprule
         \textbf{Parameter} & \textbf{Sample Distribution} & \textbf{Range} \\ \hline
-        max depth & Uniform & [$1$, $5$] \\ 
-        reg lambda & Uniform & [$0$, $1$] \\ 
-        colsample bytree & Uniform & [$0.5$, $1$] \\ 
-        n estimators & Uniform & [$20$, $500$] \\ 
-        learning rate & Log-Uniform & [$10^{-5}$, $1$] \\ 
-        subsample & Uniform & [$0.5$, $1$] \\ 
-        gamma & Log-Uniform & [$10^{-5}$, $1$] \\ 
-        min child weight & Uniform & [$1$, $10$] \\ 
+        \texttt{max\_depth} & Uniform & [$1$, $5$] \\ 
+        \texttt{reg\_lambda} & Uniform & [$0$, $1$] \\ 
+        \texttt{colsample\_bytree} & Uniform & [$0.5$, $1$] \\ 
+        \texttt{n\_estimators} & Uniform & [$20$, $500$] \\ 
+        \texttt{learning\_rate} & Log-Uniform & [$10^{-5}$, $1$] \\ 
+        \texttt{subsample} & Uniform & [$0.5$, $1$] \\ 
+        \texttt{gamma} & Log-Uniform & [$10^{-5}$, $1$] \\ 
+        \texttt{min\_child\_weight} & Uniform & [$1$, $10$] \\ 
         \bottomrule
     \end{tabular}
     \label{tab:xgb_hyperparameters_pcorr}

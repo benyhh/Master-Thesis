@@ -1,12 +1,23 @@
 
-Radio/mm telescopes are critical for studying the universe, but accurate pointing is challenging due to the inability to verify the pointing accuracy in real-time.
-Recurring residual errors that are hard to model due to various factors, including thermal and gravitational deformation and environmental factors like humidity and wind, require regular correction, which can be time-consuming.
-In this thesis, we investigated machine learning approaches to predict and correct residual errors.
-We trained two XGBoost models, reducing azimuth and elevation RMSE by $7.0\%$ and $9.4\%$, respectively.
-We also developed neural network pointing models that outperformed the commonly used linear regression model.
-Our study highlights the importance of larger datasets for accurate pointing models.
-We used data from the APEX telescope in this study.
 
+Radio/(sub)-mm telescopes are powerful instruments for studying the universe at radio, sub-millimeter, and millimeter wavelengths, but their accurate pointing is crucial for obtaining high-quality data.
+Pointing errors, which refer to the deviation of the telescope's orientation from its desired direction, can significantly impact the quality of the collected data.
+Radio/(sub)-mm telescopes use linear regression pointing models to correct for these errors, taking into account various factors such as weather conditions, telescope structure, and the target's position in the sky.
+However, residual pointing errors can still occur due to factors that are hard to model accurately, such as thermal and gravitational deformation and environmental conditions like humidity and wind.
+In this thesis, we investigated machine learning approaches to predict and correct residual pointing errors for the Atacama Pathfinder EXperiment (APEX) telescope, located in the high-altitude Atacama Desert in Chile.
+For our research, we used APEX telescope pointing data from $2022$.
+We trained eXtreme Gradient Boosting (XGBoost) models that reduced azimuth and elevation (horizontal and vertical angle) root-mean-square errors by $7.0\%$ and $9.4\%$,
+respectively, on an unseen test set. We also developed neural network pointing models from scratch that outperformed the commonly used linear regression model on a test case.
+Our study highlights the importance of larger datasets for accurate pointing models and the potential of machine learning to enhance the capabilities of current and future radio/(sub)-mm telescopes,
+such as the Atacama Large Aperture Submillimeter Telescope (AtLAST).
+
+% Radio/(sub)-mm telescopes are critical for studying the universe, but accurate pointing is challenging due to the inability to verify the pointing accuracy in real-time.
+% Recurring residual errors that are hard to model due to various factors, including thermal and gravitational deformation and environmental factors like humidity and wind, require regular correction, which can be time-consuming.
+% In this thesis, we investigated machine learning approaches to predict and correct residual errors.
+% We trained two XGBoost models, reducing azimuth and elevation RMSE by $7.0\%$ and $9.4\%$, respectively.
+% We also developed neural network pointing models that outperformed the commonly used linear regression model.
+% Our study highlights the importance of larger datasets for accurate pointing models.
+% We used data from the APEX telescope in this study.
 
 % Radio/(sub)-mm telescopes are important tools to study the universe,
 % but a big weakness is being able to verify the accuracy of the poinitn when making observations.

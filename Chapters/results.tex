@@ -78,12 +78,12 @@ Table \ref{tab:results_nflash_days} shows the mean RMS ratio \eqref{eq:mean_rms_
 and the associated standard deviation for the azimuth and elevation models when using the same number of features $k$ on all folds.
 By inspection, we see that the machine learning model does not provide any improvement over the current pointing model for case 1, apart from a slight improvement of an average of $1.8\%$ reduced RMS with a standard deviation of $1.4\%$ for the azimuth model with number of features $k=2$.
 However, case 2 shows more promising results.
-For azimuth, the best RMS ratio is $0.948$ with a standard deviation of $0.021$, which is an average improvement of $5.6\%$ reduced RMS on all folds, with a standard deviation of $2.1\%$.
+For azimuth, the best RMS ratio is $0.948$ with a standard deviation of $0.056$, which is an average improvement of $5.2\%$ reduced RMS on all folds, with a standard deviation of $5.6\%$.
 The number of features for these results is $k=2$.
 Using $k=50$ features shows similar results, with $0.945$ RMS ratio and a standard deviation of $0.073$.\\
 
 For elevation, the best RMS ratio is $0.940$ with a standard deviation of $0.075$, using $k=50$ features.
-Table \ref{tab:results_all_days} shows the same results for case 1 and 2, but for the model trained on all data from all instruments.
+Table \ref{tab:results_all_days} shows the same results for case 1 and 2, but for the model trained on data from all instruments.
 We see the same trends, with case 1 showing no improvement and case 2 showing a slight improvement for azimuth and elevation.
 The best RMS ratio for azimuth in case 2 is $0.980$ with a standard deviation of $0.059$, using $k=2$ features.
 For elevation, the best model is the one with $k=50$ features, with a RMS ratio of $0.955$ and a standard deviation of $0.029$.
@@ -144,8 +144,8 @@ Additionally, the model predicting only NFLASH230 offsets performs better than t
 \newpage
 
 Table \ref{tab:results_minval_days04} presents an unbiased estimate of the performance of this approach,
-since we choose the model for the test set purely based on performance on the validation set.
-It shows mean RMS ratio for the test set on all folds for both models in Tables \ref{tab:results_minval_val_test_days_04_n230} and \ref{tab:results_minval_val_test_days_04_all}.
+since we chose the model to use on the test set purely based on performance on the validation set.
+It shows the mean RMS ratio for the test set on all folds for both models in Tables \ref{tab:results_minval_val_test_days_04_n230} and \ref{tab:results_minval_val_test_days_04_all}.
 The results indicate that there is no improvement over the current pointing model for case 1.
 However, for case 2, the model predicting only NFLASH230 offsets shows a small improvement over the current model,
 with an RMS ratio of $0.958$ for azimuth and $0.941$ for elevation, both with standard deviations of $0.055$ and $0.079$, respectively.\\
@@ -155,33 +155,14 @@ However, it is important to note that the test data used in the cross-validation
 In the last fold, the test set falls after the training and validation in time, and for the NFLASH230 model,
 the RMS ratio on this fold was $0.930$ for azimuth and $0.906$ for elevation, which represents a $7.0\%$ and $9.4\%$ improvement, respectively.
 In contrast, for all instruments, the RMS ratio was $1.027$ for azimuth and $0.951$ for elevation, representing a $2.7\%$ worse performance for azimuth and a $4.9\%$ improvement for elevation.
-This results, is the most realistic and unbiased estimate we have on the performance of these models.
+This result is the most realistic and unbiased estimate we have on the performance of these models.
 
-For a list of the $50$ features with the most mutual information to the target variable, please refer to Table \ref{tab:exp2_top50_features} in Appendix A \ref{sec:appendix_a}.
-
-\begin{table}[!htbp]
-    \centering % (mean over values in Tables \ref{tab:results_minval_val_test_days_04_n230} and \ref{tab:results_minval_val_test_days_04_all}).
-    \caption[Mean RMS ratio for NFLASH230 and all instruments model]{
-    Mean RMS ratio \eqref{eq:mean_rms_compared} in case $1$ and $2$ (see Figure \ref{fig:datasplit_cases}) over all test folds for both the NFLASH230 and all instruments model.}
-    \begin{tabular}{lcccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{RMS ratio case 1} & & \multicolumn{4}{c}{RMS ratio case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
-        \midrule
-        All instruments   &     1.730 &     0.126 &     1.170 &     0.028 &  &   1.016 &     0.114 &     0.994 &     0.065 \\
-        Only NFLASH230    &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:results_minval_days04}
-\end{table}
+For a list of the $50$ features with the greatest mutual information to the target variable, please refer to Table \ref{tab:exp2_top50_features} in Appendix \ref{sec:appendix_a}.
 
 
-\newpage 
-Figure \ref{fig:histogram_selected_result_xgb} show the distribution of NFLASH230 offsets with and without the machine learning model corrections.
-These are the distrubtion of offsets of the unseen test set for the last fold.
+ 
+Figure \ref{fig:histogram_selected_result_xgb} shows the distribution of NFLASH230 offsets with and without the machine learning model corrections.
+These are the distribution of offsets of the unseen test set for the last fold.
 
 
 
@@ -197,7 +178,7 @@ These are the distrubtion of offsets of the unseen test set for the last fold.
     \begin{subfigure}[t]{\textwidth}
        \centering
        \includegraphics[width=\textwidth]{Results/hist_XGB_ds2_tp5_k40_uncorr_el_test.pdf}
-       \caption{The elevation mdoel, with offsets reduced on the unseen test set by $9.4\%$.}
+       \caption{The elevation model, with offsets reduced on the unseen test set by $9.4\%$.}
        \label{subfig:hist_lastfold_nflash230_el}
     \end{subfigure}
     \caption[Offset distribution with and without pointing correction model]{Distribution of offsets with and without the NFLASH230 pointing correction model on the unseen test set for the last fold. \textbf{a)} Azimuth model and \textbf{b)} elevation model.}
@@ -206,7 +187,7 @@ These are the distrubtion of offsets of the unseen test set for the last fold.
 
 
 Figure \ref{fig:sortpred_selected_result_xgb} show the predicted and observed pointing NFLASH230 offsets for all samples in the unseen test set of the last fold.
-The samples are sorted by the true value in ascending order.
+We sorted the samples by the true value in ascending order.
 
 
 \begin{figure}[H]
@@ -221,7 +202,7 @@ The samples are sorted by the true value in ascending order.
     \begin{subfigure}[t]{\textwidth}
        \centering
        \includegraphics[width=1\textwidth]{Results/sortpred_XGB_ds2_tp5_k40_uncorr_el_test.pdf}
-       \caption{The elevation mdoel, with offsets reduced on the unseen test set by $9.4\%$.}
+       \caption{The elevation model, with offsets reduced on the unseen test set by $9.4\%$.}
        \label{subfig:sortpred_lastfold_nflash230_el}
     \end{subfigure}
     \caption[Sorted offset prediction and true values]{Offset predictions by the NFLASH230 pointing correction model on the unseen test set for the last fold.
@@ -231,7 +212,8 @@ The samples are sorted by the true value in ascending order.
 
 
 
-Figure \ref{fig:sage_lastfold_nflash230_az} show the SAGE values for the NFLASH230 azimuth pointing correction model on the validation set (subfigure \ref{subfig:sage_lastfold_nflash230_az_val}) and test set (subfigure \ref{subfig sub@subfig:sage_lastfold_nflash230_el_val}).
+Figure \ref{fig:sage_lastfold_nflash230_az} show the SAGE values for the NFLASH230 azimuth pointing correction model on the validation set (Figure \ref{subfig:sage_lastfold_nflash230_az_val})
+and test set (Figure \ref{subfig:sage_lastfold_nflash230_az_test}).
 The same plots for the elevation models are presented in Figure \ref{fig:sage_lastfold_nflash230_el}.
 
 \begin{figure}[H]

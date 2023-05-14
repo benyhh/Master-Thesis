@@ -1,0 +1,27 @@
+\section{XGBoost Hyperparameters}
+
+This section provides an explanation of the hyperparameters used in the XGBoost models.
+
+\texttt{n\_estimators}: This parameter denotes the number of trees used in the ensemble.
+Increasing this number will allow for a more complex model.
+
+\texttt{max\_depth}: This parameter denotes the maximum depth of a tree.
+A tree could have a shorter depth if no new splits improve the model, but it cannot surpass this parameter value.
+A larger depth can improve the complexity of the model but also lead to overfitting.
+
+\texttt{reg\_lambda}: This parameter is responsible for the L2 regularization on leaf weights.
+Increasing this value reduces overfitting and can improve generalization.
+
+\texttt{Colsample\_by\_tree}: This parameter controls the fraction of samples used when building a new tree.
+It can have values in the range $(0,1]$.
+
+\texttt{learning\_rate}: This parameter controls the shrinkage of the weights of each tree during the learning process.
+Lowering this value will require more trees to be used in the ensemble but can improve generalization.
+
+\texttt{subsample}: This parameter denotes the fraction of samples used when constructing a tree.
+Using a subset of the samples of the full dataset can lead to better generalization.
+The range of this parameter is $(0,1]$.
+
+\texttt{min\_child\_weight}: This parameter denotes the minimum number of samples required to create a new child node during tree construction.
+
+\texttt{gamma}: This parameter specifies the minimum reduction in loss needed to split a leaf node.
