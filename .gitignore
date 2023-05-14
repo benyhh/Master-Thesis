@@ -30,7 +30,7 @@
 # *.png
 *.csv
 *.xlsx
-*.PDF
+# *.PDF
 # # *.pdf
 *.xml
 # *.jpeg
