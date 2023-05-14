@@ -203,8 +203,8 @@ A varying scan duration is problematic because we only have these tiltmeter dump
 To address this issue, we collected data for feature engineering over a shorter period of time.
 It is important to note that using data from after a pointing scan has ended can be inaccurate, as the telescope may start observing a different source.
 When examining the scatter plot of scan durations, we observed clusters of scans around $60$-$70$ seconds, $120$-$130$ seconds, and so on.
-To ensure accuracy, we used the mean scan duration grouped by instrument and shorter than $100$ seconds as the cutoff for the duration of time from which we collected data.
-For the scans with an exact start and end time, we used this time period instead. \textcolor{red}{Add list of values}
+To ensure that we collected during a pointing scan, we did not use data from more than $60$ seconds after the start of a scan.
+For the scans with an exact start and end time, we used this time period instead. 
 
 
 \begin{figure}[H]

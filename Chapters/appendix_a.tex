@@ -1,4 +1,4 @@
-\section{Pointing Correction Results}
+
 
 % \begin{table}[!htbp]
 %     \centering
@@ -384,8 +384,8 @@
 %     month\_continuous    &      x &      x &      x &      x    \\ \hline
 %     time\_of\_day        &      x &      x &      x &      x    \\ \hline
 % \end{longtable}        
-
-\begin{table}
+\section{Pointing Correction Results}
+\begin{table}[!htbp]
     \centering
     \caption{The $50$ features with the greatest mutual information to the target value (unsorted). (part 2 of 2)}
     \begin{tabular}{lcccc}
@@ -419,21 +419,12 @@
         ROTATIONX\_MEDIAN     &      x &      x &        &      x  \\ \hline
         SUNAZ\_MEDIAN        &      x &      x &      x &      x   \\ \hline
         SUNEL\_MEDIAN        &        &        &      x &      x   \\ \hline
-        TEMP1\_MEDIAN        &      x &      x &      x &      x   \\ \hline
-        TEMP26\_MEDIAN        &      x &      x &      x &      x  \\ \hline
-        TEMP27\_MEDIAN        &      x &      x &      x &      x  \\ \hline
-        TEMP28\_MEDIAN        &      x &      x &      x &      x  \\ \hline
-        TEMP2\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        TEMP3\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        TEMP4\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        TEMP5\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        TEMP6\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        TEMPERATURE\_MEDIAN  &      x &      x &        &      x    \\ \hline
+
     \end{tabular}        
     \label{tab:exp2_top50_features1}
 \end{table}
 
-\begin{table}
+\begin{table}[!htbp]
     \centering
     \caption{The $50$ features with the greatest mutual information to the target value (unsorted). (part 2 of 2)}
     \begin{tabular}{lcccc}
@@ -441,6 +432,16 @@
         & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
         \cmidrule(lr){2-3} \cmidrule(lr){4-5}
         Features & Az & El & Az & El \\  \hline
+        TEMP26\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP27\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP28\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP1\_MEDIAN        &      x &      x &      x &      x   \\ \hline
+        TEMP2\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP3\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP4\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP5\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP6\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMPERATURE\_MEDIAN  &      x &      x &        &      x    \\ \hline
         TILT1T\_MEDIAN       &      x &      x &      x &      x    \\ \hline
         TILT1X\_MEDIAN       &      x &      x &      x &      x    \\ \hline
         TILT1Y\_MEDIAN       &      x &      x &      x &      x    \\ \hline
@@ -465,7 +466,7 @@
 
 \begin{table}[!htbp]
     \centering
-    \caption{The selected hyperparameters for the all instruments pointing correction model.}
+    \caption{The selected hyperparameters for the all instruments pointing correction model in case 2.}
     \begin{tabular}{ccccccccc}
         \toprule
         \multicolumn{9}{c}{Azimuth} \\
@@ -490,6 +491,7 @@
         6 &   0.788 &  0.369 &          0.097 &      2 &             1 &       354 &       0.552 &      0.796 \\
         \bottomrule
         \end{tabular}
+        \label{tab:hyperparameters_all_instruments_case2}
 \end{table}
 
 % \begin{table}[!htbp]
@@ -520,7 +522,7 @@
 
 \begin{table}[!htbp]
     \centering
-    \caption{The selected hyperparameters for the NFLASH230 pointing correction model.}
+    \caption{The selected hyperparameters for the NFLASH230 pointing correction model in case 2.}
     \begin{tabular}{ccccccccc}
         \toprule
         \multicolumn{9}{c}{Azimuth} \\
@@ -546,6 +548,7 @@
         6 &      0.862 &  0.306 &          0.184 &      1 &            10 &       157 &       0.029 &      0.701 \\
         \bottomrule
         \end{tabular}
+        \label{tab:hyperparameters_nflash230_case2}
 \end{table}
 
 
@@ -661,23 +664,23 @@
 \begin{table}[!htbp]
     \centering
     \caption{Features with Pearson's correlation $\geq 0.1$ to either one of the target values.}
-    \begin{tabular}{lccc}
+    \begin{tabular}{lcc}
         \toprule
-        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$  \\
         \midrule
-        TEMP26\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.12$ \\
-        TEMP27\_MEDIAN\_1        &      $0.05$ &      $0.11$ &              $-0.13$ \\
-        DAZ\_TOTAL\_MEDIAN\_1     &      $0.12$ &      $0.08$ &               $0.07$ \\
-        WINDSPEED\_MEDIAN\_1     &      $0.03$ &      $0.03$ &               $0.10$ \\
-        AWAZ                   &      $0.00$ &     $-0.01$ &               $0.57$ \\
-        HESE2                  &      $0.56$ &      $0.54$ &               $0.45$ \\
-        HESE3                  &      $0.97$ &      $0.90$ &               $0.43$ \\
-        HESE4                  &      $0.91$ &      $0.82$ &               $0.26$ \\
-        HESE5                  &      $0.29$ &      $0.22$ &              $-0.11$ \\
-        HECE                   &      $1.00$ &      $0.92$ &               $0.45$ \\
-        HECE2                  &      $0.98$ &      $0.89$ &               $0.38$ \\
-        HECE3                  &      $0.70$ &      $0.62$ &               $0.10$ \\
-        HSCA                   &      $0.01$ &     $-0.00$ &               $0.53$ \\
+        TEMP26\_MEDIAN\_1        &      $0.05$ &      $0.11$   \\
+        TEMP27\_MEDIAN\_1        &      $0.05$ &      $0.11$   \\
+        DAZ\_TOTAL\_MEDIAN\_1     &      $0.12$ &      $0.08$ \\
+        WINDSPEED\_MEDIAN\_1     &      $0.03$ &      $0.03$  \\
+        AWAZ                   &      $0.00$ &     $-0.01$  \\
+        HESE2 $sin(2\cdot El)$    &      $0.56$ &      $0.54$ \\
+        HESE3 $sin(3\cdot El)$    &      $0.97$ &      $0.90$ \\
+        HESE4 $sin(4\cdot El)$    &      $0.91$ &      $0.82$ \\
+        HESE5 $sin(5\cdot El)$    &      $0.29$ &      $0.22$  \\
+        HECE  $cos(El)$        &      $1.00$ &      $0.92$ \\
+        HECE2 $cos(2 \cdot El)$                 &      $0.98$ &      $0.89$  \\
+        HECE3 $cos(3 \cdot El)$                 &      $0.70$ &      $0.62$  \\
+        HSCA  $cos(Az)/cos(El)$                 &      $0.01$ &     $-0.00$  \\
         \bottomrule
         \end{tabular}
     \label{tab:raw_data_pearson}
