@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{ToolsOfAst2009}
+{\em Tools of Radio Astronomy}.
+\newblock 2009.
+
 \bibitem{greve1996pointing}
 Jacob Baars, B.~Hooghoudt, P.~Mezger, and M.~Jonge.
 \newblock The iram 30-m millimeter radio telescope on pico veleta, spain.
@@ -69,6 +73,12 @@ Daniel George and E.A. Huerta.
 \newblock Deep learning for real-time gravitational wave detection and
   parameter estimation: Results with advanced {LIGO} data.
 \newblock {\em Physics Letters B}, 778:64--70, mar 2018.
+
+\bibitem{APEX2006}
+R.~Güsten, L.~Å Nyman, P.~Schilke, K.~Menten, C.~Cesarsky, and R.~Booth.
+\newblock The atacama pathfinder experiment (apex) - a new submillimeter
+  facility for southern skies.
+\newblock {\em Astronomy and Astrophysics}, 454, 2006.
 
 \bibitem{Haarsma2000}
 D.~B. Haarsma, R.~B. Partridge, R.~A. Windhorst, and E.~A. Richards.

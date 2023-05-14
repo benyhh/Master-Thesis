@@ -6,24 +6,24 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Line pointing panel}}{21}{figure.caption.18}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Continuum scan panel}}{22}{figure.caption.20}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Correlation between temperature measurements}}{24}{figure.caption.26}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Features during pointing scans}}{27}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Correlation between temperature measurements}}{25}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Features during pointing scans}}{28}{figure.caption.33}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Decision tree}}{33}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Evolution of XGBoost}}{33}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Neural Network with equations}}{34}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Decision tree}}{34}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Evolution of XGBoost}}{34}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Neural Network with equations}}{35}{figure.caption.38}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Performance plots of XGBoost pointing scan classifier}}{44}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Box plots with pointing scan duration and start time}}{46}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Scatter plot with pointing scan duration and start time throughout 2022.}}{47}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Performance plots of XGBoost pointing scan classifier}}{45}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Box plots with pointing scan duration and start time}}{47}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Scatter plot with pointing scan duration and start time throughout 2022.}}{48}{figure.caption.48}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data split cases for pointing correction model}}{50}{figure.caption.49}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Neural network architectures for pointing model}}{53}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data split cases for pointing correction model}}{51}{figure.caption.49}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Neural network architectures for pointing model}}{54}{figure.caption.51}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Offset distribution with and without pointing correction model}}{60}{figure.caption.58}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Sorted offset prediction and true values}}{61}{figure.caption.59}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces SAGE values for NFLASH230 elevation pointing correction model}}{62}{figure.caption.60}%
-\contentsline {figure}{\numberline {6.4}{\ignorespaces SAGE values for NFLASH230 elevation pointing correction model}}{63}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Offset distribution with and without pointing correction model}}{61}{figure.caption.58}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Sorted offset prediction and true values}}{62}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces SAGE values for NFLASH230 elevation pointing correction model}}{63}{figure.caption.60}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces SAGE values for NFLASH230 elevation pointing correction model}}{64}{figure.caption.61}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

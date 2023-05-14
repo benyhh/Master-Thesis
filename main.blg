@@ -3,44 +3,48 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 The style file: plain.bst
 Database file #1: citations.bib
-You've used 28 entries,
+Warning--to sort, need author, editor, or key in ToolsOfAst2009
+Warning--empty author and editor in ToolsOfAst2009
+Warning--empty publisher in ToolsOfAst2009
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            664 strings with 8850 characters,
-and the built_in function-call counts, 9212 in all, are:
-= -- 831
-> -- 643
+            673 strings with 9099 characters,
+and the built_in function-call counts, 9759 in all, are:
+= -- 877
+> -- 677
 < -- 0
-+ -- 264
-- -- 228
-* -- 680
-:= -- 1646
-add.period$ -- 82
-call.type$ -- 28
-change.case$ -- 198
++ -- 279
+- -- 240
+* -- 723
+:= -- 1737
+add.period$ -- 87
+call.type$ -- 30
+change.case$ -- 209
 chr.to.int$ -- 0
-cite$ -- 28
-duplicate$ -- 260
-empty$ -- 597
-format.name$ -- 228
-if$ -- 1808
+cite$ -- 33
+duplicate$ -- 283
+empty$ -- 638
+format.name$ -- 240
+if$ -- 1917
 int.to.chr$ -- 0
-int.to.str$ -- 28
-missing$ -- 18
-newline$ -- 141
-num.names$ -- 54
-pop$ -- 207
+int.to.str$ -- 30
+missing$ -- 20
+newline$ -- 150
+num.names$ -- 56
+pop$ -- 222
 preamble$ -- 1
-purify$ -- 171
+purify$ -- 181
 quote$ -- 0
-skip$ -- 208
+skip$ -- 222
 stack$ -- 0
-substring$ -- 331
-swap$ -- 28
+substring$ -- 342
+swap$ -- 30
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 112
-warning$ -- 0
-while$ -- 68
-width$ -- 30
-write$ -- 294
+type$ -- 118
+warning$ -- 3
+while$ -- 70
+width$ -- 32
+write$ -- 312
+(There were 3 warnings)

@@ -1,40 +1,40 @@
 \babel@toc {USenglish}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces List of terms in the analytical pointing model at APEX}}{19}{table.caption.16}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces List of terms in the analytical pointing model at APEX}}{20}{table.caption.16}%
 \contentsline {table}{\numberline {2.2}{\ignorespaces Number of scans for each instrument}}{23}{table.caption.23}%
-\contentsline {table}{\numberline {2.3}{\ignorespaces Database frequencies}}{26}{table.caption.32}%
-\contentsline {table}{\numberline {2.4}{\ignorespaces Raw NFLASH230 data}}{28}{table.caption.34}%
-\contentsline {table}{\numberline {2.5}{\ignorespaces Tiltmeter dump file}}{28}{table.caption.35}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Database frequencies}}{27}{table.caption.32}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Raw NFLASH230 data}}{29}{table.caption.34}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Tiltmeter dump file}}{29}{table.caption.35}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Hyperparemter search space XGBoost pointing scan classifier}}{43}{table.caption.43}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Tiltmeter dump file with $\Delta $ for analysis}}{45}{table.caption.46}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Hyperparemter search space XGBoost pointing scan classifier}}{44}{table.caption.43}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Tiltmeter dump file with $\Delta $ for analysis}}{46}{table.caption.46}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Hyperparameter search space for XGBoost pointing correction model}}{51}{table.caption.50}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Hyperparameter search space for neural network pointing models}}{54}{table.caption.52}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Hyperparameter search space for XGBoost pointing correction model}}{52}{table.caption.50}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Hyperparameter search space for neural network pointing models}}{55}{table.caption.52}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces NFLASH230 pointing correction model results on each fold}}{57}{table.caption.53}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces All instruments pointing correction model results on each fold}}{57}{table.caption.54}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces NFLASH230 model results for complexity $k$}}{58}{table.caption.55}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces All instruments model results for complexity $k$}}{58}{table.caption.56}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Mean RMS ratio for NFLASH230 and all instruments model}}{59}{table.caption.57}%
-\contentsline {table}{\numberline {6.6}{\ignorespaces RMS of each pointing model architecture on all test folds}}{67}{table.caption.62}%
-\contentsline {table}{\numberline {6.7}{\ignorespaces Selected hyperparameters for each neural network pointing model architecture}}{67}{table.caption.63}%
-\contentsline {table}{\numberline {6.8}{\ignorespaces Selected features for each neural network pointing model architecture}}{68}{table.caption.64}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces NFLASH230 pointing correction model results on each fold}}{58}{table.caption.53}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces All instruments pointing correction model results on each fold}}{58}{table.caption.54}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces NFLASH230 model results for complexity $k$}}{59}{table.caption.55}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces All instruments model results for complexity $k$}}{59}{table.caption.56}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Mean RMS ratio for NFLASH230 and all instruments model}}{60}{table.caption.57}%
+\contentsline {table}{\numberline {6.6}{\ignorespaces RMS of each pointing model architecture on all test folds}}{68}{table.caption.62}%
+\contentsline {table}{\numberline {6.7}{\ignorespaces Selected hyperparameters for each neural network pointing model architecture}}{68}{table.caption.63}%
+\contentsline {table}{\numberline {6.8}{\ignorespaces Selected features for each neural network pointing model architecture}}{69}{table.caption.64}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Performance when choosing min validation for the last fold.\relax }}{74}{table.caption.65}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.\relax }}{74}{table.caption.66}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces The $50$ features with the greatest mutual information to the target value (unsorted).\relax }}{75}{table.caption.67}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces All\relax }}{76}{table.caption.68}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces NFLASH230\relax }}{76}{table.caption.69}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces NFLASH230\relax }}{77}{table.caption.70}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces Validation and test performance for Case 2, all instruments left and nflash230 right. Performance when choosing the number of features showing best performance.\relax }}{77}{table.caption.71}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces Validation and test performance for Case 1 and 2, all instruments. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{78}{table.caption.72}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces Validation and test performance for Case 1 and 2, only NFLASH230. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{78}{table.caption.73}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.\relax }}{79}{table.caption.74}%
-\contentsline {table}{\numberline {A.11}{\ignorespaces Features with Pearson's correlation $\geq 0.1$ to either one of the target values.\relax }}{79}{table.caption.75}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Performance when choosing min validation for the last fold.\relax }}{75}{table.caption.65}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.\relax }}{75}{table.caption.66}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces The $50$ features with the greatest mutual information to the target value (unsorted).\relax }}{76}{table.caption.67}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces All\relax }}{77}{table.caption.68}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NFLASH230\relax }}{77}{table.caption.69}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NFLASH230\relax }}{78}{table.caption.70}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces Validation and test performance for Case 2, all instruments left and nflash230 right. Performance when choosing the number of features showing best performance.\relax }}{78}{table.caption.71}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Validation and test performance for Case 1 and 2, all instruments. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{79}{table.caption.72}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Validation and test performance for Case 1 and 2, only NFLASH230. Performance when choosing the model complexity that yields the best results on the validation set for the given fold.\relax }}{79}{table.caption.73}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.\relax }}{80}{table.caption.74}%
+\contentsline {table}{\numberline {A.11}{\ignorespaces Features with Pearson's correlation $\geq 0.1$ to either one of the target values.\relax }}{80}{table.caption.75}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces \textbf {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf {Transformed:} Pointing offsets and corrections according to equations \eqref {eq:ca_tilde}, \eqref {eq:ie_tilde}, \eqref {eq:off_az_tilde}, and \eqref {eq:off_el_tilde}.\relax }}{81}{table.caption.76}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces \textbf {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf {Transformed:} Pointing offsets and corrections according to equations \eqref {eq:ca_tilde}, \eqref {eq:ie_tilde}, \eqref {eq:off_az_tilde}, and \eqref {eq:off_el_tilde}.\relax }}{82}{table.caption.76}%
 \addvspace {10\p@ }

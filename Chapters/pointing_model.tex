@@ -129,7 +129,7 @@ and
 \end{equation}
 where AW is the misalignment alignment in the east-west direction.
 
-\subsubsection{Horizontal displacement of Nasmyth rotator (NRX)}
+\subsubsection{Displacement of Nasmyth rotator (NRX/NRY)}
 In a Nasmyth altazimuth mount, a horizontal displacement between the elevation axis of the mount and the rotation axis of the Nasmyth instrument-rotator produces
 and image shift on the sky with a horizontal component
 \begin{equation}
@@ -141,6 +141,16 @@ and an elevation component
 \end{equation}
 where NRX is the horizontal displacement.
 
+A vertical displacement produces an image shift on the sky with a horizontal component 
+\begin{equation}
+    \Delta Az \simeq - \text{NRY} \tan{El},
+\end{equation}
+and an elevation component
+\begin{equation}
+    \Delta El \simeq \text{NRY} \cos{El},
+\end{equation}
+
+In the case of APEX, $\text{NRY}=0$.
 
 
 
@@ -212,9 +222,8 @@ The observers use this offset to correct the pointing model (using equations \eq
 There are two types of pointing scans: Line-pointings and continuum scans.
 
 \subsubsection{Line-pointing}
-A line-pointing involves pointing at an extended source. 
-The telescope then makes ten scans, recording the flux intensity from the source, five vertically and five horizontally,
-around the center of the pointing, as shown in figure \ref{fig:line_pointings}.
+A line-pointing involves pointing at a source with strong emission lines well known coordinates. 
+The telescope then performs multiple scans recording the flux intensity from the source around the center of the pointing, as shown in figure \ref{fig:line_pointings}.
 The upper panel shows a high-quality pointing scan, and the lower panel shows a noisy, low-quality pointing scan.
 The cross-plot on the right side shows the line spectrum for each observation (center plus eight offset observations).
 
@@ -243,7 +252,8 @@ A Gaussian is fitted to these points, and the table shows the resulting amplitud
 \end{figure}
 
 \subsubsection{Continuum Scan}
-Not all sources have emission lines; for these sources, the telescope performs a continuum scan instead. In this case, a source is continuously scanned in azimuth and elevation while recording the flux intensity.
+Not all sources have emission lines; for these sources, the telescope performs a continuum scan instead.
+In this case, a source (typically major planets) is continuously scanned in azimuth and elevation while recording the flux intensity.
 A Gaussian curve is fitted to the recorded flux intensity to determine the offsets, amplitude, and full width at half maximum (FWHM).
 Figure \ref{fig:continueous_pointings} show examples of continuum scans and the corresponding Gaussian fits.
 
@@ -295,9 +305,9 @@ APEX's \href{https://www.eso.org/sci/facilities/apex/cfp/cfp110/instrument_summa
         SEPIA660  & $578$-$738$ & 856 \\
         SEPIA345  & $272$-$376$ & 818 \\
         SEPIA180  & $159$-$211$ & 359 \\
-        HOLO      & - & 225 \\
-        ZEUS2     & - & 103 \\
-        CHAMP690  & - &  34 \\
+        HOLO      & $92.4$ & 225 \\
+        ZEUS2     & $666$-$856$ & 103 \\
+        CHAMP690  & $620$-$720$ &  34 \\
         \bottomrule
         \end{tabular}
         \label{tab:instrument_usage}
@@ -365,16 +375,20 @@ The instruments take measurements at a frequency of $5$ data points per minute.
 The figures \ref{subfig:scan_winddir} and \ref{subfig:scan_windspeed} show wind direction and speed measurements for the time period around a pointing scan.
 
 
-\subsubsection{Disp abs?}
-
-Frequency of $12$ data points per minute.
+\subsubsection{Displacement measures}
+There are displacement measurements of the yoke (component of the mounting system that allows the telescope to move in azimuth and elevation).
+It measures the deformation due to mechanical stress caused by accelerations in azimuth and elevation, and thermal variations.
+These are labeled DISP\_ABS in the database, and the measurements have a frequency of $12$ data points per minute.
 
 \subsubsection{Automatic adjustments}
 Automatic adjustments based on readings from various sensors ensure accurate and stable pointing of the telescope.
 These adjustments account for previously modeled systematic errors based on measurements from tiltmeters, temperature sensors installed at different locations, and other relevant data sources.
+SPEM denotes the adjustments based on the sag of the quadrupod structure supporting the subreflector due to gravitation.
 Some system at the telescope automatically makes these adjustments, and the tables in the database that contain information about these adjustments start with DAZ or DEL, denoting adjustments in azimuth and elevation, respectively.
+
 The frequency of this data is $12$ data points per minute.
 Table \ref{tab:data_frequency} shows a comprehensive list of these variables.
+
 
 \begin{table}[H]
     \caption[Database frequencies]{The frequency in data points per minute of different variables in the monitor database.}

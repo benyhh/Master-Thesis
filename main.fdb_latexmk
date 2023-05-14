@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1684081421 "main.aux" "main.bbl" "main" 1684084609 0
-  "./citations.bib" 1683993491 13211 693d52cd68fcd8f653582f18e75b8a86 ""
+["bibtex main"] 1684090174 "main.aux" "main.bbl" "main" 1684090250 0
+  "./citations.bib" 1684085124 15413 a8dada45e48070a3249c12f1e7cd6701 ""
   "c:/texlive/2022/texmf-dist/bibtex/bst/base/plain.bst" 1677854049 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1684084588 42833 530e2af6102bbc69a9b73e0c935c6284 "pdflatex"
+  "main.aux" 1684090224 42960 9f52e4e84974efeb6a4c743491a9731c "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1683897705 "main.idx" "main.ind" "main" 1684084609 0
-  "main.idx" 1684084568 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1683897705 "main.idx" "main.ind" "main" 1684090250 0
+  "main.idx" 1684090196 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1684084556 "c:/Users/bendi/uni/Master/Master Thesis/main.tex" "main.pdf" "main" 1684084609 0
+["pdflatex"] 1684090180 "c:/Users/bendi/uni/Master/Master Thesis/main.tex" "main.pdf" "main" 1684090250 0
   "Astronomy/Azimuth-Altitude_schematic.png" 1678707361 114622 e0028e7dc3e6c8420d567c85c8fced7d ""
   "Astronomy/apex_primary_mirror_cropped.jpeg" 1683902873 145767 29b03280af05666a6aae17372354ac80 ""
   "Astronomy/apex_subreflector.jpeg" 1683881175 116949 fb9388567e93269f96a478f698cd83c7 ""
@@ -24,13 +24,13 @@
   "Chapters/appendix_a.tex" 1684080776 51587 1442da2cdab810675983f92b94be0f8f ""
   "Chapters/appendix_b.tex" 1684074425 9771 850edfffac5c76d172b3c96b90e2e27c ""
   "Chapters/appendix_c.tex" 1684072039 1586 13deac11e165b768995d74fe429df3a0 ""
-  "Chapters/astronomy.tex" 1684066898 7133 c1c85d5bb58d5fe0a2c5a7185213428f ""
+  "Chapters/astronomy.tex" 1684085023 7155 4f73594a792bd05a5c02ddf4bc0b5793 ""
   "Chapters/conclusion.tex" 1684084530 9450 104730bdcd30d98e17a335aa27f52854 ""
   "Chapters/data_processing.tex" 1684000848 19516 01f694954e900509fe508dec155b36b1 ""
-  "Chapters/introduction.tex" 1684066471 5427 53b57960c9c7e24910e522635289c7cf ""
+  "Chapters/introduction.tex" 1684085205 5443 94c2cadfc919dec75450c14a14eb7acf ""
   "Chapters/ml_background.tex" 1684005744 30043 9e0de9a55d05066d057b990ebffdc6f0 ""
   "Chapters/ml_experiments.tex" 1684071074 16290 ee3132613de1e3f0ccaa5eb14c63c59f ""
-  "Chapters/pointing_model.tex" 1684072112 29576 cb2bb3a9b063655968c5c82553925021 ""
+  "Chapters/pointing_model.tex" 1684087463 30388 b921699aee4862078ca46197a899116d ""
   "Chapters/related_works.tex" 1683970434 7070 758d0e3b5d25bd0ca1d5104044b92342 ""
   "Chapters/results.tex" 1684083404 47830 d0ff5429f809144416132b397dc47ec1 ""
   "Chapters/thesis_structure.tex" 1683966282 1068 9ba06f8a6f7fea3f56aaed9d75bab2cf ""
@@ -338,13 +338,13 @@
   "folder/uio-fp-navn-eng.pdf" 1677852914 9896 3790f54969705c4284148bf62f780187 ""
   "folder/uio-fp-segl.pdf" 1677852914 64936 89441810db60f45a672971bad5b14ed1 ""
   "folder/uiomasterfp.sty" 1677852914 8814 1230e2e7575ae9111cb964e7fb79060a ""
-  "main.aux" 1684084588 42833 530e2af6102bbc69a9b73e0c935c6284 "pdflatex"
-  "main.bbl" 1684081425 6038 d1af0aec64d366a88fd1a71217f5e679 "bibtex main"
+  "main.aux" 1684090224 42960 9f52e4e84974efeb6a4c743491a9731c "pdflatex"
+  "main.bbl" 1684090180 6366 a872b0d79707044e22f2146b23b328cd "bibtex main"
   "main.ind" 1683897706 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1684084588 2549 a44ecb2f2cc84b87733519b6f5dd69a7 "pdflatex"
-  "main.lot" 1684084588 4752 44009191eb862b8c8569ad8cb1a2829f "pdflatex"
-  "main.out" 1684084588 18152 d03a735015f88b2462923de1f919a288 "pdflatex"
-  "main.toc" 1684084588 8910 011ea6b3fa8ffd2800368fc2c8fd8a1e "pdflatex"
+  "main.lof" 1684090224 2549 3bc7ade940b706314504187a256a5a8d "pdflatex"
+  "main.lot" 1684090224 4752 d51e1abe1fe848952d8f714c8d76cf20 "pdflatex"
+  "main.out" 1684090224 18174 f692433dbe14d5d85bff4cf4ed6be6e8 "pdflatex"
+  "main.toc" 1684090224 8915 9a16cc7fa71ab512872e77c2d34636f3 "pdflatex"
   "teleskopgutt2.jpeg" 1677852914 246701 b078786cc75ae739d4a1b3af20a68b36 ""
   (generated)
   "main.aux"
