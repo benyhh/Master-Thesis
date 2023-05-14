@@ -272,7 +272,6 @@
 
 \begin{table}[!htbp]
     \centering
-    \label{tab:minval_fold5_whole}
     \caption{Performance when choosing min validation for the last fold.}
     \begin{tabular}{lcc c cc}
         \toprule
@@ -284,13 +283,13 @@
         Transformed NF230 & 1.243 & 1.009 & & 0.954 & 1.008  \\
         Regular           & 1.779 & 1.186 & & 1.027 & 0.951  \\
         Regular N230      & 1.204 & 1.262 & & 0.930 & 0.906  \\
-    \bottomrule
+        \bottomrule
     \end{tabular}
+    \label{tab:minval_fold5_whole}
 \end{table}
 
 \begin{table}[!htbp]
     \centering
-    \label{tab:results_minval_days04_whole}
     \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
     \begin{tabular}{lcccc c cccc}
         \toprule
@@ -306,6 +305,7 @@
         Only NFLASH230    &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
         \bottomrule
     \end{tabular}
+    \label{tab:results_minval_days04_whole}
 \end{table}
 % %%% FEATURES FOR DIFFERNTE DATASETS WITH PCORR MODEL
 
@@ -385,6 +385,7 @@
 % \end{longtable}        
 
 \begin{table}
+    \centering
     \caption{The $50$ features with the greatest mutual information to the target value (unsorted).}
     \begin{tabular}{lcccc}
         \toprule

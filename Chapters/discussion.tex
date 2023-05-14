@@ -2,7 +2,7 @@
 The first research question addressed in this thesis is whether machine learning can enhance the pointing accuracy of a radio telescope using the current pointing strategy.
 To investigate this question, we explored a realistic scenario (case 1) in which we trained a model on a smaller period of data and used it to predict the offset of consecutive scans for a period afterward.
 We first focus on the NFLASH230 model.
-The results from this case, presented in Table \ref{tab:results_minval_val_test_days_04_n230}, demonstrated that the model's performance on the validation set is promising,
+The results from this case, presented in Table \ref{tab:results_minval_val_test_days_04_n230}, demonstrated that the model's performance on the validation sets is promising,
 with the RMS ratio in the range of approximately $0.80$-$0.85$ for azimuth and elevation,
 which corresponds to a $15$-$20\%$ reduction in pointing offset.
 However, this performance did not transfer to the following test period,
@@ -11,7 +11,7 @@ There are several possible reasons for the model's poor performance on the test 
 One of the limitations of tree-based models, such as XGBoost, is that they typically do not generalize well to new data that is different from the training data,
 as they predict solely based on logical conditions seen in the training set.
 If the factors affecting the pointing offset change over time and the new data is different from the training data, the model will likely perform poorly. 
-Furthermore, another potential explanation for the poor performance could be that the dataset is too small, and the model overfits on the validation set.
+Furthermore, another potential explanation for the poor performance could be that the dataset is too small, and the model overfits on the validation sets.
 The results of this experiment suggest that learning the relationships in the data that affect pointing offset is challenging, and a complex model may be necessary.
 In order to train a proper complex model, a larger dataset is required.
 The findings also indicate that choosing the complexity of the model with the best performance on the validation set may not necessarily lead to the best performance on the test set.
@@ -23,11 +23,11 @@ We see the same trends when predicting offsets from all instruments, for which T
 
 
 Moving on to case 2, which tests whether the amount of data is a limitation for enhancing the pointing accuracy.
-This test case is less realistic because the data is split into $6$ folds and cross-validation is performed,
-and for all folds except for the last one, the test period will be either before or between the training/validation set, making the results less applicable in practice.
-Results from this case indicate that a larger time period helps the model generalize better, which is expected as a larger period includes more variation that can help the model capture the relationships between features.
+In this test case, we split the data into six folds and preformed cross-validation.
+Since the test period was either before or between the training/validation set in time (except for the last fold), this was a less realistic test case than case $1$.
+Results from this case indicate that a larger time period helps the model generalize better, which we expected as a longer period includes more variation that can help the model capture the relationships between features.
 We start by looking at the same table \ref{tab:results_minval_val_test_days_04_n230}.
-Here, we also see a good performance on the validation set across all folds, with a $9$-$20\%$ reduced pointing offset on the validation set.
+Here, we also see a good performance on the validation set across all folds, with a $7$-$20\%$ reduced pointing offset on the validation sets.
 This shows that more training data helps the model generalize, which is somewhat expected considering that a larger time period includes more variation,
 which helps the model learn what causes the offsets.
 The average RMS ratio over all folds on the test set for case 2 is $0.958$ for azimuth and $0.941$ for elevation.

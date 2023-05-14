@@ -88,7 +88,7 @@
 \contentsline {chapter}{\numberline {6}Results \& Discussion}{56}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Results of Experiment 1: Pointing Correction Model}{56}{section.6.1}%
 \contentsline {section}{\numberline {6.2}Discussion of Experiment 1: Pointing Correction Model}{64}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Results of Experiment 2: Pointing Model using Neural Networks}{67}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Results of Experiment 2: Pointing Model using Neural Networks}{66}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Discussion of Experiment 2: Pointing Model using Neural Networks}{67}{section.6.4}%
 \contentsline {chapter}{\numberline {7}Conclusion}{71}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{71}{section.7.1}%
@@ -100,11 +100,11 @@
 \contentsline {section}{\numberline {B.1}Transformation of Pointing Offsets and Corrections}{80}{section.B.1}%
 \contentsline {section}{\numberline {B.2}Feature Engineering for Transformed Offsets and Corrections}{81}{section.B.2}%
 \contentsline {subsection}{\numberline {B.2.1}Feature Transformation}{81}{subsection.B.2.1}%
-\contentsline {subsubsection}{Median values}{81}{section*.76}%
-\contentsline {subsubsection}{Sum of all change}{81}{section*.77}%
-\contentsline {subsubsection}{Change since the last correction}{82}{section*.78}%
-\contentsline {subsubsection}{Max change in time interval}{82}{section*.79}%
-\contentsline {subsubsection}{Position of the sun}{82}{section*.80}%
+\contentsline {subsubsection}{Median values}{81}{section*.77}%
+\contentsline {subsubsection}{Sum of all change}{81}{section*.78}%
+\contentsline {subsubsection}{Change since the last correction}{82}{section*.79}%
+\contentsline {subsubsection}{Max change in time interval}{82}{section*.80}%
+\contentsline {subsubsection}{Position of the sun}{82}{section*.81}%
 \contentsline {chapter}{\numberline {C}Supplementary Theory}{84}{appendix.C}%
 \contentsline {section}{\numberline {C.1}XGBoost Hyperparameters}{84}{section.C.1}%
-\contentsline {chapter}{Bibliography}{85}{appendix*.81}%
+\contentsline {chapter}{Bibliography}{85}{appendix*.82}%

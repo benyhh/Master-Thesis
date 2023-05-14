@@ -1,4 +1,3 @@
-
 \section{Results of Experiment 1: Pointing Correction Model}
 In this section, we present the results obtained from experiment $1$ introduced in section \ref{sec:exp1}.
 Prior to presenting the results, we provide a reminder of the RMS ratio measure \eqref{eq:mean_rms_compared}, which we frequently used in this section.
@@ -141,6 +140,8 @@ Additionally, the model predicting only NFLASH230 offsets performs better than t
     \label{tab:results_all_days}
 \end{table}
 
+
+
 \newpage
 
 Table \ref{tab:results_minval_days04} presents an unbiased estimate of the performance of this approach,
@@ -158,6 +159,26 @@ In contrast, for all instruments, the RMS ratio was $1.027$ for azimuth and $0.9
 This result is the most realistic and unbiased estimate we have on the performance of these models.
 
 For a list of the $50$ features with the greatest mutual information to the target variable, please refer to Table \ref{tab:exp2_top50_features} in Appendix \ref{sec:appendix_a}.
+
+\begin{table}[!htbp]
+    \centering % (mean over values in Tables \ref{tab:results_minval_val_test_days_04_n230} and \ref{tab:results_minval_val_test_days_04_all}).
+    \caption[Mean RMS ratio for NFLASH230 and all instruments model]{
+    Mean RMS ratio \eqref{eq:mean_rms_compared} in case $1$ and $2$ (see Figure \ref{fig:datasplit_cases}) over all test folds for both the NFLASH230 and all instruments model.}
+    \begin{tabular}{lcccc c cccc}
+        \toprule
+        \multicolumn{1}{c}{} & \multicolumn{4}{c}{RMS ratio case 1} & & \multicolumn{4}{c}{RMS ratio case 2} \\
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+        Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
+        \midrule
+        All instruments   &     1.730 &     0.126 &     1.170 &     0.028 &  &   1.016 &     0.114 &     0.994 &     0.065 \\
+        Only NFLASH230    &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:results_minval_days04}
+\end{table}
+
 
 
  
@@ -281,13 +302,11 @@ The same trends are observed when predicting offsets from all instruments in Tab
 
 
 Moving on to case 2, which tests whether the amount of data is a limitation for enhancing the pointing accuracy.
-This test case is less realistic because the data is split into $6$ folds and cross-validation is performed,
-and for all folds except for the last one, the test period will be either before or between the training/validation set, making the results less applicable in practice.
-Results from this case indicate that a larger time period helps the model generalize better, which is expected as a larger period includes more variation that can help the model capture the relationships between features.
-We start by looking at the same table \ref{tab:results_minval_val_test_days_04_n230}.
+In this case we split the data into six folds and performed cross-validation.
+Since the training/validation data is either before or in between the test data in time (except for the last fold), this is a less realistic test case.
+Results from this case indicate that a larger time period helps the model generalize better, which we expected as a longer period includes more variation that can help the model capture the relationships between features.
+We start by looking at Table \ref{tab:results_minval_val_test_days_04_n230}.
 Here, we also see a good performance on the validation set across all folds, with a $9$-$20\%$ reduced pointing offset on the validation set.
-This shows that more training data helps the model generalize, which is somewhat expected considering that a larger time period includes more variation,
-which helps the model learn what causes the offsets.
 The average RMS ratio on all folds on the test set for case 2 is $0.958$ for azimuth and $0.941$ for elevation.
 With the standard deviations, the $95\%$ confidence intervals would be put at $[0.850, 1.066]$ for azimuth and $[0.786, 1.010]$ for elevation.
 Given that the upper bound of both confidence intervals is larger than one and the testing case is not realistic, we cannot conclude that the model can reduce the pointing offset robustly and consistently.
@@ -298,13 +317,13 @@ It is not apparent from the histogram with the azimuth model results that the mo
 What we can see, however, is a shift in offsets towards the left, indicating more negative offsets.
 This is consistent with the sorted prediction plot \ref{subfig:sortpred_lastfold_nflash230_az}, which shows a bias towards positive predictions.
 There also seem to be slightly less large negative offsets.
-Looking at the elevation histogram \ref{subfig:hist_lastfold_nflash230_el} and plot \ref{subfig:sortpred_lastfold_nflash230_el}, we can make the same analysis.
+Looking at the elevation histogram (Figure \ref{subfig:hist_lastfold_nflash230_el} and sorted prediction plot (Figure \ref{subfig:sortpred_lastfold_nflash230_el}), we can make the same analysis.
 The histogram shows a shift towards the left, and the sorted prediction plot shows a bias toward positive predictions.
 We do also see that there are more offsets in the center bin in the histogram (meaning more smaller offsets).
 The tails in the sorted prediction plots also seem steep, indicating that the cleaning could have been better.\\
 
 
-We now discuss the results of the SAGE analysis on the validation and test sets for the model discussed in the previous paragraph,
+We now discuss the results of the SAGE analysis on the validation and test sets for the NFLASH230 model on the last fold,
 as shown in Figures \ref{fig:sage_lastfold_nflash230_az} and \ref{fig:sage_lastfold_nflash230_el}.
 This analysis helps us understand the factors that improve and worsen the models' performance on unseen data, thereby providing insights into how the models can be improved.
 
@@ -315,11 +334,11 @@ This indicates that there are some correlation between the azimuth and elevation
 % Surprisingly, some features such as the azimuth angle of the sun and the $X$ position of the subreflector (POSITIONX) worsen the performance on the validation set, but improve it on the test set.
 % We do not have a clear explanation for this behavior.
 Notably, the COMMANDAZ and COMMANDEL features, which are included in every model, do not affect the azimuth or elevation model's performance.
-This suggests that the analytical pointing model, which is based solely on azimuth and elevation, is performing very well, and the sources of offsets are likely attributed to factors other than the pointing direction.
+This suggests that the analytical pointing model, which is based solely on azimuth and elevation, is performing very well, and the offsets are likely attributed to factors other than the pointing direction.
 We also find that the continuous month feature is the second most important feature in the elevation model, after the elevation correction $ie$.
 However, the model's performance on the test set does not benefit from this feature, as its value is larger in the test set than in the training and validation sets.
 This is one of the weaknesses of tree-based models.
-Training the model on the previous years' data could solve this problem, as long as there are not other big changes in the structure or mounting of the instruments.
+Training the model on the previous years' data could solve this problem, as long as there are no other significant changes in the structure or mounting of the instruments.
 
 % We now look at the results from the SAGE analysis on the validation and test set, shown in Figures \ref{fig:sage_lastfold_nflash230_az} and \ref{fig:sage_lastfold_nflash230_el},
 % for the same model we discussed in the previous paragraph.
@@ -342,9 +361,10 @@ Training the model on the previous years' data could solve this problem, as long
 
 In summary of the results from case 2, we see promising results with machine learning models further reducing the offsets slightly.  
 This indicates that a possible pointing strategy could be training a model on multiple months worth of data and then using the model for a couple of weeks.
+An even better strategy could be training on previous years' data.
 However, given the limited data available in this project, this could not be tested thoroughly.
 If more data were available,
-a similar analysis could be performed with the start and end time of both the train/validation and test set moved by two weeks and iteratively train new models to predict the offsets for the next time period.
+we could preform a similar analysis with the start and end time of both the train/validation and test set moved by two weeks and iteratively train new models to predict the offsets for the next period in time.
 This could verify whether the improved performance repeats.\\
 
 
@@ -365,7 +385,7 @@ it may be preferable to create terms based on the difference between multiple te
 
 Another step is to integrate corrections for $ca$ and $ie$ into the offset that we intend to predict.
 These corrections are applied at each pointing scan and display the strongest correlation to the target offset of all the features,
-and we, therefore, incorporate them in all the models.
+and we therefore incorporated them in all the models.
 By transforming the offsets $\delta_{az}=\delta_{az} + ca$ and $\delta_{el}=\delta_{el} + ie$, we can then eliminate $ca$ and $ie$ from the input to the models.
 This could remove a layer of complexity for the model.\\
 
@@ -382,7 +402,8 @@ likely due to the limited training data available. Neural networks also require 
 To further improve the analysis, there are other possible areas for exploration, such as minimizing the number of pointing scans conducted by the astronomers.
 While performing scans every one to two hours is standard practice, this can be time-consuming and may disrupt science observations.
 A possible approach to investigate this possibility is to identify periods when pointing scans are conducted every hour or so.
-Rather than providing the model with the corrections $ca$ and $ie$ obtained following the previous pointing scan, the model can be fed with the corrections from a pointing scan that occurred six hours earlier to evaluate its performance.
+Rather than providing the model with the corrections $ca$ and $ie$ obtained following the previous pointing scan,
+the model can use the corrections from a pointing scan six hours earlier as inputs to evaluate the performance.
 In this case, reducing pointing offsets is not a primary objective of the machine learning approach.
 Instead, maintaining the same level of pointing accuracy while conducting fewer pointing scans would be a satisfactory outcome.\\
 
@@ -454,12 +475,12 @@ Instead, maintaining the same level of pointing accuracy while conducting fewer 
 
 \section{Results of Experiment 2: Pointing Model using Neural Networks}
 
-Table \ref{tab:exp1_rms_folds_best_model} shows the RMS in arcseconds on the test set overall folds for the different model architectures.
+Table \ref{tab:exp1_rms_folds_best_model} shows the RMS in arcseconds on the test set over all folds for the different model architectures.
 The models presented in this table are the ones with the lowest mean RMS across all test folds.
 A linear regression model is included for comparison. 
 It is clear that neural network architectures significantly outperform the linear regression model.
-From the mean RMS overall folds, we see that the different neural network architectures offer similar performance.
-We also see that the RMS of fold $1$ is by far worse than the other folds.
+The mean RMS over all folds show that the different neural network architectures offer similar performance.
+We also see that the RMS of fold $1$ is far worse than the other folds.
 The lowest mean RMS is from the architecture where the non-linear features are connected to the geometrical and harmonic features.\\
 
 \begin{table}[!htbp]
@@ -485,7 +506,7 @@ The lowest mean RMS is from the architecture where the non-linear features are c
 
 Table \ref{tab:exp1_hyperparameters_best_model} shows the hyperparameter used for the best models.
 All architectures perform better with a single hidden layer.
-The regular neural network uses ReLU activation and MSE loss, while the other architectures use Tanh activation and MSD loss.
+The regular neural network uses ReLU activation and MSE loss \eqref{eq:mse1}, while the other architectures use Tanh activation and MSD loss \eqref{eq:msd}.
 The regular neural network also has more neurons in the hidden layer and a higher learning rate.
 The batch size is also varying. There seem to be similarities between the hyperparameters chosen for the three architectures with separate features.
 However, given the large standard deviation of the mean RMS, there are probably bigger issues than hyperparameter tuning.\\
@@ -547,21 +568,22 @@ Table \ref{tab:exp1_features} lists the features selected for the best-performin
 
 \section{Discussion of Experiment 2: Pointing Model using Neural Networks}
 
-To address the second research question of whether machine learning models can replace the traditional analytical linear regression models commonly used in radio/(sub-)mm telescopes,
-we utilized raw data from the apex telescope containing input and observed coordinates for azimuth and elevation.
+To address the second research question of whether machine learning models can replace the traditional analytical linear regression models commonly used in radio/(sub)-mm telescopes,
+we utilized raw data from the APEX telescope containing input and observed coordinates for azimuth and elevation.
 Typically, linear regression models are fitted to this raw data using multiple geometrical and empirical terms.
 As a benchmark, we used a linear regression model and compared its performance against four different neural network architectures (see Figure \ref{fig:nn_architecture}).
 Our goal was to determine if a machine learning approach could outperform the linear regression model and, if so, which type of architecture performs the best.
 We employed cross-validation with six folds and found that all neural network architectures significantly outperformed the linear regression model.
 The mean RMS of the linear regression model was $47.63''$ with a standard deviation of $12.81''$, whereas all neural network architectures fell within the range of $16''$-$19''$ with deviations of $5''$-$7''$.
-Although all the neural network architectures had similar performance and standard deviation, we cannot conclude that any of them is better than the others.
+Although all the neural network architectures had similar performance and standard deviation, we cannot conclude that any of them are better than the others.
 Overall, our results indicate that machine learning models can outperform traditional analytical models for pointing offset prediction in radio telescopes,
 and we encourage further research in this area to explore the full potential of machine learning techniques.\\
 
 Analysis of the hyperparameters selected for the top-performing models reveals that most of them are relatively simple in structure.
 Interestingly, none of the models employed two hidden layers.
 Additionally, the architectures incorporating distinct layers for the terms employed in the analytical pointing models exhibited lower neuron counts in their nonlinear layers.
-This is likely because the level of complexity required for the input features provided to the nonlinear layers is assumed to be lower when other aspects of the model are responsible for handling certain factors.
+This is likely because the level of complexity required for the input features provided to the nonlinear layers is lower when other parts of the model are responsible for handling certain factors,
+like the pointing direction.
 Thus, the observed pattern of hyperparameter selection is consistent with the expectation based on architecture.\\
 
 Table \ref{tab:exp1_features} presents the features selected by each model.
@@ -570,16 +592,16 @@ The "Separated" neural networks incorporated the harmonic features as inputs in 
 We sampled the remaining features randomly.
 Interestingly, the models used few nonlinear features, indicating that the factors influencing pointing error are difficult to model with the current training set.
 Obtaining more data may be necessary to establish more complex relationships between features that can improve the performance of the pointing models.
-Notably, the regular neural network utilized only one additional feature, namely DISP\_ABS (which still requires explanation).
+Notably, the regular neural network utilized only one additional feature, namely DISP\_ABS.
 This finding suggests that a neural network utilizing only the azimuth and elevation angle could outperform a linear regression model.
-However, linear regression models have advantages in terms of transparency and robustness, as they are inherently linear, and all the features in the model are independent of each other,
+However, linear regression models have advantages in terms of transparency and robustness, as they are linear, and all the features in the model are independent of each other,
 resulting in a model that is unlikely to result in significant pointing errors.
-This is an important consideration when using machine learning models, which can be challenging to interpret.
+This is an important consideration when using machine learning models, which are challenging to interpret.
 Their robustness must be thoroughly tested before being deployed in practical settings.
 These considerations also underlie the design of the "Separated" neural network architectures.
 We wanted to utilize the robustness of linear regression on the terms used in the current analytical pointing model while incorporating new features. 
 Considering that the experiment demonstrated negligible performance differences between the separate neural networks and the regular
-one and that the best models only choose a few features, we conclude that additional training data is required to see if this is a feasible approach.\\
+one, and that the best models only choose a few features, we conclude that additional training data is required to see if this is a feasible approach.\\
 
 While the experiment did not demonstrate the performance that would be expected from using such models in practice,
 it indicates that a neural network could provide a more efficient and effective model than a linear regression model.

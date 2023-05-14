@@ -18,19 +18,19 @@ Overall, our study provides insights into future research directions to optimize
 
 \section{Experiment 2: Pointing Model using Neural Networks}
 
-In this study, we investigated whether machine learning models can replace traditional analytical linear regression models for predicting pointing offsets in radio/(sub-)mm telescopes.
+In this study, we investigated whether neural network pointing models can replace traditional analytical linear regression models in radio/(sub)-mm telescopes.
 To address this question, we used raw data from the APEX telescope containing input and observed coordinates for azimuth and elevation.
 We fitted a linear regression model to the raw data and compared its performance against four different neural network architectures using cross-validation with six folds.
 
 Our results showed that all neural network architectures significantly outperformed the linear regression model, with mean RMS falling within the range of $16''$-$19''$ with deviations of $5''$-$7''$, while the mean RMS of the linear regression model was $47.63''$ with a standard deviation of $12.81''$.
-Although all the neural network architectures had similar performance and standard deviation, we cannot conclude that any of them is better than the others.
+Although all the neural network architectures had similar performance and standard deviation, we cannot conclude that any of them are better than the others.
 
-The top-performing models we analyzed had relatively simple structures, with most of them not employing two hidden layers.
-Interestingly, the architectures incorporating distinct layers for the terms employed in the analytical pointing models exhibited lower neuron counts in their nonlinear layers.
+The top-performing models we analyzed had relatively simple structures, most using only one hidden layer.
+% Interestingly, the architectures incorporating distinct layers for the terms employed in the analytical pointing models used fewer neurons in their nonlinear layers.
 We also found that the models used few features for the nonlinear layers, suggesting that the factors influencing pointing error are difficult to model with the current data set.
 Obtaining more data may be necessary to establish more complex relationships between features that can improve the performance of the pointing models.
 
-While our experiment did not demonstrate the performance that would be expected from using such models in practice, it indicates that a neural network could provide a more efficient and effective model than a linear regression model.
+While our experiment did not demonstrate the performance we expect from using such models in practice, it indicates that a neural network could provide a more efficient and effective model than a linear regression.
 Moreover, a neural network can be fine-tuned with newly obtained data, making it an appealing model.
 If this approach is shown to be reliable and high-performing, it could be the preferred choice for more advanced telescopes, as it may require less manual analysis to develop and maintain a pointing model.
 However, further testing with additional data is needed to confirm the feasibility of this approach.
