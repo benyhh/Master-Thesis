@@ -102,7 +102,15 @@ top=3cm,bottom=2.5cm]{geometry}
 \makeindex
 \usepackage[totoc]{idxlayout}   % for index in the toc
 \usepackage[nottoc, notlof, notlot]{tocbibind}  % for references/bibliography in the toc
-\usepackage[numbers]{natbib}
+% \usepackage[numbers]{natbib}
+\usepackage{jheppub}
+
+
+
+
+\bibliographystyle{JHEP}
+
+
 % \usepackage{booktabs}				% for citing
 \usepackage{float}					% for placing figures
 % \usepackage[ruled,vlined,linesnumbered]{algorithm2e} %for pseudocoding
@@ -202,8 +210,9 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 
 \newpage
 
-\bibliographystyle{plain} % We choose the "plain" reference style
+% \bibliographystyle{plain} % We choose the "plain" reference style
 \bibliography{citations.bib}
+
 
 \end{document}
 
