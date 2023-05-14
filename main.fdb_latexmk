@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1684096728 "main.aux" "main.bbl" "main" 1684096990 0
+["bibtex main"] 1684096728 "main.aux" "main.bbl" "main" 1684097216 0
   "./JHEP.bst" 1684095397 20517 44198d49af4e5005d3f7b69b117e4979 ""
   "./citations.bib" 1684095767 14561 56fa042de994d27798687a164474ae50 ""
-  "main.aux" 1684096981 41300 634a0711119936d440ca6a7ad77b1978 "pdflatex"
+  "main.aux" 1684097206 41300 634a0711119936d440ca6a7ad77b1978 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["makeindex main.idx"] 1683897705 "main.idx" "main.ind" "main" 1684096990 0
-  "main.idx" 1684096967 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex main.idx"] 1683897705 "main.idx" "main.ind" "main" 1684097216 0
+  "main.idx" 1684097194 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "main.ilg"
   "main.ind"
   (rewritten before read)
-["pdflatex"] 1684096960 "c:/Users/bendi/uni/Master/Master Thesis/main.tex" "main.pdf" "main" 1684096990 2
+["pdflatex"] 1684097188 "c:/Users/bendi/uni/Master/Master Thesis/main.tex" "main.pdf" "main" 1684097216 2
   "Astronomy/Azimuth-Altitude_schematic.png" 1678707361 114622 e0028e7dc3e6c8420d567c85c8fced7d ""
   "Astronomy/apex_primary_mirror_cropped.jpeg" 1683902873 145767 29b03280af05666a6aae17372354ac80 ""
   "Astronomy/apex_subreflector.jpeg" 1683881175 116949 fb9388567e93269f96a478f698cd83c7 ""
@@ -22,7 +22,7 @@
   "Canva/datasplits.png" 1682327439 29946 54661ea2c408dd64054fb67ed387a0c6 ""
   "Chapters/abstract.tex" 1684094629 5292 0fc1fe8b60bbabfbcea3e261a835d620 ""
   "Chapters/acknowledgement.tex" 1684094418 1277 2539f3799b3db0d11d37ca7d310c867e ""
-  "Chapters/appendix_a.tex" 1684096956 51559 2c430d6184327fe726dad8338dbe82e1 ""
+  "Chapters/appendix_a.tex" 1684097178 51563 1d318378d00cd4e51823525eb670e1ab ""
   "Chapters/appendix_b.tex" 1684074425 9771 850edfffac5c76d172b3c96b90e2e27c ""
   "Chapters/appendix_c.tex" 1684072039 1586 13deac11e165b768995d74fe429df3a0 ""
   "Chapters/astronomy.tex" 1684085023 7155 4f73594a792bd05a5c02ddf4bc0b5793 ""
@@ -340,13 +340,13 @@
   "folder/uio-fp-segl.pdf" 1677852914 64936 89441810db60f45a672971bad5b14ed1 ""
   "folder/uiomasterfp.sty" 1677852914 8814 1230e2e7575ae9111cb964e7fb79060a ""
   "jheppub.sty" 1684095311 12366 45104b560cd81458e8a73ccbe3de7663 ""
-  "main.aux" 1684096981 41300 634a0711119936d440ca6a7ad77b1978 "pdflatex"
+  "main.aux" 1684097206 41300 634a0711119936d440ca6a7ad77b1978 "pdflatex"
   "main.bbl" 1684096730 6564 65c614b1bccc8c3ea8dda99698d696bd "bibtex main"
   "main.ind" 1683897706 0 d41d8cd98f00b204e9800998ecf8427e "makeindex main.idx"
-  "main.lof" 1684096981 2548 91e3253084dcb6e4efa31013de2f4674 "pdflatex"
-  "main.lot" 1684096981 3535 7f897261afc3f84e1f2e98ed71c9c1ae "pdflatex"
-  "main.out" 1684096981 18372 96970e5fc1d9ad3c5bd26ec1d2922406 "pdflatex"
-  "main.toc" 1684096981 9001 3d13888853b439beed4887f57c9e6b6e "pdflatex"
+  "main.lof" 1684097206 2548 91e3253084dcb6e4efa31013de2f4674 "pdflatex"
+  "main.lot" 1684097206 3535 7f897261afc3f84e1f2e98ed71c9c1ae "pdflatex"
+  "main.out" 1684097206 18372 96970e5fc1d9ad3c5bd26ec1d2922406 "pdflatex"
+  "main.toc" 1684097206 9001 3d13888853b439beed4887f57c9e6b6e "pdflatex"
   "teleskopgutt2.jpeg" 1677852914 246701 b078786cc75ae739d4a1b3af20a68b36 ""
   (generated)
   "main.aux"
