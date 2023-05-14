@@ -34,8 +34,8 @@
 # # *.pdf
 *.xml
 # *.jpeg
-*.jpg
-*.JPEG
+# *.jpg
+# *.JPEG
 *.tif
 *.tar
 *.tar.gz
