@@ -212,19 +212,19 @@ We then use equations \eqref{eq:bp2} and \eqref{eq:bp4} to calculate the gradien
 \subsection{Gradient Descent}
 Gradient Descent (GD) is an iterative optimization algorithm used in machine learning for minimizing a differentiable function.
 The goal of GD is to update the model's trainable parameters in such a way that the loss function is minimized.
-In mathematical terms, we aim to find the values of the parameters $\boldsymbol{\theta}$ that minimize the objective function $\mathcal{L}(\bold{x}, \boldsymbol{\theta})$, where $\bold{x}$ represents the input data.
+In mathematical terms, we aim to find the values of the parameters $\boldsymbol{\theta}$ that minimize the objective function $\mathcal{L}(\mathbf{x}, \boldsymbol{\theta})$, where $\mathbf{x}$ represents the input data.
 The loss function is typically defined as the mean squared error \eqref{eq:mse} for regression problems, so
 \begin{equation}
-    \mathcal{L}(\bold{x}, \boldsymbol{\theta}) = \frac{1}{N}\sum_{i=1}^N(y_i-f(\bold{x}_i, \boldsymbol{\theta}))^2,
+    \mathcal{L}(\mathbf{x}, \boldsymbol{\theta}) = \frac{1}{N}\sum_{i=1}^N(y_i-f(\mathbf{x}_i, \boldsymbol{\theta}))^2,
 \end{equation}
-where $f(\bold{x}_i, \boldsymbol{\theta})$ is the output of the model for input data $\bold{x}_i$, and $y_i$ is the target value.
+where $f(\mathbf{x}_i, \boldsymbol{\theta})$ is the output of the model for input data $\mathbf{x}_i$, and $y_i$ is the target value.
 
 To achieve the goal, GD involves calculating the gradient of the loss function with respect to the model's trainable parameters and updating them iteratively by taking a small step in the negative direction of the gradient.
 The iterative update rule can be expressed as follows:
 
 \begin{align}
-\bold{v}_t &= \eta_t \nabla_\theta \mathcal{L}(\bold{x}, \boldsymbol{\theta}), \\
-\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \bold{v}_t,
+\mathbf{v}_t &= \eta_t \nabla_\theta \mathcal{L}(\mathbf{x}, \boldsymbol{\theta}), \\
+\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \mathbf{v}_t,
 \end{align}
 
 where $\eta$ denotes the learning rate, and $\nabla_\theta$ denotes the gradient with respect to $\boldsymbol{\theta}$.
@@ -261,8 +261,8 @@ Momentum serves as a memory of previous momenta and can improve the convergence 
 
 The update rule for momentum can be expressed as follows:
 \begin{align}
-\bold{v}_t &= \gamma \bold{v}_{t-1} + \eta_t \nabla_\theta \mathcal{L}(\bold{x}, \boldsymbol{\theta}) \\
-\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \bold{v}_t,
+\mathbf{v}_t &= \gamma \mathbf{v}_{t-1} + \eta_t \nabla_\theta \mathcal{L}(\mathbf{x}, \boldsymbol{\theta}) \\
+\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \mathbf{v}_t,
 \end{align}
 where $\gamma$ is the momentum parameter with $0 \leq \gamma \leq 1$.
 The momentum term considers the update of the previous step, in addition to the gradients at the current step.
@@ -280,15 +280,15 @@ It uses a running average of the first and second moments of the gradient to com
 Adam updates the parameters iteratively as follows:
 
 \begin{align}
-\bold{g}_t &= \nabla_\theta \mathcal{L}(\bold{x}, \boldsymbol{\theta}) \\
-\bold{m}_t &= \beta_1 \bold{m}{t-1} + (1-\beta_1) \bold{g}_t \\
-\bold{s}_t &= \beta_2 \bold{s}{t-1} + (1-\beta_2) \bold{g}_t^2\\
-\hat{\bold{m}}_t &= \frac{\bold{m}_t}{1 - (\beta_1)^t} \\
-\hat{\bold{s}}_t &= \frac{\bold{s}_t}{1 - (\beta_2)^t} \\
-\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \eta_t \frac{\hat{\bold{m}}_t}{\sqrt{\hat{s}_t} + \epsilon},
+\mathbf{g}_t &= \nabla_\theta \mathcal{L}(\mathbf{x}, \boldsymbol{\theta}) \\
+\mathbf{m}_t &= \beta_1 \mathbf{m}{t-1} + (1-\beta_1) \mathbf{g}_t \\
+\mathbf{s}_t &= \beta_2 \mathbf{s}{t-1} + (1-\beta_2) \mathbf{g}_t^2\\
+\hat{\mathbf{m}}_t &= \frac{\mathbf{m}_t}{1 - (\beta_1)^t} \\
+\hat{\mathbf{s}}_t &= \frac{\mathbf{s}_t}{1 - (\beta_2)^t} \\
+\boldsymbol{\theta}_{t+1} &= \boldsymbol{\theta}_t - \eta_t \frac{\hat{\mathbf{m}}_t}{\sqrt{\hat{s}_t} + \epsilon},
 \end{align}
 
-where $\bold{g}_t$ denotes the gradient at time step $t$, $\bold{m}_t$ and $\bold{s}_t$ are the first and second moment estimates, respectively.
+where $\mathbf{g}_t$ denotes the gradient at time step $t$, $\mathbf{m}_t$ and $\mathbf{s}_t$ are the first and second moment estimates, respectively.
 $\beta_1$ and $\beta_2$ control the decay rate of the first and second moments, respectively.
 $\eta_t$ is the learning rate, and $\epsilon$ is a regularization constant to prevent division by zero.
 

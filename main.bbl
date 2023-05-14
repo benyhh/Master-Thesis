@@ -1,174 +1,159 @@
-\begin{thebibliography}{10}
-
-\bibitem{ToolsOfAst2009}
-{\em Tools of Radio Astronomy}.
-\newblock 2009.
-
-\bibitem{greve1996pointing}
-Jacob Baars, B.~Hooghoudt, P.~Mezger, and M.~Jonge.
-\newblock The iram 30-m millimeter radio telescope on pico veleta, spain.
-\newblock {\em Astronomy and Astrophysics}, 175:319--326, 02 1987.
-
-\bibitem{Blakseth2022}
-Sindre~Stenen Blakseth, Adil Rasheed, Trond Kvamsdal, and Omer San.
-\newblock Deep neural network enabled corrective source term approach to hybrid
-  analysis and modeling.
-\newblock {\em Neural Networks}, 146, 2022.
-
-\bibitem{Breugel1999}
-W.~Van Breugel, C.~De Breuck, S.A. Stanford, D.~Stern, H.~Röttgering, and
-  G.~Miley.
-\newblock A radio galaxy at z = 5.19.
-\newblock {\em Astrophysical Journal}, 518, 1999.
-
-\bibitem{universalapproximation}
-Tianping Chen and Hong Chen.
-\newblock Universal approximation to nonlinear operators by neural networks
-  with arbitrary activation functions and its application to dynamical systems.
-\newblock {\em IEEE Transactions on Neural Networks}, 6(4):911--917, 1995.
-
-\bibitem{Coriat2011}
-M.~Coriat, S.~Corbel, L.~Prat, J.~C.A. Miller-Jones, D.~Cseh, A.~K. Tzioumis,
-  C.~Brocksopp, J.~Rodriguez, R.~P. Fender, and G.~R. Sivakoff.
-\newblock Radiatively efficient accreting black holes in the hard state: The
-  case study of h1743-322.
-\newblock {\em Monthly Notices of the Royal Astronomical Society}, 414, 2011.
-
-\bibitem{Corstanje2017}
-A.~Corstanje, P.~Mitra, A.~Bonardi, S.~Buitink, H.~Falcke, B.~M. Hare, J.~R.
-  Hörandel, K.~Mulrey, A.~Nelles, J.~P. Rachen, L.~Rossetto, P.~Schellart,
-  O.~Scholten, S.~Ter Veen, S.~Thoudam, T.~N.G. Trinh, and T.~Winchen.
-\newblock The effect of the atmospheric refractive index on the radio signal of
-  extensive air showers using global data assimilation system (gdas).
-\newblock {\em Proceedings of Science}, 2017.
-
-\bibitem{covertshapsage}
-Ian Covert.
-\newblock Understanding shap and sage.
-\newblock \url{https://iancovert.com/blog/understanding-shap-sage/}, 2020.
-
-\bibitem{SAGE}
-Ian Covert, Scott Lundberg, and Su-In Lee.
-\newblock Understanding global feature contributions with additive importance
-  measures, 2020.
-
-\bibitem{sagepaper}
-Ian Covert, Scott Lundberg, and Su-In Lee.
-\newblock Understanding global feature contributions with additive importance
-  measures, 2020.
-
-\bibitem{Dong2018}
-Jian Dong, Li~Fu, Qinghui Liu, and Zhiqiang Shen.
-\newblock Measuring and analyzing thermal deformations of the primary reflector
-  of the tianma radio telescope.
-\newblock {\em Experimental Astronomy}, 45, 2018.
-
-\bibitem{Gawronski2005}
-Wodek Gawronski and Kamal Souccar.
-\newblock Control systems of the large millimeter telescope.
-\newblock {\em IEEE Antennas and Propagation Magazine}, 47, 2005.
-
-\bibitem{mlastgravitationalwaves}
-Daniel George and E.A. Huerta.
-\newblock Deep learning for real-time gravitational wave detection and
-  parameter estimation: Results with advanced {LIGO} data.
-\newblock {\em Physics Letters B}, 778:64--70, mar 2018.
-
-\bibitem{APEX2006}
-R.~Güsten, L.~Å Nyman, P.~Schilke, K.~Menten, C.~Cesarsky, and R.~Booth.
-\newblock The atacama pathfinder experiment (apex) - a new submillimeter
-  facility for southern skies.
-\newblock {\em Astronomy and Astrophysics}, 454, 2006.
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
 
 \bibitem{Haarsma2000}
-D.~B. Haarsma, R.~B. Partridge, R.~A. Windhorst, and E.~A. Richards.
-\newblock Faint radio sources and star formation history.
-\newblock {\em The Astrophysical Journal}, 544, 2000.
+D.~B. Haarsma, R.~B. Partridge, R.~A. Windhorst and E.~A. Richards, \emph{Faint
+  radio sources and star formation history},
+  \href{http://dx.doi.org/10.1086/317225}{\emph{The Astrophysical Journal} {\bf
+  544} (2000) }.
 
-\bibitem{SHAP}
-Scott Lundberg and Su-In Lee.
-\newblock A unified approach to interpreting model predictions, 2017.
+\bibitem{Breugel1999}
+W.~V. Breugel, C.~D. Breuck, S.~Stanford, D.~Stern, H.~Röttgering and
+  G.~Miley, \emph{A radio galaxy at z = 5.19},
+  \href{http://dx.doi.org/10.1086/312080}{\emph{Astrophysical Journal} {\bf
+  518} (1999) }.
 
-\bibitem{Mehta2019}
-Pankaj Mehta, Marin Bukov, Ching-Hao Wang, Alexandre~G.R. Day, Clint
-  Richardson, Charles~K. Fisher, and David~J. Schwab.
-\newblock A high-bias, low-variance introduction to machine learning for
-  physicists.
-\newblock {\em Physics Reports}, 810:1--124, may 2019.
+\bibitem{Coriat2011}
+M.~Coriat, S.~Corbel, L.~Prat, J.~C. Miller-Jones, D.~Cseh, A.~K. Tzioumis
+  et~al., \emph{Radiatively efficient accreting black holes in the hard state:
+  The case study of h1743-322},
+  \href{http://dx.doi.org/10.1111/j.1365-2966.2011.18433.x}{\emph{Monthly
+  Notices of the Royal Astronomical Society} {\bf 414} (2011) }.
 
-\bibitem{mordevishal}
-Vishal Morde.
-\newblock Xgboost algorithm: Long she may rein.
-\newblock Downloaded January 2023.
-
-\bibitem{tikznet}
-Izaak Neutelings.
-\newblock Neural networks with tikz.
-\newblock \url{https://tikz.net/neural_networks/}, 2021.
-\newblock Accessed: March 15, 2023.
-
-\bibitem{mlastgravlens}
-C~E Petrillo, C~Tortora, G~Vernardos, L~V~E Koopmans, G~Verdoes~Kleijn,
-  M~Bilicki, N~R Napolitano, S~Chatterjee, G~Covone, A~Dvornik, T~Erben,
-  F~Getman, B~Giblin, C~Heymans, J~T~A de~Jong, K~Kuijken, P~Schneider, H~Shan,
-  C~Spiniello, and A~H Wright.
-\newblock {LinKS}: discovering galaxy-scale strong lenses in the
-  {Kilo}-{Degree} {Survey} using convolutional neural networks.
-\newblock {\em Monthly Notices of the Royal Astronomical Society},
-  484(3):3879--3896, January 2019.
-\newblock \_eprint:
-  https://academic.oup.com/mnras/article-pdf/484/3/3879/28572367/stz189.pdf.
-
-\bibitem{ephem}
-Brandon Rhodes.
-\newblock Ephem, 2021.
-\newblock \url{https://pypi.org/project/ephem/}.
-
-\bibitem{backprop_original}
-David~E Rumelhart, Geoffrey~E Hinton, and Ronald~J Williams.
-\newblock Learning representations by back-propagating errors.
-\newblock {\em Nature}, 323(6088):533--536, 1986.
-
-\bibitem{Shannon1948}
-C.~E. Shannon.
-\newblock A mathematical theory of communication.
-\newblock {\em Bell System Technical Journal}, 27, 1948.
-
-\bibitem{shapleyvalue1953}
-Lloyd Shapley.
-\newblock A value for n-person games.
-\newblock {\em Contributions to the Theory of Games}, 2:307--317, 1953.
-
-\bibitem{stumpff1972}
-Peter Stumpff.
-\newblock Astronomical pointing theory for radio telescopes.
-\newblock {\em Kleinheubacher Reports}, 15:431, 1972.
-
-\bibitem{tikz}
-Till Tantau.
-\newblock The {PGF/TikZ} manual, 2021.
-
-\bibitem{altazschematic}
-Tomruen.
-\newblock Azimuth-altitude schematic, 2011.
-\newblock Accessed: March 13, 2023.
-
-\bibitem{tpoint_manual}
-Tpoint Software.
-\newblock {\em TPOINT}, 2009.
-\newblock Version 13.5.
+\bibitem{Dong2018}
+J.~Dong, L.~Fu, Q.~Liu and Z.~Shen, \emph{Measuring and analyzing thermal
+  deformations of the primary reflector of the tianma radio telescope},
+  \href{http://dx.doi.org/10.1007/s10686-018-9592-3}{\emph{Experimental
+  Astronomy} {\bf 45} (2018) }.
 
 \bibitem{GravDeformation}
-Sebastian von Hoerner and Woon~Yin Wong.
-\newblock Gravitational deformation and astigmatism of tiltable radio
-  telescopes.
-\newblock {\em IEEE Transactions on Antennas and Propagation}, 23, 1975.
+S.~von Hoerner and W.~Y. Wong, \emph{Gravitational deformation and astigmatism
+  of tiltable radio telescopes},
+  \href{http://dx.doi.org/10.1109/TAP.1975.1141163}{\emph{IEEE Transactions on
+  Antennas and Propagation} {\bf 23} (1975) }.
+
+\bibitem{Corstanje2017}
+A.~Corstanje, P.~Mitra, A.~Bonardi, S.~Buitink, H.~Falcke, B.~M. Hare et~al.,
+  \emph{The effect of the atmospheric refractive index on the radio signal of
+  extensive air showers using global data assimilation system (gdas)},
+  \href{http://dx.doi.org/10.22323/1.301.0325}{\emph{Proceedings of Science}
+  (2017) }.
+
+\bibitem{Gawronski2005}
+W.~Gawronski and K.~Souccar, \emph{Control systems of the large millimeter
+  telescope}, \href{http://dx.doi.org/10.1109/MAP.2005.1589873}{\emph{IEEE
+  Antennas and Propagation Magazine} {\bf 47} (2005) }.
+
+\bibitem{stumpff1972}
+P.~Stumpff, \emph{Astronomical pointing theory for radio telescopes},
+  {\emph{Kleinheubacher Reports} {\bf 15} (1972) 431}.
+
+\bibitem{APEX2006}
+R.~G\\"usten, L.~A. Nyman, P.~Schilke, K.~Menten, C.~Cesarsky and R.~Booth,
+  \emph{The atacama pathfinder experiment (apex) - a new submillimeter facility
+  for southern skies},
+  \href{http://dx.doi.org/10.1051/0004-6361:20065420}{\emph{Astronomy and
+  Astrophysics} {\bf 454} (2006) }.
+
+\bibitem{mlastgravlens}
+C.~E. Petrillo, C.~Tortora, G.~Vernardos, L.~V.~E. Koopmans, G.~Verdoes~Kleijn,
+  M.~Bilicki et~al., \emph{{LinKS}: discovering galaxy-scale strong lenses in
+  the {Kilo}-{Degree} {Survey} using convolutional neural networks},
+  \href{http://dx.doi.org/10.1093/mnras/stz189}{\emph{Monthly Notices of the
+  Royal Astronomical Society} {\bf 484} (Jan., 2019) 3879--3896}.
+
+\bibitem{mlastgravitationalwaves}
+D.~George and E.~Huerta, \emph{Deep learning for real-time gravitational wave
+  detection and parameter estimation: Results with advanced {LIGO} data},
+  \href{http://dx.doi.org/10.1016/j.physletb.2017.12.053}{\emph{Physics Letters
+  B} {\bf 778} (mar, 2018) 64--70}.
 
 \bibitem{whitegreen2022}
 E.~White, F.~D. Ghigo, R.~M. Prestage, D.~T. Frayer, R.~J. Maddalena, P.~T.
-  Wallace, J.~J. Brandt, D.~Egan, J.~D. Nelson, and J.~Ray.
-\newblock Green {Bank} {Telescope}: {Overview} and analysis of metrology
-  systems and pointing performance.
-\newblock {\em Astronomy \& Astrophysics}, 659:A113, March 2022.
+  Wallace et~al., \emph{Green {Bank} {Telescope}: {Overview} and analysis of
+  metrology systems and pointing performance},
+  \href{http://dx.doi.org/10.1051/0004-6361/202141936}{\emph{Astronomy \&
+  Astrophysics} {\bf 659} (Mar., 2022) A113}.
 
-\end{thebibliography}
+\bibitem{greve1996pointing}
+J.~Baars, B.~Hooghoudt, P.~Mezger and M.~Jonge, \emph{The iram 30-m millimeter
+  radio telescope on pico veleta, spain}, {\emph{Astronomy and Astrophysics}
+  {\bf 175} (02, 1987) 319--326}.
+
+\bibitem{Blakseth2022}
+S.~S. Blakseth, A.~Rasheed, T.~Kvamsdal and O.~San, \emph{Deep neural network
+  enabled corrective source term approach to hybrid analysis and modeling},
+  \href{http://dx.doi.org/10.1016/j.neunet.2021.11.021}{\emph{Neural Networks}
+  {\bf 146} (2022) }.
+
+\bibitem{altazschematic}
+Tomruen, \emph{Azimuth-altitude schematic},  2011.
+
+\bibitem{ToolsOfAst2009}
+T.~L. Wilson, K.~Rohlfs and S.~Hüttemeister, \emph{Tools of Radio Astronomy}.
+\newblock Springer, 2009,
+  \href{http://dx.doi.org/10.1007/978-3-540-85122-6}{10.1007/978-3-540-85122-6}.
+
+\bibitem{tpoint_manual}
+Tpoint Software, \emph{TPOINT}, 2009.
+
+\bibitem{Mehta2019}
+P.~Mehta, M.~Bukov, C.-H. Wang, A.~G. Day, C.~Richardson, C.~K. Fisher et~al.,
+  \emph{A high-bias, low-variance introduction to machine learning for
+  physicists},
+  \href{http://dx.doi.org/10.1016/j.physrep.2019.03.001}{\emph{Physics Reports}
+  {\bf 810} (may, 2019) 1--124}.
+
+\bibitem{mordevishal}
+V.~Morde, ``Xgboost algorithm: Long she may rein.''
+
+\bibitem{universalapproximation}
+T.~Chen and H.~Chen, \emph{Universal approximation to nonlinear operators by
+  neural networks with arbitrary activation functions and its application to
+  dynamical systems}, \href{http://dx.doi.org/10.1109/72.392253}{\emph{IEEE
+  Transactions on Neural Networks} {\bf 6} (1995) 911--917}.
+
+\bibitem{tikznet}
+I.~Neutelings, ``Neural networks with tikz.''
+  \url{https://tikz.net/neural_networks/}, 2021.
+
+\bibitem{tikz}
+T.~Tantau, \emph{The {PGF/TikZ} manual},  2021.
+
+\bibitem{backprop_original}
+D.~E. Rumelhart, G.~E. Hinton and R.~J. Williams, \emph{Learning
+  representations by back-propagating errors},
+  \href{http://dx.doi.org/10.1038/323533a0}{\emph{Nature} {\bf 323} (1986)
+  533--536}.
+
+\bibitem{SHAP}
+S.~Lundberg and S.-I. Lee, \emph{A unified approach to interpreting model
+  predictions},  2017.
+\newblock 10.48550/ARXIV.1705.07874.
+
+\bibitem{SAGE}
+I.~Covert, S.~Lundberg and S.-I. Lee, \emph{Understanding global feature
+  contributions with additive importance measures},  2020.
+\newblock 10.48550/ARXIV.2004.00668.
+
+\bibitem{shapleyvalue1953}
+L.~Shapley, \emph{A value for n-person games}, {\emph{Contributions to the
+  Theory of Games} {\bf 2} (1953) 307--317}.
+
+\bibitem{covertshapsage}
+I.~Covert, ``Understanding shap and sage.''
+  \url{https://iancovert.com/blog/understanding-shap-sage/}, 2020.
+
+\bibitem{sagepaper}
+I.~Covert, S.~Lundberg and S.-I. Lee, \emph{Understanding global feature
+  contributions with additive importance measures},  2020.
+\newblock 10.48550/ARXIV.2004.00668.
+
+\bibitem{Shannon1948}
+C.~E. Shannon, \emph{A mathematical theory of communication},
+  \href{http://dx.doi.org/10.1002/j.1538-7305.1948.tb01338.x}{\emph{Bell System
+  Technical Journal} {\bf 27} (1948) }.
+
+\bibitem{ephem}
+B.~Rhodes, \emph{Ephem},  2021.
+
+\end{thebibliography}\endgroup

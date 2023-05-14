@@ -95,16 +95,15 @@
 \contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{71}{section.7.2}%
 \contentsline {part}{IV\hspace {1em}Appendices}{73}{part.4}%
 \contentsline {chapter}{\numberline {A}Results \& Tables}{74}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Raw data correlation}{74}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Additional Methods}{78}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Transformation of Pointing Offsets and Corrections}{78}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Feature Engineering for Transformed Offsets and Corrections}{79}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}Feature Transformation}{79}{subsection.B.2.1}%
-\contentsline {subsubsection}{Median values}{79}{section*.71}%
-\contentsline {subsubsection}{Sum of all change}{79}{section*.72}%
-\contentsline {subsubsection}{Change since the last correction}{80}{section*.73}%
-\contentsline {subsubsection}{Max change in time interval}{80}{section*.74}%
-\contentsline {subsubsection}{Position of the sun}{80}{section*.75}%
+\contentsline {section}{\numberline {A.1}Pointing Correction Results}{74}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Raw Data Correlation}{74}{section.A.2}%
+\contentsline {chapter}{\numberline {B}Additional Methods}{79}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Transformation of Pointing Offsets and Corrections}{79}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Feature Engineering for Transformed Offsets and Corrections}{80}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Feature Transformation}{80}{subsection.B.2.1}%
+\contentsline {subsubsection}{Sum of all change}{80}{section*.72}%
+\contentsline {subsubsection}{Change since the last correction}{81}{section*.73}%
+\contentsline {subsubsection}{Max change in time interval}{81}{section*.74}%
 \contentsline {chapter}{\numberline {C}Supplementary Theory}{82}{appendix.C}%
 \contentsline {section}{\numberline {C.1}XGBoost Hyperparameters}{82}{section.C.1}%
-\contentsline {chapter}{Bibliography}{83}{appendix*.76}%
+\contentsline {chapter}{Bibliography}{83}{appendix*.75}%
