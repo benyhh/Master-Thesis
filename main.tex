@@ -103,14 +103,7 @@ top=3cm,bottom=2.5cm]{geometry}
 \usepackage[totoc]{idxlayout}   % for index in the toc
 \usepackage[nottoc, notlof, notlot]{tocbibind}  % for references/bibliography in the toc
 % \usepackage[numbers]{natbib}
-\usepackage{jheppub}
-
-
-
-
 \bibliographystyle{JHEP}
-
-
 % \usepackage{booktabs}				% for citing
 \usepackage{float}					% for placing figures
 % \usepackage[ruled,vlined,linesnumbered]{algorithm2e} %for pseudocoding
@@ -146,9 +139,14 @@ top=3cm,bottom=2.5cm]{geometry}
 % \onehalfspacing
 
 \uiomasterfp[master, program={Computational Science: Physics},
-color=blue,image = {teleskopgutt2},
-supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Claudia Cicone (UiO)}]
-
+                color=blue,
+                supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Claudia Cicone (UiO)},
+                date=Spring 2023,
+                dept=Department of Physics,
+                fac=Faculty of Mathematics and Natural Sciences,    
+                title=A Novel Application of Machine Learning to Develop Pointing Models for Current and Future Radio/Sub-millimeter Telescopes,
+                program = {Computational Science: Physics}
+            ]
 \chapter*{Abstract}
 \input{Chapters/abstract.tex}
 
@@ -212,7 +210,6 @@ supervisors = {Signe Riemer Sørensen (Sintef) \and Rodrigo Parrar (ESO) \and Cl
 
 % \bibliographystyle{plain} % We choose the "plain" reference style
 \bibliography{citations.bib}
-
 
 \end{document}
 

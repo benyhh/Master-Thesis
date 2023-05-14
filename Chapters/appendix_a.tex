@@ -310,7 +310,8 @@
 % %%% FEATURES FOR DIFFERNTE DATASETS WITH PCORR MODEL
 
 
-% \begin{longtable}{|lcccc|}
+
+% \begin{longtable}{lcccc}
 %     \caption{The $50$ features with the greatest mutual information to the target value (unsorted).}
 %     \toprule
 %     \label{tab:non}
@@ -386,7 +387,7 @@
 
 \begin{table}
     \centering
-    \caption{The $50$ features with the greatest mutual information to the target value (unsorted).}
+    \caption{The $50$ features with the greatest mutual information to the target value (unsorted). (part 2 of 2)}
     \begin{tabular}{lcccc}
         \toprule
         & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
@@ -404,30 +405,42 @@
         DEL\_SPEM\_MEDIAN     &      x &      x &      x &      x   \\ \hline
         DEL\_TILTTEMP\_MEDIAN &      x &      x &      x &      x   \\ \hline
         DEL\_TILT\_MEDIAN     &      x &      x &      x &      x   \\ \hline
-        % DEL\_TOTAL\_MEDIAN    &      x &      x &      x &      x   \\ \hline
-        % DEWPOINT\_MEDIAN       &      x &      x &      x &      x   \\ \hline
-        % DISP\_ABS1\_MEDIAN    &      x &      x &      x &      x  \\ \hline
-        % DISP\_ABS2\_MEDIAN    &      x &      x &      x &      x  \\ \hline
-        % DISP\_ABS3\_MEDIAN    &      x &      x &      x &      x  \\ \hline
-        % DSUNAZ\_CHANGE\_P5    &      x &      x &      x &      x  \\ \hline
-        % HUMIDITY\_MEDIAN      &      x &      x &      x &      x  \\ \hline
-        % POSITIONX\_MEDIAN     &      x &      x &      x &      x  \\ \hline
-        % POSITIONY\_MEDIAN     &      x &      x &      x &      x  \\ \hline
-        % POSITIONZ\_MEDIAN     &      x &      x &      x &         \\ \hline
-        % PRESSURE\_MEDIAN      &      x &      x &      x &      x  \\ \hline
-        % ROTATIONX\_MEDIAN     &      x &      x &        &      x  \\ \hline
-        % SUNAZ\_MEDIAN        &      x &      x &      x &      x   \\ \hline
-        % SUNEL\_MEDIAN        &        &        &      x &      x   \\ \hline
-        % TEMP1\_MEDIAN        &      x &      x &      x &      x   \\ \hline
-        % TEMP26\_MEDIAN        &      x &      x &      x &      x  \\ \hline
-        % TEMP27\_MEDIAN        &      x &      x &      x &      x  \\ \hline
-        % TEMP28\_MEDIAN        &      x &      x &      x &      x  \\ \hline
-        % TEMP2\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        % TEMP3\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        % TEMP4\_MEDIAN        &      x &      x &      x &      x    \\ \hline
-        % TEMP5\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        DEL\_TOTAL\_MEDIAN    &      x &      x &      x &      x   \\ \hline
+        DEWPOINT\_MEDIAN       &      x &      x &      x &      x   \\ \hline
+        DISP\_ABS1\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+        DISP\_ABS2\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+        DISP\_ABS3\_MEDIAN    &      x &      x &      x &      x  \\ \hline
+        DSUNAZ\_CHANGE\_P5    &      x &      x &      x &      x  \\ \hline
+        HUMIDITY\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+        POSITIONX\_MEDIAN     &      x &      x &      x &      x  \\ \hline
+        POSITIONY\_MEDIAN     &      x &      x &      x &      x  \\ \hline
+        POSITIONZ\_MEDIAN     &      x &      x &      x &         \\ \hline
+        PRESSURE\_MEDIAN      &      x &      x &      x &      x  \\ \hline
+        ROTATIONX\_MEDIAN     &      x &      x &        &      x  \\ \hline
+        SUNAZ\_MEDIAN        &      x &      x &      x &      x   \\ \hline
+        SUNEL\_MEDIAN        &        &        &      x &      x   \\ \hline
+        TEMP1\_MEDIAN        &      x &      x &      x &      x   \\ \hline
+        TEMP26\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP27\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP28\_MEDIAN        &      x &      x &      x &      x  \\ \hline
+        TEMP2\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP3\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP4\_MEDIAN        &      x &      x &      x &      x    \\ \hline
+        TEMP5\_MEDIAN        &      x &      x &      x &      x    \\ \hline
         TEMP6\_MEDIAN        &      x &      x &      x &      x    \\ \hline
         TEMPERATURE\_MEDIAN  &      x &      x &        &      x    \\ \hline
+    \end{tabular}        
+    \label{tab:exp2_top50_features1}
+\end{table}
+
+\begin{table}
+    \centering
+    \caption{The $50$ features with the greatest mutual information to the target value (unsorted). (part 2 of 2)}
+    \begin{tabular}{lcccc}
+        \toprule
+        & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
+        \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+        Features & Az & El & Az & El \\  \hline
         TILT1T\_MEDIAN       &      x &      x &      x &      x    \\ \hline
         TILT1X\_MEDIAN       &      x &      x &      x &      x    \\ \hline
         TILT1Y\_MEDIAN       &      x &      x &      x &      x    \\ \hline
@@ -446,15 +459,16 @@
         month\_continuous    &      x &      x &      x &      x    \\ \hline
         time\_of\_day        &      x &      x &      x &      x    \\ \hline
     \end{tabular}        
-    \label{tab:exp2_top50_features}
+    \label{tab:exp2_top50_features2}
 \end{table}
 
 
 \begin{table}[!htbp]
     \centering
-    \caption{All}
+    \caption{The selected hyperparameters for the all instruments pointing correction model.}
     \begin{tabular}{ccccccccc}
         \toprule
+        \multicolumn{9}{c}{Azimuth} \\
         \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
          & by   & & & Max   & child  & of         & & \\
          & tree & & & Depth & weight & estimators & & \\
@@ -465,7 +479,7 @@
         4 &   0.501 &  0.008 &          0.019 &      3 &             2 &       400 &       0.578 &      0.979 \\
         5 &   0.530 &  0.031 &          0.187 &      2 &             3 &        69 &       0.277 &      0.931 \\
         6 &   0.668 &  0.056 &          0.139 &      2 &             2 &        77 &       0.426 &      0.783 \\
-        \hline
+        \cmidrule{1-9}
         \multicolumn{9}{c}{Elevation} \\
         \cmidrule{1-9}
         1 &   0.577 &  0.247 &          0.017 &      5 &             1 &       111 &       0.966 &      0.517 \\
@@ -506,7 +520,7 @@
 
 \begin{table}[!htbp]
     \centering
-    \caption{NFLASH230}
+    \caption{The selected hyperparameters for the NFLASH230 pointing correction model.}
     \begin{tabular}{ccccccccc}
         \toprule
         \multicolumn{9}{c}{Azimuth} \\
@@ -521,7 +535,7 @@
         4 &      0.972 &  0.773 &          0.116 &      5 &             1 &        30 &       0.006 &      0.802 \\
         5 &      0.897 &  0.112 &          0.008 &      5 &            10 &       435 &       0.658 &      0.819 \\
         6 &      0.935 &  0.011 &          0.064 &      1 &             6 &       224 &       0.228 &      0.748 \\
-        \hline
+        \cmidrule{1-9}
         \multicolumn{9}{c}{Elevation} \\
         \cmidrule{1-9}
         1 &      0.600 &  0.156 &          0.007 &      5 &             2 &       140 &       0.047 &      0.792 \\
@@ -614,31 +628,31 @@
 \begin{table}[!htbp]
     \centering
     \caption{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.}
-    \begin{tabular}{lccc}
+    \begin{tabular}{lcc}
         \toprule
-        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$ &  $\delta_{\text{Az}}\cos{\text{El}}$ \\
+        Feature &  $\delta_{\text{Az}}$ &  $\delta_{\text{El}}$  \\
         \midrule
-        WINDSPEED\_VAR\_5        &      $0.10$ &      $0.12$ &               $0.11$ \\
-        DAZ\_TILT\_MEDIAN\_1      &      $0.09$ &      $0.03$ &               $0.14$ \\
-        DAZ\_TILTTEMP\_MEDIAN\_1  &      $0.00$ &     -$0.06$ &               $0.30$ \\
-        TILT1Y\_MEDIAN\_1        &      $0.08$ &      $0.02$ &               $0.13$ \\
-        TEMP26\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.19$ \\
-        TEMP27\_MEDIAN\_1        &      $0.06$ &      $0.13$ &              $-0.21$ \\
-        TEMP28\_MEDIAN\_1        &      $0.04$ &      $0.11$ &              $-0.25$ \\
-        TEMPERATURE\_MEDIAN\_1   &      $0.04$ &      $0.12$ &              $-0.26$ \\
-        POSITIONZ\_MEDIAN\_1     &      $0.05$ &      $0.11$ &              $-0.21$ \\
-        DEWPOINT\_MEDIAN\_1      &      $0.08$ &      $0.12$ &              $-0.15$ \\
-        DAZ\_TOTAL\_MEDIAN\_1     &      $0.09$ &      $0.03$ &               $0.13$ \\
-        WINDSPEED\_MEDIAN\_1     &      $0.02$ &      $0.02$ &               $0.13$ \\
-        HESE2                  &      $0.46$ &      $0.44$ &               $0.44$ \\
-        HESE3                  &      $0.98$ &      $0.94$ &               $0.77$ \\
-        HESE4                  &      $0.97$ &      $0.92$ &               $0.74$ \\
-        HESE5                  &      $0.34$ &      $0.31$ &               $0.15$ \\
-        HACA5                  &      $0.06$ &      $0.05$ &               $0.10$ \\
-        HECE                   &      $1.00$ &      $0.96$ &               $0.78$ \\
-        HECE2                  &      $1.00$ &      $0.96$ &               $0.78$ \\
-        HECE3                  &      $0.76$ &      $0.72$ &               $0.52$ \\
-        HSCA5                  &      $0.12$ &      $0.11$ &               $0.14$ \\
+        WINDSPEED\_VAR\_5        &      $0.10$ &      $0.12$ \\
+        DAZ\_TILT\_MEDIAN\_1      &      $0.09$ &      $0.03$\\
+        DAZ\_TILTTEMP\_MEDIAN\_1  &      $0.00$ &     -$0.06$\\
+        TILT1Y\_MEDIAN\_1        &      $0.08$ &      $0.02$ \\
+        TEMP26\_MEDIAN\_1        &      $0.06$ &      $0.13$  \\
+        TEMP27\_MEDIAN\_1        &      $0.06$ &      $0.13$  \\
+        TEMP28\_MEDIAN\_1        &      $0.04$ &      $0.11$  \\
+        TEMPERATURE\_MEDIAN\_1   &      $0.04$ &      $0.12$  \\
+        POSITIONZ\_MEDIAN\_1     &      $0.05$ &      $0.11$  \\
+        DEWPOINT\_MEDIAN\_1      &      $0.08$ &      $0.12$  \\
+        DAZ\_TOTAL\_MEDIAN\_1     &      $0.09$ &      $0.03$\\
+        WINDSPEED\_MEDIAN\_1     &      $0.02$ &      $0.02$ \\
+        $sin(2\cdot El)$                  &      $0.46$ &      $0.44$  \\
+        $sin(3\cdot El)$                  &      $0.98$ &      $0.94$  \\
+        $sin(4\cdot El)$                  &      $0.97$ &      $0.92$  \\
+        $sin(5\cdot El)$                  &      $0.34$ &      $0.31$  \\
+        $cos(5\cdot Az)$                  &      $0.06$ &      $0.05$  \\
+         $cos(El)$                        &      $1.00$ &      $0.96$  \\
+         $cos(2\cdot El)$                 &      $1.00$ &      $0.96$  \\
+         $cos(3\cdot El)$                 &      $0.76$ &      $0.72$  \\
+         $cos(5\cdot Az)/cos El$             &      $0.12$ &      $0.11$ \\
         \bottomrule
     \end{tabular}
     \label{tab:raw_data_spearmans}

@@ -24,11 +24,12 @@
 \contentsline {table}{\numberline {6.8}{\ignorespaces Selected features for each neural network pointing model architecture}}{68}{table.caption.64}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces The $50$ features with the greatest mutual information to the target value (unsorted).\relax }}{75}{table.caption.65}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces All\relax }}{76}{table.caption.66}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces NFLASH230\relax }}{76}{table.caption.67}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.\relax }}{77}{table.caption.68}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces Features with Pearson's correlation $\geq 0.1$ to either one of the target values.\relax }}{77}{table.caption.69}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces The $50$ features with the greatest mutual information to the target value (unsorted). (part 2 of 2)\relax }}{75}{table.caption.65}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces The $50$ features with the greatest mutual information to the target value (unsorted). (part 2 of 2)\relax }}{76}{table.caption.66}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces The selected hyperparameters for the all instruments pointing correction model.\relax }}{76}{table.caption.67}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces The selected hyperparameters for the NFLASH230 pointing correction model.\relax }}{77}{table.caption.68}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.\relax }}{77}{table.caption.69}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces Features with Pearson's correlation $\geq 0.1$ to either one of the target values.\relax }}{78}{table.caption.70}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces \textbf {Original:} Example from the dataset of the observed pointing offsets and the corrections applied during the pointing scan. \textbf {Transformed:} Pointing offsets and corrections according to equations \eqref {eq:ca_tilde}, \eqref {eq:ie_tilde}, \eqref {eq:off_az_tilde}, and \eqref {eq:off_el_tilde}.\relax }}{79}{table.caption.70}%
+\contentsline {table}{\numberline {B.1}{\ignorespaces Original and transformed pointing offsets and corrections}}{80}{table.caption.71}%
 \addvspace {10\p@ }
