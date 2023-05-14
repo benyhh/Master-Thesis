@@ -270,43 +270,43 @@
 % \end{table}
 
 
-\begin{table}[!htbp]
-    \centering
-    \caption{Performance when choosing min validation for the last fold.}
-    \begin{tabular}{lcc c cc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Case 1} & & \multicolumn{2}{c}{Case 2} \\
-        \cmidrule(lr){2-3} \cmidrule(lr){5-6}
-        Dataset &  Azimuth  &  Elevation  & & Azimuth  &  Elevation  \\
-        \midrule
-        Transformed       & 2.016 & 1.067 & & 1.050 & 0.926  \\
-        Transformed NF230 & 1.243 & 1.009 & & 0.954 & 1.008  \\
-        Regular           & 1.779 & 1.186 & & 1.027 & 0.951  \\
-        Regular N230      & 1.204 & 1.262 & & 0.930 & 0.906  \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:minval_fold5_whole}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Performance when choosing min validation for the last fold.}
+%     \begin{tabular}{lcc c cc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Case 1} & & \multicolumn{2}{c}{Case 2} \\
+%         \cmidrule(lr){2-3} \cmidrule(lr){5-6}
+%         Dataset &  Azimuth  &  Elevation  & & Azimuth  &  Elevation  \\
+%         \midrule
+%         Transformed       & 2.016 & 1.067 & & 1.050 & 0.926  \\
+%         Transformed NF230 & 1.243 & 1.009 & & 0.954 & 1.008  \\
+%         Regular           & 1.779 & 1.186 & & 1.027 & 0.951  \\
+%         Regular N230      & 1.204 & 1.262 & & 0.930 & 0.906  \\
+%         \bottomrule
+%     \end{tabular}
+%     \label{tab:minval_fold5_whole}
+% \end{table}
 
-\begin{table}[!htbp]
-    \centering
-    \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
-    \begin{tabular}{lcccc c cccc}
-        \toprule
-        \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
-        \cmidrule(lr){2-5} \cmidrule(lr){7-10}
-        Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
-        \midrule
-        Transformed       &     2.140 &     0.498 &     1.073 &     0.040 &  &   1.008 &     0.073 &     0.949 &     0.022 \\
-        Transformed NF230 &     1.242 &     0.047 &     1.006 &     0.009 &  &   0.999 &     0.096 &     1.074 &     0.201 \\
-        All instruments   &     1.730 &     0.126 &     1.170 &     0.028 &  &   1.016 &     0.114 &     0.994 &     0.065 \\
-        Only NFLASH230    &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
-        \bottomrule
-    \end{tabular}
-    \label{tab:results_minval_days04_whole}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{Performance when choosing min validation for each fold. Train/val split on days. Test size $0.43$.}
+%     \begin{tabular}{lcccc c cccc}
+%         \toprule
+%         \multicolumn{1}{c}{} & \multicolumn{4}{c}{Case 1} & & \multicolumn{4}{c}{Case 2} \\
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         \multicolumn{1}{c}{} & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} & & \multicolumn{2}{c}{Azimuth} & \multicolumn{2}{c}{Elevation} \\ 
+%         \cmidrule(lr){2-5} \cmidrule(lr){7-10}
+%         Dataset &  Mean &  STD &  Mean &  STD & & Mean &  STD &  Mean &  STD \\
+%         \midrule
+%         Transformed       &     2.140 &     0.498 &     1.073 &     0.040 &  &   1.008 &     0.073 &     0.949 &     0.022 \\
+%         Transformed NF230 &     1.242 &     0.047 &     1.006 &     0.009 &  &   0.999 &     0.096 &     1.074 &     0.201 \\
+%         All instruments   &     1.730 &     0.126 &     1.170 &     0.028 &  &   1.016 &     0.114 &     0.994 &     0.065 \\
+%         Only NFLASH230    &     1.251 &     0.131 &     1.198 &     0.033 &  &   0.958 &     0.055 &     0.941 &     0.079 \\
+%         \bottomrule
+%     \end{tabular}
+%     \label{tab:results_minval_days04_whole}
+% \end{table}
 % %%% FEATURES FOR DIFFERNTE DATASETS WITH PCORR MODEL
 
 
@@ -316,13 +316,13 @@
 %     \label{tab:non}
 %     & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
 %     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
-%     Features & Az & El & Az & El & Az & El & Az & El \\  \hline
+%     Features & Az & El & Az & El \\  \hline
 %     \endfirsthead
     
 %     \toprule
 %     & \multicolumn{2}{c}{All Instruments} & \multicolumn{2}{c}{NFLASH230}\\
 %     \cmidrule(lr){2-3} \cmidrule(lr){4-5}
-%     Features & Az & El & Az & El & Az & El & Az & El \\ \hline
+%     Features & Az & El & Az & El \\ \hline
 %     \endhead
 %     \multicolumn{5}{r}{{Continued on next page}} \\
 %     \midrule
@@ -454,54 +454,56 @@
 \begin{table}[!htbp]
     \centering
     \caption{All}
-    \begin{tabular}{lccccccccc}
+    \begin{tabular}{ccccccccc}
         \toprule
-        \multirow{3}{*}{Target} & \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
-        & & by   & & & Max   & child  & of         & & \\
-        & & tree & & & Depth & weight & estimators & & \\
+        \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
+         & by   & & & Max   & child  & of         & & \\
+         & tree & & & Depth & weight & estimators & & \\
         \midrule
-        \multirow{6}{*}{Az} &   1 &   0.536 &  0.013 &          0.018 &      5 &             8 &       269 &       1 &      0.699 \\
-                            &   2 &   0.526 &  0.013 &          0.010 &      1 &            10 &       393 &       0.175 &      0.756 \\
-                            &   3 &   0.970 &  0.063 &          0.023 &      2 &             2 &       460 &       0.071 &      0.800 \\
-                            &   4 &   0.501 &  0.008 &          0.019 &      3 &             2 &       400 &       0.578 &      0.979 \\
-                            &   5 &   0.530 &  0.031 &          0.187 &      2 &             3 &        69 &       0.277 &      0.931 \\
-                            &   6 &   0.668 &  0.056 &          0.139 &      2 &             2 &        77 &       0.426 &      0.783 \\
+        1 &   0.536 &  0.013 &          0.018 &      5 &             8 &       269 &       1 &      0.699 \\
+        2 &   0.526 &  0.013 &          0.010 &      1 &            10 &       393 &       0.175 &      0.756 \\
+        3 &   0.970 &  0.063 &          0.023 &      2 &             2 &       460 &       0.071 &      0.800 \\
+        4 &   0.501 &  0.008 &          0.019 &      3 &             2 &       400 &       0.578 &      0.979 \\
+        5 &   0.530 &  0.031 &          0.187 &      2 &             3 &        69 &       0.277 &      0.931 \\
+        6 &   0.668 &  0.056 &          0.139 &      2 &             2 &        77 &       0.426 &      0.783 \\
         \hline
-        \multirow{6}{*}{El} &   1 &   0.577 &  0.247 &          0.017 &      5 &             1 &       111 &       0.966 &      0.517 \\
-                            &   2 &   0.645 &  0.078 &          0.063 &      5 &             2 &        33 &       0.010 &      0.787 \\
-                            &   3 &   0.600 &  0.017 &          0.009 &      5 &             5 &        86 &       0.660 &      0.598 \\
-                            &   4 &   0.608 &  0.019 &          0.037 &      5 &            10 &       368 &       0.329 &      0.600 \\
-                            &   5 &   0.999 &  0.031 &          0.022 &      4 &             1 &       427 &       0.178 &      0.716 \\
-                            &   6 &   0.788 &  0.369 &          0.097 &      2 &             1 &       354 &       0.552 &      0.796 \\
+        \multicolumn{9}{c}{Elevation} \\
+        \cmidrule{1-9}
+        1 &   0.577 &  0.247 &          0.017 &      5 &             1 &       111 &       0.966 &      0.517 \\
+        2 &   0.645 &  0.078 &          0.063 &      5 &             2 &        33 &       0.010 &      0.787 \\
+        3 &   0.600 &  0.017 &          0.009 &      5 &             5 &        86 &       0.660 &      0.598 \\
+        4 &   0.608 &  0.019 &          0.037 &      5 &            10 &       368 &       0.329 &      0.600 \\
+        5 &   0.999 &  0.031 &          0.022 &      4 &             1 &       427 &       0.178 &      0.716 \\
+        6 &   0.788 &  0.369 &          0.097 &      2 &             1 &       354 &       0.552 &      0.796 \\
         \bottomrule
         \end{tabular}
 \end{table}
 
-\begin{table}[!htbp]
-    \centering
-    \caption{NFLASH230}
-    \begin{tabular}{lccccccccc}
-        \toprule
-        \multirow{3}{*}{Target} & \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
-        & & by   & & & Max   & child  & of         & & \\
-        & & tree & & & Depth & weight & estimators & & \\
-        \midrule
-        \multirow{6}{*}{Az} &   1 &      0.720 &  0.125 &          0.126 &      1 &             4 &       201 &       0.247 &      0.864 \\
-                            &   2 &      0.777 &  0.988 &          0.017 &      1 &             6 &       468 &       0.763 &      0.962 \\
-                            &   3 &      0.517 &  0.298 &          0.014 &      2 &             7 &       470 &       0.509 &      0.762 \\
-                            &   4 &      0.972 &  0.773 &          0.116 &      5 &             1 &        30 &       0.006 &      0.802 \\
-                            &   5 &      0.897 &  0.112 &          0.008 &      5 &            10 &       435 &       0.658 &      0.819 \\
-                            &   6 &      0.935 &  0.011 &          0.064 &      1 &             6 &       224 &       0.228 &      0.748 \\
-        \hline
-        \multirow{6}{*}{El} &   1 &      0.600 &  0.156 &          0.007 &      5 &             2 &       140 &       0.047 &      0.792 \\
-                            &   2 &      0.999 &  0.148 &          0.029 &      5 &             1 &        38 &       0.998 &      0.580 \\
-                            &   3 &      0.955 &  0.237 &          0.014 &      3 &             6 &       210 &       0.613 &      0.712 \\
-                            &   4 &      0.537 &  0.014 &          0.034 &      2 &            10 &       352 &       0.537 &      0.594 \\
-                            &   5 &      0.686 &  0.324 &          0.081 &      1 &             1 &       371 &       0.368 &      0.966 \\
-                            &   6 &      0.862 &  0.306 &          0.184 &      1 &            10 &       157 &       0.029 &      0.701 \\
-        \bottomrule
-        \end{tabular}
-\end{table}
+% \begin{table}[!htbp]
+%     \centering
+%     \caption{NFLASH230}
+%     \begin{tabular}{lccccccccc}
+%         \toprule
+%         \multirow{3}{*}{Target} & \multirow{3}{*}{Fold} &  Colsample &  \multirow{3}{*}{$\gamma$} &  \multirow{3}{*}{$\eta$} &   &  Min &  Number &  \multirow{3}{*}{$\lambda$} &  \multirow{3}{*}{Subsample} \\
+%         & & by   & & & Max   & child  & of         & & \\
+%         & & tree & & & Depth & weight & estimators & & \\
+%         \midrule
+%         \multirow{6}{*}{Az} &   1 &      0.720 &  0.125 &          0.126 &      1 &             4 &       201 &       0.247 &      0.864 \\
+%                             &   2 &      0.777 &  0.988 &          0.017 &      1 &             6 &       468 &       0.763 &      0.962 \\
+%                             &   3 &      0.517 &  0.298 &          0.014 &      2 &             7 &       470 &       0.509 &      0.762 \\
+%                             &   4 &      0.972 &  0.773 &          0.116 &      5 &             1 &        30 &       0.006 &      0.802 \\
+%                             &   5 &      0.897 &  0.112 &          0.008 &      5 &            10 &       435 &       0.658 &      0.819 \\
+%                             &   6 &      0.935 &  0.011 &          0.064 &      1 &             6 &       224 &       0.228 &      0.748 \\
+%         \hline
+%         \multirow{6}{*}{El} &   1 &      0.600 &  0.156 &          0.007 &      5 &             2 &       140 &       0.047 &      0.792 \\
+%                             &   2 &      0.999 &  0.148 &          0.029 &      5 &             1 &        38 &       0.998 &      0.580 \\
+%                             &   3 &      0.955 &  0.237 &          0.014 &      3 &             6 &       210 &       0.613 &      0.712 \\
+%                             &   4 &      0.537 &  0.014 &          0.034 &      2 &            10 &       352 &       0.537 &      0.594 \\
+%                             &   5 &      0.686 &  0.324 &          0.081 &      1 &             1 &       371 &       0.368 &      0.966 \\
+%                             &   6 &      0.862 &  0.306 &          0.184 &      1 &            10 &       157 &       0.029 &      0.701 \\
+%         \bottomrule
+%         \end{tabular}
+% \end{table}
 
 \begin{table}[!htbp]
     \centering
@@ -534,82 +536,82 @@
 \end{table}
 
 
-\begin{table}
-    \centering
-    \caption{Validation and test performance for Case 2, all instruments left and nflash230 right.
-    Performance when choosing the number of features showing best performance.}
-    \begin{tabular}{lccccc}
-        \toprule
-        Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
-        \midrule
-        \multirow{6}{*}{Az} & 1 &      0.915 &       1.084 &      0.846 &       1.043 \\
-                            & 2 &      0.971 &       0.928 &      0.886 &       0.953 \\
-                            & 3 &      0.927 &       1.011 &      0.928 &       0.872 \\
-                            & 4 &      0.945 &       0.952 &      0.882 &       0.962 \\
-                            & 5 &      0.933 &       0.972 &      0.898 &       0.938 \\
-                            & 6 &      0.937 &       0.935 &      0.930 &       0.923 \\ 
-        \hline
-        \multirow{6}{*}{El} & 1 &      0.964 &       0.975 &      0.916 &       1.014 \\
-                            & 2 &      0.930 &       1.000 &      0.889 &       0.973 \\
-                            & 3 &      0.966 &       0.957 &      0.886 &       1.025 \\
-                            & 4 &      0.822 &       0.922 &      0.839 &       0.839 \\
-                            & 5 &      0.830 &       0.934 &      0.802 &       0.888 \\
-                            & 6 &      0.836 &       0.941 &      0.827 &       0.901 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}
+%     \centering
+%     \caption{Validation and test performance for Case 2, all instruments left and nflash230 right.
+%     Performance when choosing the number of features showing best performance.}
+%     \begin{tabular}{lccccc}
+%         \toprule
+%         Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
+%         \midrule
+%         \multirow{6}{*}{Az} & 1 &      0.915 &       1.084 &      0.846 &       1.043 \\
+%                             & 2 &      0.971 &       0.928 &      0.886 &       0.953 \\
+%                             & 3 &      0.927 &       1.011 &      0.928 &       0.872 \\
+%                             & 4 &      0.945 &       0.952 &      0.882 &       0.962 \\
+%                             & 5 &      0.933 &       0.972 &      0.898 &       0.938 \\
+%                             & 6 &      0.937 &       0.935 &      0.930 &       0.923 \\ 
+%         \hline
+%         \multirow{6}{*}{El} & 1 &      0.964 &       0.975 &      0.916 &       1.014 \\
+%                             & 2 &      0.930 &       1.000 &      0.889 &       0.973 \\
+%                             & 3 &      0.966 &       0.957 &      0.886 &       1.025 \\
+%                             & 4 &      0.822 &       0.922 &      0.839 &       0.839 \\
+%                             & 5 &      0.830 &       0.934 &      0.802 &       0.888 \\
+%                             & 6 &      0.836 &       0.941 &      0.827 &       0.901 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
     
 
-\begin{table}
-    \centering
-    \caption{Validation and test performance for Case 1 and 2, all instruments.
-    Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
-    \begin{tabular}{lccccc}
-        \toprule
-        Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
-        \midrule
-        \multirow{6}{*}{Az} & 1 &  0.870 &       1.642 &      0.881 &       1.233 \\
-                            & 2 &  0.861 &       1.626 &      0.971 &       0.928 \\
-                            & 3 &  0.876 &       1.784 &      0.897 &       1.016 \\
-                            & 4 &  0.866 &       1.613 &      0.938 &       0.950 \\
-                            & 5 &  0.862 &       1.935 &      0.927 &       0.942 \\
-                            & 6 &  0.874 &       1.779 &      0.923 &       1.027 \\
-        \hline
-        \multirow{6}{*}{El} & 1 &  0.832 &       1.193 &      0.948 &       0.965 \\
-                            & 2 &  0.831 &       1.141 &      0.924 &       1.051 \\
-                            & 3 &  0.824 &       1.129 &      0.929 &       1.094 \\
-                            & 4 &  0.816 &       1.172 &      0.822 &       0.922 \\
-                            & 5 &  0.818 &       1.196 &      0.828 &       0.978 \\
-                            & 6 &  0.822 &       1.186 &      0.831 &       0.951 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}
+%     \centering
+%     \caption{Validation and test performance for Case 1 and 2, all instruments.
+%     Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
+%     \begin{tabular}{lccccc}
+%         \toprule
+%         Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
+%         \midrule
+%         \multirow{6}{*}{Az} & 1 &  0.870 &       1.642 &      0.881 &       1.233 \\
+%                             & 2 &  0.861 &       1.626 &      0.971 &       0.928 \\
+%                             & 3 &  0.876 &       1.784 &      0.897 &       1.016 \\
+%                             & 4 &  0.866 &       1.613 &      0.938 &       0.950 \\
+%                             & 5 &  0.862 &       1.935 &      0.927 &       0.942 \\
+%                             & 6 &  0.874 &       1.779 &      0.923 &       1.027 \\
+%         \hline
+%         \multirow{6}{*}{El} & 1 &  0.832 &       1.193 &      0.948 &       0.965 \\
+%                             & 2 &  0.831 &       1.141 &      0.924 &       1.051 \\
+%                             & 3 &  0.824 &       1.129 &      0.929 &       1.094 \\
+%                             & 4 &  0.816 &       1.172 &      0.822 &       0.922 \\
+%                             & 5 &  0.818 &       1.196 &      0.828 &       0.978 \\
+%                             & 6 &  0.822 &       1.186 &      0.831 &       0.951 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
-\begin{table}
-    \centering
-    \caption{Validation and test performance for Case 1 and 2, only NFLASH230.
-    Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
-    \begin{tabular}{lccccc}
-        \toprule
-        Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
-        \midrule
-        \multirow{6}{*}{Az} & 1 &  0.848 &       1.188 &      0.846 &       1.043 \\
-                            & 2 &  0.841 &       1.427 &      0.870 &       0.962 \\
-                            & 3 &  0.840 &       1.462 &      0.923 &       0.882 \\
-                            & 4 &  0.837 &       1.266 &      0.873 &       0.989 \\
-                            & 5 &  0.846 &       1.242 &      0.879 &       0.944 \\
-                            & 6 &  0.837 &       1.318 &      0.907 &       0.930 \\
-        \multirow{6}{*}{El} & 1 &  0.835 &       1.173 &      0.887 &       1.030 \\
-                            & 2 &  0.831 &       1.188 &      0.889 &       0.973 \\
-                            & 3 &  0.831 &       1.204 &      0.886 &       1.025 \\
-                            & 4 &  0.812 &       1.198 &      0.826 &       0.844 \\
-                            & 5 &  0.815 &       1.166 &      0.802 &       0.870 \\
-                            & 6 &  0.810 &       1.262 &      0.825 &       0.906 \\
-        \bottomrule
-    \end{tabular}
-\end{table}
+% \begin{table}
+%     \centering
+%     \caption{Validation and test performance for Case 1 and 2, only NFLASH230.
+%     Performance when choosing the model complexity that yields the best results on the validation set for the given fold.}
+%     \begin{tabular}{lccccc}
+%         \toprule
+%         Target & Fold & Val RMS 1 &  Test RMS 1 &  Val RMS 2 &  Test RMS 2 \\
+%         \midrule
+%         \multirow{6}{*}{Az} & 1 &  0.848 &       1.188 &      0.846 &       1.043 \\
+%                             & 2 &  0.841 &       1.427 &      0.870 &       0.962 \\
+%                             & 3 &  0.840 &       1.462 &      0.923 &       0.882 \\
+%                             & 4 &  0.837 &       1.266 &      0.873 &       0.989 \\
+%                             & 5 &  0.846 &       1.242 &      0.879 &       0.944 \\
+%                             & 6 &  0.837 &       1.318 &      0.907 &       0.930 \\
+%         \multirow{6}{*}{El} & 1 &  0.835 &       1.173 &      0.887 &       1.030 \\
+%                             & 2 &  0.831 &       1.188 &      0.889 &       0.973 \\
+%                             & 3 &  0.831 &       1.204 &      0.886 &       1.025 \\
+%                             & 4 &  0.812 &       1.198 &      0.826 &       0.844 \\
+%                             & 5 &  0.815 &       1.166 &      0.802 &       0.870 \\
+%                             & 6 &  0.810 &       1.262 &      0.825 &       0.906 \\
+%         \bottomrule
+%     \end{tabular}
+% \end{table}
 
-\section{Raw data correlation}
+\section{Raw Data Correlation}
 \begin{table}[!htbp]
     \centering
     \caption{Features with Spearman's rank correlation $\geq 0.1$ to either one of the target values.}

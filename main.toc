@@ -1,110 +1,110 @@
 \babel@toc {USenglish}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduction}{10}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduction}{10}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Related Works}{12}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Astronomy Background}{13}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}The Celestial Sphere}{13}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Altitude-Azimuth Coordinate System}{13}{subsection.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}Radio/(Sub)-mm Telescope Basics}{14}{subsection.1.3.3}%
-\contentsline {part}{I\hspace {1em}Background and Theory}{15}{part.1}%
-\contentsline {chapter}{\numberline {2}APEX Pointing Model and Database}{16}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Pointing model}{16}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Analytical Model}{16}{subsection.2.1.1}%
-\contentsline {subsubsection}{Harmonic terms}{17}{section*.10}%
-\contentsline {subsubsection}{Az/El non-perpendicularity (NPAE)}{18}{section*.11}%
-\contentsline {subsubsection}{Left-right collimation error (CA)}{18}{section*.12}%
-\contentsline {subsubsection}{Azimuth and elevation index error (IA/IE)}{18}{section*.13}%
-\contentsline {subsubsection}{Azimuth axis misalignment (AN/AW)}{18}{section*.14}%
-\contentsline {subsubsection}{Displacement of Nasmyth rotator (NRX/NRY)}{19}{section*.15}%
-\contentsline {subsection}{\numberline {2.1.2}Pointing Corrections}{19}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}APEX Database}{19}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Pointing Scan Data}{19}{subsection.2.2.1}%
-\contentsline {subsubsection}{Line-pointing}{21}{section*.17}%
-\contentsline {subsubsection}{Continuum Scan}{22}{section*.19}%
-\contentsline {subsubsection}{Pointing scan timestamp}{22}{section*.21}%
-\contentsline {subsubsection}{Instruments}{23}{section*.22}%
-\contentsline {subsection}{\numberline {2.2.2}The Monitor Database}{23}{subsection.2.2.2}%
-\contentsline {subsubsection}{Azimuth and Elevation}{23}{section*.24}%
-\contentsline {subsubsection}{Temperature Measurements}{24}{section*.25}%
-\contentsline {subsubsection}{Hexapod}{25}{section*.27}%
-\contentsline {subsubsection}{Tiltmeter}{25}{section*.28}%
-\contentsline {subsubsection}{Weather data}{26}{section*.29}%
-\contentsline {subsubsection}{Displacement measures}{26}{section*.30}%
-\contentsline {subsubsection}{Automatic adjustments}{26}{section*.31}%
-\contentsline {subsection}{\numberline {2.2.3}Raw Data}{28}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Tiltmeter Dump Files}{29}{subsection.2.2.4}%
-\contentsline {chapter}{\numberline {3}Machine Learning Theory}{30}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Supervised Learning}{30}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Loss/Cost}{30}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Loss Functions}{31}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Datasplitting}{31}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Scaling}{32}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Decision Trees}{32}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Bagging}{33}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Random Forest}{33}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Boosting}{33}{subsection.3.5.3}%
-\contentsline {subsection}{\numberline {3.5.4}Gradient Boosting}{33}{subsection.3.5.4}%
-\contentsline {section}{\numberline {3.6}Neural Networks}{34}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Backpropagation}{35}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Gradient Descent}{36}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Stochastic Gradient Descent}{37}{subsection.3.6.3}%
-\contentsline {subsection}{\numberline {3.6.4}Momentum}{37}{subsection.3.6.4}%
-\contentsline {subsection}{\numberline {3.6.5}Adam}{38}{subsection.3.6.5}%
-\contentsline {subsection}{\numberline {3.6.6}Activation Functions}{38}{subsection.3.6.6}%
-\contentsline {subsubsection}{Tanh}{39}{section*.39}%
-\contentsline {subsubsection}{ReLU}{39}{section*.40}%
-\contentsline {subsubsection}{GeLU}{39}{section*.41}%
-\contentsline {section}{\numberline {3.7}Model Explainability}{39}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}SHAP}{40}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}SAGE}{40}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}Mutual Information}{41}{section.3.8}%
-\contentsline {part}{II\hspace {1em}Data Processing \& Methods}{42}{part.2}%
-\contentsline {chapter}{\numberline {4}Data Processing}{43}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Cleaning Pointing Scan Data}{43}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Cleaning Criteria}{43}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Pointing Scan Classifier}{44}{subsection.4.1.2}%
-\contentsline {subsubsection}{Method}{44}{section*.42}%
-\contentsline {subsubsection}{Results}{44}{section*.44}%
-\contentsline {section}{\numberline {4.2}Scan Duration Analysis}{45}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Analysis}{45}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Algorithm}{46}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Results}{46}{subsection.4.2.3}%
-\contentsline {section}{\numberline {4.3}Feature Engineering}{48}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Median Values}{48}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Turbulence}{48}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Position of the Sun}{48}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Time based features}{49}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Additional features}{49}{subsection.4.3.5}%
-\contentsline {chapter}{\numberline {5}Machine Learning Experiments}{50}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Experiment 1: Pointing Correction Model}{50}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Feature Selection}{51}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Model Architecture}{51}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Model Evaluation}{52}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Experiment 2: Pointing Model using Neural Networks}{52}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Feature Selection}{53}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Model Architecture}{53}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Loss Function and Model Evaluation}{55}{subsection.5.2.3}%
-\contentsline {part}{III\hspace {1em}Results \& Discussion}{56}{part.3}%
-\contentsline {chapter}{\numberline {6}Results \& Discussion}{57}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Results of Experiment 1: Pointing Correction Model}{57}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Discussion of Experiment 1: Pointing Correction Model}{65}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Results of Experiment 2: Pointing Model using Neural Networks}{67}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Discussion of Experiment 2: Pointing Model using Neural Networks}{68}{section.6.4}%
-\contentsline {chapter}{\numberline {7}Conclusion}{72}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{72}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{72}{section.7.2}%
-\contentsline {part}{IV\hspace {1em}Appendices}{74}{part.4}%
-\contentsline {chapter}{\numberline {A}Results \& Tables}{75}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Raw data correlation}{75}{section.A.1}%
-\contentsline {chapter}{\numberline {B}Additional Methods}{81}{appendix.B}%
-\contentsline {section}{\numberline {B.1}Transformation of Pointing Offsets and Corrections}{81}{section.B.1}%
-\contentsline {section}{\numberline {B.2}Feature Engineering for Transformed Offsets and Corrections}{82}{section.B.2}%
-\contentsline {subsection}{\numberline {B.2.1}Feature Transformation}{82}{subsection.B.2.1}%
-\contentsline {subsubsection}{Median values}{82}{section*.77}%
-\contentsline {subsubsection}{Sum of all change}{82}{section*.78}%
-\contentsline {subsubsection}{Change since the last correction}{83}{section*.79}%
-\contentsline {subsubsection}{Max change in time interval}{83}{section*.80}%
-\contentsline {subsubsection}{Position of the sun}{83}{section*.81}%
-\contentsline {chapter}{\numberline {C}Supplementary Theory}{85}{appendix.C}%
-\contentsline {section}{\numberline {C.1}XGBoost Hyperparameters}{85}{section.C.1}%
-\contentsline {chapter}{Bibliography}{86}{appendix*.82}%
+\contentsline {chapter}{\numberline {1}Introduction}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{9}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Related Works}{11}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Astronomy Background}{12}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}The Celestial Sphere}{12}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Altitude-Azimuth Coordinate System}{12}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Radio/(Sub)-mm Telescope Basics}{13}{subsection.1.3.3}%
+\contentsline {part}{I\hspace {1em}Background and Theory}{14}{part.1}%
+\contentsline {chapter}{\numberline {2}APEX Pointing Model and Database}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Pointing model}{15}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Analytical Model}{15}{subsection.2.1.1}%
+\contentsline {subsubsection}{Harmonic terms}{16}{section*.10}%
+\contentsline {subsubsection}{Az/El non-perpendicularity (NPAE)}{17}{section*.11}%
+\contentsline {subsubsection}{Left-right collimation error (CA)}{17}{section*.12}%
+\contentsline {subsubsection}{Azimuth and elevation index error (IA/IE)}{17}{section*.13}%
+\contentsline {subsubsection}{Azimuth axis misalignment (AN/AW)}{17}{section*.14}%
+\contentsline {subsubsection}{Displacement of Nasmyth rotator (NRX/NRY)}{18}{section*.15}%
+\contentsline {subsection}{\numberline {2.1.2}Pointing Corrections}{18}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}APEX Database}{18}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Pointing Scan Data}{18}{subsection.2.2.1}%
+\contentsline {subsubsection}{Line-pointing}{20}{section*.17}%
+\contentsline {subsubsection}{Continuum Scan}{21}{section*.19}%
+\contentsline {subsubsection}{Pointing scan timestamp}{21}{section*.21}%
+\contentsline {subsubsection}{Instruments}{22}{section*.22}%
+\contentsline {subsection}{\numberline {2.2.2}The Monitor Database}{22}{subsection.2.2.2}%
+\contentsline {subsubsection}{Azimuth and Elevation}{22}{section*.24}%
+\contentsline {subsubsection}{Temperature Measurements}{23}{section*.25}%
+\contentsline {subsubsection}{Hexapod}{24}{section*.27}%
+\contentsline {subsubsection}{Tiltmeter}{24}{section*.28}%
+\contentsline {subsubsection}{Weather data}{25}{section*.29}%
+\contentsline {subsubsection}{Displacement measures}{25}{section*.30}%
+\contentsline {subsubsection}{Automatic adjustments}{25}{section*.31}%
+\contentsline {subsection}{\numberline {2.2.3}Raw Data}{27}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Tiltmeter Dump Files}{28}{subsection.2.2.4}%
+\contentsline {chapter}{\numberline {3}Machine Learning Theory}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Supervised Learning}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Loss/Cost}{29}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Loss Functions}{30}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Datasplitting}{30}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Scaling}{31}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Decision Trees}{31}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Bagging}{32}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Random Forest}{32}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Boosting}{32}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.4}Gradient Boosting}{32}{subsection.3.5.4}%
+\contentsline {section}{\numberline {3.6}Neural Networks}{33}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Backpropagation}{34}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Gradient Descent}{35}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Stochastic Gradient Descent}{36}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Momentum}{36}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Adam}{37}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Activation Functions}{37}{subsection.3.6.6}%
+\contentsline {subsubsection}{Tanh}{38}{section*.39}%
+\contentsline {subsubsection}{ReLU}{38}{section*.40}%
+\contentsline {subsubsection}{GeLU}{38}{section*.41}%
+\contentsline {section}{\numberline {3.7}Model Explainability}{38}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}SHAP}{39}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}SAGE}{39}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}Mutual Information}{40}{section.3.8}%
+\contentsline {part}{II\hspace {1em}Data Processing \& Methods}{41}{part.2}%
+\contentsline {chapter}{\numberline {4}Data Processing}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Cleaning Pointing Scan Data}{42}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Cleaning Criteria}{42}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Pointing Scan Classifier}{43}{subsection.4.1.2}%
+\contentsline {subsubsection}{Method}{43}{section*.42}%
+\contentsline {subsubsection}{Results}{43}{section*.44}%
+\contentsline {section}{\numberline {4.2}Scan Duration Analysis}{44}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Analysis}{44}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Algorithm}{45}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Results}{45}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}Feature Engineering}{47}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Median Values}{47}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Turbulence}{47}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Position of the Sun}{47}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Time based features}{48}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Additional features}{48}{subsection.4.3.5}%
+\contentsline {chapter}{\numberline {5}Machine Learning Experiments}{49}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Experiment 1: Pointing Correction Model}{49}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Feature Selection}{50}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Model Architecture}{50}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Model Evaluation}{51}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Experiment 2: Pointing Model using Neural Networks}{51}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Feature Selection}{52}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Model Architecture}{52}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Loss Function and Model Evaluation}{54}{subsection.5.2.3}%
+\contentsline {part}{III\hspace {1em}Results \& Discussion}{55}{part.3}%
+\contentsline {chapter}{\numberline {6}Results \& Discussion}{56}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Results of Experiment 1: Pointing Correction Model}{56}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Discussion of Experiment 1: Pointing Correction Model}{64}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Results of Experiment 2: Pointing Model using Neural Networks}{66}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Discussion of Experiment 2: Pointing Model using Neural Networks}{67}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Conclusion}{71}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Experiment 1: Pointing Correction Model}{71}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Experiment 2: Pointing Model using Neural Networks}{71}{section.7.2}%
+\contentsline {part}{IV\hspace {1em}Appendices}{73}{part.4}%
+\contentsline {chapter}{\numberline {A}Results \& Tables}{74}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Raw data correlation}{74}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Additional Methods}{78}{appendix.B}%
+\contentsline {section}{\numberline {B.1}Transformation of Pointing Offsets and Corrections}{78}{section.B.1}%
+\contentsline {section}{\numberline {B.2}Feature Engineering for Transformed Offsets and Corrections}{79}{section.B.2}%
+\contentsline {subsection}{\numberline {B.2.1}Feature Transformation}{79}{subsection.B.2.1}%
+\contentsline {subsubsection}{Median values}{79}{section*.71}%
+\contentsline {subsubsection}{Sum of all change}{79}{section*.72}%
+\contentsline {subsubsection}{Change since the last correction}{80}{section*.73}%
+\contentsline {subsubsection}{Max change in time interval}{80}{section*.74}%
+\contentsline {subsubsection}{Position of the sun}{80}{section*.75}%
+\contentsline {chapter}{\numberline {C}Supplementary Theory}{82}{appendix.C}%
+\contentsline {section}{\numberline {C.1}XGBoost Hyperparameters}{82}{section.C.1}%
+\contentsline {chapter}{Bibliography}{83}{appendix*.76}%
