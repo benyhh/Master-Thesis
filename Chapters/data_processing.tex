@@ -209,14 +209,14 @@ For the scans with an exact start and end time, we used this time period instead
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_rx.pdf}
+    \includegraphics[width=1.1\textwidth]{Results/scan_duration_distribution_rx.pdf}
     \caption[Box plots with pointing scan duration and start time]{Box plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
     \label{fig:scan_times_box}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.1\textwidth]{Tiltmeter plots/scan_duration_distribution_date.pdf}
+    \includegraphics[width=1.1\textwidth]{Results/scan_duration_distribution_date.pdf}
     \caption[Scatter plot with pointing scan duration and start time throughout 2022.]{Scatter plot of the duration of scans, and the time difference between the timestamp of a scan and the actual start of it.}
     \label{fig:scan_times_date}
 \end{figure}
@@ -224,7 +224,7 @@ For the scans with an exact start and end time, we used this time period instead
 
 \section{Feature Engineering}\label{sec:feature_engineering}
 Feature engineering is important to ensure that the inputs for the machine learning models are as informative as possible.
-Informative features make it easier for the machine learning model to learn the relationship between features and target values.
+Informative features make it easier for the machine learning model to learn thse relationship between features and target values.
 With limited training data, this is essential.
 
 % \textcolor{red}{Put this in feature engineering section}
@@ -250,19 +250,19 @@ where the $\sigma_\textit{wind}^2$ variance in windspeed.
 We calculated the variance in a period of $5$ minutes before the pointing scan.
 
 \subsection{Position of the Sun}
-Observers at the telescope report that the sun is affecting the pointing.
-It is most drastically affected when the sun sets or rises, likely due to rapid temperature change leading to deformation in the telescope structure.
-We also think the sun's position affects the pointing.
-For instance, if the sun is shining on the left side of the telescope, it will affect the pointing differently than if it is on the right side.
+Observers at the telescope report that the Sun is affecting the pointing.
+It is most drastically affected when the Sun sets or rises, likely due to rapid temperature change leading to deformation in the telescope structure.
+We also think the Sun's position affects the pointing.
+For instance, if the Sun is shining on the left side of the telescope, it will affect the pointing differently than if it is on the right side.
 Obtaining the Sun's position for the telescope's location is done using the Python module PyEphem \cite{ephem}.
 
-Using the azimuth angle of the sun and the telescope, we can calculate the position of the sun with respect to the pointing with
+Using the azimuth angle of the Sun and the telescope, we can calculate the position of the Sun with respect to the pointing with
 \begin{equation}\label{eq:sun_az_diff}
     \Delta \textit{Az}_\odot = \textit{Az}_{\textit{t}} - \textit{Az}_\odot
 \end{equation}
 This will result in values outside the $[-180^\circ,180^\circ]$. An example is if $Az_\odot=179^\circ$ and $Az_t = -179^\circ$.
 The calculation in equation \eqref{eq:sun_az_diff} yield $-179^\circ-179^\circ=-358^\circ$,
-which corresponds to the sun being $358^\circ$ to the right of the telescope, while it ideally should be $2^\circ$ to the left.
+which corresponds to the Sun being $358^\circ$ to the right of the telescope, while it ideally should be $2^\circ$ to the left.
 Therefore, we adjust the values accordingly
 %Write equations where \Delta Az_\odot above 180 is -= 360 and under 180 is += 360
 \begin{align}
@@ -271,8 +271,8 @@ Therefore, we adjust the values accordingly
 \end{align}
 
 Here, the interval of the difference in azimuth is fixed to the interval $(-180^\circ,180^\circ)$,
-where $0^\circ$ means the telescope is pointing towards the sun in the azimuth direction.
-$\Delta \textit{Az}_\odot = 90^\circ$ corresponds to the sun being direct to the left of the pointing direction.
+where $0^\circ$ means the telescope is pointing towards the Sun in the azimuth direction.
+$\Delta \textit{Az}_\odot = 90^\circ$ corresponds to the Sun being direct to the left of the pointing direction.
 
 We also calculated the change of $\Delta Az_\odot$ in the past five minutes.
 Let $\Delta Az_\odot(t)$ denote the difference between the telescope's and the Sun's azimuth given time $t$ in minutes,
